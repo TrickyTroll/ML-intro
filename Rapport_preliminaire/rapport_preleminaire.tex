@@ -1,0 +1,44 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage{pdfpages}
+\usepackage[french]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{siunitx}
+\usepackage{hyperref}
+\usepackage{wrapfig}
+\usepackage{booktabs}
+\usepackage{rotating}
+\usepackage{gensymb}
+\usepackage{lscape}
+\DeclareMathSymbol{.}{\mathord}{letters}{"3B}
+\begin{document} % Le document commence après cette ligne.
+\input{../Page_presentation/pp_pre.tex} % Ajout de la page de présentation.
+\setlength{\parindent}{0in}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\thepage}
+\pagenumbering{roman}
+\tableofcontents
+\newpage
+% Le body du document commence ici.
+\pagenumbering{arabic}
+% Section sur l'énoncé du sujet. La section devrait être écrite dans le fichier
+% enonce_sujet.tex sous Components.
+\section{Énoncé du sujet}
+\input{./Body/enonce_sujet.tex}
+% Section sur la description. Devrait être faite dans description.tex.
+\section{Description de la manière dont on entend traiter le sujet}
+\input{./Body/description.tex}
+% Section sur le plan de rédaction. Devrait être fait dans le fichier plan.tex.
+\section{Plan de rédaction du travail}
+\input{./Body/plan.tex}
+% Bibliographie générée par bibTeX. Les références devraient être dans
+% bibliography.bib sous Bibliography.
+\bibliography{./Bibliography/bibliography.bib}
+
+% Rien après cette ligne.
+\end{document}
