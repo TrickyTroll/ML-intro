@@ -1,0 +1,17 @@
+#+TITLE: Énoncé du sujet
+#+AUTHOR: Étienne Parent
+
+* Brainstorm
+- Commence par des projets comme Tesseract.
+- Permet aujourd'hui de garder des documents et rapidement faire de la recherche
+  .
+- Utile pour les personnes ayant des problèmes de la vue.
+- L'OCR sera-t-il plus d'actualité lorsque tout sera électronique?
+- Probablement pas car:
+- Avoir des machines réellement consciente de leur environnement nécessite
+  le soutien de l'OCR.
+* Liens Utiles
+
+
+
+* Réflexion sur le passé

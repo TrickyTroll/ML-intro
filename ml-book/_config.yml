@@ -1,0 +1,13 @@
+# Book settings
+title: Introduction à la reconnaissance optique de caractère
+author: Émile Bergeron, Samuel Paquin, Étienne Parent et Jérémie Sanfaçon
+logo: logo.png
+
+latex:
+  latex_documents:
+    targetname: book.tex
+
+sphinx:
+  config:
+    language: fr
+    myst_amsmath_enable: true

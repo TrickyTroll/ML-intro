@@ -1,0 +1,7 @@
+- file: intro
+- file: rapport_preliminaire
+  sections:
+    - file: enonce_sujet
+    - file: description
+    - file: plan
+    - file: biblio_commented
