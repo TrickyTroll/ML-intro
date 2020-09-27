@@ -1,6 +1,6 @@
 # Book settings
-title: My sample book
-author: The Jupyter Book Community
+title: Introduction à la reconnaissance optique de caractère
+author: Émile Bergeron, Samuel Paquin, Étienne Parent et Jérémie Sanfaçon
 logo: logo.png
 
 latex:

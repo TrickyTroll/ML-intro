@@ -1,5 +1,7 @@
 - file: intro
-- file: content
+- file: rapport_preliminaire
   sections:
-    - file: markdown
-    - file: notebooks
+    - file: enonce_sujet
+    - file: description
+    - file: plan
+    - file: biblio_commented
