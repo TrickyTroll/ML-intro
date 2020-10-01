@@ -42,7 +42,10 @@ Malgré les avancées incroyables que l'intelligence artificielle a déjà permi
 continuera de permettre dans le futur, elle n'est pas sans ses inconvénients. Au
 courant des dernières années, les systèmes intelligents sont de plus en plus
 reconnus coupables de discrimination envers certains groupes d'individus. Une
-étude réalisée par le [NIST](https://www.nist.gov/) présente des taux d'erreur
+étude réalisée par le [NIST](https://www.nist.gov/) à étudié le taux d'erreur de
+différents programmes de reconnaissance faciale en fonction des différences de
+sexe et d'ethnicité des individus sur les photos analysées. L'étude 
+présente des taux d'erreur
 jusqu'à cent fois plus élevés pour des personnes d'origine asiatique ou 
 africaine lorsque comparé à des personnes d'origine européenne {cite}`nistbias`.
 Le taux d'erreur est aussi plus élevé chez les femmes que chez les hommes, et
@@ -52,3 +55,12 @@ Un autre résultat important de cette étude est que le taux d'erreur associé �
 reconnaissance de personnes asiatiques n'est pas présent dans des programmes
 réalisé dans des pays d'Asie. Cette observation permet de déduire l'un des plus
 grands problèmes liés à l'intelligence artificielle: le biais.
+
+Contrairement à une fonction mathématique qui transforme un chiffre de manière
+définie, les procédés menant à la reconnaissance faciale sont beaucoup plus
+flous et souvent très mal compris. Plusieurs considèrent les programmes
+entraînés comme des «boites noires». Il est difficile de prédire ce qui sortira
+de la boîte lorsque l'on y insère quelque chose, et il est encore plus difficile
+de comprendre pourquoi le programme prend certaines décisions plus que d'autres.
+
+![Boîte noire](./img/black_box.png)
