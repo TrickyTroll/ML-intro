@@ -1,5 +1,5 @@
-Bibliographie Commenté
-================
+Bibliographie Commentée
+=======================
 
 ## Brookings, [How artificial intelligence is transforming the world](https://www.brookings.edu/research/how-artificial-intelligence-is-transforming-the-world/#_edn4)
 
@@ -34,5 +34,15 @@ pour cette section, soit de rendre le concept de réseau neuronal plus tangible 
 
 ## Michael A. Nielsen, [Neural Network and Deel Learning](http://neuralnetworksanddeeplearning.com/chap1.html)
 
-Cette source est intéressante puisqu’elle explique en profondeur le fonctionnement d’un réseau neuronal en donnant un exemple débutant par la reconnaissance optique de caractères qui est un exemple du programme semblable à celui que nous allons écrire. De plus, de nombreuses démonstrations mathématiques imagées. Également cette source donne des astuces afin de créer notre programme. Cette source est très détaillée. De plus, l’auteur est un scientifique qui a aidé à débuter l’informatique quantique en plus de grandement s’intéresser à l’intelligence artificielle. Malgré tout, cette source est en anglais ce qui peut légèrement nuire à la compréhension. Nous allons principalement utiliser la section concernant un exemple d’utilisation de l’intelligence artificielle afin de reconnaître des chiffres écrits à la main.
+Cette source est intéressante puisqu’elle explique en profondeur le fonctionnement 
+d’un réseau neuronal en donnant un exemple débutant par la reconnaissance optique 
+de caractères qui est un exemple du programme semblable à celui que nous allons 
+écrire. De plus, de nombreuses démonstrations mathématiques imagées. Également 
+cette source donne des astuces afin de créer notre programme. Cette source est 
+très détaillée. De plus, l’auteur est un scientifique qui a aidé à débuter 
+l’informatique quantique en plus de grandement s’intéresser à l’intelligence 
+artificielle. Malgré tout, cette source est en anglais ce qui peut 
+légèrement nuire à la compréhension. Nous allons principalement utiliser la 
+section concernant un exemple d’utilisation de l’intelligence 
+artificielle afin de reconnaître des chiffres écrits à la main.
 
