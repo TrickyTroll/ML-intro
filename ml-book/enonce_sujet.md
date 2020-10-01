@@ -39,4 +39,16 @@ lui même capable de programmer à partir de demandes spécifiques faites par un
 utilisateur.
 
 Malgré les avancées incroyables que l'intelligence artificielle a déjà permis et
-continuera de permettre dans le futur, elle n'est pas sans ses inconvénients.
+continuera de permettre dans le futur, elle n'est pas sans ses inconvénients. Au
+courant des dernières années, les systèmes intelligents sont de plus en plus
+reconnus coupables de discrimination envers certains groupes d'individus. Une
+étude réalisée par le [NIST](https://www.nist.gov/) présente des taux d'erreur
+jusqu'à cent fois plus élevés pour des personnes d'origine asiatique ou 
+africaine lorsque comparé à des personnes d'origine européenne {cite}`nistbias`.
+Le taux d'erreur est aussi plus élevé chez les femmes que chez les hommes, et
+ce, peut importe l'origine.
+
+Un autre résultat important de cette étude est que le taux d'erreur associé à la
+reconnaissance de personnes asiatiques n'est pas présent dans des programmes
+réalisé dans des pays d'Asie. Cette observation permet de déduire l'un des plus
+grands problèmes liés à l'intelligence artificielle: le biais.
