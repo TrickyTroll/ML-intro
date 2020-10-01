@@ -2,28 +2,43 @@
 
 Nous allons répondre à notre question sous plusieurs aspects;
 
-## Recherche des bénéfices de la reconnaissance de caractères
+## Introduction
 
-* Recherche et documentation sur l'histoire de la technologie ainsi que ses
+* Recherche et documentation sur l'histoire de l'intelligence ainsi que ses
 utilités dans le passé.
 
-* Recherche sur les avancées importante menées par l'IA
+* L'intelligenge artificielle présentement
 
-* Recherche sur les avancées en ce moment
+## Notion de base d'un réseau neuronal
+* Définition de OCR
 
-## Recherche sur le contionnement de l'OCR
+* Explications des neurones
+    * Structure d'un neurone
+    * poids
+    * biais
+    * entrants et extrants
+* Communication entre les couches
+    * Fonction d'activation (démonstration mathématique)
+    * lien avec les neurones biologiques
+    
+## Apprentissage machine (explication à l'aide d'un programme)  
+* Explication de la collecte et traitement de données
+    * Préparation des données
 
-* Recherche et Documentation sur le fonctionnement de l'intelligence Artificielle
+* Fonction de coût
+    * Exemples de programmation
+    * Démonstration mathématique
     
-* Recherche et Documentation sur l'OCR
-    
-* Recherche et Documentation sur la programmation d'un OCR
-    
-* Programmation d'un programme qui fait de l'OCR
-    
-* Recherche et Documentation sur l'entraînement d'un OCR
-    
-* Étude et Documentation sur l'utilisation de plusieurs entraînements différent 
-au programme en utilisant des humains différent ainsi qu'un type d'écriture 
-différent.
+* Explication de la modification des paramètres
+    * Démonstration mathématique / programmation
+* Démonstration du programme
+
+## Impact de l'intelligence artificielle
+* Bienfaits
+* Inconvénients
+
+## Conclusion
+* Retour sur notre hypothèse 
+* Réponse à la question
+* Ouverture
     
