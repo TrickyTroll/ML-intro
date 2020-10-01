@@ -9,6 +9,8 @@ utilités dans le passé.
 
 * L'intelligenge artificielle présentement
 
+* Formulation de l'hypothèse
+
 ## Notion de base d'un réseau neuronal
 * Définition de OCR
 
