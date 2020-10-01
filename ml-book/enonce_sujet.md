@@ -64,3 +64,4 @@ de la boîte lorsque l'on y insère quelque chose, et il est encore plus diffici
 de comprendre pourquoi le programme prend certaines décisions plus que d'autres.
 
 ![Boîte noire](./img/black_box.png)
+
