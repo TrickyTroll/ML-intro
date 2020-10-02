@@ -75,6 +75,27 @@ Finalement, il est aussi intéressant d'avoir une publication du NIST pour
 supporter la recherche puisque nous comptons utiliser des données publiées
 par cette même organisation pour l'entraînement de notre programme.
 
+## Portland passes broadest facial recognition ban in the US 
+
+{cite}`cnnportland`
+
+Cet article publié par CNN en septembre 2020 relate de récentes régulations
+en lien avec l'utilisation de la reconnaissance faciale par les forces de
+l'ordre. 
+
+L'article est très récent, ce qui est important puisque notre
+sujet évolue rapidement dans le temps. En effet, l'intelligence artificielle
+est un domaine en pleine explosion. Des changements majeurs peuvent survenir
+à tout moment, comme les récentes réglementations expliquées dans l'article.
+
+CNN est aussi une source journalistique fiable. L'organisation a reporté sur
+plusieurs évènements majeurs et ses journalistes ont remporté plusieurs prix.
+
+Bien que CNN ait la réputation d'être biaisé poliquement, favorisant 
+souvent le partir démocrate lors que leurs reportages, ce biais ne semble pas
+avoir déteint sur la qualité de l'article sélectionné.
+
+
 ``` {bibliography} ./references.bib
 :style: apa
 ```

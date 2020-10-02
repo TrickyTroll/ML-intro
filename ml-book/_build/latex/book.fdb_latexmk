@@ -1,10 +1,10 @@
 # Fdb version 3
-["makeindex book.idx"] 1601586618 "book.idx" "book.ind" "book" 1601644484
-  "book.idx" 1601643831 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+["makeindex book.idx"] 1601586618 "book.idx" "book.ind" "book" 1601649290
+  "book.idx" 1601649290 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   (generated)
-  "book.ilg"
   "book.ind"
-["pdflatex"] 1601643831 "book.tex" "book.pdf" "book" 1601644484
+  "book.ilg"
+["pdflatex"] 1601649289 "book.tex" "book.pdf" "book" 1601649290
   "/etc/texmf/web2c/texmf.cnf" 1599012926 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -138,22 +138,22 @@
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1599012976 4770781 1ed1abab22da9c3e2cc82e4db562318b ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1599013017 8257533 4dae15fec2c9689e2df7141ec6a6831f ""
   "black_box.png" 1601587200 455147 c1fadf7630f4734a3171255d3c037d6f ""
-  "book.aux" 1601643832 8402 73849fc4f1b826e9c11a63a638a10f52 "pdflatex"
+  "book.aux" 1601649290 8311 1ca5badc73d65ec2652cedb2113df0d3 "pdflatex"
   "book.ind" 1601586618 0 d41d8cd98f00b204e9800998ecf8427e "makeindex book.idx"
-  "book.out" 1601643832 1152 b268270dcbd532bb67702b027520e9bb "pdflatex"
-  "book.tex" 1601644201 25030 3913d7374dd3913e6672c4b6ca488cdc ""
-  "book.toc" 1601643832 2260 c6bf55eff200e3fd2683067f4550670b "pdflatex"
+  "book.out" 1601649290 1152 b268270dcbd532bb67702b027520e9bb "pdflatex"
+  "book.tex" 1601649289 24874 8ede3d58e05fbf2b1ab70d118449119f ""
+  "book.toc" 1601649290 2260 c6bf55eff200e3fd2683067f4550670b "pdflatex"
   "duplex.jpeg" 1601605915 117216 cd4e960806f9aa615f9a8cf22892c2cf ""
   "footnotehyper-sphinx.sty" 1601586187 8888 1bbd7bdeae8c8bed1d10d551bddb1cc9 ""
   "sphinx.sty" 1601586187 82155 76e1169ffc917b7b0448ff4c656bfb06 ""
-  "sphinxhighlight.sty" 1601644484 8137 38a433148fcb7611515a989ff1750dd5 ""
+  "sphinxhighlight.sty" 1601649288 8137 38a433148fcb7611515a989ff1750dd5 ""
   "sphinxmanual.cls" 1601586187 4236 124cd90deb92742b5d3922bfc2cd70c0 ""
-  "sphinxmessages.sty" 1601644484 742 57bfa84249e53808c286b99adea1854e ""
+  "sphinxmessages.sty" 1601649289 742 57bfa84249e53808c286b99adea1854e ""
   "sphinxmulticell.sty" 1601586187 14606 0b6edc2b1a83546ed92026d1f6a311b5 ""
   (generated)
+  "book.toc"
   "book.log"
+  "book.idx"
   "book.aux"
   "book.out"
   "book.pdf"
-  "book.idx"
-  "book.toc"
