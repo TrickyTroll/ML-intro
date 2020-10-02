@@ -75,9 +75,9 @@
 
 
 \title{Introduction à la reconnaissance optique de caractère}
-\date{oct. 01, 2020}
+\date{oct. 02, 2020}
 \release{}
-\author{Émile Bergeron, Samuel Paquin, Étienne Parent, \textbackslash{}n et Jérémie Sanfaçon}
+\author{Émile Bergeron, Samuel Paquin, Étienne Parent, Jérémie Sanfaçon}
 \newcommand{\sphinxlogo}{\vbox{}}
 \renewcommand{\releasename}{}
 \makeindex
@@ -96,10 +96,7 @@
 \phantomsection\label{\detokenize{intro::doc}}
 
 
-This is a small sample book to give you a feel for how book content is
-structured.
-
-Check out the content pages bundled with this sample book to get started.
+La documentation sur l’utilisation de ce site n’a pas encore été faite. :)
 
 
 \chapter{Rapport préliminaire}
@@ -110,25 +107,6 @@ résultats de nos premières recherches.
 
 \section{Énoncé du sujet}
 \label{\detokenize{enonce_sujet:enonce-du-sujet}}\label{\detokenize{enonce_sujet::doc}}
-
-\subsection{Intro JSanf}
-\label{\detokenize{enonce_sujet:intro-jsanf}}
-L’intelligence artificielle est un sujet d’actualité de haute importance avec les
-nombreuses avancées
-technologiques qui se font depuis les dernières années avec des avancés comme la
-conduite automatique
-par la compagnie Tesla ainsi que le Neuralink. L’intelligence artificielle ou
-l’IA nous entourent
-dans notre vie que se soit sur notre cellulaire, sur notre ordinateur et même nos automobile.
-Quel est le fonctionnent de ce processus et comment peut\sphinxhyphen{}il être utilisé afin de
-bénéficier l’être humain?. Pour tenter de répondre à cet question, nous allons
-écrire un programme qui permet de faire de l” Optical Character Recognition ou OCR
-qui consiste à lire un chiffre écrit à la main et retourner une réponse grâce à
-un entraînement sur l’ordinateur nommé Supervised Learning. Pour en découvrir
-plus sur ce processus, nous allons aussi voir l’impact d’un entraînement varié
-sur le modèle en changeant l’écriture de l’humain pour voir si cela constitue un
-biais.
-
 
 \subsection{Mise en contexte}
 \label{\detokenize{enonce_sujet:mise-en-contexte}}
@@ -176,8 +154,16 @@ un nouveau modèle d’intelligence artificielle produit par
 lui même capable de programmer à partir de demandes spécifiques faites par un
 utilisateur.
 
+
+\subsection{Le début de la découverte des inconvénients}
+\label{\detokenize{enonce_sujet:le-debut-de-la-decouverte-des-inconvenients}}
 Malgré les avancées incroyables que l’intelligence artificielle a déjà permis et
-continuera de permettre dans le futur, elle n’est pas sans ses inconvénients. Au
+continuera de permettre dans le futur, elle n’est pas sans ses inconvénients.
+
+
+\subsection{Le biais}
+\label{\detokenize{enonce_sujet:le-biais}}
+Au
 courant des dernières années, les systèmes intelligents sont de plus en plus
 reconnus coupables de discrimination envers certains groupes d’individus. Une
 étude réalisée par le \sphinxhref{https://www.nist.gov/}{NIST} à étudié le taux d’erreur de
@@ -185,7 +171,7 @@ différents programmes de reconnaissance faciale en fonction des différences de
 sexe et d’ethnicité des individus sur les photos analysées. L’étude
 présente des taux d’erreur
 jusqu’à cent fois plus élevés pour des personnes d’origine asiatique ou
-africaine lorsque comparé à des personnes d’origine européenne \DUrole{bibtex}{{[}nistbias{]}}.
+africaine lorsque comparé à des personnes d’origine européenne \sphinxcite{biblio_commented:nistbias}.
 Le taux d’erreur est aussi plus élevé chez les femmes que chez les hommes, et
 ce, peut importe l’origine.
 
@@ -197,20 +183,87 @@ grands problèmes liés à l’intelligence artificielle: le biais.
 Contrairement à une fonction mathématique qui transforme un chiffre de manière
 définie, les procédés menant à la reconnaissance faciale sont beaucoup plus
 flous et souvent très mal compris. Plusieurs considèrent les programmes
-entraînés comme des «boites noires». Il est difficile de prédire ce qui sortira
+entraînés comme des « boîtes noires ». Il est difficile de prédire ce qui sortira
 de la boîte lorsque l’on y insère quelque chose, et il est encore plus difficile
 de comprendre pourquoi le programme prend certaines décisions plus que d’autres.
 
-\sphinxincludegraphics{{black_box}.png}
+Cette imprévisibilité inquiète plusieurs. Elle rend la tâche de corriger le
+biais assez ardue. Elle fait aussi en sorte qu’il est difficile de prédire le
+comportement du programme dans des cas extrêmes sans avoir à lui faire passer
+des tests dans ces conditions. Le biais est donc un phénomène difficile à
+corriger, ce qui entraîne des questionnements en rapport aux bienfaits de
+l’utilisation de l’intelligence artificielle.
+
+Certaines régions du monde
+commencent à banir l’utilisation de la reconnaissance faciale par les forces
+de l’ordre. C’est le cas de la ville de Portland, en Oregon \sphinxcite{biblio_commented:cnnportland}.
+La ville a décidé de bannir l’utilisation de la technologie suite à des craintes
+en liées à son manque de précision, surtout lorsqu’utilisée sur des individus
+appartenant à une minorité visible.
+
+\begin{figure}[htbp]
+\centering
+\capstart
+
+\noindent\sphinxincludegraphics{{black_box}.png}
+\caption{L’analogie de la boîte noire.}\label{\detokenize{enonce_sujet:boite-noire}}\end{figure}
+
+
+\subsection{Une deuxième révolution industrielle}
+\label{\detokenize{enonce_sujet:une-deuxieme-revolution-industrielle}}
+Une autre inquiétude liée à l’intelligence artificielle est l’importante
+quantité d’emplois qui risque de disparaître puisqu’ils seront maintenant
+occupés par des ordinateurs. Ces inquiétudes sont justifiées. Plusieurs articles,
+dont
+\sphinxhref{https://www.cnbc.com/2019/01/14/the-oracle-of-ai-these-kinds-of-jobs-will-not-be-replaced-by-robots-.html}{celui\sphinxhyphen{}ci}
+publié par CNN ainsi que
+\sphinxhref{https://medium.com/@ChanPriya/15-jobs-that-will-never-be-replaced-by-ai-512bfbbed0d6}{cette publication}
+sur Medium tentent de rassurer la population en mentionnant des emplois qui ne
+pourraient apparement jamais être remplacés par des ordinateurs. Ils mentionnent
+entre autres les emplois créatifs, accompagnés des emplois nécessitant beaucoup
+d’intéractions humaines.
+
+Pourtant, le domaine de l’IA avance à chaque année, et il existe maintenant une
+panoplie de programmes capable de
+\sphinxhref{https://openai.com/blog/musenet/}{composer de la musique},
+\sphinxhref{https://www.nvidia.com/en-us/research/ai-playground/}{maîtriser les arts visuels}
+ainsi qu”\sphinxhref{https://www.youtube.com/watch?v=D5VN56jQMWM}{entretenir des conversations au téléphone}.
+
+\begin{figure}[htbp]
+\centering
+\capstart
+
+\noindent\sphinxincludegraphics{{duplex}.jpeg}
+\caption{Le PDG de Google présentant une démonstation de Google Duplex.}\label{\detokenize{enonce_sujet:duplex-presentation}}\end{figure}
+
+Il est dangereux d’extrapoler le progrès qui a été fait au courant des dernières
+années sur les décénies à venir. Certaines lois limitant le développement de
+l’IA, ou des limitations physiques au présent rythome d’augmentation de la
+puissance de calcul des ordinateurs pourraient survenir grandement ralentir
+le développement de la technologie. Si nous tentons tout de même de le faire,
+les inquiétudes vécues par plusieurs semblent raisonnables.
+
+
+\subsection{Comprendre la technologie pour démistifier les inquiétudes}
+\label{\detokenize{enonce_sujet:comprendre-la-technologie-pour-demistifier-les-inquietudes}}
+Bien que les précédentes inquiétudes façe à l’intelligence artificielle soient
+totalement justifiées, elles ne sont pas sans solution. Si son développement
+est fait de manière éthique et s’il est bien encâdré, nous pourrions en retirer
+plus d’avantages que d’inconvénient. Pour bien comprendre les inquiétudes, il
+faut d’abord comprendre les enjeux. C’est pourquoi nous tenterons de répondre
+à la question suivante.
+
+\sphinxstyleemphasis{Quel est le fonctionnent de l’intelligence artificielle et comment devrait\sphinxhyphen{}elle
+être utilisée afin de bénéficier l’être humain?}
 
 
 \section{Description de la manière dont on entend traiter le sujet}
 \label{\detokenize{description:description-de-la-maniere-dont-on-entend-traiter-le-sujet}}\label{\detokenize{description::doc}}
 Nous croyons que l’humain gagne à utiliser l’intelligence artificielle, mais que son application a des limites et qu’il est important de l’utiliser avec discernement. Pour ce faire, il faut débuter par bien la comprendre. Nous allons donc expliquer le code et les mathématiques derrière cette technologie. En comprenant le processus de programmation, les concepts mathématiques s’intègrent naturellement à la démarche, permettant une bonne compréhension globale de cette technologie. Par exemple, en apprenant les interactions entre les couches de neurones, l’algèbre linéaire requise pour faire des opérations sur les matrices d’intrants et de sortants des neurones découle logiquement. De plus, nous considérerons les applications concrètes de cette technologie, ainsi que les ramifications potentielles de l’apprentissage machine dans le futur, et comment celles\sphinxhyphen{}ci devraient être utilisées afin d’améliorer la société.
 
-D’abord, afin d’établir une base solide et d’assurer la compréhension du sujet par le lecteur, nous allons commencer par définir les notions de base du réseau neuronal. Pour ce faire, nous allons d’abord expliquer le fonctionnement général d’un programme d’intelligence artificielle qui effectue de la reconnaissance optique de caractères, ou ROC. En bref, ce type de programme transforme une image de texte, soit écrit à la main ou à l’ordinateur, en fichier de texte. Une fois cet exemple établi, nous définirons les différents termes, comme neurone, couche et expliquerons leurs différentes caractéristiques. Nous ferons également un lien entre la structure d’un réseau neuronal et celle du cerveau humain, afin de rapprocher le concept abstrait d’un réseau fait de code à quelque chose de plus tangible et connu. \DUrole{bibtex}{{[}Ubiquity{]}}
+D’abord, afin d’établir une base solide et d’assurer la compréhension du sujet par le lecteur, nous allons commencer par définir les notions de base du réseau neuronal. Pour ce faire, nous allons d’abord expliquer le fonctionnement général d’un programme d’intelligence artificielle qui effectue de la reconnaissance optique de caractères, ou ROC. En bref, ce type de programme transforme une image de texte, soit écrit à la main ou à l’ordinateur, en fichier de texte. Une fois cet exemple établi, nous définirons les différents termes, comme neurone, couche et expliquerons leurs différentes caractéristiques. Nous ferons également un lien entre la structure d’un réseau neuronal et celle du cerveau humain, afin de rapprocher le concept abstrait d’un réseau fait de code à quelque chose de plus tangible et connu. \sphinxcite{biblio_commented:ubiquity}
 
-Nous allons expliquer le déroulement étape par étape d’un apprentissage machine. À l’aide d’un programme préalablement codé ayant pour objectif de reconnaître un chiffre écrit. Nous allons donc utiliser et expliquer les étapes de ce programme afin de mieux comprendre les réseaux neuronaux. Le  traitement des données et comment celles\sphinxhyphen{}ci sont introduites dans le programme sera expliqué. Ensuite, le concept de “backpropagation”, qui correspond au fait d’entraîner un programme en fournissant les entrants et les extrants désirés, sera divisé afin de mieux le comprendre.  Parmi ces divisions se retrouvera le concept de la fonction du coût qui correspond au niveau de réussite du programme non entraîné. Ainsi ce résultat de coût impactera les différents paramètres modifiables mentionnés plus tôt. La modification de ces paramètres sera expliquée et démontrée. Enfin, une démonstration de l’efficacité du programme et les impacts de ces résultats.\DUrole{bibtex}{{[}Michael{]}}
+Nous allons expliquer le déroulement étape par étape d’un apprentissage machine. À l’aide d’un programme préalablement codé ayant pour objectif de reconnaître un chiffre écrit. Nous allons donc utiliser et expliquer les étapes de ce programme afin de mieux comprendre les réseaux neuronaux. Le  traitement des données et comment celles\sphinxhyphen{}ci sont introduites dans le programme sera expliqué. Ensuite, le concept de “backpropagation”, qui correspond au fait d’entraîner un programme en fournissant les entrants et les extrants désirés, sera divisé afin de mieux le comprendre.  Parmi ces divisions se retrouvera le concept de la fonction du coût qui correspond au niveau de réussite du programme non entraîné. Ainsi ce résultat de coût impactera les différents paramètres modifiables mentionnés plus tôt. La modification de ces paramètres sera expliquée et démontrée. Enfin, une démonstration de l’efficacité du programme et les impacts de ces résultats.\sphinxcite{biblio_commented:michael}
 
 Afin de déterminer la manière dont l’intelligence artificielle doit être utilisée pour être bénéfique pour l’être humain, nous allons comparer ses avantages et inconvénients. Pour ce qui est question des bienfaits, nous comptons étudier les diverses tâches pouvant exclusivement être accomplies par l’intelligence artificielle. Par exemple, nous comptons traiter du fait que plusieurs problèmes sont tout simplement impossibles à résoudre à l’aide de raisonnement seul ou d’application de formules mathématiques, tandis que l’IA peut s’entraîner des milliers de fois à résoudre un problème spécifique, dépassant largement les capacités des autres méthodes. Pour les inconvénients, nous pensons parler du biais inhérent à la nature d’une intelligence artificielle. Puisque cette dernière apprend à l’aide d’une base de données, la qualité et la diversité de celle\sphinxhyphen{}ci influencent grandement le degré de précision de résultats pour chaque type de donné. Nous allons explorer les enjeux éthiques des problèmes de discrimination qui peuvent en résulter.
 
@@ -336,6 +389,8 @@ Ouverture
 
 \subsection{Brookings, How artificial intelligence is transforming the world}
 \label{\detokenize{biblio_commented:brookings-how-artificial-intelligence-is-transforming-the-world}}
+\sphinxcite{biblio_commented:brookings}
+
 Cette source est vraiment intéressante à utiliser, car elle englobe une
 grande partie de l’information sur l’intelligence artificielle. Elle est donc très utile pour notre
 travail, car elle parle des qualités de l’Intelligence Artificielle, l’application de
@@ -349,6 +404,8 @@ ainsi que les évenements relié a l’intelligence artificielle.
 
 \subsection{Ministère de l’Économie et de l’Innovation, Les avantages et inconvénients de l’intelligence artificielle}
 \label{\detokenize{biblio_commented:ministere-de-l-economie-et-de-l-innovation-les-avantages-et-inconvenients-de-l-intelligence-artificielle}}
+\sphinxcite{biblio_commented:gouvqc}
+
 Cette source est importante pour notre projet en plus d’être fiable,
 car elle provient de notre gouvernement. Grâce à cette source, nous pourrons développer d’avantage
 sur les conséquences de l’implementation de l’intelligence artificielle dans plusieurs secteurs.
@@ -361,6 +418,8 @@ utiliser l’intelligence artificielle pour bénéficier l’être humain.
 
 \subsection{Ubiquity, HUMAN BRAIN AND NEURAL NETWORK BEHAVIOR, A COMPARISON}
 \label{\detokenize{biblio_commented:ubiquity-human-brain-and-neural-network-behavior-a-comparison}}
+\sphinxcite{biblio_commented:ubiquity}
+
 Cet article provient de la revue scientifique revue par les pairs de l’ACM, soit Association for Computing Machinery.
 Il est donc possible d’affirmer qu’elle est très fiable et pertinente. Dans cette article, l’auteur compare
 les caractéristiques d’un réseau neuronal à celles du cerveau humain. Il aborde par exemple comment les deux apprenent et
@@ -370,6 +429,8 @@ pour cette section, soit de rendre le concept de réseau neuronal plus tangible 
 
 \subsection{Michael A. Nielsen, Neural Network and Deel Learning}
 \label{\detokenize{biblio_commented:michael-a-nielsen-neural-network-and-deel-learning}}
+\sphinxcite{biblio_commented:michael}
+
 Cette source est intéressante puisqu’elle explique en profondeur le fonctionnement
 d’un réseau neuronal en donnant un exemple débutant par la reconnaissance optique
 de caractères qui est un exemple du programme semblable à celui que nous allons
@@ -381,6 +442,45 @@ artificielle. Malgré tout, cette source est en anglais ce qui peut
 légèrement nuire à la compréhension. Nous allons principalement utiliser la
 section concernant un exemple d’utilisation de l’intelligence
 artificielle afin de reconnaître des chiffres écrits à la main.
+
+
+\subsection{Face Recognition Vendor Test (FRVT) Part 3: Demographic Effects}
+\label{\detokenize{biblio_commented:face-recognition-vendor-test-frvt-part-3-demographic-effects}}
+\sphinxcite{biblio_commented:nistbias}
+
+Cette publication gouvernementale semble fiable. Elle a été citée par de
+multiples articles ultérieurement consultés. L’organisme derrière la
+publication, le National Institute of Standards and Technology, est un organisme
+fondé en 1901 afin de facilité la standardisation des procédés entre les
+entreprises et les organisations gouvernementales de développement technologique
+aux États\sphinxhyphen{}Unis.
+
+Cette publication est aussi utile puisqu’elle consiste des résultats d’une
+recherche sur les imprécisions de la reconnaissance faciale à l’aide de
+l’intelligence artificielle. Le sujet sera abordé au courant du rapport et
+les statistiques contenues dans cet article du NIST seront utilisées pour
+supporter plusieurs arguments.
+
+Finalement, il est aussi intéressant d’avoir une publication du NIST pour
+supporter la recherche puisque nous comptons utiliser des données publiées
+par cette même organisation pour l’entraînement de notre programme.
+
+
+
+\begin{sphinxthebibliography}{Innovati}
+\bibitem[InnovationQuebec, 2018]{biblio_commented:gouvqc}
+et Innovation Québec, É. (2018). \sphinxstyleemphasis{Les avantages et inconvénients de l’intelligence artificielle}.
+\bibitem[Grother et al., 2019]{biblio_commented:nistbias}
+Grother, P., Ngan, M., \& Hanaoka, K. (2019). \sphinxstyleemphasis{Face Recognition Vendor Test (FRVT) Part 3: Demographic Effects}. NIST.
+\bibitem[LAURO, n.d.]{biblio_commented:ubiquity}
+LAURO, D. M. (n.d.). \sphinxstyleemphasis{HUMAN BRAIN AND NEURAL NETWORK BEHAVIOR A COMPARISON}.
+\bibitem[Metz, 2020]{biblio_commented:cnnportland}
+Metz, R. (2020). \sphinxstyleemphasis{Portland passes broadest facial recognition ban in the US}.
+\bibitem[Nielsen, 2019]{biblio_commented:michael}
+Nielsen, M. A. (2019). \sphinxstyleemphasis{Neural Networl and Deep Learning}.
+\bibitem[West \& Allen, 2018]{biblio_commented:brookings}
+West, D. M., \& Allen, J. R. (2018). \sphinxstyleemphasis{How artificial intelligence is transforming the world}.
+\end{sphinxthebibliography}
 
 
 

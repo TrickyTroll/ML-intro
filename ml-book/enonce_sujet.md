@@ -118,7 +118,7 @@ panoplie de programmes capable de
 [maîtriser les arts visuels](https://www.nvidia.com/en-us/research/ai-playground/)
 ainsi qu'[entretenir des conversations au téléphone](https://www.youtube.com/watch?v=D5VN56jQMWM).
 
-```{figure} ./img/duplex.jpg
+```{figure} ./img/duplex.jpeg
 ---
 name: duplex-presentation
 ---
@@ -132,13 +132,15 @@ puissance de calcul des ordinateurs pourraient survenir grandement ralentir
 le développement de la technologie. Si nous tentons tout de même de le faire,
 les inquiétudes vécues par plusieurs semblent raisonnables.
 
-## La dominance des machines sur l'homme
-
-Terminator
-
 ## Comprendre la technologie pour démistifier les inquiétudes
 
-``` {bibliography} ./references.bib
-:style: apa
-```
+Bien que les précédentes inquiétudes façe à l'intelligence artificielle soient
+totalement justifiées, elles ne sont pas sans solution. Si son développement
+est fait de manière éthique et s'il est bien encâdré, nous pourrions en retirer
+plus d'avantages que d'inconvénient. Pour bien comprendre les inquiétudes, il
+faut d'abord comprendre les enjeux. C'est pourquoi nous tenterons de répondre
+à la question suivante.
+
+*Quel est le fonctionnent de l'intelligence artificielle et comment devrait-elle
+être utilisée afin de bénéficier l’être humain?*
 

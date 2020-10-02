@@ -3,6 +3,8 @@ Bibliographie Commentée
 
 ## Brookings, [How artificial intelligence is transforming the world](https://www.brookings.edu/research/how-artificial-intelligence-is-transforming-the-world/#_edn4)
 
+{cite}`brookings`
+
 Cette source est vraiment intéressante à utiliser, car elle englobe une 
 grande partie de l'information sur l'intelligence artificielle. Elle est donc très utile pour notre 
 travail, car elle parle des qualités de l'Intelligence Artificielle, l'application de
@@ -15,6 +17,8 @@ ainsi que les évenements relié a l'intelligence artificielle.
 
 ## Ministère de l'Économie et de l'Innovation, [Les avantages et inconvénients de l'intelligence artificielle](https://www.economie.gouv.qc.ca/objectifs/informer/vecteurs/vecteurs-actualites/vecteurs-actualites-details/?no_cache=1&tx_ttnews%5Btt_news%5D=23153&tx_ttnews%5Bcat%5D=&cHash=2f4aa33c55d12596ff0c2d6f468960bc)
 
+{cite}`gouvqc`
+
 Cette source est importante pour notre projet en plus d'être fiable, 
 car elle provient de notre gouvernement. Grâce à cette source, nous pourrons développer d'avantage
 sur les conséquences de l'implementation de l'intelligence artificielle dans plusieurs secteurs.
@@ -26,6 +30,8 @@ utiliser l'intelligence artificielle pour bénéficier l'être humain.
 
 ## Ubiquity, [HUMAN BRAIN AND NEURAL NETWORK BEHAVIOR, A COMPARISON](https://ubiquity.acm.org/article.cfm?id=958078)
 
+{cite}`Ubiquity`
+
 Cet article provient de la revue scientifique revue par les pairs de l'ACM, soit Association for Computing Machinery.
 Il est donc possible d'affirmer qu'elle est très fiable et pertinente. Dans cette article, l'auteur compare
 les caractéristiques d'un réseau neuronal à celles du cerveau humain. Il aborde par exemple comment les deux apprenent et 
@@ -33,6 +39,8 @@ se développent avec le temps, en commençant de zéro, comme un bébé. Ce genr
 pour cette section, soit de rendre le concept de réseau neuronal plus tangible et facile à assimiler.
 
 ## Michael A. Nielsen, [Neural Network and Deel Learning](http://neuralnetworksanddeeplearning.com/chap1.html)
+
+{cite}`Michael`
 
 Cette source est intéressante puisqu’elle explique en profondeur le fonctionnement 
 d’un réseau neuronal en donnant un exemple débutant par la reconnaissance optique 
@@ -45,6 +53,27 @@ artificielle. Malgré tout, cette source est en anglais ce qui peut
 légèrement nuire à la compréhension. Nous allons principalement utiliser la 
 section concernant un exemple d’utilisation de l’intelligence 
 artificielle afin de reconnaître des chiffres écrits à la main.
+
+## Face Recognition Vendor Test (FRVT) Part 3: Demographic Effects
+
+{cite}`nistbias`
+
+Cette publication gouvernementale semble fiable. Elle a été citée par de 
+multiples articles ultérieurement consultés. L'organisme derrière la
+publication, le National Institute of Standards and Technology, est un organisme
+fondé en 1901 afin de facilité la standardisation des procédés entre les 
+entreprises et les organisations gouvernementales de développement technologique
+aux États-Unis.
+
+Cette publication est aussi utile puisqu'elle consiste des résultats d'une
+recherche sur les imprécisions de la reconnaissance faciale à l'aide de
+l'intelligence artificielle. Le sujet sera abordé au courant du rapport et
+les statistiques contenues dans cet article du NIST seront utilisées pour
+supporter plusieurs arguments.
+
+Finalement, il est aussi intéressant d'avoir une publication du NIST pour
+supporter la recherche puisque nous comptons utiliser des données publiées
+par cette même organisation pour l'entraînement de notre programme.
 
 ``` {bibliography} ./references.bib
 :style: apa
