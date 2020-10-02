@@ -28,7 +28,7 @@ les moyens de transports, la publicité, et plusieurs autres.
 
 Que ça soit des décisions sur l'investissement d'un portefeuille
 d'un individu ou de la détection de fraude en identifiant des anormalités, l'intelligence
-artificielle est de plus en plus présente dans le secteur de la finance. {cite}`nytimes` 
+artificielle est de plus en plus présente dans le secteur de la finance. ({cite}`nytimes`) 
 
 Du côté de la 
 sécurité, un excellent exemple serait [Project Maven](https://en.wikipedia.org/wiki/Project_Maven)
@@ -47,7 +47,7 @@ milliard investi dans des véhicule de conduite autonome entre 2014 et 2017. L'i
 artficielle dans ce domaine aurait pour but de diminuer grandement l'erreur humaine dans les transports
 et réduire à presque zéro les accidents si la majorité des autos était intelligente. De plus, cela réduirait
 aussi grandement le traffic grâce à la communication entre les automobiles intelligents. La compagnie [Tesla](https://www.tesla.com/)
-en est déjà très avancée pour ce qui est de leur auto intelligente.{cite}`gouvqc`
+en est déjà très avancée pour ce qui est de leur auto intelligente.({cite}`gouvqc`)
 
 
 Comme on peut le voir, cette technologie a permis de multiples avancées dans des domaines où 
