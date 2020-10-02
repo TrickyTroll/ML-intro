@@ -118,14 +118,23 @@ panoplie de programmes capable de
 [maîtriser les arts visuels](https://www.nvidia.com/en-us/research/ai-playground/)
 ainsi qu'[entretenir des conversations au téléphone](https://www.youtube.com/watch?v=D5VN56jQMWM).
 
+```{figure} ./img/duplex.jpg
+---
+name: duplex-presentation
+---
+Le PDG de Google présentant une démonstation de Google Duplex.
+```
+
 Il est dangereux d'extrapoler le progrès qui a été fait au courant des dernières 
 années sur les décénies à venir. Certaines lois limitant le développement de 
 l'IA, ou des limitations physiques au présent rythome d'augmentation de la 
 puissance de calcul des ordinateurs pourraient survenir grandement ralentir
 le développement de la technologie. Si nous tentons tout de même de le faire,
-il
+les inquiétudes vécues par plusieurs semblent raisonnables.
 
 ## La dominance des machines sur l'homme
+
+Terminator
 
 ## Comprendre la technologie pour démistifier les inquiétudes
 
