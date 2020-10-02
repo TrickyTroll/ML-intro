@@ -46,3 +46,6 @@ légèrement nuire à la compréhension. Nous allons principalement utiliser la
 section concernant un exemple d’utilisation de l’intelligence 
 artificielle afin de reconnaître des chiffres écrits à la main.
 
+``` {bibliography} ./references.bib
+:style: apa
+```

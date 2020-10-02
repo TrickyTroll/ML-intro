@@ -93,3 +93,7 @@ de comprendre pourquoi le programme prend certaines décisions plus que d'autres
 
 ![Boîte noire](./img/black_box.png)
 
+``` {bibliography} ./references.bib
+:style: apa
+```
+
