@@ -1,24 +1,5 @@
 # Énoncé du sujet
 
-
-## Intro JSanf
-
-L'intelligence artificielle est un sujet d'actualité de haute importance avec les
-nombreuses avancées
-technologiques qui se font depuis les dernières années avec des avancés comme la
-conduite automatique
-par la compagnie Tesla ainsi que le Neuralink. L'intelligence artificielle ou
-l'IA nous entourent
-dans notre vie que se soit sur notre cellulaire, sur notre ordinateur et même nos automobile.
-Quel est le fonctionnent de ce processus et comment peut-il être utilisé afin de
-bénéficier l’être humain?. Pour tenter de répondre à cet question, nous allons
-écrire un programme qui permet de faire de l' Optical Character Recognition ou OCR
-qui consiste à lire un chiffre écrit à la main et retourner une réponse grâce à
-un entraînement sur l'ordinateur nommé Supervised Learning. Pour en découvrir
-plus sur ce processus, nous allons aussi voir l'impact d'un entraînement varié
-sur le modèle en changeant l'écriture de l'humain pour voir si cela constitue un
-biais.
-
 ## Mise en contexte
 
 L'intelligence artificielle est au coeur de l'actualité depuis près d'une
@@ -91,7 +72,12 @@ entraînés comme des «boites noires». Il est difficile de prédire ce qui sor
 de la boîte lorsque l'on y insère quelque chose, et il est encore plus difficile
 de comprendre pourquoi le programme prend certaines décisions plus que d'autres.
 
-![Boîte noire](./img/black_box.png)
+```{figure} ./img/black_box.png
+---
+name: boite-noire
+---
+L'analogie de la boîte noire.
+```
 
 ``` {bibliography} ./references.bib
 :style: apa

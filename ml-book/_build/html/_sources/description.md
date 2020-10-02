@@ -8,3 +8,6 @@ Nous allons expliquer le déroulement étape par étape d’un apprentissage mac
 
 Afin de déterminer la manière dont l’intelligence artificielle doit être utilisée pour être bénéfique pour l’être humain, nous allons comparer ses avantages et inconvénients. Pour ce qui est question des bienfaits, nous comptons étudier les diverses tâches pouvant exclusivement être accomplies par l’intelligence artificielle. Par exemple, nous comptons traiter du fait que plusieurs problèmes sont tout simplement impossibles à résoudre à l’aide de raisonnement seul ou d’application de formules mathématiques, tandis que l’IA peut s’entraîner des milliers de fois à résoudre un problème spécifique, dépassant largement les capacités des autres méthodes. Pour les inconvénients, nous pensons parler du biais inhérent à la nature d’une intelligence artificielle. Puisque cette dernière apprend à l’aide d’une base de données, la qualité et la diversité de celle-ci influencent grandement le degré de précision de résultats pour chaque type de donné. Nous allons explorer les enjeux éthiques des problèmes de discrimination qui peuvent en résulter.
 
+``` {bibliography} ./references.bib
+:style: apa
+```
