@@ -1,24 +1,5 @@
 # Énoncé du sujet
 
-
-## Intro JSanf
-
-L'intelligence artificielle est un sujet d'actualité de haute importance avec les
-nombreuses avancées
-technologiques qui se font depuis les dernières années avec des avancés comme la
-conduite automatique
-par la compagnie Tesla ainsi que le Neuralink. L'intelligence artificielle ou
-l'IA nous entourent
-dans notre vie que se soit sur notre cellulaire, sur notre ordinateur et même nos automobile.
-Quel est le fonctionnent de ce processus et comment peut-il être utilisé afin de
-bénéficier l’être humain?. Pour tenter de répondre à cet question, nous allons
-écrire un programme qui permet de faire de l' Optical Character Recognition ou OCR
-qui consiste à lire un chiffre écrit à la main et retourner une réponse grâce à
-un entraînement sur l'ordinateur nommé Supervised Learning. Pour en découvrir
-plus sur ce processus, nous allons aussi voir l'impact d'un entraînement varié
-sur le modèle en changeant l'écriture de l'humain pour voir si cela constitue un
-biais.
-
 ## Mise en contexte
 
 L'intelligence artificielle est au coeur de l'actualité depuis près d'une
@@ -66,8 +47,13 @@ un nouveau modèle d'intelligence artificielle produit par
 lui même capable de programmer à partir de demandes spécifiques faites par un
 utilisateur.
 
+## Le début de la découverte des inconvénients
+
 Malgré les avancées incroyables que l'intelligence artificielle a déjà permis et
-continuera de permettre dans le futur, elle n'est pas sans ses inconvénients. Au
+continuera de permettre dans le futur, elle n'est pas sans ses inconvénients. 
+
+## Le biais
+Au
 courant des dernières années, les systèmes intelligents sont de plus en plus
 reconnus coupables de discrimination envers certains groupes d'individus. Une
 étude réalisée par le [NIST](https://www.nist.gov/) à étudié le taux d'erreur de
@@ -87,11 +73,70 @@ grands problèmes liés à l'intelligence artificielle: le biais.
 Contrairement à une fonction mathématique qui transforme un chiffre de manière
 définie, les procédés menant à la reconnaissance faciale sont beaucoup plus
 flous et souvent très mal compris. Plusieurs considèrent les programmes
-entraînés comme des «boites noires». Il est difficile de prédire ce qui sortira
+entraînés comme des « boîtes noires ». Il est difficile de prédire ce qui sortira
 de la boîte lorsque l'on y insère quelque chose, et il est encore plus difficile
 de comprendre pourquoi le programme prend certaines décisions plus que d'autres.
 
-![Boîte noire](./img/black_box.png)
+Cette imprévisibilité inquiète plusieurs. Elle rend la tâche de corriger le
+biais assez ardue. Elle fait aussi en sorte qu'il est difficile de prédire le
+comportement du programme dans des cas extrêmes sans avoir à lui faire passer
+des tests dans ces conditions. Le biais est donc un phénomène difficile à
+corriger, ce qui entraîne des questionnements en rapport aux bienfaits de
+l'utilisation de l'intelligence artificielle. 
+
+Certaines régions du monde
+commencent à banir l'utilisation de la reconnaissance faciale par les forces
+de l'ordre. C'est le cas de la ville de Portland, en Oregon {cite}`cnnportland`.
+La ville a décidé de bannir l'utilisation de la technologie suite à des craintes
+en liées à son manque de précision, surtout lorsqu'utilisée sur des individus
+appartenant à une minorité visible.
+
+```{figure} ./img/black_box.png
+---
+name: boite-noire
+---
+L'analogie de la boîte noire.
+```
+
+## Une deuxième révolution industrielle
+
+Une autre inquiétude liée à l'intelligence artificielle est l'importante 
+quantité d'emplois qui risque de disparaître puisqu'ils seront maintenant
+occupés par des ordinateurs. Ces inquiétudes sont justifiées. Plusieurs articles,
+dont 
+[celui-ci](https://www.cnbc.com/2019/01/14/the-oracle-of-ai-these-kinds-of-jobs-will-not-be-replaced-by-robots-.html)
+publié par CNN ainsi que 
+[cette publication](https://medium.com/@ChanPriya/15-jobs-that-will-never-be-replaced-by-ai-512bfbbed0d6)
+sur Medium tentent de rassurer la population en mentionnant des emplois qui ne
+pourraient apparement jamais être remplacés par des ordinateurs. Ils mentionnent
+entre autres les emplois créatifs, accompagnés des emplois nécessitant beaucoup
+d'intéractions humaines.
+
+Pourtant, le domaine de l'IA avance à chaque année, et il existe maintenant une
+panoplie de programmes capable de
+[composer de la musique](https://openai.com/blog/musenet/),
+[maîtriser les arts visuels](https://www.nvidia.com/en-us/research/ai-playground/)
+ainsi qu'[entretenir des conversations au téléphone](https://www.youtube.com/watch?v=D5VN56jQMWM).
+
+```{figure} ./img/duplex.jpeg
+---
+name: duplex-presentation
+---
+Le PDG de Google présentant une démonstation de Google Duplex.
+```
+
+Il est dangereux d'extrapoler le progrès qui a été fait au courant des dernières 
+années sur les décénies à venir. Certaines lois limitant le développement de 
+l'IA, ou des limitations physiques au présent rythome d'augmentation de la 
+puissance de calcul des ordinateurs pourraient survenir grandement ralentir
+le développement de la technologie. Si nous tentons tout de même de le faire,
+les inquiétudes vécues par plusieurs semblent raisonnables.
+
+## La dominance des machines sur l'homme
+
+Terminator
+
+## Comprendre la technologie pour démistifier les inquiétudes
 
 ``` {bibliography} ./references.bib
 :style: apa
