@@ -2,6 +2,69 @@
 
 Introduction aux concepts de base de l'apprentissage machine à l'aide de Python.
 
+## Utilisation de Jupyter Book
+
+Pour la réalisation de notre projet, nous avons décidé d'utiliser 
+[Jupyter Book](https://jupyterbook.org/intro.html). Cet outil nous permettra
+de n'avoir qu'une seule source de fichiers afin de réaliser un site internet
+sur notre projet ainsi qu'un fichier PDF pour les remises. Jupyter Book permet
+aussi l'utilisation du langage de markup 
+[MyST](https://myst-parser.readthedocs.io/en/latest/), ce qui laisse beaucoup
+de flexibilité lors de la stylisation de notre texte. L'intégration entre les
+fichiers Markdown et les notebooks Jupyter se fait aussi sans friction, ce qui
+nous permet de présenter des exemples concrets en Python pour supporter nos
+propos.
+
+### Respect des normes de présentation du cégep
+
+Par défaut, Jupyter Book est configuré en anglais et le style de citation ne
+convient pas aux normes du Cégep de Sainte-Foy. Afin de respecter ces normes,
+certaines modifications ont dû être faites à la configuration.
+
+#### Jupyter Book en français
+
+Jupyter Book utilise [Sphinx](https://www.sphinx-doc.org/en/master/) pour
+générer le layout du site. Il n'est donc pas particulièrement compliqué de
+changer le langage. Dans le fichier `_config.yml`, il faut ajouter `langage: fr`
+sous les paramètres de configuration de Sphinx comme suit.
+
+```yaml
+sphinx:
+  config:
+    language: fr
+```
+
+#### Citations style APA
+
+Pour l'instant, 
+[très peu](https://jupyterbook.org/content/citations.html#selecting-your-reference-style)
+de styles de référence et citation sont disponibles dans Jupyter Book. 
+Heureusement, l'outil se sert de 
+[sphinxcontrib-bibtex](https://jupyterbook.org/content/citations.html#selecting-your-reference-style)
+pour générer les références. Les extensions faites pour ce programme sont donc 
+compatibles avec Jupyter Book.
+
+Pour utiliser le style de citations APA, nous avons décidé d'utiliser
+[pybtex-apa-style](https://github.com/Naeka/pybtex-apa-style). L'extension est
+disponible comme un package sur [Pip](https://pypi.org/project/pybtex-apa-style/).
+
+Afin d'utiliser cette extension, il vous faut:
+
+1. L'installer avec `pip` dans le même environnement que Jupyter Book.
+2. Ajouter la mention `:style: apa` sous l'appel à votre bibliographie.
+
+#### Conclusion
+
+En seulement quelques minutes, il est possible d'avoir un nnement permettant
+de générer des rapports scientifiques reproductibles, de qualité et suivant les
+normes du Cégep de Sainte-Foy.
+
+Pour l'instant, la page de présentation générée automatiquement par Jupyter Book
+ne suit pas les conventions du Cégep. Pour l'instant, nous générons la page
+de présentation à part et joignons les deux fichiers PDF à l'aide du programme
+[pdfjam](https://github.com/DavidFirth/pdfjam), mais il serait beaucoup plus
+efficace d'ajuster le générateur de page de présentation.
+
 ## Comment travailler avec LaTeX
 
 Cette section vise à accélérer la transition de Word vers LaTeX.

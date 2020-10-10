@@ -52,7 +52,7 @@ utilisateur.
 Malgré les avancées incroyables que l'intelligence artificielle a déjà permis et
 continuera de permettre dans le futur, elle n'est pas sans ses inconvénients. 
 
-## Le biais
+### Le biais
 Au
 courant des dernières années, les systèmes intelligents sont de plus en plus
 reconnus coupables de discrimination envers certains groupes d'individus. Une
@@ -98,7 +98,7 @@ name: boite-noire
 L'analogie de la boîte noire.
 ```
 
-## Une deuxième révolution industrielle
+### Une deuxième révolution industrielle
 
 Une autre inquiétude liée à l'intelligence artificielle est l'importante 
 quantité d'emplois qui risque de disparaître puisqu'ils seront maintenant
