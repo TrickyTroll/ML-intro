@@ -28,12 +28,41 @@ articles par année.
 
 Les tendances de recherche à l'aide du moteur [Google](https://www.google.com/) 
 pointent aussi dans la même direction. L'intérêt dans le temps pour les termes
-«Deep learning» et «Machine learning» a beaucoup augmenté récemment. L
+«Deep learning» et «Machine learning» a beaucoup augmenté récemment 
+{cite}`trendsml`. Par contre, la popularité du terme «Artificial Intelligence» 
+ne semble pas varier dans la même direction {cite}`trendsai`. Il faut alors prendre en 
+considération que l'intelligence artificielle est un domaine qui date, et que
+le moteur de recherche n'existe que depuis le début des années 2000.
+
+En se basant sur les statistiques mentionnées plus haut, il est possible
+d'affirmer que l'IA est un domaine d'actualité avec lequel la population se
+fait de plus en plus familière. De multiples articles traitent déjà du sujet, 
+une grande partie d'entre eux mentionnant comment son utilisation pourrait
+bénéficier l'être humain.
+
+Le principal problème avec ces articles est qu'ils ne permettent pas au lecteur
+de réellement saisir comment un programme peut être entraîné à réaliser des 
+tâches qui témoignent d'une intelligence humaine. Une conaissance de ces
+concepts est nécessaire au développement d'un bon jugement critique face
+aux bonnes et mauvaises utilisations de la technologie.
+
+C'est pourquoi notre thèse inclus non seulement la manière dont l'IA pourrait
+être utilisée pour bénéficier l'être humain, mais aussi quel est le 
+fonctionnement de la technologie.
+
+Nous allons d'abord introduire le sujet en mentionnant comment l'intelligence
+artificielle a évolée depuis sa création. Nous allons ensuite décrire en détails
+les composantes d'un _machine learing pipeline_ ainsi que les mathématiques qui
+y sont associées. À l'aide des ces composantes, nous alons créer un modèle
+permettant la reconnaissance optique de charactères. Par la suite, nous 
+analyserons les capacités de notre modèle, mettant beaucoup d'emphase sur les
+limites de celui-ci. Pour conclure, nous utiliserons les connaissances
+nouvellements acquises afin de porter un regard critique sur les utilisations
+potentielles de l'IA.
 
 
-Nous allons répondre à notre question sous plusieurs aspects;
 
-## Introduction
+## Un bref historique
 
 * Recherche et documentation sur l'histoire de l'intelligence ainsi que ses
 utilités dans le passé.
@@ -42,7 +71,7 @@ utilités dans le passé.
 
 * Formulation de l'hypothèse
 
-## Notion de base d'un réseau neuronal
+## Notion de base des procédés
 * Définition du mot OCR
 
 * Explications des neurones
