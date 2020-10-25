@@ -25,7 +25,7 @@ utilités dans le passé.
     
 ## Apprentissage machine (explication à l'aide d'un programme)  
 Maintenant que le langage et certaines notions de base relié aux réseau neural et à la reconnaissance optique expliqué,
-cette section-ci va expliquer en profondeur les différentes étapes à l’intérieur d’un système neuronal. Certaines démonstrations
+cette section-ci va expliquer en profondeur les différentes étapes à l’intérieur d’un système neuronal. Le phénomène de l'apprentissage machine sera expliqué en détail afin de comprendre d'où provient le biais et comment l'intelligence artificielle peut être autant pratique et puissante. Certaines démonstrations
 mathématiques permettront d’expliquer en profondeur le fonctionnement de chaque étape. Enfin, un programme documenté fera un lien
 entre la théorie démontrée et l'application pratique.
 
