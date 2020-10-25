@@ -71,6 +71,15 @@ utilités dans le passé.
 
 * Formulation de l'hypothèse
 
+### Les débuts de l'IA
+
+### Les grandes avancées
+
+* Big data
+* GPUS
+
+
+
 ## Notion de base des procédés
 * Définition du mot OCR
 
