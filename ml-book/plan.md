@@ -24,7 +24,12 @@ aout 1984 et 12 novembre 2006, soit un peu plus de 5 par année. En comparaison,
 entre novembre 2006 et le 8 octobre 2020, une augmentation d'environ 1400%
 articles par année.
 
-Aussi, en 
+<script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/2213_RC01/embed_loader.js"></script> <script type="text/javascript"> trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"/m/0h1fn8h","geo":"","time":"all"},{"keyword":"machine learning","geo":"","time":"all"}],"category":0,"property":""}, {"exploreQuery":"date=all&q=%2Fm%2F0h1fn8h,machine%20learning","guestPath":"https://trends.google.com:443/trends/embed/"}); </script> 
+
+Les tendances de recherche à l'aide du moteur [Google](https://www.google.com/) 
+pointent aussi dans la même direction. L'intérêt dans le temps pour les termes
+«Deep learning» et «Machine learning» a beaucoup augmenté récemment. L
+
 
 Nous allons répondre à notre question sous plusieurs aspects;
 
