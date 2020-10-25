@@ -36,8 +36,20 @@ utilités dans le passé.
 * Démonstration du programme
 
 ## Impact de l'intelligence artificielle
+   Il est important de parler de l'**Impact de l'intelligence artificielle** 
+   dans le but de répondre à la thèse, c'est pour cela que dans cette section,
+   on y retrouve les bienfaits et les incovénients de l'intelligence artificielle.
+   Ceux-ci permettront d'identifier si l'impacte des bienfaits est plus important
+   que celui des incovénients , et donc prouver que l'intelligence artificielle et
+   un bénéfice pour l'être humain.
+
+
 * Bienfaits
+   La sous-section **Bienfaits** permettera de montrer et expliquer les bienfaits de
+   l'intelligence artificielle pour l'être  humain.
 * Inconvénients
+   La sous-section **Inconvénients** permettera de montrer et expliquer les incovénients de
+   l'intelligence artificielle pour l'être  humain.
 
 ## Conclusion
 * Retour sur notre hypothèse 
