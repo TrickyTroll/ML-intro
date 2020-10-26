@@ -24,13 +24,13 @@ aout 1984 et 12 novembre 2006, soit un peu plus de 5 par année. En comparaison,
 entre novembre 2006 et le 8 octobre 2020, une augmentation d'environ 1400%
 articles par année.
 
-<script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/2213_RC01/embed_loader.js"></script> <script type="text/javascript"> trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"/m/0h1fn8h","geo":"","time":"all"},{"keyword":"machine learning","geo":"","time":"all"}],"category":0,"property":""}, {"exploreQuery":"date=all&q=%2Fm%2F0h1fn8h,machine%20learning","guestPath":"https://trends.google.com:443/trends/embed/"}); </script> 
+<script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/2213_RC01/embed_loader.js"></script> <script type="text/javascript"> trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"machine learning","geo":"US","time":"2004-01-01 2020-10-26"},{"keyword":"artificial intelligence","geo":"US","time":"2004-01-01 2020-10-26"}],"category":0,"property":""}, {"exploreQuery":"date=all&geo=US&q=machine%20learning,artificial%20intelligence","guestPath":"https://trends.google.com:443/trends/embed/"}); </script>
 
 Les tendances de recherche à l'aide du moteur [Google](https://www.google.com/) 
 pointent aussi dans la même direction. L'intérêt dans le temps pour les termes
 «Deep learning» et «Machine learning» a beaucoup augmenté récemment 
-{cite}`trendsml`. Par contre, la popularité du terme «Artificial Intelligence» 
-ne semble pas varier dans la même direction {cite}`trendsai`. Il faut alors prendre en 
+{cite}`trendsai` . Par contre, la popularité du terme «Artificial Intelligence» 
+ne semble pas varier dans la même direction {cite}`trendsai` . Il faut alors prendre en 
 considération que l'intelligence artificielle est un domaine qui date, et que
 le moteur de recherche n'existe que depuis le début des années 2000.
 
@@ -64,21 +64,76 @@ potentielles de l'IA.
 
 ## Un bref historique
 
-* Recherche et documentation sur l'histoire de l'intelligence ainsi que ses
-utilités dans le passé.
-
-* L'intelligence artificielle présentement
-
-* Formulation de l'hypothèse
+Afin de bien introduire la technologie, nous comptons tenir une ligne du temps
+commentée des évènements marquants dans le développement de l'intelligence
+artificielle. Voici les élèments que cette ligne du temps devrait pour l'instant
+contenir.
 
 ### Les débuts de l'IA
 
+#### Alan Turing
+
+Au courant de la deuxième guerre mondiale, les forces de l'Axe encryptent leurs
+communications à l'aide de machines 
+[Enigma](https://en.wikipedia.org/wiki/Enigma_machine). Ces machines rendent la
+décription par force brute pratiquement impossible à réaliser par des humains.
+Les forces alliées ne peuvent alors décrypter les messages que lorsqu'ils
+trouvent des indices quant à de l'information contenue dans les messages.
+
+Afin de déchiffrer plus efficacement les communications encryptées, Alan Turing
+améliore une machine polonaise et crée une version britannique de la
+[Bombe](https://en.wikipedia.org/wiki/Bombe). Cette version rudimentaire de
+l'ordinateur sera discutée plus en détail.
+
+Alan Turing publie aussi
+[Computing Machinery and Intelligence](https://en.wikipedia.org/wiki/Computing_Machinery_and_Intelligence)
+quelques années après la guerre {cite}`ibmai`. C'est à ce papier que l'on doit
+le [Turing Test](https://en.wikipedia.org/wiki/Turing_test), une procédure
+dont nous comptons aussi discuter.
+
+#### Eliza
+
+Eliza est le tout premier _chatbot_ à être créé. Développée à MIT au courant des
+années 60, Eliza permet à un utilisateur d'avoir une conversation similaire à
+celles que l'on pourrait entretenir avec un humain {cite}`harvardeliza`.
+
+#### Défaite de Garry Kasparov
+
+En 1987, l'ordinateur Deep Blue de la compagnie IBM défait le champion mondial
+aux échecs {cite}`wiredai`.
+
+```{figure} ./img/garry.jpg
+---
+name: garry-deepblue
+---
+Garry Kasparov jouant une partie d'échecs contre Deep Blue.
+
+*source: https://www.forbes.com/sites/davidewalt/2011/05/03/kasparov-vs-deep-blue/#1134dd3b30f8*
+```
+
 ### Les grandes avancées
 
-* Big data
-* GPUS
+Ensuite, nous comptons discuter des principales avancées qui ont permis les
+avancées fulgurantes des deux dernières décénies.
 
+#### Les quantités massives de données
 
+Nous comptons discuter de l'impact qu'ont eu Google et Facebook dans la collecte
+et l'utilisation de l'information de leurs utilisateurs pour le développement de
+l'intelligence artificielle.
+
+#### GPUS
+
+Les cartes graphiques ont aussi eu un rôle très important à jouer dans les récentes
+avancées du domaine. Nous verrons plus en détail pourquoi les cartes graphiques
+sont aussi performantes pour faire de l'intelligence artificielle.
+
+### Les prédictions pour le futur
+
+Nous comptons aussi conclure l'introduction avec une hypothèse quant aux bonnes
+et mauvaises utilisations de l'intelligence artificielle. Nous discuterons de
+comment cette technologie pourra révolutionner le monde sous la majorité de ses
+aspects.
 
 ## Notion de base des procédés
 * Définition du mot OCR
@@ -92,25 +147,29 @@ utilités dans le passé.
     * Fonction d'activation (démonstration mathématique)
     * lien avec les neurones biologiques
     
-<<<<<<< HEAD
 ## Apprentissage machine (explication à l'aide d'un programme)
 * Explication de la collecte et traitement de données
     * Préparation des données
-=======
-## Apprentissage machine (explication à l'aide d'un programme)  
-Maintenant que le langage et certaines notions de base relié aux réseau neural et à la reconnaissance optique expliqué,
-cette section-ci va expliquer en profondeur les différentes étapes à l’intérieur d’un système neuronal. Le phénomène de l'apprentissage machine sera expliqué en détail afin de comprendre d'où provient le biais et comment l'intelligence artificielle peut être autant pratique et puissante. Certaines démonstrations
-mathématiques permettront d’expliquer en profondeur le fonctionnement de chaque étape. Enfin, un programme documenté fera un lien
+
+## Apprentissage machine (explication à l'aide d'un programme)
+
+Maintenant que le langage et certaines notions de base relié aux réseau neural 
+et à la reconnaissance optique expliqué,
+cette section-ci va expliquer en profondeur les différentes étapes à l’intérieur
+d’un système neuronal. Le phénomène de l'apprentissage machine sera expliqué en 
+détail afin de comprendre d'où provient le biais et comment l'intelligence 
+artificielle peut être autant pratique et puissante. Certaines démonstrations
+mathématiques permettront d’expliquer en profondeur le fonctionnement de chaque 
+étape. Enfin, un programme documenté fera un lien
 entre la théorie démontrée et l'application pratique.
->>>>>>> 4627b15ce5255acbf1fd7b14feca250761ea69d4
 
 * Explication de la collecte et traitement de données
    * Les différentes étapes nécessaires avant de pouvoir utiliser les données d’une image comme la binarisation. 
    Expliquer ce fonctionnement est utile puisque sans ce processus, les images données ne pourraient pas être fiable
-   en raison des défauts de l’image.{cite}`preprocessing`
+   en raison des défauts de l’image {cite}`preprocessing`.
 * Fonction de coût
    * Le coût est le résultat lors de l'entraînement d’un programme. Cette étape sera expliqué et la fonction sigmoïde sera démontrée. 
-   Cette étape permet de comprendre le fonctionnement de l’apprentissage machine global.{cite}`Michael`
+   Cette étape permet de comprendre le fonctionnement de l’apprentissage machine global {cite}`Michael`.
 * Explication de la modification des paramètres
    * Un paramètre modifié a un grand impact sur le reste du résultat. Comprenant la fonction de coût et en utilisant
    son résulats cette étape permettra de comprendre l’impact des changements à l’intérieur du système neuronal et ainsi
