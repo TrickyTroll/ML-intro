@@ -80,17 +80,25 @@ utilités dans le passé.
 
 
 
-## Notion de base des procédés
-* Définition du mot OCR
+## Notions de base des procédés
+La section **Notions de base des procédés** a comme fonction de définir et expliquer certains termes de base, et d'expliciter la structure d'un réseau neuronal. D'abord, le processus de reconnaissance optique de caractères sera expliqué sommairement, et servira d'exemple auquel pourront être rapportés les concepts qui suiveront. Ensuite, les différentes composantes d'un réseau neuronal seront expliqués en ordre croissant de complexité, en débutant avec la plus simple unité, le neurone.
 
-* Explications des neurones
-    * Structure d'un neurone
-    * poids
-    * biais
-    * entrants et extrants
+* Définition du mot OCR
+   * Définir ce terme, et expliquer le fonctionnement global d'un type de réseau neuronal permettera au lecteur de relier les différents termes qui suivent à cet exemple afin
+   de faciliter leur compréhension.
+
+* Explication des neurones
+   * Une connaissance adéquate de l'unité de base d'un réseau neuronal permettera de comprendre d'où proviennent divers concepts mathématiques qui sont nécessaires à son
+      fonctionnement.
+      * Structure d'un neurone
+      * Poids et biais
+      * Fonction d'activation (démonstration mathématique)
 * Communication entre les couches
-    * Fonction d'activation (démonstration mathématique)
-    * lien avec les neurones biologiques
+   * La manière les valeurs sont entrées dans le réseau, puis sont ensuite modifiées et propagées au travers du réseau est le fondement de comment un réseau neuronal apprend.
+      * entrants et extrants
+* Lien avec les neurones biologiques
+   * L'analogie avec les neurones biologiques permet de visualiser plus facilement le fonctionnement d'un réseau neuronal, et fait un lien avec le terme 
+      "intelligence artificielle".
     
 <<<<<<< HEAD
 ## Apprentissage machine (explication à l'aide d'un programme)
@@ -98,7 +106,7 @@ utilités dans le passé.
     * Préparation des données
 =======
 ## Apprentissage machine (explication à l'aide d'un programme)  
-Maintenant que le langage et certaines notions de base relié aux réseau neural et à la reconnaissance optique expliqué,
+Maintenant que le langage et certaines notions de base relié aux réseau neuronal et à la reconnaissance optique ont été expliqués,
 cette section-ci va expliquer en profondeur les différentes étapes à l’intérieur d’un système neuronal. Le phénomène de l'apprentissage machine sera expliqué en détail afin de comprendre d'où provient le biais et comment l'intelligence artificielle peut être autant pratique et puissante. Certaines démonstrations
 mathématiques permettront d’expliquer en profondeur le fonctionnement de chaque étape. Enfin, un programme documenté fera un lien
 entre la théorie démontrée et l'application pratique.
