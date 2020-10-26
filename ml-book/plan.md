@@ -154,16 +154,7 @@ La section **Notions de base des procédés** a comme fonction de définir et ex
 * Lien avec les neurones biologiques
    * L'analogie avec les neurones biologiques permet de visualiser plus facilement le fonctionnement d'un réseau neuronal, et fait un lien avec le terme 
       "intelligence artificielle".
-    
-## Apprentissage machine (explication à l'aide d'un programme)
-* Explication de la collecte et traitement de données
-    * Préparation des données
-    
-## Apprentissage machine (explication à l'aide d'un programme)  
-Maintenant que le langage et certaines notions de base relié aux réseau neuronal et à la reconnaissance optique ont été expliqués,
-cette section-ci va expliquer en profondeur les différentes étapes à l’intérieur d’un système neuronal. Le phénomène de l'apprentissage machine sera expliqué en détail afin de comprendre d'où provient le biais et comment l'intelligence artificielle peut être autant pratique et puissante. Certaines démonstrations
-mathématiques permettront d’expliquer en profondeur le fonctionnement de chaque étape. Enfin, un programme documenté fera un lien
-
+        
 ## Apprentissage machine (explication à l'aide d'un programme)
 
 Maintenant que le langage et certaines notions de base relié aux réseau neural 
@@ -188,7 +179,8 @@ entre la théorie démontrée et l'application pratique.
    son résulats cette étape permettra de comprendre l’impact des changements à l’intérieur du système neuronal et ainsi
    mieux comprendre le fonctionnement de l'apprentissage machine
 * Programme sur la reconnaissance optique de caractère
-   * Un programme écrit sera documenté afin de comprendre l’aspect pratique des notions théoriques précédemment expliquées. Cela va permettre d’avoir un exemple tangible de l’utilisation et du fonctionnement de l’intelligence artificielle.
+   * Un programme écrit sera documenté afin de comprendre l’aspect pratique des notions théoriques précédemment expliquées.
+   Cela va permettre d’avoir un exemple tangible de l’utilisation et du fonctionnement de l’intelligence artificielle.
 
 ## Impact de l'intelligence artificielle
    Il est important de parler de l'**Impact de l'intelligence artificielle** 
