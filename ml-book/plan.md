@@ -168,7 +168,7 @@ mathématiques permettront d’expliquer en profondeur le fonctionnement de chaq
 étape. Enfin, un programme documenté fera un lien
 entre la théorie démontrée et l'application pratique.
 
-* Explication de la collecte et traitement de données
+### Explication de la collecte et traitement de données
    * Les différentes étapes nécessaires avant de pouvoir utiliser les données d’une image comme la
    conversion en binaire. 
 
@@ -176,24 +176,28 @@ entre la théorie démontrée et l'application pratique.
    données ne pourraient pas être fiables en raison des défauts de l’image 
    {cite}`preprocessing`.
 
-* Fonction de coût
+### Fonction de coût
+
    * Le coût est le résultat lors de l'entraînement d’un programme. Cette étape sera
    expliquée et la fonction sigmoïde sera démontrée. Cette étape permet de 
    comprendre le fonctionnement de l’apprentissage machine global {cite}`Michael`.
    
-* Explication de la modification des paramètres
+### Explication de la modification des paramètres
+
    * Un paramètre modifié a un grand impact sur le reste du résultat. Comprenant
    la fonction de coût et en utilisant son résulat cette étape permettra de 
    comprendre l’impact des changements à l’intérieur du système neuronal et ainsi
    mieux comprendre le fonctionnement de l'apprentissage machine.
 
-* Programme sur la reconnaissance optique de caractère
+### Programme sur la reconnaissance optique de caractère
+
    * Un programme écrit sera documenté afin de comprendre l’aspect pratique des 
    notions théoriques précédemment expliquées. Cela va permettre d’avoir un 
    exemple tangible de l’utilisation et du fonctionnement de l’intelligence 
    artificielle.
 
-## Impact de l'intelligence artificielle
+### Impact de l'intelligence artificielle
+
    Il est important de parler de l'**Impact de l'intelligence artificielle** 
    dans le but de répondre à la thèse, c'est pour cela que dans cette section,
    on y retrouve les bienfaits et les inconvénients de l'intelligence artificielle.
@@ -202,11 +206,12 @@ entre la théorie démontrée et l'application pratique.
    Est-ce que l'intelligence artificielle peut constituer un bénéfice pour l'être humain?
 
 
-* Bienfaits
+### Bienfaits
 
    La sous-section **Bienfaits** permettra de montrer et expliquer les bienfaits de
    l'intelligence artificielle dans plusieurs sphères pour l'être  humain.
-* Inconvénients
+   
+### Inconvénients
 
    La sous-section **Inconvénients** permettra de montrer et expliquer les inconvénients de
    l'intelligence artificielle dans plusieurs sphères pour l'être  humain.
@@ -216,14 +221,16 @@ entre la théorie démontrée et l'application pratique.
    les résultats obtenus lors d'expérimentation et d'expliquer les différences entre ceux-ci.
    Tout cela dans le but d'utiliser cette information pour construire et formuler la réponse 
    finale à la thèse: *Quel est le fonctionnent de l'intelligence artificielle et comment devrait-elle 
-   être utilisée afin de bénéficier l’être humain?*. Cette section se termine par une ouverture globale de 
-   la thèse et du projet pour complémenter celle-ci et laisser place à d'autres questions à répondre.
+   être utilisée afin de bénéficier l’être humain?*. Cette section se termine 
+   par une ouverture globale de la thèse et du projet pour complémenter celle-ci
+   et laisser place à d'autres questions à répondre.
    
 ### Retour sur l'hypothèse 
 
    Le **Retour sur l'hypothèse** permet d'avoir une rétroaction sur l'hypothèse dans le but de comparer 
    celle-ci avec les résultats trouvés après les tests et les recherches et en comparer leurs différences
    et leurs ressemblances et d'assembler la réponse à la thèse.
+
 ### Réponse à la question
 
    La **Réponse à la question** est la réponse finale à la thèse émise au début du projet basé sur les 
@@ -231,6 +238,54 @@ entre la théorie démontrée et l'application pratique.
 
 ### Ouverture
 
-   L'**ouverture** est une question ouverte qui permet, non pas de répondre à une question spécifique, mais d'ouvrir
-   plusieurs champs de réflexions ainsi que des pistes sur  l'intelligence aritifielle dans le monde présent.
+   L'**ouverture** est une question ouverte qui permet, non pas de répondre à une 
+   question spécifique, mais d'ouvrir plusieurs champs de réflexions ainsi que 
+   des pistes sur  l'intelligence aritifielle dans le monde présent.
     
+
+## Méthodologie
+
+Pour plus d'information sur notre méthodologie, voir le
+[README](https://github.com/TrickyTroll/ML-intro/blob/master/README.md)
+de notre projet. Nous y mentionnons comment nous avons modifié la
+configuration de nos outils afin de les rendre compatibles avec les
+normes du cégep.
+
+### Markdown
+
+Pour écrire notre rapport, nous utilisons le langage de *markup*
+[MyST](https://myst-parser.readthedocs.io/en/latest/). Beaucoup plus facile
+d'accès et efficace que LaTeX, il permet tout de même la réalisation de
+rapports scientifiques de qualité possible avec
+[ses multiples fonctionnalités](https://jupyterbook.org/content/myst.html).
+
+### Google Colab
+
+[Google Colab](https://colab.research.google.com/notebooks/intro.ipynb#recent=true)
+nous permet de réaliser nos calculs dans le nuage sur les serveurs Google.
+Il est donc facile de partager notre progrès, et nos calculs peuvent être
+réalisés sur n'importe quel ordinateur possédant un navigateur web. Avec
+Google Colab, le lecteur pourra aussi facilement lancer son propre notebook
+lors de sa lecture afin de tester nos fonctions. La version de base de
+l'application est gratuite.
+
+### Jupyter Book
+
+[Jupyter Book](https://jupyterbook.org/intro.html) est un nouveau projet
+permettant de créer des publications scientifiques à l'aide de notebooks
+[Jupyter](https://jupyter.org/) et du [Markdown](https://commonmark.org/help/).
+Nous avons choisi cet outil puisqu'il nous permet d'intégrer nos calculs
+réalisés dans un environnement de calcul interactif Python ainsi que notre
+texte décrivant les procédés. Il sera donc plus facile pour le lecteur de
+comprendre les concepts de programmation puisque des explications pourront
+accompagner chaque cellule de code.
+
+### Github
+
+Grâce à Github, la séparation des tâches en sous-section est beaucoup plus 
+facile, donc chacun des coéquipiers aura leurs sous-section pour travailler 
+dedans. Ces sous-sections seront les grandes lignes de notre plan: Le projet 
+consiste aussi un produit qui est un programme, celui-ci ce ferra sur le côté, 
+plus comme enrichissement au projet et pourra être travaillé à la guise des 
+membres de l'équipe ainsi qu'à leur habilité en programmation.
+
