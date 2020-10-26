@@ -158,13 +158,11 @@ La section **Notions de base des procédés** a comme fonction de définir et ex
 ## Apprentissage machine (explication à l'aide d'un programme)
 * Explication de la collecte et traitement de données
     * Préparation des données
-<<<<<<< HEAD
-=======
+    
 ## Apprentissage machine (explication à l'aide d'un programme)  
 Maintenant que le langage et certaines notions de base relié aux réseau neuronal et à la reconnaissance optique ont été expliqués,
 cette section-ci va expliquer en profondeur les différentes étapes à l’intérieur d’un système neuronal. Le phénomène de l'apprentissage machine sera expliqué en détail afin de comprendre d'où provient le biais et comment l'intelligence artificielle peut être autant pratique et puissante. Certaines démonstrations
 mathématiques permettront d’expliquer en profondeur le fonctionnement de chaque étape. Enfin, un programme documenté fera un lien
-=======
 
 ## Apprentissage machine (explication à l'aide d'un programme)
 
@@ -176,7 +174,6 @@ détail afin de comprendre d'où provient le biais et comment l'intelligence
 artificielle peut être autant pratique et puissante. Certaines démonstrations
 mathématiques permettront d’expliquer en profondeur le fonctionnement de chaque 
 étape. Enfin, un programme documenté fera un lien
->>>>>>> Tricky
 entre la théorie démontrée et l'application pratique.
 
 * Explication de la collecte et traitement de données

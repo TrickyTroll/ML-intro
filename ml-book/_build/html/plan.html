@@ -105,7 +105,7 @@
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="biblio_commented.html">
+    <a class="reference internal" href="zbiblio_commented.html">
      Bibliographie Commentée
     </a>
    </li>
@@ -238,8 +238,8 @@
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#notion-de-base-des-procedes">
-   Notion de base des procédés
+  <a class="reference internal nav-link" href="#notions-de-base-des-procedes">
+   Notions de base des procédés
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -249,6 +249,11 @@
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id6">
+   Apprentissage machine (explication à l’aide d’un programme)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id7">
    Apprentissage machine (explication à l’aide d’un programme)
   </a>
  </li>
@@ -298,8 +303,8 @@ articles par année.</p>
 <p>Les tendances de recherche à l’aide du moteur <a class="reference external" href="https://www.google.com/">Google</a>
 pointent aussi dans la même direction. L’intérêt dans le temps pour les termes
 «Deep learning» et «Machine learning» a beaucoup augmenté récemment
-<a class="bibtex reference internal" href="biblio_commented.html#trendsai" id="id1">[Google, n.d.]</a> . Par contre, la popularité du terme «Artificial Intelligence»
-ne semble pas varier dans la même direction <a class="bibtex reference internal" href="biblio_commented.html#trendsai" id="id2">[Google, n.d.]</a> . Il faut alors prendre en
+<a class="bibtex reference internal" href="zbiblio_commented.html#trendsai" id="id1">[Google, n.d.]</a> . Par contre, la popularité du terme «Artificial Intelligence»
+ne semble pas varier dans la même direction <a class="bibtex reference internal" href="zbiblio_commented.html#trendsai" id="id2">[Google, n.d.]</a> . Il faut alors prendre en
 considération que l’intelligence artificielle est un domaine qui date, et que
 le moteur de recherche n’existe que depuis le début des années 2000.</p>
 <p>En se basant sur les statistiques mentionnées plus haut, il est possible
@@ -347,7 +352,7 @@ améliore une machine polonaise et crée une version britannique de la
 l’ordinateur sera discutée plus en détail.</p>
 <p>Alan Turing publie aussi
 <a class="reference external" href="https://en.wikipedia.org/wiki/Computing_Machinery_and_Intelligence">Computing Machinery and Intelligence</a>
-quelques années après la guerre <span class="bibtex" id="id3">[ibmai]</span>. C’est à ce papier que l’on doit
+quelques années après la guerre <a class="bibtex reference internal" href="zbiblio_commented.html#ibmai" id="id3">[Education, 2020]</a>. C’est à ce papier que l’on doit
 le <a class="reference external" href="https://en.wikipedia.org/wiki/Turing_test">Turing Test</a>, une procédure
 dont nous comptons aussi discuter.</p>
 </div>
@@ -355,12 +360,12 @@ dont nous comptons aussi discuter.</p>
 <h4>Eliza<a class="headerlink" href="#eliza" title="Lien permanent vers ce titre">¶</a></h4>
 <p>Eliza est le tout premier <em>chatbot</em> à être créé. Développée à MIT au courant des
 années 60, Eliza permet à un utilisateur d’avoir une conversation similaire à
-celles que l’on pourrait entretenir avec un humain <span class="bibtex" id="id4">[harvardeliza]</span>.</p>
+celles que l’on pourrait entretenir avec un humain <a class="bibtex reference internal" href="zbiblio_commented.html#harvardeliza" id="id4">[Ireland, 2012]</a>.</p>
 </div>
 <div class="section" id="defaite-de-garry-kasparov">
 <h4>Défaite de Garry Kasparov<a class="headerlink" href="#defaite-de-garry-kasparov" title="Lien permanent vers ce titre">¶</a></h4>
 <p>En 1987, l’ordinateur Deep Blue de la compagnie IBM défait le champion mondial
-aux échecs <span class="bibtex" id="id5">[wiredai]</span>.</p>
+aux échecs <a class="bibtex reference internal" href="zbiblio_commented.html#wiredai" id="id5">[Simonite, 2018]</a>.</p>
 <div class="figure align-default" id="garry-deepblue">
 <img alt="_images/garry.jpg" src="_images/garry.jpg" />
 <p class="caption"><span class="caption-number">Fig. 3 </span><span class="caption-text">Garry Kasparov jouant une partie d’échecs contre Deep Blue.</span><a class="headerlink" href="#garry-deepblue" title="Lien permanent vers cette image">¶</a></p>
@@ -395,22 +400,41 @@ comment cette technologie pourra révolutionner le monde sous la majorité de se
 aspects.</p>
 </div>
 </div>
-<div class="section" id="notion-de-base-des-procedes">
-<h2>Notion de base des procédés<a class="headerlink" href="#notion-de-base-des-procedes" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="notions-de-base-des-procedes">
+<h2>Notions de base des procédés<a class="headerlink" href="#notions-de-base-des-procedes" title="Lien permanent vers ce titre">¶</a></h2>
+<p>La section <strong>Notions de base des procédés</strong> a comme fonction de définir et expliquer certains termes de base, et d’expliciter la structure d’un réseau neuronal. D’abord, le processus de reconnaissance optique de caractères sera expliqué sommairement, et servira d’exemple auquel pourront être rapportés les concepts qui suiveront. Ensuite, les différentes composantes d’un réseau neuronal seront expliqués en ordre croissant de complexité, en débutant avec la plus simple unité, le neurone.</p>
 <ul class="simple">
-<li><p>Définition du mot OCR</p></li>
-<li><p>Explications des neurones</p>
+<li><p>Définition du mot OCR</p>
+<ul>
+<li><p>Définir ce terme, et expliquer le fonctionnement global d’un type de réseau neuronal permettera au lecteur de relier les différents termes qui suivent à cet exemple afin
+de faciliter leur compréhension.</p></li>
+</ul>
+</li>
+<li><p>Explication des neurones</p>
+<ul>
+<li><p>Une connaissance adéquate de l’unité de base d’un réseau neuronal permettera de comprendre d’où proviennent divers concepts mathématiques qui sont nécessaires à son
+fonctionnement.</p>
 <ul>
 <li><p>Structure d’un neurone</p></li>
-<li><p>poids</p></li>
-<li><p>biais</p></li>
-<li><p>entrants et extrants</p></li>
+<li><p>Poids et biais</p></li>
+<li><p>Fonction d’activation (démonstration mathématique)</p></li>
+</ul>
+</li>
 </ul>
 </li>
 <li><p>Communication entre les couches</p>
 <ul>
-<li><p>Fonction d’activation (démonstration mathématique)</p></li>
-<li><p>lien avec les neurones biologiques</p></li>
+<li><p>La manière les valeurs sont entrées dans le réseau, puis sont ensuite modifiées et propagées au travers du réseau est le fondement de comment un réseau neuronal apprend.</p>
+<ul>
+<li><p>entrants et extrants</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Lien avec les neurones biologiques</p>
+<ul>
+<li><p>L’analogie avec les neurones biologiques permet de visualiser plus facilement le fonctionnement d’un réseau neuronal, et fait un lien avec le terme
+« intelligence artificielle ».</p></li>
 </ul>
 </li>
 </ul>
@@ -427,6 +451,12 @@ aspects.</p>
 </div>
 <div class="section" id="id6">
 <h2>Apprentissage machine (explication à l’aide d’un programme)<a class="headerlink" href="#id6" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Maintenant que le langage et certaines notions de base relié aux réseau neuronal et à la reconnaissance optique ont été expliqués,
+cette section-ci va expliquer en profondeur les différentes étapes à l’intérieur d’un système neuronal. Le phénomène de l’apprentissage machine sera expliqué en détail afin de comprendre d’où provient le biais et comment l’intelligence artificielle peut être autant pratique et puissante. Certaines démonstrations
+mathématiques permettront d’expliquer en profondeur le fonctionnement de chaque étape. Enfin, un programme documenté fera un lien</p>
+</div>
+<div class="section" id="id7">
+<h2>Apprentissage machine (explication à l’aide d’un programme)<a class="headerlink" href="#id7" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Maintenant que le langage et certaines notions de base relié aux réseau neural
 et à la reconnaissance optique expliqué,
 cette section-ci va expliquer en profondeur les différentes étapes à l’intérieur
@@ -441,13 +471,13 @@ entre la théorie démontrée et l’application pratique.</p>
 <ul>
 <li><p>Les différentes étapes nécessaires avant de pouvoir utiliser les données d’une image comme la binarisation.
 Expliquer ce fonctionnement est utile puisque sans ce processus, les images données ne pourraient pas être fiable
-en raison des défauts de l’image <a class="bibtex reference internal" href="biblio_commented.html#preprocessing" id="id7">[Reddy, 2019]</a>.</p></li>
+en raison des défauts de l’image <a class="bibtex reference internal" href="zbiblio_commented.html#preprocessing" id="id8">[Reddy, 2019]</a>.</p></li>
 </ul>
 </li>
 <li><p>Fonction de coût</p>
 <ul>
 <li><p>Le coût est le résultat lors de l’entraînement d’un programme. Cette étape sera expliqué et la fonction sigmoïde sera démontrée.
-Cette étape permet de comprendre le fonctionnement de l’apprentissage machine global <a class="bibtex reference internal" href="biblio_commented.html#michael" id="id8">[Nielsen, 2019]</a>.</p></li>
+Cette étape permet de comprendre le fonctionnement de l’apprentissage machine global <a class="bibtex reference internal" href="zbiblio_commented.html#michael" id="id9">[Nielsen, 2019]</a>.</p></li>
 </ul>
 </li>
 <li><p>Explication de la modification des paramètres</p>
