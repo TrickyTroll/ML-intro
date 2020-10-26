@@ -95,7 +95,6 @@ Bien que CNN ait la réputation d'être biaisé poliquement, favorisant
 souvent le partir démocrate lors que leurs reportages, ce biais ne semble pas
 avoir déteint sur la qualité de l'article sélectionné.
 
-
 ``` {bibliography} ./references.bib
 :style: apa
 ```
