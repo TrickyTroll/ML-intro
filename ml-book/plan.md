@@ -40,19 +40,38 @@ utilités dans le passé.
    dans le but de répondre à la thèse, c'est pour cela que dans cette section,
    on y retrouve les bienfaits et les incovénients de l'intelligence artificielle.
    Ceux-ci permettront d'identifier si l'impacte des bienfaits est plus important
-   que celui des incovénients , et donc prouver que l'intelligence artificielle et
-   un bénéfice pour l'être humain.
+   que celui des incovénients , et donc répondre à la sous-question de notre thèse: 
+   Est-que l'intelligence artificielle peut constituer un bénéfice pour l'être humain?
 
 
 * Bienfaits
+
    La sous-section **Bienfaits** permettera de montrer et expliquer les bienfaits de
-   l'intelligence artificielle pour l'être  humain.
+   l'intelligence artificielle dans plusieurs sphères pour l'être  humain.
 * Inconvénients
+
    La sous-section **Inconvénients** permettera de montrer et expliquer les incovénients de
-   l'intelligence artificielle pour l'être  humain.
+   l'intelligence artificielle dans plusieurs sphères pour l'être  humain.
 
 ## Conclusion
-* Retour sur notre hypothèse 
+   Cette section à pour but de rappeller l'hypothèse de départ et de la comparer avec
+   les résultats obtenues lors d'expérimentation et d'expliquer les différences entre ceux-ci.
+   Tout cela dans le but d'utiliser cette information pour construire et formuler la réponse 
+   finale à la thèse: *Quel est le fonctionnent de l'intelligence artificielle et comment devrait-elle 
+   être utilisée afin de bénéficier l’être humain?*. Cette section fini par une ouverture global de 
+   la thèse et du projet pour complémenter celle-ci et laisser place à d'autres questions à répondre.
+   
+* Retour sur l'hypothèse 
+
+   Le **Retour sur l'hypothèse** permet d'avoir une rétroaction sur l'hypothèse dans le but de comparer 
+   celle-ci avec les résultats trouvés après les tests et les recherches et en comparer leurs différences
+   et leurs ressemblances et d'assembler la réponse à la thèse.
 * Réponse à la question
+
+   La **Réponse à la question** est la réponse finale à la thèse émit au début du projet basé sur les 
+   test et les recherches ainsi que l'hypothèse.
 * Ouverture
+
+   L'**ouverture** est une question ouverte qui permet, non pas de répondre à une question spécifique, mais d'ouvrir
+   plusieurs champs de réflections ainsi que des pistes sur  l'intelligence aritifielle dans le monde présent.
     
