@@ -1,7 +1,8 @@
 - file: intro
-- file: rapport_preliminaire
+- file: rapport_misession
   sections:
     - file: enonce_sujet
     - file: description
     - file: plan
-    - file: biblio_commented
+    - file: notebooks.ipynb
+    - file: zbiblio_commented

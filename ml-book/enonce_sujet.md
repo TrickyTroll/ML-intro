@@ -3,7 +3,7 @@
 ## Mise en contexte
 
 L'intelligence artificielle est au coeur de l'actualité depuis près d'une
-décénnie. Elle est déjà entrain de changer le monde , et ce, dans plusieurs 
+décennie. Elle est déjà entrain de changer le monde , et ce, dans plusieurs 
 secteurs incluant la finance, la sécurité, la santé, la justice criminelle, 
 les moyens de transport, la publicité, et plusieurs autres. 
 
@@ -18,7 +18,7 @@ des États-Unis qui est capable de passer à travers plusieurs informations,
 vidéos et photos pour détecter des dangers potentiels.
 
 L'intelligence artificielle est très importante dans la santé avec des compagnies comme 
-[Merantix](https://www.merantix.com/), une compagnie allemande qui a permis de detecter 
+[Merantix](https://www.merantix.com/), une compagnie allemande qui a permis de détecter 
 des ganglions lymphatiques ainsi que des problèmes liés à ceux-ci tels que des lésions 
 ou des cancers. L'étude de séquence d'ADN par l'intelligence artificielle permet de détecter
 des maladies génétiques et des cancers.
@@ -85,7 +85,7 @@ corriger, ce qui entraîne des questionnements en rapport aux bienfaits de
 l'utilisation de l'intelligence artificielle. 
 
 Certaines régions du monde
-commencent à banir l'utilisation de la reconnaissance faciale par les forces
+commencent à bannir l'utilisation de la reconnaissance faciale par les forces
 de l'ordre. C'est le cas de la ville de Portland, en Oregon {cite}`cnnportland`.
 La ville a décidé de bannir l'utilisation de la technologie suite à des craintes
 en liées à son manque de précision, surtout lorsqu'utilisée sur des individus
@@ -126,7 +126,7 @@ Le PDG de Google présentant une démonstration de Google Duplex.
 ```
 
 Il est dangereux d'extrapoler le progrès qui a été fait au courant des dernières 
-années sur les décénnies à venir. Certaines lois limitant le développement de 
+années sur les décennies à venir. Certaines lois limitant le développement de 
 l'IA, ou des limitations physiques au présent rythme d'augmentation de la 
 puissance de calcul des ordinateurs pourraient survenir grandement ralentir
 le développement de la technologie. Si nous tentons tout de même de le faire,

@@ -28,8 +28,6 @@
     <script src="_static/sphinx-book-theme.js"></script>
     <script src="_static/translations.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -40,7 +38,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Recherche" href="search.html" />
     <link rel="next" title="Description de la manière dont on entend traiter le sujet" href="description.html" />
-    <link rel="prev" title="Rapport préliminaire" href="rapport_preliminaire.html" />
+    <link rel="prev" title="Rapport de mi-session" href="rapport_misession.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
@@ -82,8 +80,8 @@
 </ul>
 <ul class="current nav sidenav_l1">
  <li class="toctree-l1 current active">
-  <a class="reference internal" href="rapport_preliminaire.html">
-   Rapport préliminaire
+  <a class="reference internal" href="rapport_misession.html">
+   Rapport de mi-session
   </a>
   <ul class="current">
    <li class="toctree-l2 current active">
@@ -102,7 +100,12 @@
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="biblio_commented.html">
+    <a class="reference internal" href="notebooks.html">
+     Following a tutorial to learn about classification
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="zbiblio_commented.html">
      Bibliographie Commentée
     </a>
    </li>
@@ -220,19 +223,19 @@
 <div class="section" id="mise-en-contexte">
 <h2>Mise en contexte<a class="headerlink" href="#mise-en-contexte" title="Lien permanent vers ce titre">¶</a></h2>
 <p>L’intelligence artificielle est au coeur de l’actualité depuis près d’une
-décénnie. Elle est déjà entrain de changer le monde , et ce, dans plusieurs
+décennie. Elle est déjà entrain de changer le monde , et ce, dans plusieurs
 secteurs incluant la finance, la sécurité, la santé, la justice criminelle,
 les moyens de transport, la publicité, et plusieurs autres.</p>
 <p>Que ça soit des décisions sur l’investissement d’un portefeuille
 d’un individu ou de la détection de fraude en identifiant des anormalités, l’intelligence
-artificielle est de plus en plus présente dans le secteur de la finance. <a class="bibtex reference internal" href="biblio_commented.html#nytimes" id="id1">[Popper, 2016]</a></p>
+artificielle est de plus en plus présente dans le secteur de la finance. <a class="bibtex reference internal" href="zbiblio_commented.html#nytimes" id="id1">[Popper, 2016]</a></p>
 <p>Du côté de la
 sécurité, un excellent exemple serait <a class="reference external" href="https://en.wikipedia.org/wiki/Project_Maven">Project Maven</a>
 un projet d” intelligence artificielle du <a class="reference external" href="https://en.wikipedia.org/wiki/The_Pentagon">Pentagon</a>
 des États-Unis qui est capable de passer à travers plusieurs informations,
 vidéos et photos pour détecter des dangers potentiels.</p>
 <p>L’intelligence artificielle est très importante dans la santé avec des compagnies comme
-<a class="reference external" href="https://www.merantix.com/">Merantix</a>, une compagnie allemande qui a permis de detecter
+<a class="reference external" href="https://www.merantix.com/">Merantix</a>, une compagnie allemande qui a permis de détecter
 des ganglions lymphatiques ainsi que des problèmes liés à ceux-ci tels que des lésions
 ou des cancers. L’étude de séquence d’ADN par l’intelligence artificielle permet de détecter
 des maladies génétiques et des cancers.</p>
@@ -241,7 +244,7 @@ milliards investis dans des véhicules de conduite autonome entre 2014 et 2017. 
 artificielle dans ce domaine aurait pour but de diminuer grandement l’erreur humaine dans les transports
 et réduire à presque zéro les accidents si la majorité des autos était intelligente. De plus, cela réduirait
 aussi grandement le trafic grâce à la communication entre les automobiles intelligentes. La compagnie <a class="reference external" href="https://www.tesla.com/">Tesla</a>
-en est déjà très avancée pour ce qui est de leur auto intelligente. <a class="bibtex reference internal" href="biblio_commented.html#gouvqc" id="id2">[InnovationQuebec, 2018]</a></p>
+en est déjà très avancée pour ce qui est de leur auto intelligente. <a class="bibtex reference internal" href="zbiblio_commented.html#gouvqc" id="id2">[InnovationQuebec, 2018]</a></p>
 <p>Comme on peut le voir, cette technologie a permis de multiples avancées dans des domaines où
 il se fait extrêmement difficile de modéliser la problématique selon une
 fonction mathématique particulière. L’analyse de langage en est un bon exemple.
@@ -272,7 +275,7 @@ différents programmes de reconnaissance faciale en fonction des différences de
 sexe et d’ethnicité des individus sur les photos analysées. L’étude
 présente des taux d’erreur
 jusqu’à cent fois plus élevés pour des personnes d’origine asiatique ou
-africaine lorsque comparé à des personnes d’origine européenne <a class="bibtex reference internal" href="biblio_commented.html#nistbias" id="id3">[Grother et al., 2019]</a>.
+africaine lorsque comparé à des personnes d’origine européenne <a class="bibtex reference internal" href="zbiblio_commented.html#nistbias" id="id3">[Grother et al., 2019]</a>.
 Le taux d’erreur est aussi plus élevé chez les femmes que chez les hommes, et
 ce, peut importe l’origine.</p>
 <p>Un autre résultat important de cette étude est que le taux d’erreur associé à la
@@ -292,8 +295,8 @@ des tests dans ces conditions. Le biais est donc un phénomène difficile à
 corriger, ce qui entraîne des questionnements en rapport aux bienfaits de
 l’utilisation de l’intelligence artificielle.</p>
 <p>Certaines régions du monde
-commencent à banir l’utilisation de la reconnaissance faciale par les forces
-de l’ordre. C’est le cas de la ville de Portland, en Oregon <a class="bibtex reference internal" href="biblio_commented.html#cnnportland" id="id4">[Metz, 2020]</a>.
+commencent à bannir l’utilisation de la reconnaissance faciale par les forces
+de l’ordre. C’est le cas de la ville de Portland, en Oregon <a class="bibtex reference internal" href="zbiblio_commented.html#cnnportland" id="id4">[Metz, 2020]</a>.
 La ville a décidé de bannir l’utilisation de la technologie suite à des craintes
 en liées à son manque de précision, surtout lorsqu’utilisée sur des individus
 appartenant à une minorité visible.</p>
@@ -325,7 +328,7 @@ ainsi qu”<a class="reference external" href="https://www.youtube.com/watch?v=D
 <p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">Le PDG de Google présentant une démonstration de Google Duplex.</span><a class="headerlink" href="#duplex-presentation" title="Lien permanent vers cette image">¶</a></p>
 </div>
 <p>Il est dangereux d’extrapoler le progrès qui a été fait au courant des dernières
-années sur les décénnies à venir. Certaines lois limitant le développement de
+années sur les décennies à venir. Certaines lois limitant le développement de
 l’IA, ou des limitations physiques au présent rythme d’augmentation de la
 puissance de calcul des ordinateurs pourraient survenir grandement ralentir
 le développement de la technologie. Si nous tentons tout de même de le faire,
@@ -373,7 +376,7 @@ faut d’abord comprendre les enjeux. C’est pourquoi nous tenterons de répond
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="rapport_preliminaire.html" title="previous page">Rapport préliminaire</a>
+    <a class='left-prev' id="prev-link" href="rapport_misession.html" title="previous page">Rapport de mi-session</a>
     <a class='right-next' id="next-link" href="description.html" title="next page">Description de la manière dont on entend traiter le sujet</a>
 
     </div>
