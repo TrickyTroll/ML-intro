@@ -155,7 +155,11 @@ La section **Notions de base des procédés** a comme fonction de définir et ex
 * Lien avec les neurones biologiques
    * L'analogie avec les neurones biologiques permet de visualiser plus facilement le fonctionnement d'un réseau neuronal, et fait un lien avec le terme 
       "intelligence artificielle".
+<<<<<<< HEAD
     
+=======
+        
+>>>>>>> 6d4ec17d2093bedc7ade0bd115bfdd94a5491e64
 ## Apprentissage machine (explication à l'aide d'un programme)
 
 Maintenant que le langage et certaines notions de base reliées aux réseaux neurals 
@@ -168,6 +172,7 @@ mathématiques permettront d’expliquer en profondeur le fonctionnement de chaq
 étape. Enfin, un programme documenté fera un lien
 entre la théorie démontrée et l'application pratique.
 
+<<<<<<< HEAD
 ### Explication de la collecte et traitement de données
    * Les différentes étapes nécessaires avant de pouvoir utiliser les données d’une image comme la
    conversion en binaire. 
@@ -198,6 +203,24 @@ entre la théorie démontrée et l'application pratique.
 
 ### Impact de l'intelligence artificielle
 
+=======
+* Explication de la collecte et traitement de données
+   * Les différentes étapes nécessaires avant de pouvoir utiliser les données d’une image comme la binarisation. 
+   Expliquer ce fonctionnement est utile puisque sans ce processus, les images données ne pourraient pas être fiable
+   en raison des défauts de l’image {cite}`preprocessing`.
+* Fonction de coût
+   * Le coût est le résultat lors de l'entraînement d’un programme. Cette étape sera expliqué et la fonction sigmoïde sera démontrée. 
+   Cette étape permet de comprendre le fonctionnement de l’apprentissage machine global {cite}`Michael`.
+* Explication de la modification des paramètres
+   * Un paramètre modifié a un grand impact sur le reste du résultat. Comprenant la fonction de coût et en utilisant
+   son résulats cette étape permettra de comprendre l’impact des changements à l’intérieur du système neuronal et ainsi
+   mieux comprendre le fonctionnement de l'apprentissage machine
+* Programme sur la reconnaissance optique de caractère
+   * Un programme écrit sera documenté afin de comprendre l’aspect pratique des notions théoriques précédemment expliquées.
+   Cela va permettre d’avoir un exemple tangible de l’utilisation et du fonctionnement de l’intelligence artificielle.
+
+## Impact de l'intelligence artificielle
+>>>>>>> 6d4ec17d2093bedc7ade0bd115bfdd94a5491e64
    Il est important de parler de l'**Impact de l'intelligence artificielle** 
    dans le but de répondre à la thèse, c'est pour cela que dans cette section,
    on y retrouve les bienfaits et les inconvénients de l'intelligence artificielle.
