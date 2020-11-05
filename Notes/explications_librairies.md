@@ -28,7 +28,8 @@ par de multiples entreprises dont Google, Coca-Cola, airbnb, Twitter et Intel
 
 ### Notre utilisation
 
-
+Nous utiliseons TensorFlow afin de faciliter l'accès à nos données et afin
+de créer notre modèle.
 
 
 
