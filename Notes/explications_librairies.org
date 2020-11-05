@@ -1,0 +1,10 @@
+#+TITLE: Explications sur les librairies utilisées
+#+AUTHOR: Etienne Parent
+
+* Les librairies nécessaires
+
+Afin de réaliser ce projet dans des temps raisonnables, nous utilisons des
+outils des des données réalisés par des organisations réputées comme Google,
+[[https://numpy.org/][Numpy]] et la [[https://matplotlib.org/][Matplotlib]] development team.
+
+** Tensorflow
