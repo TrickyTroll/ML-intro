@@ -31,5 +31,14 @@ par de multiples entreprises dont Google, Coca-Cola, airbnb, Twitter et Intel
 Nous utiliseons TensorFlow afin de faciliter l'accès à nos données et afin
 de créer notre modèle.
 
+#### Accès aux données
+
+Pour entrainer notre modèle, nous utiliseons la base de données
+[MNIST](http://yann.lecun.com/exdb/mnist/). Bien qu'elle soit assez complète,
+le format de cette base de donnée est assez complexe 
+([Voir la section sur le *preprocessing*](./preprocessing.ipynb). Heureusement,
+la libraire TensorFlow procure un 
+[interface simple](https://www.tensorflow.org/api_docs/python/tf/keras/datasets/mnist/load_data)
+avec le langage de programmation que nous utiliseons.
 
 
