@@ -137,23 +137,30 @@ aspects.
 
 ## Notions de base des procédés
 
-La section **Notions de base des procédés** a comme fonction de définir et expliquer certains termes de base, et d'expliciter la structure d'un réseau neuronal. D'abord, le processus de reconnaissance optique de caractères sera expliqué sommairement, et servira d'exemple auquel pourront être rapportés les concepts qui suivront. Ensuite, les différentes composantes d'un réseau neuronal seront expliquées en ordre croissant de complexité, en débutant avec la plus simple unité, le neurone.
+La section **Notions de base des procédés** a comme fonction de définir et expliquer certains termes de base, 
+et d'expliciter la structure d'un réseau neuronal. D'abord, le processus de reconnaissance optique de caractères
+sera expliqué sommairement, et servira d'exemple auquel pourront être rapportés les concepts qui suivront. 
+Ensuite, les différentes composantes d'un réseau neuronal seront expliquées en ordre croissant de complexité, 
+en débutant avec la plus simple unité, le neurone.
 
 * Définition du mot OCR
-   * Définir ce terme, et expliquer le fonctionnement global d'un type de réseau neuronal permettra au lecteur de relier les différents termes qui suivent à cet exemple afin
+   * Définir ce terme, et expliquer le fonctionnement global d'un type de réseau neuronal permettra
+   au lecteur de relier les différents termes qui suivent à cet exemple afin
    de faciliter leur compréhension.
 
 * Explication des neurones
-   * Une connaissance adéquate de l'unité de base d'un réseau neuronal permettra de comprendre d'où proviennent divers concepts mathématiques qui sont nécessaires à son
-      fonctionnement.
+   * Une connaissance adéquate de l'unité de base d'un réseau neuronal permettra de comprendre 
+   d'où proviennent divers concepts mathématiques qui sont nécessaires à son fonctionnement.
       * Structure d'un neurone
       * Poids et biais
       * Fonction d'activation (démonstration mathématique)
 * Communication entre les couches
-   * La manière les valeurs sont entrées dans le réseau, puis sont ensuite modifiées et propagées au travers du réseau est le fondement de comment un réseau neuronal apprend.
+   * La manière les valeurs sont entrées dans le réseau, puis sont ensuite modifiées et propagées
+   au travers du réseau est le fondement de comment un réseau neuronal apprend.
       * entrants et extrants
 * Lien avec les neurones biologiques
-   * L'analogie avec les neurones biologiques permet de visualiser plus facilement le fonctionnement d'un réseau neuronal, et fait un lien avec le terme 
+   * L'analogie avec les neurones biologiques permet de visualiser plus facilement le fonctionnement
+   d'un réseau neuronal, et fait un lien avec le terme 
       "intelligence artificielle".
 <<<<<<< HEAD
     
