@@ -18,11 +18,11 @@ d’ajuster l’algorithme d’OCR graduellement. Une “epoch” étant un cycl
 de données qui lui a été fournie une seule fois. 
 
 Donc, cet algorithme "intelligent ”n’est pas capable de prendre des décisions elle-même et doit être surveillé
-et entraîné par un être humain à l’aide d’une base de données pour pouvoir répondre à la tâche précise à la-quel
+et entraîné par un être humain à l’aide d’un jeu de données pour pouvoir répondre à la tâche précise à la-quel
 l’algorithme s'est fait assigner, qui est dans notre cas la reconnaissance optique des chiffres de 0 à 9. 
 Alors, un algorithme qui est bon ou mauvais dans sa tâche et donc qui a une bonne ou mauvaise précision (celle-ci
 est calculé dans notre cas par le nombre de prédiction réussite sur le nombre total de prédiction) est principalement
-déterminé par la façon que l’algorithme a été entraînée et si la base de données utilisée pour l’entraîner est fiable
+déterminé par la façon que l’algorithme a été entraînée et si le jeu de données utilisée pour l’entraîner est fiable
 et diversifié. C’est de l’entraînement que provient une partie des biais de l’intelligence artificielle, et donc,
 un des inconvénients qu’on avait cité dans notre hypothèse.
 
