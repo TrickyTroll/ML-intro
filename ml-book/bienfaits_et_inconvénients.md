@@ -11,7 +11,7 @@ est présente et joue un gros rôle dans plusieurs métiers. L’erreur est huma
 minimiser l’effort tout en maximisant la précision est primordial pour certaines tâches. 
 L’utilisation d'une intelligence artificielle bien entraînée permet de réduire le taux d’erreurs
 et le temps requis à l’exécution d’une tâche. Cela est possible, car un programme peut 
-parcourir une large base de données et appliquer des algorithmes en peu de temps, tandis que 
+parcourir un large jeu de données et appliquer des algorithmes en peu de temps, tandis que 
 l’être humain prendrait des mois et des mois pour faire cela. Un exemple moderne serait 
 l’utilisation de l’intelligence artificielle dans les prévisions météo. En effet, ceux-ci 
 deviennent de plus en plus précis avec l’aide de l’apprentissage machine ainsi que l’amélioration
@@ -37,11 +37,11 @@ Donnant plus de temps aux travailleurs pour se concentrer sur des tâches plus e
 Quand on parle de rapidité, l’être humain est très lent comparé à l’intelligence artificielle. En effet,
 l’utilisation de l’intelligence artificielle pour la prise de décision permet de prendre ceux-ci 
 extrêmement rapidement avec une précision qui dépend de la qualité de leurs bases de données. 
-En effet, une base de données fiable et bien construite permet à l’intelligence artificielle
-de prendre des bonnes décisions rapidement. Un être humain, de l’autre côté, doit analyser une
-plus petite base de données qui est dans sa mémoire en prenant plus de temps. Un des exemples serait
+En effet, un jeu de données fiable et bien construite permet à l’intelligence artificielle
+de prendre des bonnes décisions rapidement. Un être humain, de l’autre côté, doit analyser le
+plus petit  jeu de données qui est dans sa mémoire en prenant plus de temps. Un des exemples serait
 l’utilisation de l’intelligence artificielle dans les jeux d’échecs. L’intelligence artificielle
-à accès à des milliers et des milliers de parties dans sa base de données. Alors, lorsque son adversaire
+à accès à des milliers et des milliers de parties dans son jeu de données. Alors, lorsque son adversaire
 humain joue le coup  Nc3 (Cavalier sur la case C3), l’ordinateur analyse toutes les parties où ce coup
 c’est fait et en ressort le meilleur coup pour contrer celui-ci, et ce, en moins d’une seconde. De plus,
 la prise de décision de l’intelligence artificielle ne va pas seulement s’arrêter au jeu d’échec. Nous 
@@ -98,8 +98,8 @@ et l’efficacité des piratages informatiques menant sûrement à une augmentat
 causera plusieurs problèmes majeurs, jusqu'à temps qu’une solution soit trouvée.
 
 L’utilisation de l’intelligence artificielle dans des buts de tuer des individus est un grave danger.
-Tel que mentionné dans le rapport, l’entraînement de l’intelligence se fait à partir d’une grande 
-base de données fiables. Dans un contexte d’une guerre contre le terrorisme, avoir une base de données
+Tel que mentionné dans le rapport, l’entraînement de l’intelligence se fait à partir d’un grand 
+jeu de données fiables. Dans un contexte d’une guerre contre le terrorisme, avoir un jeu de données
 sur les terroristres s’avère très difficile et peu fiable, car la plupart d’entre eux s’habille comme
 des civiles. De plus, cette technologie, une fois tombée dans les mains des terroristes, pourrait 
 semer terreur au sein d’un pays comme le démontre très bien la vidéo Slaughterbots 
