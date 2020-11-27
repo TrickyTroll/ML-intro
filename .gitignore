@@ -1,7 +1,6 @@
 # Latex compiling stuff
 *.aux
 *.out
-*.pdf
 *.toc
 # Byte-compiled / optimized / DLL files
 __pycache__/
