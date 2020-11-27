@@ -39,7 +39,7 @@ $E=1/2\sum_{i=1}^n({T_i-Y_i})^2$
 
 __(1.3)__
 
-### Transmition de l'information
+### Transmission de l'information
 
 >Note: Afin de simplifier les explications, ces dernières seront faites en utilisant un réseau neuronal ayant seulement 1 >neurone par couche. 
 
