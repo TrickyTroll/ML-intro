@@ -20,7 +20,7 @@ c’est que cette “intelligence” artificielle, n’est rien d’autre qu’u
 de fonctions avec des paramètres qui ont été ajustés par une méthode d'optimisation
 dénommée “Back propagation”. Cette méthode est composée de fonctions qui 
 utilisent des notions de mathématiques telles que les dérivées. Cet algorithme
-a lieu lors de chaque “epoch[^xd]” dans le but d’ajuster l’algorithme d’OCR 
+a lieu lors de chaque “epoch<sup>1</sup>” dans le but d’ajuster l’algorithme d’OCR 
 graduellement.  
 
 
@@ -80,5 +80,5 @@ années qui ne semblent pas s'arrêter, il serait juste de croire que l’IA
 à un futur prometteur. Avec ces avancés prometteuses, ce pourrait-il qu’il
 y aurait une sorte d’intelligence au-delà de celle humaine et artificielle ?
 
-[^xd]: Une “epoch” étant un cycle complet où l'algorithme a traité
+1: Une “epoch” étant un cycle complet où l'algorithme a traité
 le jeu de données qui lui a été fournie une seule fois.
