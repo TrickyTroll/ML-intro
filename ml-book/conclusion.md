@@ -82,5 +82,24 @@ années qui ne semblent pas s'arrêter, il serait juste de croire que l’IA
 a un futur prometteur. Avec ces avancés prometteuses, ce pourrait-il qu’il
 y ait une sorte d’intelligence au-delà de celle humaine et artificielle dans le futur ?
 
+---
+**NOTE**
+
+Pour répondre à cette question, il est aussi important de savoir différencier l’IA à l’être
+humain. L’utilisation de plusieurs tests peuvent permettre de découvrir si un robot possède
+de l’intelligence artificielle semblable ou supérieure à celle d’un être humain. Le test de 
+Turing, nommé après Alan Turing, proposait que si un ordinateur était capable de se dissimuler
+parmi un autre être humain lors d’une période de question pour plus de 50 % des 
+questions, celui-ci est considéré comme s’il possédait une intelligence artificielle. 
+Avec l’avancement en intelligence artificielle, il s’avère de plus en plus difficile
+de différencier un être humain d’un robot. En effet, C’est en 2014, que le programme
+Eugene Goostman fut le premier à passer le test de Turing. Chaque année, une quantité 
+toujours plus importante de programmes passent le test. D’autre exemple de l’utilité 
+du test de Turing, serait sa version à l’envers. Donc, un être humain qui tente de 
+prouver à un ordinateur qu’il est réellement humain. Cela se voit quasiment tous les 
+jours avec les tests Captcha.
+
+---
+
 [^1]: Une “epoch” étant un cycle complet où l'algorithme a traité
 le jeu de données qui lui a été fournie une seule fois.
