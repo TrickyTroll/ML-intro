@@ -346,11 +346,6 @@
        </li>
       </ul>
      </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#pourquoi-seulement-784-pixels">
-       Pourquoi seulement 784 pixels?
-      </a>
-     </li>
     </ul>
    </li>
   </ul>
@@ -379,7 +374,7 @@
 </div>
 <div class="section" id="mise-en-bouche-sur-lapprentissage-machine">
 <h2>Mise en bouche sur l’apprentissage machine<a class="headerlink" href="#mise-en-bouche-sur-lapprentissage-machine" title="Lien permanent vers ce titre">¶</a></h2>
-<p>L’entrainement d’un modèle se rapproche beaucoup des mathématiques, plus précisément de la statistique, comme en témoigne le <em>Deep Learning Book</em> <a class="bibtex reference internal" href="zbib.html#goodfellow-et-al-2016" id="id1">[Goodfellow et al., 2016]</a>. L’apprentissage machine vise à ingérer des quantités massives de données provenant de sources différentes. Par la suite, à l’aide de calculs statistiques, le programme tente de faire une certaine classification du jeu données. Selon le besoin, le programme pourrait alors poser une étiquette sur des données non étiquetées similaires à celles retrouvées dans le jeu de donnée <span class="bibtex" id="id2">[mitclassification]</span>.   Le modèle pourrait aussi être entrainer afin de reconnaître des anomalies, grouper des informations similaires par classes et bien d’autres <span class="bibtex" id="id3">[wikisupervised]</span>. Toutes ces informations seront discutées plus en détails au courant de la prochaine section. Ce qu’il est important de retenir, c’est qu’entrainer un modèle nécessite <em><strong>beaucoup</strong></em> de données.</p>
+<p>L’entrainement d’un modèle se rapproche beaucoup des mathématiques, plus précisément de la statistique, comme en témoigne le <em>Deep Learning Book</em> <a class="bibtex reference internal" href="zbib.html#goodfellow-et-al-2016" id="id1">[Goodfellow et al., 2016]</a>. L’apprentissage machine vise à ingérer des quantités massives de données provenant de sources différentes. Par la suite, à l’aide de calculs statistiques, le programme tente de faire une certaine classification du jeu données. Selon le besoin, le programme pourrait alors poser une étiquette sur des données non étiquetées similaires à celles retrouvées dans le jeu de donnée <span class="bibtex" id="id2">[bost_machine_2015 ]</span>. Le modèle pourrait aussi être entrainer afin de reconnaître des anomalies, grouper des informations similaires par classes et bien d’autres <a class="bibtex reference internal" href="zbib.html#noauthor-supervised-2020" id="id3">[Anonymous, 2020]</a>. Toutes ces informations seront discutées plus en détails au courant de la prochaine section. Ce qu’il est important de retenir, c’est qu’entrainer un modèle nécessite <em><strong>beaucoup</strong></em> de données.</p>
 <div class="admonition-sur-la-signification-de-beaucoup-de-donnees admonition">
 <p class="admonition-title">Sur la signification de «beaucoup de données»</p>
 <p>Il y a 60 000 exemples dans nos données d’entraînement.</p>
@@ -391,19 +386,19 @@
 </div>
 <div class="section" id="traiter-beaucoup-de-donnees">
 <h2>Traiter beaucoup de données<a class="headerlink" href="#traiter-beaucoup-de-donnees" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Pour reprendre l’exemple précédent, la <code class="docutils literal notranslate"><span class="pre">shape</span></code> de l’objet <code class="docutils literal notranslate"><span class="pre">train_data</span></code>est une liste de 60 000 images représentées par des matrices carrées de dimension 28. Dans notre cas, si le programme passait tous les pixels un à un, il faudrait qu’il réalise séquentiellement <span class="math notranslate nohighlight">\(28 \times 28 \times 60 000 = 47 040 000\)</span> opérations. Ce serait par exemple le cas dans une <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">loop</span></code>. Bien que les ordinateurs modernes sont particulièrement rapides<a class="footnote-reference brackets" href="#id24" id="id4">16</a>, les modèles récents sont eux aussi entrainés avec des jeux de données de plus en plus massifs. Celui utilisé pour le service <a class="reference external" href="https://translate.google.ca">Google Translate</a>, par exemple, compte des milliards d’exemples <span class="bibtex" id="id5">[googledatasize]</span>.</p>
-<p>Heureusement, il existe des méthodes permettant de paralléliser<a class="footnote-reference brackets" href="#id25" id="id6">17</a> les opérations statistiques réalisées sur notre modèle.</p>
+<p>Pour reprendre l’exemple précédent, la <code class="docutils literal notranslate"><span class="pre">shape</span></code> de l’objet <code class="docutils literal notranslate"><span class="pre">train_data</span></code>est une liste de 60 000 images représentées par des matrices carrées de dimension 28. Dans notre cas, si le programme passait tous les pixels un à un, il faudrait qu’il réalise séquentiellement <span class="math notranslate nohighlight">\(28 \times 28 \times 60 000 = 47 040 000\)</span> opérations. Ce serait par exemple le cas dans une <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">loop</span></code>. Bien que les ordinateurs modernes sont particulièrement rapides<a class="footnote-reference brackets" href="#id28" id="id4">18</a>, les modèles récents sont eux aussi entrainés avec des jeux de données de plus en plus massifs. Celui utilisé pour le service <a class="reference external" href="https://translate.google.ca">Google Translate</a>, par exemple, compte des milliards d’exemples <span class="bibtex" id="id5">[noauthor_size_nodate ]</span>.</p>
+<p>Heureusement, il existe des méthodes permettant de paralléliser<a class="footnote-reference brackets" href="#id29" id="id6">19</a> les opérations statistiques réalisées sur notre modèle.</p>
 <div class="section" id="le-parallelisme">
 <h3>Le parallélisme<a class="headerlink" href="#le-parallelisme" title="Lien permanent vers ce titre">¶</a></h3>
-<p>Pour réduire le coût monétaire et temporel de l’entrainement d’un modèle, la tâche peut être séparée sur plusieurs des coeurs<a class="footnote-reference brackets" href="#id26" id="id7">18</a> de la machine. Pour se faire, nous profiterons des propriétés des matrices.</p>
+<p>Pour réduire le coût monétaire et temporel de l’entrainement d’un modèle, la tâche peut être séparée sur plusieurs des coeurs<a class="footnote-reference brackets" href="#id30" id="id7">20</a> de la machine. Pour se faire, nous profiterons des propriétés des matrices.</p>
 <div class="section" id="les-proprietes-des-matrices">
 <h4>Les propriétés des matrices<a class="headerlink" href="#les-proprietes-des-matrices" title="Lien permanent vers ce titre">¶</a></h4>
 <p>Afin de trouver comment il serait possible de réaliser nos calculs en parallèle, analysons les propriétés des matrices.</p>
 <div class="section" id="la-multiplication">
 <h5>La multiplication<a class="headerlink" href="#la-multiplication" title="Lien permanent vers ce titre">¶</a></h5>
-<p>Assumons les matrices de dimensions compatibles<a class="footnote-reference brackets" href="#id27" id="id8">19</a> <span class="math notranslate nohighlight">\(A\)</span> et <span class="math notranslate nohighlight">\(B\)</span>:</p>
+<p>Assumons les matrices de dimensions compatibles<a class="footnote-reference brackets" href="#id31" id="id8">21</a> <span class="math notranslate nohighlight">\(A\)</span> et <span class="math notranslate nohighlight">\(B\)</span>:</p>
 <p><span class="math notranslate nohighlight">\([A \times B]_{i,j} = \displaystyle\sum_{k=1}A_{i,k}B_{k,j}\)</span></p>
-<p>Assumons aussi que la matrice <span class="math notranslate nohighlight">\(C\)</span> est produite par l’opération <span class="math notranslate nohighlight">\(A \times B\)</span> et que les matrices <span class="math notranslate nohighlight">\(A\)</span> et <span class="math notranslate nohighlight">\(B\)</span> sont carrées<a class="footnote-reference brackets" href="#id28" id="id9">20</a>.  Le calcul de <span class="math notranslate nohighlight">\(C\)</span> pourrait alors être implémenté de la manière suivante.</p>
+<p>Assumons aussi que la matrice <span class="math notranslate nohighlight">\(C\)</span> est produite par l’opération <span class="math notranslate nohighlight">\(A \times B\)</span> et que les matrices <span class="math notranslate nohighlight">\(A\)</span> et <span class="math notranslate nohighlight">\(B\)</span> sont carrées<a class="footnote-reference brackets" href="#id32" id="id9">22</a>.  Le calcul de <span class="math notranslate nohighlight">\(C\)</span> pourrait alors être implémenté de la manière suivante.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initialisation de la matrice de départ.</span>
 <span class="c1"># Nous assumons que les matrices sont 3x3.</span>
 <span class="n">C</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span>
@@ -419,18 +414,18 @@
 			<span class="n">C</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">+=</span> <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">k</span><span class="p">]</span> <span class="o">*</span> <span class="n">B</span><span class="p">[</span><span class="n">k</span><span class="p">][</span><span class="n">j</span><span class="p">]</span>
 </pre></div>
 </div>
-<p>Quoi qu’assez simple à implémenter, cette façon de calculer <span class="math notranslate nohighlight">\(C\)</span> est particulièrement inefficace. Alors que les matrices A et B augmentent en taille, le nombre d’opérations requises augmente…<strong>au cube!</strong> Si <span class="math notranslate nohighlight">\(A\)</span> passe d’une matrice <span class="math notranslate nohighlight">\(2X2\)</span> à une matrice <span class="math notranslate nohighlight">\(3X3\)</span>, chaque <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">loop</span></code> doit être réalisée <span class="math notranslate nohighlight">\(n\)</span><a class="footnote-reference brackets" href="#id29" id="id10">21</a> fois de plus. Comme le programme contient 3 for loops imbriquées, si la première doit être faite <span class="math notranslate nohighlight">\(n\)</span> fois de plus, alors c’est de même pour la deuxième, puis la troisième. Le calcul est alors <span class="math notranslate nohighlight">\(n \times n \times n = n^3\)</span> fois plus complexe à réaliser <span class="bibtex" id="id11">[wikimatrixmulti]</span>.</p>
+<p>Quoi qu’assez simple à implémenter, cette façon de calculer <span class="math notranslate nohighlight">\(C\)</span> est particulièrement inefficace. Alors que les matrices A et B augmentent en taille, le nombre d’opérations requises augmente…<strong>au cube!</strong> Si <span class="math notranslate nohighlight">\(A\)</span> passe d’une matrice <span class="math notranslate nohighlight">\(2X2\)</span> à une matrice <span class="math notranslate nohighlight">\(3X3\)</span>, chaque <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">loop</span></code> doit être réalisée <span class="math notranslate nohighlight">\(n\)</span><a class="footnote-reference brackets" href="#id33" id="id10">23</a> fois de plus. Comme le programme contient 3 for loops imbriquées, si la première doit être faite <span class="math notranslate nohighlight">\(n\)</span> fois de plus, alors c’est de même pour la deuxième, puis la troisième. Le calcul est alors <span class="math notranslate nohighlight">\(n \times n \times n = n^3\)</span> fois plus complexe à réaliser <span class="bibtex" id="id11">[noauthor_matrix_2020 ]</span>.</p>
 <p>Heureusement, ce problème n’est pas sans issues. Reprenons l’équation de la multiplication de deux matrices.
 <span class="math notranslate nohighlight">\([A \times B]_{i,j} = \displaystyle\sum_{k=1}A_{i,k}B_{k,j}\)</span>
-Dans ce cas, chaque élément de <span class="math notranslate nohighlight">\(C\)</span> est produit par une sommation sur des multiplications d’éléments de <span class="math notranslate nohighlight">\(A\)</span> et <span class="math notranslate nohighlight">\(B\)</span>. Il est aussi important de noter qu’aucun calcul pour un élément de <span class="math notranslate nohighlight">\(C\)</span> dépend d’un calcul pour un autre élément de <span class="math notranslate nohighlight">\(C\)</span><a class="footnote-reference brackets" href="#id30" id="id12">22</a>. Il serait donc possible de calculer plusieurs éléments de <span class="math notranslate nohighlight">\(C\)</span> en même temps!</p>
-<p>Bien que le calcul en parallèle ne réduit pas l’ordre de complexité, il permet tout de même de diviser le temps requis par le nombre de coeurs utilisés<a class="footnote-reference brackets" href="#id31" id="id13">23</a>.</p>
+Dans ce cas, chaque élément de <span class="math notranslate nohighlight">\(C\)</span> est produit par une sommation sur des multiplications d’éléments de <span class="math notranslate nohighlight">\(A\)</span> et <span class="math notranslate nohighlight">\(B\)</span>. Il est aussi important de noter qu’aucun calcul pour un élément de <span class="math notranslate nohighlight">\(C\)</span> dépend d’un calcul pour un autre élément de <span class="math notranslate nohighlight">\(C\)</span><a class="footnote-reference brackets" href="#id34" id="id12">24</a>. Il serait donc possible de calculer plusieurs éléments de <span class="math notranslate nohighlight">\(C\)</span> en même temps!</p>
+<p>Bien que le calcul en parallèle ne réduit pas l’ordre de complexité, il permet tout de même de diviser le temps requis par le nombre de coeurs utilisés<a class="footnote-reference brackets" href="#id35" id="id13">25</a>.</p>
 </div>
 <div class="section" id="laddition">
 <h5>L’addition<a class="headerlink" href="#laddition" title="Lien permanent vers ce titre">¶</a></h5>
-<p>L’addition de deux matrices compatibles<a class="footnote-reference brackets" href="#id32" id="id14">24</a> se définit par l’addition de chacun des éléments homologues des deux matrices. Si nous reprenons les matrices carrées <span class="math notranslate nohighlight">\(A\)</span> et <span class="math notranslate nohighlight">\(B\)</span> utilisées plus haut, la somme de ces deux matrices serait:</p>
+<p>L’addition de deux matrices compatibles<a class="footnote-reference brackets" href="#id36" id="id14">26</a> se définit par l’addition de chacun des éléments homologues des deux matrices. Si nous reprenons les matrices carrées <span class="math notranslate nohighlight">\(A\)</span> et <span class="math notranslate nohighlight">\(B\)</span> utilisées plus haut, la somme de ces deux matrices serait:</p>
 <p><span class="math notranslate nohighlight">\([A+B]_{i,j} = A_{i,j} + B_{i,j}\)</span></p>
 <p>Supposons que la matrice <span class="math notranslate nohighlight">\(C\)</span> résulte de la somme de <span class="math notranslate nohighlight">\(A\)</span> et <span class="math notranslate nohighlight">\(B\)</span>. Il est encore une fois possible d’affirmer que la valeur de <span class="math notranslate nohighlight">\(C_{i,j}\)</span> ne dépend pas de la valeur de <span class="math notranslate nohighlight">\(C_{k,l}\)</span>. Il serait possible d’additionner chaque composante des deux matrices dans n’importe quel ordre en obtenant toujours le même résultat.</p>
-<p>Encore une fois, l’addition de deux matrices peut être parallélisé afin de réduire le temps de calcul<a class="footnote-reference brackets" href="#id33" id="id15">25</a>.</p>
+<p>Encore une fois, l’addition de deux matrices peut être parallélisé afin de réduire le temps de calcul<a class="footnote-reference brackets" href="#id37" id="id15">27</a>.</p>
 </div>
 <div class="section" id="la-multiplication-par-un-scalaire">
 <h5>La multiplication par un scalaire<a class="headerlink" href="#la-multiplication-par-un-scalaire" title="Lien permanent vers ce titre">¶</a></h5>
@@ -452,7 +447,7 @@ Dans ce cas, chaque élément de <span class="math notranslate nohighlight">\(C\
 </div>
 <div class="section" id="la-sommation">
 <h5>La sommation<a class="headerlink" href="#la-sommation" title="Lien permanent vers ce titre">¶</a></h5>
-<p>Nous avons ici un calcul légèrement différent des autres. Dans le cas de la sommation des éléments d’une matrice de dimension <span class="math notranslate nohighlight">\((1,n)\)</span>, le calcul s’avère commutatif en plus d’être associatif<a class="footnote-reference brackets" href="#id34" id="id16">26</a>. La commutativité de l’addition permet à notre programme d’utiliser l’opérateur de réduction.</p>
+<p>Nous avons ici un calcul légèrement différent des autres. Dans le cas de la sommation des éléments d’une matrice de dimension <span class="math notranslate nohighlight">\((1,n)\)</span>, le calcul s’avère commutatif en plus d’être associatif<a class="footnote-reference brackets" href="#id38" id="id16">28</a>. La commutativité de l’addition permet à notre programme d’utiliser l’opérateur de réduction.</p>
 <div class="admonition-l-operateur-de-reduction admonition">
 <p class="admonition-title">L’opérateur de réduction</p>
 <p>Un opérateur de réduction permet de réduire les éléments d’un <a class="reference external" href="https://fr.wikipedia.org/wiki/Tableau_(structure_de_donn%C3%A9es)">tableau</a> à un seul résultat. <span class="bibtex" id="id17">[wikireducop]</span></p>
@@ -472,7 +467,7 @@ Dans ce cas, chaque élément de <span class="math notranslate nohighlight">\(C\
 </div>
 <p>Cet exemple permettrait de réaliser une sommation séquentielle sur tous les chiffres contenus dans le tableau. Ce reviendrait à réaliser le calcul suivant:
 <span class="math notranslate nohighlight">\((((((((2+9)+6)+4)+1)+3)+8)+8)\)</span>
-Bien que la moindre performance de cette méthode ne se fait pas ressentir pour des petites sommations, ce programme ne s’adapte pas bien à de grands tableaux<a class="footnote-reference brackets" href="#id35" id="id18">27</a>.</p>
+Bien que la moindre performance de cette méthode ne se fait pas ressentir pour des petites sommations, ce programme ne s’adapte pas bien à de grands tableaux<a class="footnote-reference brackets" href="#id39" id="id18">29</a>.</p>
 <p>Ensuite, si l’addition n’était qu’associative, l’opération pourrait tout de même être parallélisée. Les sommes partielles pourraient être calculées indépendamment les unes des autres comme pour les autres opérations matricielles. Le calcul serait similaire à celui ci:
 <span class="math notranslate nohighlight">\(((2+1)+(9+3))+((6+8)+(4+8))\)</span>
 Dans cet exemple, les sommes <span class="math notranslate nohighlight">\(2+1\)</span>, <span class="math notranslate nohighlight">\(9+3\)</span>, <span class="math notranslate nohighlight">\(6+8\)</span> et <span class="math notranslate nohighlight">\(4+8\)</span> sont calculées en même temps. Par contre, lorsque l’une des opérations est complétée avant une autre, il arrive que l’ordinateur ait à attendre <span class="bibtex" id="id19">[stackoverflowcommutativity]</span>. Le coeur ne pourrait alors pas se libérer pour faire d’autres opérations. Par exemple, assumons un ordinateur possédant deux unités de calcul disponibles et une addition non commutative. Si le calcul de <span class="math notranslate nohighlight">\(2+9\)</span> était complété avant celui de <span class="math notranslate nohighlight">\(9+3\)</span>, l’ordinateur devrait attendre que les deux calculs soient complétés avant de calculer la somme partielle <span class="math notranslate nohighlight">\((2+9)+(9+3)\)</span>. Heureusement, l’addition est associative. L’ordinateur ira donc écrire le résultat de la première opération complétée à la somme partielle, sans se soucier de la complétion de l’autre opération. L’unité de calcul sera alors libérée pour calculer, par exemple, la somme <span class="math notranslate nohighlight">\(6+8\)</span>.</p>
@@ -501,11 +496,11 @@ Il est possible de remarquer que l’addition est fait dans un ordre particulier
 </div>
 <div class="section" id="numpy">
 <h3>NumPy<a class="headerlink" href="#numpy" title="Lien permanent vers ce titre">¶</a></h3>
-<p>C’est pour les opérations parallèles que la librairie <code class="docutils literal notranslate"><span class="pre">numpy</span></code>, mentionnée lors de la section précédente, entre en jeu. Les opérations matricielles réalisées à l’aide de méthodes implémentés par <code class="docutils literal notranslate"><span class="pre">numpy</span></code>profitent aussi de l’implémentation des <code class="docutils literal notranslate"><span class="pre">BLAS</span></code><a class="footnote-reference brackets" href="#id36" id="id20">28</a>. Les <code class="docutils literal notranslate"><span class="pre">BLAS</span></code> permettent de grandement accélérer nos calculs sans même nécessiter de coeurs supplémentaires. Elles exploitent plutôt les différentes architectures de processeur ainsi que leur différents niveau de cache<a class="footnote-reference brackets" href="#id37" id="id21">29</a>.</p>
+<p>C’est pour les opérations parallèles que la librairie <code class="docutils literal notranslate"><span class="pre">numpy</span></code>, mentionnée lors de la <a class="reference internal" href="explications_librairies.html"><span class="doc std std-doc">section précédente</span></a>, entre en jeu. Les opérations matricielles réalisées à l’aide de méthodes implémentés par <code class="docutils literal notranslate"><span class="pre">numpy</span></code>profitent aussi de l’implémentation des <code class="docutils literal notranslate"><span class="pre">BLAS</span></code><a class="footnote-reference brackets" href="#id40" id="id20">30</a>. Les <code class="docutils literal notranslate"><span class="pre">BLAS</span></code> permettent de grandement accélérer nos calculs sans même nécessiter de coeurs supplémentaires. Elles exploitent plutôt les différentes architectures de processeur ainsi que leur différents niveau de cache<a class="footnote-reference brackets" href="#id41" id="id21">31</a>.</p>
 <div class="section" id="blas">
 <h4><code class="docutils literal notranslate"><span class="pre">BLAS</span></code><a class="headerlink" href="#blas" title="Lien permanent vers ce titre">¶</a></h4>
 <p>Les sous-routines d’algèbre linéaire permettent de nettement réduire l’ordre de complexité des opérations d’algèbre linéaire. Elles permettent, par exemple, de décomposer des matrices en blocs afin d’accélérer la multiplication.</p>
-<p>Ces sous-programmes sont extrêmement populaires. Ils sont implémentés dans une majorité des programmes de calcul scientifique <span class="bibtex" id="id22">[blaswebsite]</span>.</p>
+<p>Ces sous-programmes sont extrêmement populaires. Ils sont implémentés dans une majorité des programmes de calcul scientifique <a class="bibtex reference internal" href="zbib.html#noauthor-blas-nodate" id="id22">[Anonymous, n.d.c]</a>.</p>
 </div>
 <div class="section" id="quelques-resultats-concrets">
 <h4>Quelques résultats concrets<a class="headerlink" href="#quelques-resultats-concrets" title="Lien permanent vers ce titre">¶</a></h4>
@@ -554,7 +549,7 @@ Il est possible de remarquer que l’addition est fait dans un ordre particulier
 <span class="n">Run</span> <span class="n">time</span> <span class="n">numpy</span> <span class="o">=</span> <span class="mf">0.005700111389160156</span> <span class="n">seconds</span>
 </pre></div>
 </div>
-<p>Alors que l’implémentation de base prend plus de 30 minutes à faire le calcul, <code class="docutils literal notranslate"><span class="pre">Numpy</span></code> n’a besoin de que moins de 6 millièmes de secondes<a class="footnote-reference brackets" href="#id38" id="id23">30</a>!</p>
+<p>Alors que l’implémentation de base prend plus de 30 minutes à faire le calcul, <code class="docutils literal notranslate"><span class="pre">Numpy</span></code> n’a besoin de que moins de 6 millièmes de secondes<a class="footnote-reference brackets" href="#id42" id="id23">32</a>!</p>
 </div>
 </div>
 <div class="section" id="sommations-de-tableaux-a-laide-de-numpy">
@@ -633,63 +628,68 @@ Il est possible de remarquer que l’addition est fait dans un ordre particulier
 <p>Le paramètre <code class="docutils literal notranslate"><span class="pre">dtype=uint8</span></code>signifie que nos pixels sont représentés par des entiers de 8 bits. Chaque bit ne pouvant avoir une valeur que de 1 ou 0, le plus grand nombre pouvant être représenté par ce type d’entier est 255.</p>
 <div class="section" id="explications-plus-detaillees-sur-la-representation-des-images">
 <h3>Explications plus détaillées sur la représentation des images.<a class="headerlink" href="#explications-plus-detaillees-sur-la-representation-des-images" title="Lien permanent vers ce titre">¶</a></h3>
-<p>Cette section c’est seulement si j’ai le temps.</p>
+<p>Quelques explications plus détaillées sur la représentation des images par des nombres.</p>
 <div class="section" id="pourquoi-le-grayscale">
 <h4>Pourquoi le <em>grayscale</em>?<a class="headerlink" href="#pourquoi-le-grayscale" title="Lien permanent vers ce titre">¶</a></h4>
+<p>Les couleurs ne s’avèrent pas très utiles <a class="bibtex reference internal" href="zbib.html#noauthor-why-nodate" id="id24">[Anonymous, n.d.b]</a> pour déceler les caractéristiques importantes d’une image. De plus, il nous faudrait beaucoup plus d’éléments dans une <code class="docutils literal notranslate"><span class="pre">array</span></code> pour représenter des images en couleur qu’en noir et blanc. Par exemple, pour représenter une couleur en <code class="docutils literal notranslate"><span class="pre">RGB</span></code><a class="footnote-reference brackets" href="#id43" id="id25">33</a>, il nous faudrait 256 bits pour chacune des trois couleurs<a class="footnote-reference brackets" href="#id44" id="id26">34</a>. En <em>grayscale</em>, seulement 256 bits sont nécessaires pour définir un pixel.</p>
 <div class="section" id="pourquoi-est-il-inverse">
 <h5>Pourquoi est-il inversé?<a class="headerlink" href="#pourquoi-est-il-inverse" title="Lien permanent vers ce titre">¶</a></h5>
-</div>
-</div>
-<div class="section" id="pourquoi-seulement-784-pixels">
-<h4>Pourquoi seulement 784 pixels?<a class="headerlink" href="#pourquoi-seulement-784-pixels" title="Lien permanent vers ce titre">¶</a></h4>
+<p>Lors de notre entraînement, les valeurs de <code class="docutils literal notranslate"><span class="pre">0</span></code>sont ignorées et ne nécessitent pas de calcul <a class="bibtex reference internal" href="zbib.html#noauthor-impact-nodate" id="id27">[Anonymous, n.d.a]</a>. Il est donc préférable d’avoir le plus de valeurs de <em>grayscale</em> à 0 possible. Les chiffres écrits à la main ne remplissent qu’une minorité de l’image. En utilisant les valeurs inversées, les pixels les moins nombreux ont une valeur de <code class="docutils literal notranslate"><span class="pre">256</span></code>, alors que les plus nombreux ont une valeur de <code class="docutils literal notranslate"><span class="pre">0</span></code>.</p>
 <hr class="docutils" />
 <dl class="footnote brackets">
-<dt class="label" id="id24"><span class="brackets"><a class="fn-backref" href="#id4">16</a></span></dt>
+<dt class="label" id="id28"><span class="brackets"><a class="fn-backref" href="#id4">18</a></span></dt>
 <dd><p>Un ordinateur moderne possédant un processeur de 2GHz peut réaliser 2 000 000 000 opérations par seconde sur chacun de ses coeurs.</p>
 </dd>
-<dt class="label" id="id25"><span class="brackets"><a class="fn-backref" href="#id6">17</a></span></dt>
+<dt class="label" id="id29"><span class="brackets"><a class="fn-backref" href="#id6">19</a></span></dt>
 <dd><p>Exécuter plusieurs opérations parallèlement plutôt que séquentiellement.</p>
 </dd>
-<dt class="label" id="id26"><span class="brackets"><a class="fn-backref" href="#id7">18</a></span></dt>
+<dt class="label" id="id30"><span class="brackets"><a class="fn-backref" href="#id7">20</a></span></dt>
 <dd><p>Un «coeur» est une unité du processeur pouvant faire du calcul indépendamment des autres coeurs. Un processeur d’ordinateur portable moderne possède de deux à quatre coeurs. Une carte graphique moderne en possède quelques milliers, quoique moins performants que ceux du processeur.</p>
 </dd>
-<dt class="label" id="id27"><span class="brackets"><a class="fn-backref" href="#id8">19</a></span></dt>
+<dt class="label" id="id31"><span class="brackets"><a class="fn-backref" href="#id8">21</a></span></dt>
 <dd><p>Pour réaliser une multiplication entre deux matrices, il faut que le nombre de colonnes de la première matrice soit égal au nombre de rangées de la deuxième.</p>
 </dd>
-<dt class="label" id="id28"><span class="brackets"><a class="fn-backref" href="#id9">20</a></span></dt>
+<dt class="label" id="id32"><span class="brackets"><a class="fn-backref" href="#id9">22</a></span></dt>
 <dd><p>Une matrice carrée est une matrice qui contient autant de rangées que de colonnes.</p>
 </dd>
-<dt class="label" id="id29"><span class="brackets"><a class="fn-backref" href="#id10">21</a></span></dt>
+<dt class="label" id="id33"><span class="brackets"><a class="fn-backref" href="#id10">23</a></span></dt>
 <dd><p><span class="math notranslate nohighlight">\(n\)</span> représente le nombre de rangées et de colonnes d’une matrice carrée.</p>
 </dd>
-<dt class="label" id="id30"><span class="brackets"><a class="fn-backref" href="#id12">22</a></span></dt>
+<dt class="label" id="id34"><span class="brackets"><a class="fn-backref" href="#id12">24</a></span></dt>
 <dd><p>Ils peuvent être calculés dans n’importe quel ordre et le résultat sera toujours le même. Un résultat pourrait aussi</p>
 </dd>
-<dt class="label" id="id31"><span class="brackets"><a class="fn-backref" href="#id13">23</a></span></dt>
+<dt class="label" id="id35"><span class="brackets"><a class="fn-backref" href="#id13">25</a></span></dt>
 <dd><p>Plus ou moins. Voir <a class="reference external" href="https://en.wikipedia.org/wiki/Parallel_computing#Amdahl%27s_law_and_Gustafson%27s_law">1.1 Amdahl’s law and Gustafson’s law</a></p>
 </dd>
-<dt class="label" id="id32"><span class="brackets"><a class="fn-backref" href="#id14">24</a></span></dt>
+<dt class="label" id="id36"><span class="brackets"><a class="fn-backref" href="#id14">26</a></span></dt>
 <dd><p>Pour que deux matrices puissent être additionnées, elles doivent avoir le même nombre de rangées et de colonnes.</p>
 </dd>
-<dt class="label" id="id33"><span class="brackets"><a class="fn-backref" href="#id15">25</a></span></dt>
+<dt class="label" id="id37"><span class="brackets"><a class="fn-backref" href="#id15">27</a></span></dt>
 <dd><p>En assumant que le calcul est réalisé sur une machine possédant plusieurs coeurs.</p>
 </dd>
-<dt class="label" id="id34"><span class="brackets"><a class="fn-backref" href="#id16">26</a></span></dt>
+<dt class="label" id="id38"><span class="brackets"><a class="fn-backref" href="#id16">28</a></span></dt>
 <dd><p>Dans le cas des autres opérations matricielles présentées, elles étaient seulement associatives. Les calculs étaient, comme pour la sommation, indépendants les un des autres. Par contre, pour les autres opérations les résultats devaient être placés de manière ordonnée dans la matrice résultante.</p>
 </dd>
-<dt class="label" id="id35"><span class="brackets"><a class="fn-backref" href="#id18">27</a></span></dt>
+<dt class="label" id="id39"><span class="brackets"><a class="fn-backref" href="#id18">29</a></span></dt>
 <dd><p>Voir la {section} sur les résultats concrets.</p>
 </dd>
-<dt class="label" id="id36"><span class="brackets"><a class="fn-backref" href="#id20">28</a></span></dt>
+<dt class="label" id="id40"><span class="brackets"><a class="fn-backref" href="#id20">30</a></span></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">BLAS</span></code> signifie <strong>B</strong>asic <strong>L</strong>inear <strong>A</strong>lgebra <strong>S</strong>ubroutines, ou sous-routines de base d’algèbre linéaire.</p>
 </dd>
-<dt class="label" id="id37"><span class="brackets"><a class="fn-backref" href="#id21">29</a></span></dt>
+<dt class="label" id="id41"><span class="brackets"><a class="fn-backref" href="#id21">31</a></span></dt>
 <dd><p>Petite mémoire rapide allouée au processeur.</p>
 </dd>
-<dt class="label" id="id38"><span class="brackets"><a class="fn-backref" href="#id23">30</a></span></dt>
+<dt class="label" id="id42"><span class="brackets"><a class="fn-backref" href="#id23">32</a></span></dt>
 <dd><p>Testé sur un processeur <em>2.9 GHz Dual-Core Intel Core i5</em>.</p>
 </dd>
+<dt class="label" id="id43"><span class="brackets"><a class="fn-backref" href="#id25">33</a></span></dt>
+<dd><p>Modèle de représentation des couleurs. Une couleur est représentée par les intensités des couleurs rouge, vert et bleu qui la constituent.</p>
+</dd>
+<dt class="label" id="id44"><span class="brackets"><a class="fn-backref" href="#id26">34</a></span></dt>
+<dd><p>Donc 768 bits.</p>
+</dd>
 </dl>
+</div>
 </div>
 </div>
 </div>

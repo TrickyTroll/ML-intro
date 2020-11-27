@@ -1,6 +1,3 @@
-<script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath:[['$','$']]}});</script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=default' async></script>
-
 # Traitement antérieur à l’entrainement
 
 Dans cette section, nous discuterons du traitement nécessaire afin d’utiliser des images pour entrainer un réseau neuronal. Nous discuterons aussi de l’importance de ce traitement, ainsi que de la raison pour laquelle il doit aussi être réalisé sur les images que nous voudrons par la suite reconnaître.
@@ -311,11 +308,11 @@ Quelques explications plus détaillées sur la représentation des images par de
 
 #### Pourquoi le *grayscale*?
 
-Les couleurs ne s’avèrent pas très utiles {cite}`stackoverflow pour déceler les caractéristiques importantes d’une image. De plus, il nous faudrait beaucoup plus d’éléments dans une `array` pour représenter des images en couleur qu’en noir et blanc. Par exemple, pour représenter une couleur en `RGB`[^16], il nous faudrait 256 bits pour chacune des trois couleurs[^17]. En _grayscale_, seulement 256 bits sont nécessaires pour définir un pixel.
+Les couleurs ne s’avèrent pas très utiles {cite}`noauthor_why_nodate` pour déceler les caractéristiques importantes d’une image. De plus, il nous faudrait beaucoup plus d’éléments dans une `array` pour représenter des images en couleur qu’en noir et blanc. Par exemple, pour représenter une couleur en `RGB`[^16], il nous faudrait 256 bits pour chacune des trois couleurs[^17]. En _grayscale_, seulement 256 bits sont nécessaires pour définir un pixel.
 
 ##### Pourquoi est-il inversé?
 
-Lors de notre entraînement, les valeurs de `0`sont ignorées et ne nécessitent pas de calcul {cite}`stackexchange. Il est donc préférable d’avoir le plus de valeurs de *grayscale* à 0 possible. Les chiffres écrits à la main ne remplissent qu’une minorité de l’image. En utilisant les valeurs inversées, les pixels les moins nombreux ont une valeur de `256`, alors que les plus nombreux ont une valeur de `0`.
+Lors de notre entraînement, les valeurs de `0`sont ignorées et ne nécessitent pas de calcul {cite}`noauthor_impact_nodate`. Il est donc préférable d’avoir le plus de valeurs de *grayscale* à 0 possible. Les chiffres écrits à la main ne remplissent qu’une minorité de l’image. En utilisant les valeurs inversées, les pixels les moins nombreux ont une valeur de `256`, alors que les plus nombreux ont une valeur de `0`.
 
 [^1]:	Un ordinateur moderne possédant un processeur de 2GHz peut réaliser 2 000 000 000 opérations par seconde sur chacun de ses coeurs.
 

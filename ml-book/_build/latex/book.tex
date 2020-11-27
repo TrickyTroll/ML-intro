@@ -391,7 +391,7 @@ Dans le domaine de l’IA, un jeu de données représente l’ensemble des donn�
 
 \subsection{Mise en bouche sur l’apprentissage machine}
 \label{\detokenize{preprocessing:mise-en-bouche-sur-lapprentissage-machine}}
-L’entrainement d’un modèle se rapproche beaucoup des mathématiques, plus précisément de la statistique, comme en témoigne le \sphinxstyleemphasis{Deep Learning Book} \sphinxcite{zbib:goodfellow-et-al-2016}. L’apprentissage machine vise à ingérer des quantités massives de données provenant de sources différentes. Par la suite, à l’aide de calculs statistiques, le programme tente de faire une certaine classification du jeu données. Selon le besoin, le programme pourrait alors poser une étiquette sur des données non étiquetées similaires à celles retrouvées dans le jeu de donnée \DUrole{bibtex}{{[}mitclassification{]}}.   Le modèle pourrait aussi être entrainer afin de reconnaître des anomalies, grouper des informations similaires par classes et bien d’autres \DUrole{bibtex}{{[}wikisupervised{]}}. Toutes ces informations seront discutées plus en détails au courant de la prochaine section. Ce qu’il est important de retenir, c’est qu’entrainer un modèle nécessite \sphinxstyleemphasis{\sphinxstylestrong{beaucoup}} de données.
+L’entrainement d’un modèle se rapproche beaucoup des mathématiques, plus précisément de la statistique, comme en témoigne le \sphinxstyleemphasis{Deep Learning Book} \sphinxcite{zbib:goodfellow-et-al-2016}. L’apprentissage machine vise à ingérer des quantités massives de données provenant de sources différentes. Par la suite, à l’aide de calculs statistiques, le programme tente de faire une certaine classification du jeu données. Selon le besoin, le programme pourrait alors poser une étiquette sur des données non étiquetées similaires à celles retrouvées dans le jeu de donnée \DUrole{bibtex}{{[}bost\_machine\_2015 {]}}. Le modèle pourrait aussi être entrainer afin de reconnaître des anomalies, grouper des informations similaires par classes et bien d’autres \sphinxcite{zbib:noauthor-supervised-2020}. Toutes ces informations seront discutées plus en détails au courant de la prochaine section. Ce qu’il est important de retenir, c’est qu’entrainer un modèle nécessite \sphinxstyleemphasis{\sphinxstylestrong{beaucoup}} de données.
 
 \begin{sphinxadmonition}{note}{Sur la signification de «beaucoup de données»}
 
@@ -407,13 +407,13 @@ Il y a 60 000 exemples dans nos données d’entraînement.
 \subsection{Traiter beaucoup de données}
 \label{\detokenize{preprocessing:traiter-beaucoup-de-donnees}}
 Pour reprendre l’exemple précédent, la \sphinxcode{\sphinxupquote{shape}} de l’objet \sphinxcode{\sphinxupquote{train\_data}}est une liste de 60 000 images représentées par des matrices carrées de dimension 28. Dans notre cas, si le programme passait tous les pixels un à un, il faudrait qu’il réalise séquentiellement \(28 \times 28 \times 60 000 = 47 040 000\) opérations. Ce serait par exemple le cas dans une \sphinxcode{\sphinxupquote{for loop}}. Bien que les ordinateurs modernes sont particulièrement rapides%
-\begin{footnote}[16]\sphinxAtStartFootnote
+\begin{footnote}[18]\sphinxAtStartFootnote
 Un ordinateur moderne possédant un processeur de 2GHz peut réaliser 2 000 000 000 opérations par seconde sur chacun de ses coeurs.
 %
-\end{footnote}, les modèles récents sont eux aussi entrainés avec des jeux de données de plus en plus massifs. Celui utilisé pour le service \sphinxhref{https://translate.google.ca}{Google Translate}, par exemple, compte des milliards d’exemples \DUrole{bibtex}{{[}googledatasize{]}}.
+\end{footnote}, les modèles récents sont eux aussi entrainés avec des jeux de données de plus en plus massifs. Celui utilisé pour le service \sphinxhref{https://translate.google.ca}{Google Translate}, par exemple, compte des milliards d’exemples \DUrole{bibtex}{{[}noauthor\_size\_nodate {]}}.
 
 Heureusement, il existe des méthodes permettant de paralléliser%
-\begin{footnote}[17]\sphinxAtStartFootnote
+\begin{footnote}[19]\sphinxAtStartFootnote
 Exécuter plusieurs opérations parallèlement plutôt que séquentiellement.
 %
 \end{footnote} les opérations statistiques réalisées sur notre modèle.
@@ -422,7 +422,7 @@ Exécuter plusieurs opérations parallèlement plutôt que séquentiellement.
 \subsubsection{Le parallélisme}
 \label{\detokenize{preprocessing:le-parallelisme}}
 Pour réduire le coût monétaire et temporel de l’entrainement d’un modèle, la tâche peut être séparée sur plusieurs des coeurs%
-\begin{footnote}[18]\sphinxAtStartFootnote
+\begin{footnote}[20]\sphinxAtStartFootnote
 Un «coeur» est une unité du processeur pouvant faire du calcul indépendamment des autres coeurs. Un processeur d’ordinateur portable moderne possède de deux à quatre coeurs. Une carte graphique moderne en possède quelques milliers, quoique moins performants que ceux du processeur.
 %
 \end{footnote} de la machine. Pour se faire, nous profiterons des propriétés des matrices.
@@ -436,7 +436,7 @@ Afin de trouver comment il serait possible de réaliser nos calculs en parallèl
 \subparagraph{La multiplication}
 \label{\detokenize{preprocessing:la-multiplication}}
 Assumons les matrices de dimensions compatibles%
-\begin{footnote}[19]\sphinxAtStartFootnote
+\begin{footnote}[21]\sphinxAtStartFootnote
 Pour réaliser une multiplication entre deux matrices, il faut que le nombre de colonnes de la première matrice soit égal au nombre de rangées de la deuxième.
 %
 \end{footnote} \(A\) et \(B\):
@@ -444,7 +444,7 @@ Pour réaliser une multiplication entre deux matrices, il faut que le nombre de 
 \([A \times B]_{i,j} = \displaystyle\sum_{k=1}A_{i,k}B_{k,j}\)
 
 Assumons aussi que la matrice \(C\) est produite par l’opération \(A \times B\) et que les matrices \(A\) et \(B\) sont carrées%
-\begin{footnote}[20]\sphinxAtStartFootnote
+\begin{footnote}[22]\sphinxAtStartFootnote
 Une matrice carrée est une matrice qui contient autant de rangées que de colonnes.
 %
 \end{footnote}.  Le calcul de \(C\) pourrait alors être implémenté de la manière suivante.
@@ -466,21 +466,21 @@ Une matrice carrée est une matrice qui contient autant de rangées que de colon
 \end{sphinxVerbatim}
 
 Quoi qu’assez simple à implémenter, cette façon de calculer \(C\) est particulièrement inefficace. Alors que les matrices A et B augmentent en taille, le nombre d’opérations requises augmente…\sphinxstylestrong{au cube!} Si \(A\) passe d’une matrice \(2X2\) à une matrice \(3X3\), chaque \sphinxcode{\sphinxupquote{for loop}} doit être réalisée \(n\)%
-\begin{footnote}[21]\sphinxAtStartFootnote
+\begin{footnote}[23]\sphinxAtStartFootnote
 \(n\) représente le nombre de rangées et de colonnes d’une matrice carrée.
 %
-\end{footnote} fois de plus. Comme le programme contient 3 for loops imbriquées, si la première doit être faite \(n\) fois de plus, alors c’est de même pour la deuxième, puis la troisième. Le calcul est alors \(n \times n \times n = n^3\) fois plus complexe à réaliser \DUrole{bibtex}{{[}wikimatrixmulti{]}}.
+\end{footnote} fois de plus. Comme le programme contient 3 for loops imbriquées, si la première doit être faite \(n\) fois de plus, alors c’est de même pour la deuxième, puis la troisième. Le calcul est alors \(n \times n \times n = n^3\) fois plus complexe à réaliser \DUrole{bibtex}{{[}noauthor\_matrix\_2020 {]}}.
 
 Heureusement, ce problème n’est pas sans issues. Reprenons l’équation de la multiplication de deux matrices.
 \([A \times B]_{i,j} = \displaystyle\sum_{k=1}A_{i,k}B_{k,j}\)
 Dans ce cas, chaque élément de \(C\) est produit par une sommation sur des multiplications d’éléments de \(A\) et \(B\). Il est aussi important de noter qu’aucun calcul pour un élément de \(C\) dépend d’un calcul pour un autre élément de \(C\)%
-\begin{footnote}[22]\sphinxAtStartFootnote
+\begin{footnote}[24]\sphinxAtStartFootnote
 Ils peuvent être calculés dans n’importe quel ordre et le résultat sera toujours le même. Un résultat pourrait aussi
 %
 \end{footnote}. Il serait donc possible de calculer plusieurs éléments de \(C\) en même temps!
 
 Bien que le calcul en parallèle ne réduit pas l’ordre de complexité, il permet tout de même de diviser le temps requis par le nombre de coeurs utilisés%
-\begin{footnote}[23]\sphinxAtStartFootnote
+\begin{footnote}[25]\sphinxAtStartFootnote
 Plus ou moins. Voir \sphinxhref{https://en.wikipedia.org/wiki/Parallel\_computing\#Amdahl\%27s\_law\_and\_Gustafson\%27s\_law}{1.1 Amdahl’s law and Gustafson’s law}
 %
 \end{footnote}.
@@ -489,7 +489,7 @@ Plus ou moins. Voir \sphinxhref{https://en.wikipedia.org/wiki/Parallel\_computin
 \subparagraph{L’addition}
 \label{\detokenize{preprocessing:laddition}}
 L’addition de deux matrices compatibles%
-\begin{footnote}[24]\sphinxAtStartFootnote
+\begin{footnote}[26]\sphinxAtStartFootnote
 Pour que deux matrices puissent être additionnées, elles doivent avoir le même nombre de rangées et de colonnes.
 %
 \end{footnote} se définit par l’addition de chacun des éléments homologues des deux matrices. Si nous reprenons les matrices carrées \(A\) et \(B\) utilisées plus haut, la somme de ces deux matrices serait:
@@ -499,7 +499,7 @@ Pour que deux matrices puissent être additionnées, elles doivent avoir le mêm
 Supposons que la matrice \(C\) résulte de la somme de \(A\) et \(B\). Il est encore une fois possible d’affirmer que la valeur de \(C_{i,j}\) ne dépend pas de la valeur de \(C_{k,l}\). Il serait possible d’additionner chaque composante des deux matrices dans n’importe quel ordre en obtenant toujours le même résultat.
 
 Encore une fois, l’addition de deux matrices peut être parallélisé afin de réduire le temps de calcul%
-\begin{footnote}[25]\sphinxAtStartFootnote
+\begin{footnote}[27]\sphinxAtStartFootnote
 En assumant que le calcul est réalisé sur une machine possédant plusieurs coeurs.
 %
 \end{footnote}.
@@ -531,7 +531,7 @@ Encore une fois, aucun résultat n’est dépendant d’un autre. Il serait donc
 \subparagraph{La sommation}
 \label{\detokenize{preprocessing:la-sommation}}
 Nous avons ici un calcul légèrement différent des autres. Dans le cas de la sommation des éléments d’une matrice de dimension \((1,n)\), le calcul s’avère commutatif en plus d’être associatif%
-\begin{footnote}[26]\sphinxAtStartFootnote
+\begin{footnote}[28]\sphinxAtStartFootnote
 Dans le cas des autres opérations matricielles présentées, elles étaient seulement associatives. Les calculs étaient, comme pour la sommation, indépendants les un des autres. Par contre, pour les autres opérations les résultats devaient être placés de manière ordonnée dans la matrice résultante.
 %
 \end{footnote}. La commutativité de l’addition permet à notre programme d’utiliser l’opérateur de réduction.
@@ -559,7 +559,7 @@ En premier lieu, voici comme une addition séquentielle d’un tableau pourrait 
 Cet exemple permettrait de réaliser une sommation séquentielle sur tous les chiffres contenus dans le tableau. Ce reviendrait à réaliser le calcul suivant:
 \((((((((2+9)+6)+4)+1)+3)+8)+8)\)
 Bien que la moindre performance de cette méthode ne se fait pas ressentir pour des petites sommations, ce programme ne s’adapte pas bien à de grands tableaux%
-\begin{footnote}[27]\sphinxAtStartFootnote
+\begin{footnote}[29]\sphinxAtStartFootnote
 Voir la \{section\} sur les résultats concrets.
 %
 \end{footnote}.
@@ -597,12 +597,12 @@ En bref, une majorité des opérations matricielles peuvent être parallélisée
 
 \subsubsection{NumPy}
 \label{\detokenize{preprocessing:numpy}}
-C’est pour les opérations parallèles que la librairie \sphinxcode{\sphinxupquote{numpy}}, mentionnée lors de la section précédente, entre en jeu. Les opérations matricielles réalisées à l’aide de méthodes implémentés par \sphinxcode{\sphinxupquote{numpy}}profitent aussi de l’implémentation des \sphinxcode{\sphinxupquote{BLAS}}%
-\begin{footnote}[28]\sphinxAtStartFootnote
+C’est pour les opérations parallèles que la librairie \sphinxcode{\sphinxupquote{numpy}}, mentionnée lors de la {\hyperref[\detokenize{explications_librairies::doc}]{\sphinxcrossref{\DUrole{doc,std,std-doc}{section précédente}}}}, entre en jeu. Les opérations matricielles réalisées à l’aide de méthodes implémentés par \sphinxcode{\sphinxupquote{numpy}}profitent aussi de l’implémentation des \sphinxcode{\sphinxupquote{BLAS}}%
+\begin{footnote}[30]\sphinxAtStartFootnote
 \sphinxcode{\sphinxupquote{BLAS}} signifie \sphinxstylestrong{B}asic \sphinxstylestrong{L}inear \sphinxstylestrong{A}lgebra \sphinxstylestrong{S}ubroutines, ou sous\sphinxhyphen{}routines de base d’algèbre linéaire.
 %
 \end{footnote}. Les \sphinxcode{\sphinxupquote{BLAS}} permettent de grandement accélérer nos calculs sans même nécessiter de coeurs supplémentaires. Elles exploitent plutôt les différentes architectures de processeur ainsi que leur différents niveau de cache%
-\begin{footnote}[29]\sphinxAtStartFootnote
+\begin{footnote}[31]\sphinxAtStartFootnote
 Petite mémoire rapide allouée au processeur.
 %
 \end{footnote}.
@@ -612,7 +612,7 @@ Petite mémoire rapide allouée au processeur.
 \label{\detokenize{preprocessing:blas}}
 Les sous\sphinxhyphen{}routines d’algèbre linéaire permettent de nettement réduire l’ordre de complexité des opérations d’algèbre linéaire. Elles permettent, par exemple, de décomposer des matrices en blocs afin d’accélérer la multiplication.
 
-Ces sous\sphinxhyphen{}programmes sont extrêmement populaires. Ils sont implémentés dans une majorité des programmes de calcul scientifique \DUrole{bibtex}{{[}blaswebsite{]}}.
+Ces sous\sphinxhyphen{}programmes sont extrêmement populaires. Ils sont implémentés dans une majorité des programmes de calcul scientifique \sphinxcite{zbib:noauthor-blas-nodate}.
 
 
 \paragraph{Quelques résultats concrets}
@@ -668,7 +668,7 @@ Dans ce programme, deux matrices de dimensions \(1000 x 1000\) sont multipliées
 \end{sphinxVerbatim}
 
 Alors que l’implémentation de base prend plus de 30 minutes à faire le calcul, \sphinxcode{\sphinxupquote{Numpy}} n’a besoin de que moins de 6 millièmes de secondes%
-\begin{footnote}[30]\sphinxAtStartFootnote
+\begin{footnote}[32]\sphinxAtStartFootnote
 Testé sur un processeur \sphinxstyleemphasis{2.9 GHz Dual\sphinxhyphen{}Core Intel Core i5}.
 %
 \end{footnote}!
@@ -763,17 +763,26 @@ Le paramètre \sphinxcode{\sphinxupquote{dtype=uint8}}signifie que nos pixels so
 
 \subsubsection{Explications plus détaillées sur la représentation des images.}
 \label{\detokenize{preprocessing:explications-plus-detaillees-sur-la-representation-des-images}}
-Cette section c’est seulement si j’ai le temps.
+Quelques explications plus détaillées sur la représentation des images par des nombres.
 
 
 \paragraph{Pourquoi le \sphinxstyleemphasis{grayscale}?}
 \label{\detokenize{preprocessing:pourquoi-le-grayscale}}
+Les couleurs ne s’avèrent pas très utiles \sphinxcite{zbib:noauthor-why-nodate} pour déceler les caractéristiques importantes d’une image. De plus, il nous faudrait beaucoup plus d’éléments dans une \sphinxcode{\sphinxupquote{array}} pour représenter des images en couleur qu’en noir et blanc. Par exemple, pour représenter une couleur en \sphinxcode{\sphinxupquote{RGB}}%
+\begin{footnote}[33]\sphinxAtStartFootnote
+Modèle de représentation des couleurs. Une couleur est représentée par les intensités des couleurs rouge, vert et bleu qui la constituent.
+%
+\end{footnote}, il nous faudrait 256 bits pour chacune des trois couleurs%
+\begin{footnote}[34]\sphinxAtStartFootnote
+Donc 768 bits.
+%
+\end{footnote}. En \sphinxstyleemphasis{grayscale}, seulement 256 bits sont nécessaires pour définir un pixel.
+
 
 \subparagraph{Pourquoi est\sphinxhyphen{}il inversé?}
 \label{\detokenize{preprocessing:pourquoi-est-il-inverse}}
+Lors de notre entraînement, les valeurs de \sphinxcode{\sphinxupquote{0}}sont ignorées et ne nécessitent pas de calcul \sphinxcite{zbib:noauthor-impact-nodate}. Il est donc préférable d’avoir le plus de valeurs de \sphinxstyleemphasis{grayscale} à 0 possible. Les chiffres écrits à la main ne remplissent qu’une minorité de l’image. En utilisant les valeurs inversées, les pixels les moins nombreux ont une valeur de \sphinxcode{\sphinxupquote{256}}, alors que les plus nombreux ont une valeur de \sphinxcode{\sphinxupquote{0}}.
 
-\paragraph{Pourquoi seulement 784 pixels?}
-\label{\detokenize{preprocessing:pourquoi-seulement-784-pixels}}
 
 \bigskip\hrule\bigskip
 
@@ -1376,6 +1385,14 @@ y ait une sorte d’intelligence au\sphinxhyphen{}delà de celle humaine et arti
 
 
 \begin{sphinxthebibliography}{Les cont}
+\bibitem[Anonymous, n.d.a]{zbib:noauthor-impact-nodate}
+None to claim their bones (n.d.). \sphinxstyleemphasis{Impact of inverting grayscale values on mnist dataset}.
+\bibitem[Anonymous, n.d.b]{zbib:noauthor-why-nodate}
+None to claim their bones (n.d.). \sphinxstyleemphasis{why we should use gray scale for image processing}.
+\bibitem[Anonymous, n.d.c]{zbib:noauthor-blas-nodate}
+None to claim their bones (n.d.). \sphinxstyleemphasis{BLAS (Basic Linear Algebra Subprograms)}.
+\bibitem[Anonymous, 2020]{zbib:noauthor-supervised-2020}
+None to claim their bones (2020 , October). \sphinxstyleemphasis{Supervised learning}. Page Version ID: 982281641.
 \bibitem[InnovationQuebec, 2018]{zbib:gouvqc}
 et Innovation Québec, É. (2018). \sphinxstyleemphasis{Les avantages et inconvénients de l’intelligence artificielle}.
 \bibitem[futura\sphinxhyphen{}sciences, n.d.]{zbib:futura-sciences}

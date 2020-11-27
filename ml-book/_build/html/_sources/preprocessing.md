@@ -12,7 +12,7 @@ Dans le domaine de l'IA, un jeu de données représente l'ensemble des données 
 
 ## Mise en bouche sur l’apprentissage machine
 
-L’entrainement d’un modèle se rapproche beaucoup des mathématiques, plus précisément de la statistique, comme en témoigne le *Deep Learning Book* {cite}`Goodfellow-et-al-2016`. L’apprentissage machine vise à ingérer des quantités massives de données provenant de sources différentes. Par la suite, à l’aide de calculs statistiques, le programme tente de faire une certaine classification du jeu données. Selon le besoin, le programme pourrait alors poser une étiquette sur des données non étiquetées similaires à celles retrouvées dans le jeu de donnée {cite}`mitclassification`.   Le modèle pourrait aussi être entrainer afin de reconnaître des anomalies, grouper des informations similaires par classes et bien d’autres {cite}`wikisupervised`. Toutes ces informations seront discutées plus en détails au courant de la prochaine section. Ce qu’il est important de retenir, c’est qu’entrainer un modèle nécessite ***beaucoup*** de données.
+L’entrainement d’un modèle se rapproche beaucoup des mathématiques, plus précisément de la statistique, comme en témoigne le *Deep Learning Book* {cite}`Goodfellow-et-al-2016`. L’apprentissage machine vise à ingérer des quantités massives de données provenant de sources différentes. Par la suite, à l’aide de calculs statistiques, le programme tente de faire une certaine classification du jeu données. Selon le besoin, le programme pourrait alors poser une étiquette sur des données non étiquetées similaires à celles retrouvées dans le jeu de donnée {cite}`bost_machine_2015 `. Le modèle pourrait aussi être entrainer afin de reconnaître des anomalies, grouper des informations similaires par classes et bien d’autres {cite}`noauthor_supervised_2020`. Toutes ces informations seront discutées plus en détails au courant de la prochaine section. Ce qu’il est important de retenir, c’est qu’entrainer un modèle nécessite ***beaucoup*** de données.
 
 ```{admonition} Sur la signification de «beaucoup de données»
 Il y a 60 000 exemples dans nos données d'entraînement.
@@ -23,7 +23,7 @@ Out[ ]: (60000, 28, 28)
 
 ## Traiter beaucoup de données
 
-Pour reprendre l’exemple précédent, la `shape` de l’objet `train_data`est une liste de 60 000 images représentées par des matrices carrées de dimension 28. Dans notre cas, si le programme passait tous les pixels un à un, il faudrait qu’il réalise séquentiellement $28 \times 28 \times 60 000 = 47 040 000$ opérations. Ce serait par exemple le cas dans une `for loop`. Bien que les ordinateurs modernes sont particulièrement rapides[^1], les modèles récents sont eux aussi entrainés avec des jeux de données de plus en plus massifs. Celui utilisé pour le service [Google Translate](https://translate.google.ca), par exemple, compte des milliards d’exemples {cite}`googledatasize`.
+Pour reprendre l’exemple précédent, la `shape` de l’objet `train_data`est une liste de 60 000 images représentées par des matrices carrées de dimension 28. Dans notre cas, si le programme passait tous les pixels un à un, il faudrait qu’il réalise séquentiellement $28 \times 28 \times 60 000 = 47 040 000$ opérations. Ce serait par exemple le cas dans une `for loop`. Bien que les ordinateurs modernes sont particulièrement rapides[^1], les modèles récents sont eux aussi entrainés avec des jeux de données de plus en plus massifs. Celui utilisé pour le service [Google Translate](https://translate.google.ca), par exemple, compte des milliards d’exemples {cite}`noauthor_size_nodate `.
 
 Heureusement, il existe des méthodes permettant de paralléliser[^2] les opérations statistiques réalisées sur notre modèle.
 
@@ -59,7 +59,7 @@ for i in range(len(A)):
 			C[i][j] += A[i][k] * B[k][j]
 ```
 
-Quoi qu’assez simple à implémenter, cette façon de calculer $C$ est particulièrement inefficace. Alors que les matrices A et B augmentent en taille, le nombre d’opérations requises augmente…**au cube!** Si $A$ passe d’une matrice $2X2$ à une matrice $3X3$, chaque `for loop` doit être réalisée $n$[^6] fois de plus. Comme le programme contient 3 for loops imbriquées, si la première doit être faite $n$ fois de plus, alors c’est de même pour la deuxième, puis la troisième. Le calcul est alors $n \times n \times n = n^3$ fois plus complexe à réaliser {cite}`wikimatrixmulti`.
+Quoi qu’assez simple à implémenter, cette façon de calculer $C$ est particulièrement inefficace. Alors que les matrices A et B augmentent en taille, le nombre d’opérations requises augmente…**au cube!** Si $A$ passe d’une matrice $2X2$ à une matrice $3X3$, chaque `for loop` doit être réalisée $n$[^6] fois de plus. Comme le programme contient 3 for loops imbriquées, si la première doit être faite $n$ fois de plus, alors c’est de même pour la deuxième, puis la troisième. Le calcul est alors $n \times n \times n = n^3$ fois plus complexe à réaliser {cite}`noauthor_matrix_2020 `.
 
 Heureusement, ce problème n’est pas sans issues. Reprenons l’équation de la multiplication de deux matrices.
 $[A \times B]_{i,j} = \displaystyle\sum_{k=1}A_{i,k}B_{k,j}$
@@ -154,13 +154,13 @@ En bref, une majorité des opérations matricielles peuvent être parallélisée
 
 ### NumPy
 
-C’est pour les opérations parallèles que la librairie `numpy`, mentionnée lors de la section précédente, entre en jeu. Les opérations matricielles réalisées à l’aide de méthodes implémentés par `numpy`profitent aussi de l’implémentation des `BLAS`[^13]. Les `BLAS` permettent de grandement accélérer nos calculs sans même nécessiter de coeurs supplémentaires. Elles exploitent plutôt les différentes architectures de processeur ainsi que leur différents niveau de cache[^14].
+C’est pour les opérations parallèles que la librairie `numpy`, mentionnée lors de la [section précédente](./explications_librairies.md), entre en jeu. Les opérations matricielles réalisées à l’aide de méthodes implémentés par `numpy`profitent aussi de l’implémentation des `BLAS`[^13]. Les `BLAS` permettent de grandement accélérer nos calculs sans même nécessiter de coeurs supplémentaires. Elles exploitent plutôt les différentes architectures de processeur ainsi que leur différents niveau de cache[^14].
 
 #### `BLAS`
 
 Les sous-routines d’algèbre linéaire permettent de nettement réduire l’ordre de complexité des opérations d’algèbre linéaire. Elles permettent, par exemple, de décomposer des matrices en blocs afin d’accélérer la multiplication.
 
-Ces sous-programmes sont extrêmement populaires. Ils sont implémentés dans une majorité des programmes de calcul scientifique {cite}`blaswebsite`.
+Ces sous-programmes sont extrêmement populaires. Ils sont implémentés dans une majorité des programmes de calcul scientifique {cite}`noauthor_blas_nodate`.
 
 #### Quelques résultats concrets
 
@@ -303,10 +303,16 @@ Le paramètre `dtype=uint8`signifie que nos pixels sont représentés par des en
 
 
 ### Explications plus détaillées sur la représentation des images.
-Cette section c’est seulement si j’ai le temps.
+
+Quelques explications plus détaillées sur la représentation des images par des nombres.
+
 #### Pourquoi le *grayscale*?
+
+Les couleurs ne s’avèrent pas très utiles {cite}`noauthor_why_nodate` pour déceler les caractéristiques importantes d’une image. De plus, il nous faudrait beaucoup plus d’éléments dans une `array` pour représenter des images en couleur qu’en noir et blanc. Par exemple, pour représenter une couleur en `RGB`[^16], il nous faudrait 256 bits pour chacune des trois couleurs[^17]. En _grayscale_, seulement 256 bits sont nécessaires pour définir un pixel.
+
 ##### Pourquoi est-il inversé?
-#### Pourquoi seulement 784 pixels?
+
+Lors de notre entraînement, les valeurs de `0`sont ignorées et ne nécessitent pas de calcul {cite}`noauthor_impact_nodate`. Il est donc préférable d’avoir le plus de valeurs de *grayscale* à 0 possible. Les chiffres écrits à la main ne remplissent qu’une minorité de l’image. En utilisant les valeurs inversées, les pixels les moins nombreux ont une valeur de `256`, alors que les plus nombreux ont une valeur de `0`.
 
 [^1]:	Un ordinateur moderne possédant un processeur de 2GHz peut réaliser 2 000 000 000 opérations par seconde sur chacun de ses coeurs.
 
@@ -337,3 +343,7 @@ Cette section c’est seulement si j’ai le temps.
 [^14]:	Petite mémoire rapide allouée au processeur.
 
 [^15]:	Testé sur un processeur *2.9 GHz Dual-Core Intel Core i5*.
+
+[^16]:	Modèle de représentation des couleurs. Une couleur est représentée par les intensités des couleurs rouge, vert et bleu qui la constituent.
+
+[^17]:	Donc 768 bits.
