@@ -8,7 +8,7 @@ outils et des données réalisés par des organisations réputées comme Google,
 le développement de notre application d'apprentissage machine. La librairie
 procure un [API](https://en.wikipedia.org/wiki/API) en Python donnant accès
 à de multiples fonctions utilisées pour obtenir des données et les utiliser
-pour entraîner notre programme.
+pour entrainer notre programme.
 
 ### Historique
 Développée par Google et rendue publique en 2015 {cite}`wikitf`, la librairie
@@ -28,11 +28,11 @@ Nous utilisons TensorFlow afin de faciliter l'accès à nos données et afin
 de créer notre modèle.
 
 #### Accès aux données
-Pour entrainer notre modèle, nous utilisons la base de données
+Pour entrainer notre modèle, nous utilisons le jeu de données du
 [MNIST](http://yann.lecun.com/exdb/mnist/). Bien qu'elle soit très complète,
-le format de cette base de donnée est assez complexe
+le format de ce jeu de de donnée est assez complexe
 ([Voir la section sur le *preprocessing*)](./preprocessing.ipynb). Heureusement,
-la libraire TensorFlow procure un
+la libraire TensorFlow procure une
 [interface simple](https://www.tensorflow.org/api_docs/python/tf/keras/datasets/mnist/load_data)
 avec le langage de programmation que nous utilisons.
 
@@ -44,10 +44,11 @@ num_labels = np.hstack([train_labels, test_labels])
 
 La classe `mnist` fournie par la librairie `Tensorflow`nous permet de charger en mémoire toutes les données nécessaires en seulement trois lignes.
 
-#### Entraînement du modèle
-Le domaine de l’IA s’avère assez complexe. Programmer et entraîner un modèle nécessite des connaissances en mathématiques avancées {cite}`Goodfellow-et-al-2016`.
+#### Entrainement du modèle
 
-`Tensorflow`vise à accélérer le développement de l’intelligence artificielle ainsi que de rendre ce développement accessible aux masses. Afin de simplifier la réalisation de notre programme et afin de le rendre plus efficace, nous comptons donc utiliser les méthodes d’entraînement fournies par la librairie. Pour aider le lecteur à comprendre le fonctionnement du programme (et donc pour éviter le phénomène de la [boîte noire](lien vers la section de la boîte noire), chaque fonction utilisée sera décortiquée et expliquée en détails.
+Le domaine de l’IA s’avère assez complexe. Programmer et entrainer un modèle nécessite des connaissances en mathématiques avancées {cite}`Goodfellow-et-al-2016`.
+
+`Tensorflow`vise à accélérer le développement de l’intelligence artificielle ainsi que de rendre ce développement accessible aux masses. Afin de simplifier la réalisation de notre programme et afin de le rendre plus efficace, nous comptons donc utiliser les méthodes d’entrainement fournies par la librairie. Pour aider le lecteur à comprendre le fonctionnement du programme (et donc pour éviter le phénomène de la [boite noire](lien vers la section de la boîte noire), chaque fonction utilisée sera décortiquée et expliquée en détail.
 ```python
 model = keras.Sequential([
     keras.layers.Flatten(input_shape=(28, 28)),
@@ -60,28 +61,28 @@ model.compile(optimizer='adam',
               metrics=['accuracy'])
 model.fit(train_images, train_labels, epochs=10)
 ```
-Seulement quelques lignes sont nécessaires à l’entraînement de notre modèle.
+Seulement quelques lignes sont nécessaires à l’entrainement de notre modèle.
 
 ## Numpy
 [NumPy](https://numpy.org) est une librairie facilitant le calcul avec le langage de programmation que nous utilisons pour créer notre modèle.
 
 ### Historique
-La libraire à été créée en 2005 et était à l’époque basée sur les librairies [numériques et les modules mathématiques](https://docs.python.org/3/library/numeric.html) de Python {cite}`numpy`.
-Numpy vise à rendre la réalisation de grands calculs numériques plus simples et optimisée. Plusieurs de ses capacités ont des fonctions homologue dans les logiciels [Matlab](https://www.mathworks.com) et [Maple](https://maplesoft.com).
+La libraire a été créée en 2005 et était à l’époque basée sur les librairies [numériques et les modules mathématiques](https://docs.python.org/3/library/numeric.html) de Python {cite}`numpy`.
+Numpy vise à rendre la réalisation de grands calculs numériques plus simples et optimisée. Plusieurs de ses capacités ont des fonctions homologues dans les logiciels [Matlab](https://www.mathworks.com) et [Maple](https://maplesoft.com).
 
 ### Notre utilisation
-Comme sera possible de l’observer tout au long de ce rapport, les mathématiques constituent le pilier principal sur lequel repose le domaine de l’intelligence artificielle. De plus, la plupart des composantes des réseaux neuronaux peuvent être représentés comme des matrices. Numpy permet d’utiliser certaines propriétés des matrices afin de paralléliser les calculs menant à l’entraînement du modèle.  De plus,  comme nous le verrons dans la section suivante, Numpy peut être utilisé afin de représenter des images comme des matrices, et donc faciliter les opérations sur chacun des pixels.
+Comme sera possible de l’observer tout au long de ce rapport, les mathématiques constituent le pilier principal sur lequel repose le domaine de l’intelligence artificielle. De plus, la plupart des composantes des réseaux neuronaux peuvent être représentées comme des matrices. Numpy permet d’utiliser certaines propriétés des matrices afin de paralléliser les calculs menant à l’entrainement du modèle.  De plus,  comme nous le verrons dans la section suivante, Numpy peut être utilisé afin de représenter des images comme des matrices, et donc faciliter les opérations sur chacun des pixels.
 
 ## Matplolib
 [Matplotlib](https://matplotlib.org) est une librairie de visualisation implémentée dans le langage de programmation Python.
 
 ### Historique
 
-La libraire est un projet à code source ouvert financé par [Numfocus](https://numfocus.org). Déployé depuis plus de 17 ans cite`wikimatplotlib`,  la librairie permet, tout comme `Numpy`, au langage de programmation Python de se rapprocher de l’application Matlab, tout en restant libre de droit.
+La libraire est un projet à code source ouvert financé par [Numfocus](https://numfocus.org). Déployé depuis plus de 17 ans cite`wikimatplotlib`,  la librairie permet, tout comme `Numpy`, au langage de programmation Python de se rapprocher de l’application Matlab, tout en restant libre de droits.
 
 ### Notre utilisation
 
-La librairie fourni un *API* simple à utiliser permettant de réaliser des graphiques directement dans nos notebooks. Nous utilisons aussi la fonctionnalité permettant de représenter des images comme suit:
+La librairie fournit un *API* simple à utiliser permettant de réaliser des graphiques directement dans nos notebooks. Nous utilisons aussi la fonctionnalité permettant de représenter des images comme suit:
 
 ```python
 plt.imshow(train_data[0])

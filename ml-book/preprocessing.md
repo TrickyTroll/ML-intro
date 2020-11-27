@@ -1,21 +1,21 @@
 # Traitement antérieur à l’entrainement
 
-Dans cette section, nous discuterons du traitement nécessaire afin d’utiliser des images pour entrainer un réseau neuronal. Nous discuterons aussi de l’importance de ce traitement, ainsi que de la raison pour laquelle il doit aussi être réalisé sur les images que nous voudrons par la suite reconnaître.
+Dans cette section, nous discuterons du traitement nécessaire afin d’utiliser des images pour entrainer un réseau neuronal. Nous discuterons aussi de l’importance de ce traitement, ainsi que de la raison pour laquelle il doit aussi être réalisé sur les images que nous voudrons par la suite reconnaitre.
 
 ## Pourquoi faire du *preprocessing*?
 
-Comme nous en avons discuté dans la section précédente, notre programme utilise des méthodes fournies par la librairie `Tensorflow` afin de charger les données dans le bon format. Malheureusement, dans une majorité des cas, les données ne vous seront pas fournies sur un plateau d’argent. Les programmes d’apprentissage machine visent à faire du calcul statistique sur le jeu de données fourni
+Comme nous en avons discuté dans la section précédente, notre programme utilise des méthodes fournies par la librairie `Tensorflow` afin de charger les données dans le bon format. Malheureusement, dans une majorité des cas, les données ne vous seront pas fournies sur un plateau d’argent. Les programmes d’apprentissage machine visent à faire du calcul statistique sur le jeu de données fourni.
 
 ```{note}
-Dans le domaine de l'IA, un jeu de données représente l'ensemble des données traitées ainsi que leur étiquettes.
+Dans le domaine de l'IA, un jeu de données représente l'ensemble des données traitées ainsi que leurs étiquettes.
 ```
 
 ## Mise en bouche sur l’apprentissage machine
 
-L’entrainement d’un modèle se rapproche beaucoup des mathématiques, plus précisément de la statistique, comme en témoigne le *Deep Learning Book* {cite}`Goodfellow-et-al-2016`. L’apprentissage machine vise à ingérer des quantités massives de données provenant de sources différentes. Par la suite, à l’aide de calculs statistiques, le programme tente de faire une certaine classification du jeu données. Selon le besoin, le programme pourrait alors poser une étiquette sur des données non étiquetées similaires à celles retrouvées dans le jeu de donnée {cite}`bost_machine_2015 `. Le modèle pourrait aussi être entrainer afin de reconnaître des anomalies, grouper des informations similaires par classes et bien d’autres {cite}`noauthor_supervised_2020`. Toutes ces informations seront discutées plus en détails au courant de la prochaine section. Ce qu’il est important de retenir, c’est qu’entrainer un modèle nécessite ***beaucoup*** de données.
+L’entrainement d’un modèle se rapproche beaucoup des mathématiques, plus précisément de la statistique, comme en témoigne le *Deep Learning Book* {cite}`Goodfellow-et-al-2016`. L’apprentissage machine vise à ingérer des quantités massives de données provenant de sources différentes. Par la suite, à l’aide de calculs statistiques, le programme tente de faire une certaine classification du jeu données. Selon le besoin, le programme pourrait alors poser une étiquette sur des données non étiquetées similaires à celles retrouvées dans le jeu de donnée {cite}`bost_machine_2015 `. Le modèle pourrait aussi être entrainé afin de reconnaitre des anomalies, grouper des informations similaires par classes et bien d’autres {cite}`noauthor_supervised_2020`. Toutes ces informations seront discutées plus en détail au courant de la prochaine section. Ce qu’il est important de retenir, c’est qu’entrainer un modèle nécessite ***beaucoup*** de données.
 
 ```{admonition} Sur la signification de «beaucoup de données»
-Il y a 60 000 exemples dans nos données d'entraînement.
+Il y a 60 000 exemples dans nos données d'entrainement.
 ```python
 In [ ]: train_data.shape
 Out[ ]: (60000, 28, 28)
@@ -29,7 +29,7 @@ Heureusement, il existe des méthodes permettant de paralléliser[^2] les opéra
 
 ### Le parallélisme
 
-Pour réduire le coût monétaire et temporel de l’entrainement d’un modèle, la tâche peut être séparée sur plusieurs des coeurs[^3] de la machine. Pour se faire, nous profiterons des propriétés des matrices.
+Pour réduire le cout monétaire et temporel de l’entrainement d’un modèle, la tâche peut être séparée sur plusieurs des coeurs[^3] de la machine. Pour ce faire, nous profiterons des propriétés des matrices.
 
 #### Les propriétés des matrices
 
@@ -59,11 +59,11 @@ for i in range(len(A)):
 			C[i][j] += A[i][k] * B[k][j]
 ```
 
-Quoi qu’assez simple à implémenter, cette façon de calculer $C$ est particulièrement inefficace. Alors que les matrices A et B augmentent en taille, le nombre d’opérations requises augmente…**au cube!** Si $A$ passe d’une matrice $2X2$ à une matrice $3X3$, chaque `for loop` doit être réalisée $n$[^6] fois de plus. Comme le programme contient 3 for loops imbriquées, si la première doit être faite $n$ fois de plus, alors c’est de même pour la deuxième, puis la troisième. Le calcul est alors $n \times n \times n = n^3$ fois plus complexe à réaliser {cite}`noauthor_matrix_2020 `.
+Quoiqu’assez simple à implémenter, cette façon de calculer $C$ est particulièrement inefficace. Alors que les matrices A et B augmentent en taille, le nombre d’opérations requises augmente…**au cube!** Si $A$ passe d’une matrice $2X2$ à une matrice $3X3$, chaque `for loop` doit être réalisée $n$[^6] fois de plus. Comme le programme contient 3 for loops imbriquées, si la première doit être faite $n$ fois de plus, alors c’est de même pour la deuxième, puis la troisième. Le calcul est alors $n \times n \times n = n^3$ fois plus complexe à réaliser {cite}`noauthor_matrix_2020 `.
 
 Heureusement, ce problème n’est pas sans issues. Reprenons l’équation de la multiplication de deux matrices.
 $[A \times B]_{i,j} = \displaystyle\sum_{k=1}A_{i,k}B_{k,j}$
-Dans ce cas, chaque élément de $C$ est produit par une sommation sur des multiplications d’éléments de $A$ et $B$. Il est aussi important de noter qu’aucun calcul pour un élément de $C$ dépend d’un calcul pour un autre élément de $C$[^7]. Il serait donc possible de calculer plusieurs éléments de $C$ en même temps!
+Dans ce cas, chaque élément de $C$ est produit par une sommation sur des multiplications d’éléments de $A$ et $B$. Il est aussi important de noter qu’aucun calcul pour un élément de $C$ ne dépend d’un calcul pour un autre élément de $C$[^7]. Il serait donc possible de calculer plusieurs éléments de $C$ en même temps!
 
 Bien que le calcul en parallèle ne réduit pas l’ordre de complexité, il permet tout de même de diviser le temps requis par le nombre de coeurs utilisés[^8].
 
@@ -75,7 +75,7 @@ $[A+B]_{i,j} = A_{i,j} + B_{i,j}$
 
 Supposons que la matrice $C$ résulte de la somme de $A$ et $B$. Il est encore une fois possible d’affirmer que la valeur de $C_{i,j}$ ne dépend pas de la valeur de $C_{k,l}$. Il serait possible d’additionner chaque composante des deux matrices dans n’importe quel ordre en obtenant toujours le même résultat.
 
-Encore une fois, l’addition de deux matrices peut être parallélisé afin de réduire le temps de calcul[^10].
+Encore une fois, l’addition de deux matrices peut être parallélisée afin de réduire le temps de calcul[^10].
 
 ##### La multiplication par un scalaire
 
@@ -107,7 +107,7 @@ Un opérateur de réduction permet de réduire les éléments d'un [tableau](htt
 ```
 
 
-En premier lieu, voici comme une addition séquentielle d’un tableau pourrait être réalisé. Assumons un tableau de 8 entiers comme suit: `tableau = [2,9,6,4,1,3,8,8]`. L’addition pourrait alors être réalisée en ajoutant chaque nombre un par un jusqu’à obtenir le total.
+En premier lieu, voici comme une addition séquentielle d’un tableau pourrait être réalisée. Assumons un tableau de 8 entiers comme suit: `tableau = [2,9,6,4,1,3,8,8]`. L’addition pourrait alors être réalisée en ajoutant chaque nombre un par un jusqu’à obtenir le total.
 ```python
 # Création du tableau.
 tableau = [2,9,6,4,1,3,8,8]
@@ -124,13 +124,13 @@ Cet exemple permettrait de réaliser une sommation séquentielle sur tous les ch
 $(((((((2+9)+6)+4)+1)+3)+8)+8)$
 Bien que la moindre performance de cette méthode ne se fait pas ressentir pour des petites sommations, ce programme ne s’adapte pas bien à de grands tableaux[^12].
 
-Ensuite, si l’addition n’était qu’associative, l’opération pourrait tout de même être parallélisée. Les sommes partielles pourraient être calculées indépendamment les unes des autres comme pour les autres opérations matricielles. Le calcul serait similaire à celui ci:
+Ensuite, si l’addition n’était qu’associative, l’opération pourrait tout de même être parallélisée. Les sommes partielles pourraient être calculées indépendamment les unes des autres comme pour les autres opérations matricielles. Le calcul serait similaire à celui-ci:
 $((2+1)+(9+3))+((6+8)+(4+8))$
 Dans cet exemple, les sommes $2+1$, $9+3$, $6+8$ et $4+8$ sont calculées en même temps. Par contre, lorsque l’une des opérations est complétée avant une autre, il arrive que l’ordinateur ait à attendre {cite}`stackoverflowcommutativity`. Le coeur ne pourrait alors pas se libérer pour faire d’autres opérations. Par exemple, assumons un ordinateur possédant deux unités de calcul disponibles et une addition non commutative. Si le calcul de $2+9$ était complété avant celui de $9+3$, l’ordinateur devrait attendre que les deux calculs soient complétés avant de calculer la somme partielle $(2+9)+(9+3)$. Heureusement, l’addition est associative. L’ordinateur ira donc écrire le résultat de la première opération complétée à la somme partielle, sans se soucier de la complétion de l’autre opération. L’unité de calcul sera alors libérée pour calculer, par exemple, la somme $6+8$.
 
-Finalement , l’opérateur de réduction est beaucoup plus adapté aux échelles de l’intelligence artificielle. Encore une fois, l’ordinateur sépare la sommation en plusieurs petites opérations qui peuvent être exécutés en parallèle. De plus, l’opérateur profite de l’associativité pour optimiser la tâche au maximum. À la fin de la réduction, il ne reste qu’une seule addition. Le calcul mathématique serait par contre identique au précédent.
+Finalement , l’opérateur de réduction est beaucoup plus adapté aux échelles de l’intelligence artificielle. Encore une fois, l’ordinateur sépare la sommation en plusieurs petites opérations qui peuvent être exécutées en parallèle. De plus, l’opérateur profite de l’associativité pour optimiser la tâche au maximum. À la fin de la réduction, il ne reste qu’une seule addition. Le calcul mathématique serait par contre identique au précédent.
 $((2+1)+(9+3))+((6+8)+(4+8))$
-Il est possible de remarquer que l’addition est fait dans un ordre particulier. Cet ordre donne un meilleur modèle d’accès à la mémoire.
+Il est possible de remarquer que l’addition est faite dans un ordre particulier. Cet ordre donne un meilleur modèle d’accès à la mémoire.
 
 Python utilise l’opérateur de réduction lors du calcul de sommations. Implémenter ce genre de solution s’avère donc assez simple.
 ```python
@@ -150,11 +150,11 @@ print(somme)
 
 ##### En bref
 
-En bref, une majorité des opérations matricielles peuvent être parallélisées. Les matrices sont donc la représentation de choix pour les jeux de données dans le domaine de l’intelligence artificielle. La transformation du jeu de données en matrices est une partie majeure du *preprocessing*. Elle permet d’accélérer le calcul d’un facteur non-négligeable.
+En bref, une majorité des opérations matricielles peuvent être parallélisées. Les matrices sont donc la représentation de choix pour les jeux de données dans le domaine de l’intelligence artificielle. La transformation du jeu de données en matrices est une partie majeure du *preprocessing*. Elle permet d’accélérer le calcul d’un facteur non négligeable.
 
 ### NumPy
 
-C’est pour les opérations parallèles que la librairie `numpy`, mentionnée lors de la [section précédente](./explications_librairies.md), entre en jeu. Les opérations matricielles réalisées à l’aide de méthodes implémentés par `numpy`profitent aussi de l’implémentation des `BLAS`[^13]. Les `BLAS` permettent de grandement accélérer nos calculs sans même nécessiter de coeurs supplémentaires. Elles exploitent plutôt les différentes architectures de processeur ainsi que leur différents niveau de cache[^14].
+C’est pour les opérations parallèles que la librairie `numpy`, mentionnée lors de la [section précédente](./explications_librairies.md), entre en jeu. Les opérations matricielles réalisées à l’aide de méthodes implémentées par `numpy`profitent aussi de l’implémentation des `BLAS`[^13]. Les `BLAS` permettent de grandement accélérer nos calculs sans même nécessiter de coeurs supplémentaires. Elles exploitent plutôt les différentes architectures de processeur ainsi que leur différents niveaux de cache[^14].
 
 #### `BLAS`
 
@@ -283,7 +283,7 @@ In [ ]: train_data.shape
 Out[ ]: (60000, 28, 28)
 ```
 
-La première valeur correspond au nombre d’image dans nos données d’entrainement. Les deux valeurs suivantes sont le nombre de rangées et de colonnes des matrices utilisées pour représenter ces mêmes images. Ce sont donc des matrices carrées de dimensions $n = 28$.
+La première valeur correspond au nombre d’images dans nos données d’entrainement. Les deux valeurs suivantes sont le nombre de rangées et de colonnes des matrices utilisées pour représenter ces mêmes images. Ce sont donc des matrices carrées de dimensions $n = 28$.
 
 Afin d’analyser précisément l’une de ces images, imprimons l’une des rangées de pixels.
 
@@ -312,7 +312,7 @@ Les couleurs ne s’avèrent pas très utiles {cite}`noauthor_why_nodate` pour d
 
 ##### Pourquoi est-il inversé?
 
-Lors de notre entraînement, les valeurs de `0`sont ignorées et ne nécessitent pas de calcul {cite}`noauthor_impact_nodate`. Il est donc préférable d’avoir le plus de valeurs de *grayscale* à 0 possible. Les chiffres écrits à la main ne remplissent qu’une minorité de l’image. En utilisant les valeurs inversées, les pixels les moins nombreux ont une valeur de `256`, alors que les plus nombreux ont une valeur de `0`.
+Lors de notre entrainement, les valeurs de `0`sont ignorées et ne nécessitent pas de calcul {cite}`noauthor_impact_nodate`. Il est donc préférable d’avoir le plus de valeurs de *grayscale* à 0 possible. Les chiffres écrits à la main ne remplissent qu’une minorité de l’image. En utilisant les valeurs inversées, les pixels les moins nombreux ont une valeur de `256`, alors que les plus nombreux ont une valeur de `0`.
 
 [^1]:	Un ordinateur moderne possédant un processeur de 2GHz peut réaliser 2 000 000 000 opérations par seconde sur chacun de ses coeurs.
 
@@ -326,7 +326,7 @@ Lors de notre entraînement, les valeurs de `0`sont ignorées et ne nécessitent
 
 [^6]:	$n$ représente le nombre de rangées et de colonnes d’une matrice carrée.
 
-[^7]:	Ils peuvent être calculés dans n’importe quel ordre et le résultat sera toujours le même. Un résultat pourrait aussi
+[^7]:	Ils peuvent être calculés dans n’importe quel ordre et le résultat sera toujours le même. Un résultat pourrait aussi être calculé indépendamment des autres.
 
 [^8]:	Plus ou moins. Voir [1.1 Amdahl's law and Gustafson's law](https://en.wikipedia.org/wiki/Parallel_computing#Amdahl's_law_and_Gustafson's_law "1.1 Amdahl's law and Gustafson's law")
 
