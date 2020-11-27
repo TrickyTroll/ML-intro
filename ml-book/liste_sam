@@ -1,0 +1,7 @@
+# Entrainement d'un système neuronal
+
+### Figures
+
+* `overfitting.png` est utilisée afin de démontrer les concepts
+de sous-entrainement et sur-entrainement
+* `tanh.png`est utilisée afin de montrer où se situe le gradiant dans une fonction de coût.
