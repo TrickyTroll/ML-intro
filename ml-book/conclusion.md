@@ -77,8 +77,8 @@ Il ne faut toutefois pas écarter le fait que le futur n'est jamais certain,
 et qu’on ne peut prédire à 100% ce que l’intelligence artificielle va 
 ressembler dans 50 ans. Mais, avec les avancées technologiques des dernières
 années qui ne semblent pas s'arrêter, il serait juste de croire que l’IA
-à un futur prometteur. Avec ces avancés prometteuses, ce pourrait-il qu’il
-y aurait une sorte d’intelligence au-delà de celle humaine et artificielle ?
+a un futur prometteur. Avec ces avancés prometteuses, ce pourrait-il qu’il
+y ait une sorte d’intelligence au-delà de celle humaine et artificielle dans le futur ?
 
 [^1]: Une “epoch” étant un cycle complet où l'algorithme a traité
 le jeu de données qui lui a été fournie une seule fois.
