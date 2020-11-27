@@ -22,17 +22,17 @@ parcourir un large jeu de données et appliquer des algorithmes en peu de temps,
 tandis que l’être humain prendrait des mois et des mois pour faire cela. Un exemple 
 moderne serait l’utilisation de l’intelligence artificielle dans les prévisions météo.
 Ceux-ci deviennent donc de plus en plus précis avec l’aide de l’apprentissage 
-machine ainsi que l’amélioration des algorithmes.
+machine ainsi que l’amélioration des algorithmes.{cite}`towardsdatascience`
 
 
 L’IA peut assister l’être humain dans des tâches dangereuses qui pourraient risquer
 la vie d'individus, mais qui est sans risques pour l’intelligence artificielle. 
 Un exemple serait le robot [Curiosity](https://mars.nasa.gov/msl/home/) lancé en novembre 2011 dans le but d’atteindre
-la planète Mars. Il se trouve toujours sur cette planète en date du 19 novembre 
+la planète Mars{cite}`bar`. Il se trouve toujours sur cette planète en date du 19 novembre 
 2020 dans des conditions impossibles pour qu’un être humain y soit resté aussi 
 longtemps. Celui-ci est contrôlé par l’intelligence artificielle dans le but 
 d’accomplir plusieurs tâches. Ses tâches consistent à examiner la biologie, la 
-géologie  et la radiation de Mars, afin de préparer une exploration humaine dans le futur.
+géologie  et la radiation de Mars, afin de préparer une exploration humaine dans le futur.{cite}`towardsdatascience`
 
 
 Les conditions de travail standard dictent qu’un être humain travaille environ 
@@ -46,13 +46,13 @@ répétitifs. Ces tâches banales peuvent être automatisées par l’IA. Donnan
 temps aux travailleurs pour se concentrer sur des tâches plus exigeantes et passionnantes.
 Comme les ordinateurs le font déjà dans plusieurs domaines, tel celui de la finance
 où un apprentissage machine s’occupe de détecter des fraudes potentielles dans 
-les transactions des clients.
+les transactions des clients.{cite}`towardsdatascience`
 
 
 Quand on parle de rapidité, l’être humain est très lent comparé à l’intelligence 
 artificielle. En effet, l’utilisation de l’intelligence artificielle pour la prise
 de décision permet de prendre ceux-ci extrêmement rapidement avec une précision qui
-dépend de la qualité de leurs bases de données. Effectivement, un jeu de données fiable
+dépend de la qualité de leurs bases de données.{cite}`towardsdatascience` Effectivement, un jeu de données fiable
 et bien construit permet à l’intelligence artificielle de prendre des bonnes décisions 
 rapidement. Un être humain, de l’autre côté, doit analyser une plus petite quantité de 
 données directement sous son nez en prenant plus de temps. Un des exemples serait 
@@ -67,18 +67,18 @@ artificielle en plus des nouveaux programmes qui se font développer en ce momen
 ont pour but d’aider les professionnels de la santé dans des diagnostics, surveillances 
 de patients, et plusieurs autres. La compagnie Google est en train de développer  leur 
 projet [Google Health](https://health.google/) Pour se faire, ils étudient l’utilisation de l’intelligence artificielle
-dans le but d’assister au diagnostic de cancer, prévenir l’aveuglement et plusieurs autres.
+dans le but d’assister au diagnostic de cancer, prévenir l’aveuglement et plusieurs autres.{cite}`springer`
 
 
 La croissance exponentielle de l’intelligence artificielle dans le monde a affecté
 de manière abrupte le nombre de travail qui requiert des capacités en intelligence 
 artificielle, et donc, a créé plusieurs nouveaux emplois dans ce domaine. Grâce à cela,
 la part des emplois qui requièrent des capacités en intelligence artificielle a augmenté
-de 4,5 fois depuis 2013 aux États-Unis sur le site web [indeed.com](https://ca.indeed.com/?r=us).
+de 4,5 fois depuis 2013 aux États-Unis sur le site web [indeed.com](https://ca.indeed.com/?r=us).{cite}`forbes10charts`
 
 
 Certes, ces merveilleux bénéfices ne viennent pas sans coût. Or, l’intelligence artificielle
-s’avère à être une arme à double tranchant et continents plusieurs problèmes 
+s’avère à être une arme à double tranchant et continents plusieurs problèmes. 
 
 
 Un de ces  problèmes majeurs est le biais de l’intelligence artificielle intégrée dans 
@@ -92,19 +92,19 @@ Prénommé «[Tay](https://twitter.com/tayandyou?lang=en)», le bot s'est rapide
 d’internautes racistes. Cela a mené le robot à dire des phrases vulgaires et inappropriées 
 avant que celui-ci voit la fin de ses jours 16 heures après son arrivée sur Twitter. 
 Le problème provient donc d’un jeu de données non fiable où mal construit qui induit 
-l’apprentissage machine en erreur.
+l’apprentissage machine en erreur.{cite}`theguardianrise`
 
 
 Tel que mentionné plus haut, l’intelligence artificielle a apporté et va apporter plusieurs
 nouveaux emplois spécialisés dans l’intelligence artificielle, mais plusieurs autres emplois
 vont voir leur fin arriver à grands pas avec la montée de l’intelligence artificielle. Cela 
 c’est déjà fait avec la révolution industrielle, qui, avec l'arrivée de la machine à vapeur, 
-avait fait grimper le taux de chômage à une vitesse fulgurante. L’intelligence artificielle 
+avait fait grimper le taux de chômage à une vitesse fulgurante{cite}`forbesaithreat`. L’intelligence artificielle 
 devrait, tout comme la machine à vapeur, augmenter le besoin de certains emplois et créer des
 emplois qui requièrent un plus haut niveau d’étude en éducation tout en éradiquant des emplois
 auxquels aucune caractéristique uniquement humaine est requise. Il reste à noter que l’être 
 humain s’en est quand même bien sortie de la révolution industrielle, contrairement aux idées
-pessimistes quant au futur proliférées à l'époque. 
+pessimistes quant au futur proliférées à l'époque.{cite}`bernardmarr` 
 
 
 Par ailleurs, l’omniprésence de la technologie a créé une multitude d’interconnexions entre 
@@ -118,8 +118,8 @@ d’établir des règles communes s’avère difficile, et de les faire respecte
 se font déjà voir entre les puissances du monde face à l’intelligence artificielle avec l’Union
 Européenne qui est déjà entrain de pousser pour des mesures plus strictes pour le développement et
 l’utilisation de l’intelligence artificielle avec le ‘White Paper on Artificial Intelligence – 
-A European Approach to Excellence and Trust’ ,publié en 2020. Au contraire, les États - Unis
-et la Chine permettent à leur compagnie d’utiliser l’intelligence artificielle plus librement.
+A European Approach to Excellence and Trust’ ,publié en 2020{cite}`european` . Au contraire, les États - Unis
+et la Chine permettent à leur compagnie d’utiliser l’intelligence artificielle plus librement{cite}`bernardmarr`.
 
 
 L’intelligence artificielle va augmenter l’efficacité et la rapidité de plusieurs programmes.
@@ -127,7 +127,7 @@ Cela n'exclut pas les programmes de piratages informatiques, qui eux aussi vont 
 amélioration drastique avec l’implémentation de l’intelligence artificielle. Cela va donc 
 augmenter aussi la rapidité et l’efficacité des piratages informatiques menant sûrement à 
 une augmentation de ceux-ci ce qui causera plusieurs problèmes majeurs, jusqu'à temps 
-qu’une solution soit trouvée.
+qu’une solution soit trouvée{cite}`bernardmarr`.
 
 
 L’utilisation de l’intelligence artificielle dans des buts de tuer des individus est un grave
@@ -137,7 +137,7 @@ un jeu de données sur les terroristres s’avère très difficile et peu fiable
 d’entre eux s’habille comme des civiles. De plus, cette technologie, une fois tombée dans les mains
 des terroristes, pourrait semer terreur au sein d’un pays comme le démontre très bien la vidéo
 [Slaughterbots](https://www.youtube.com/watch?v=HipTO_7mUOw&ab_channel=FutureofLifeInstitute) 
-qui promeut l’interdiction de l’usage robot tueur.
+qui promeut l’interdiction de l’usage robot tueur{cite}`foo`.
 
 
 En conclusion, l’implémentation de l’intelligence artificielle ainsi que la croissance 
@@ -154,8 +154,3 @@ dans le but d'éviter les problèmes. C’est déjà ce que le NIST fait en four
 fiables gratuitement. 
 
 
-Finalement, quel est le fonctionnement de l'intelligence artificielle et comment devrait-elle être utilisée
-afin de bénéficier l’être humain? L’hypothèse émise était que si son développement se fait de manière 
-éthique et s'il est bien encadré, nous pourrions en retirer plus d'avantages que d'inconvénients. Il 
-était donc important de comprendre le fonctionnement de cette technologie pour pouvoir expliquer et 
-rationaliser l’utilisation bénéfique de l’intelligence artificielle et d’ainsi le documenter.
