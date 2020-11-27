@@ -46,7 +46,11 @@ Essentiellement, un neurone reçoit une ou des valeurs comme intrant, effectue d
 
 La structure d'un neurone est relativement simple. Chaque neurone possède un coefficient, ou un **poids** $p$ dans le jargon, associé à chaque **intrant** $I$ qu'elle reçoit.
 La première opération que la neurone effectue est la somme des produits des intrants fois leur poids. À celà est ajouté un **biais** $b$ propre à chaque neurone.
-Cette opération peut être représentée par la fonction $Y = \sum_{i=1}^{n} I_i \times p_i + b$, où n correspond au nombre d'intrants.
+Cette opération peut être représentée par la fonction 
+
+$Y = \sum_{i=1}^{n} I_i \times p_i + b$
+
+, où n correspond au nombre d'intrants.
 
 La dernière opération que les valeurs subissent avant d'être transmises est une fonction d'activation. La fonction d'activation est appliquée à chaque extrant de chaque
 neurone de la couche. Les fonctions d'activation, analogues à l'activation
@@ -108,6 +112,7 @@ Ici, les zéros sont remplacés par de très petits nombres négatifs, qui corre
 
 
 Une autre fonction commune est la sigmoide. Son équation est : 
+
 $ \phi(x) = 
 \frac{1}{1 + e^{-x}}
 $
@@ -149,8 +154,7 @@ Il faut donc faire la transposée de la matrice $C_{4\times3}$, qui devient alor
 dans l'ordre, élément par élément, chaque élément d'une ligne de *I* par chaque élément d'une colonne de *C*, puis est effectué la somme de 
 ces produits pour obtenir un nouvel élément de la matrice résultante $R_{1\times4}$ {cite}`Alloprof`. 
 
-Par la suite, la matrice $B_{1\times4}$ 
-contenant les biais de chaque neurone 
+Par la suite, la matrice $B_{1\times4}$ contenant les biais de chaque neurone 
 de la couche est additionnée à la matrice R, dans une opération où s'additionnent entre eux les éléments correspondants de chaque matrice pour 
 former une nouvelle matrice de même dimension. Finalement, dans une itération au travers de cette matrice, chaque élément passe par la fonction d'activation, 
 pour former encore une nouvelle matrice de même dimension contenant les résultats de cette dernière opération. Cette matrice résultante finale $F_{1\times4}$ devient 
