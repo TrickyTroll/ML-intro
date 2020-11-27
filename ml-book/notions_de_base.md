@@ -13,8 +13,6 @@ constituée d'une liste ces quatres valeurs enregistrées à chaque jour des der
 Les réponses du réseau sont comparées aux étiquettes, et les paramètres des neurones sont individuellement modifiés de manière à se rapprocher de la réponse attendue.
 
 
- ![picture](https://drive.google.com/uc?export=view&id=1c7VtAd-NvVteokYgHm_UMHoj7pr7FiuF)
-
 ```{figure} ./img/reseauneuronalsimp.png
 ---
 name: Réseau neuronal
@@ -117,8 +115,8 @@ Une fonction similaire à la sigmoide et la TanH. Son équation est :
 $$ tanh(x) = 
 \frac{2}{1 + e^{-2x}} - 1
 $$
-Elle retourne -1 lorsque x tend vers l'infin négatif, et 1 lorsque x tend vers l'infini positif. Elle a comme avantage de retourner en moyenne
-des valeurs proches de 0, ce qui rend la tâche plus facile pour les couches d'après, puisque les valeurs auront moins tendance à devenir très grandes, 
+Elle retourne -1 lorsque x tend vers l'infini négatif, et 1 lorsque x tend vers l'infini positif. Elle a comme avantage de retourner en moyenne
+des valeurs proches de 0, ce qui rend la tâche plus facile pour les couches suivantes, puisque les valeurs auront moins tendance à devenir très grandes, 
 ce qui ralentirait les opérations.
 
 
@@ -126,7 +124,7 @@ ce qui ralentirait les opérations.
 
 Comme mentionné précedemment, les neurones sont organisés en couches. Il y a 3 types de couches différentes. La première est la couche des intrants, dans laquelle 
 les données sont rentrées dans le réseau. Dans le cas de notre programme, où les intrants sont des images de format 28x28, 
-la première couche est composée de 784 (28*28 = 784) neurones recevant chacun la valeur en echelle de gris  d'un pixel de l'image. 
+la première couche est composée de 784 ($28\times28 = 784$) neurones recevant chacun la valeur en echelle de gris  d'un pixel de l'image. 
 Plus concrètement, ces images sont des matrices $M_{28}$, qui se font vectoriser
 
 ### Réseaux neuronaux et le cerveau humain
