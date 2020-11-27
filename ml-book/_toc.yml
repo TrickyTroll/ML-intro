@@ -6,6 +6,7 @@
     - file: preprocessing
     - file: notions_de_base
     - file: training
+    - file: notebooks
     - file: bienfaits_et_inconvénients
     - file: conclusion
     - file: zbib
