@@ -1,6 +1,3 @@
-<script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath:[['$','$']]}});</script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=default' async></script>
-
 # Traitement antérieur à l’entrainement
 
 Dans cette section, nous discuterons du traitement nécessaire afin d’utiliser des images pour entrainer un réseau neuronal. Nous discuterons aussi de l’importance de ce traitement, ainsi que de la raison pour laquelle il doit aussi être réalisé sur les images que nous voudrons par la suite reconnaître.
@@ -18,15 +15,15 @@ Dans le domaine de l'IA, un jeu de données représente l'ensemble des données 
 L’entrainement d’un modèle se rapproche beaucoup des mathématiques, plus précisément de la statistique, comme en témoigne le *Deep Learning Book* {cite}`Goodfellow-et-al-2016`. L’apprentissage machine vise à ingérer des quantités massives de données provenant de sources différentes. Par la suite, à l’aide de calculs statistiques, le programme tente de faire une certaine classification du jeu données. Selon le besoin, le programme pourrait alors poser une étiquette sur des données non étiquetées similaires à celles retrouvées dans le jeu de donnée {cite}`mitclassification`.   Le modèle pourrait aussi être entrainer afin de reconnaître des anomalies, grouper des informations similaires par classes et bien d’autres {cite}`wikisupervised`. Toutes ces informations seront discutées plus en détails au courant de la prochaine section. Ce qu’il est important de retenir, c’est qu’entrainer un modèle nécessite ***beaucoup*** de données.
 
 ```{admonition} Sur la signification de «beaucoup de données»
+Il y a 60 000 exemples dans nos données d'entraînement.
 ```python
 In [ ]: train_data.shape
 Out[ ]: (60000, 28, 28)
 ```
-``
 
 ## Traiter beaucoup de données
 
-Pour reprendre l’exemple précédent, la `shape` de l’objet `train_data`est une liste de 60 000 images représentées par des matrices carrées de dimension 28. Dans notre cas, si le programme passait tous les pixels un à un, il faudrait qu’il réalise séquentiellement $28 \times 28 \times 60 000 = 47 040 000$ opérations. Ce serait par exemple le cas dans une `for loop`. Bien que les ordinateurs modernes sont particulièrement rapides[^1], les modèles récents sont eux aussi entrainés avec des jeux de données de plus en plus massifs. Celui utilisé pour le service [Google Translate](https://translate.google.ca), par exemple, compte des milliards d’exemples {cite}`googledatasize.
+Pour reprendre l’exemple précédent, la `shape` de l’objet `train_data`est une liste de 60 000 images représentées par des matrices carrées de dimension 28. Dans notre cas, si le programme passait tous les pixels un à un, il faudrait qu’il réalise séquentiellement $28 \times 28 \times 60 000 = 47 040 000$ opérations. Ce serait par exemple le cas dans une `for loop`. Bien que les ordinateurs modernes sont particulièrement rapides[^1], les modèles récents sont eux aussi entrainés avec des jeux de données de plus en plus massifs. Celui utilisé pour le service [Google Translate](https://translate.google.ca), par exemple, compte des milliards d’exemples {cite}`googledatasize`.
 
 Heureusement, il existe des méthodes permettant de paralléliser[^2] les opérations statistiques réalisées sur notre modèle.
 
@@ -83,18 +80,23 @@ Encore une fois, l’addition de deux matrices peut être parallélisé afin de 
 ##### La multiplication par un scalaire
 
 Bien que la multiplication par un scalaire s’avère facile à réaliser à la main pour de petites matrices, l’opération doit tout de même être réalisée sur chaque élément de la matrice.
-$\lambda \begin{bmatrix}
+
+$ \lambda \begin{bmatrix}
     x_{11} & x_{12} & x_{13} & \dots  & x_{1n} \\
     x_{21} & x_{22} & x_{23} & \dots  & x_{2n} \\
     \vdots & \vdots & \vdots & \ddots & \vdots \\
     x_{d1} & x_{d2} & x_{d3} & \dots  & x_{dn}
-\end{bmatrix} = 
-\begin{bmatrix}
+\end{bmatrix} $
+
+Revient à faire le calcul:
+
+$\begin{bmatrix}
     \lambda x_{11} & \lambda x_{12} & \lambda x_{13} & \dots  & \lambda x_{1n} \\
     \lambda x_{21} & \lambda x_{22} & \lambda x_{23} & \dots  & \lambda x_{2n} \\
     \vdots & \vdots & \vdots & \ddots & \vdots \\
     \lambda x_{d1} & \lambda x_{d2} & \lambda x_{d3} & \dots  & \lambda x_{dn}
 \end{bmatrix}$
+
 Encore une fois, aucun résultat n’est dépendant d’un autre. Il serait donc possible d’effectuer plusieurs multiplications en même temps, puis grouper les résultats dans une matrice.
 
 ##### La sommation
@@ -301,16 +303,10 @@ Le paramètre `dtype=uint8`signifie que nos pixels sont représentés par des en
 
 
 ### Explications plus détaillées sur la représentation des images.
-Cette section c’est seulement si j’ai le temps
+Cette section c’est seulement si j’ai le temps.
 #### Pourquoi le *grayscale*?
 ##### Pourquoi est-il inversé?
 #### Pourquoi seulement 784 pixels?
-```{figure} ./img/toto.png
----
-name: toto
----
-this is just toto
-```
 
 [^1]:	Un ordinateur moderne possédant un processeur de 2GHz peut réaliser 2 000 000 000 opérations par seconde sur chacun de ses coeurs.
 

@@ -31,7 +31,7 @@ de créer notre modèle.
 Pour entrainer notre modèle, nous utilisons la base de données
 [MNIST](http://yann.lecun.com/exdb/mnist/). Bien qu'elle soit très complète,
 le format de cette base de donnée est assez complexe
-([Voir la section sur le /preprocessing/](./preprocessing.ipynb). Heureusement,
+([Voir la section sur le *preprocessing*)](./preprocessing.ipynb). Heureusement,
 la libraire TensorFlow procure un
 [interface simple](https://www.tensorflow.org/api_docs/python/tf/keras/datasets/mnist/load_data)
 avec le langage de programmation que nous utilisons.
