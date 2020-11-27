@@ -1,0 +1,436 @@
+
+<!DOCTYPE html>
+
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Les librairies nécessaires &#8212; Introduction à la reconnaissance optique de caractère</title>
+    
+  <link rel="stylesheet" href="_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/translations.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Recherche" href="search.html" />
+    <link rel="next" title="Notions de base" href="notions_de_base.html" />
+    <link rel="prev" title="Introduction" href="intro_finale.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="index.html">
+  
+  <img src="_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Introduction à la reconnaissance optique de caractère</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Rechercher dans ce livre ..." aria-label="Rechercher dans ce livre ..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Préface
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="rapport_final.html">
+   Rapport Final
+  </a>
+  <ul class="current collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="intro_finale.html">
+     Introduction
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Les librairies nécessaires
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="notions_de_base.html">
+     Notions de base
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="training.html">
+     L’entrainement d’un système neuronal
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="bienfaits_et_inconv%C3%A9nients.html">
+     Bienfaits et inconvénients
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="conclusion.html">
+     Conclusion
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Basculer la navigation" aria-controls="site-navigation"
+            title="Basculer la navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Téléchargez cette page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/explications_librairies.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Télécharger le fichier source" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimer au format PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Mode plein écran"
+                title="Mode plein écran"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contenu
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tensorflow">
+   Tensorflow
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#historique">
+     Historique
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#notre-utilisation">
+     Notre utilisation
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#acces-aux-donnees">
+       Accès aux données
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#entrainement-du-modele">
+       Entraînement du modèle
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#numpy">
+   Numpy
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id5">
+     Historique
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id7">
+     Notre utilisation
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#matplolib">
+   Matplolib
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id8">
+     Historique
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id9">
+     Notre utilisation
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="les-librairies-necessaires">
+<h1>Les librairies nécessaires<a class="headerlink" href="#les-librairies-necessaires" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Afin de réaliser ce projet dans des temps raisonnables, nous utilisons des
+outils et des données réalisés par des organisations réputées comme Google,
+<a class="reference external" href="https://numpy.org/">Numpy</a> et la <a class="reference external" href="https://matplotlib.org/">Matplotlib</a> development team.</p>
+<div class="section" id="tensorflow">
+<h2>Tensorflow<a class="headerlink" href="#tensorflow" title="Lien permanent vers ce titre">¶</a></h2>
+<p><span class="xref myst">Tensorflow</span> est une plateforme nous permettant d’accélérer
+le développement de notre application d’apprentissage machine. La librairie
+procure un <a class="reference external" href="https://en.wikipedia.org/wiki/API">API</a> en Python donnant accès
+à de multiples fonctions utilisées pour obtenir des données et les utiliser
+pour entraîner notre programme.</p>
+<div class="section" id="historique">
+<h3>Historique<a class="headerlink" href="#historique" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Développée par Google et rendue publique en 2015 <a class="bibtex reference internal" href="zbib.html#wikitf" id="id1">[Les contributeurs de Wikipedia, 2020]</a>, la librairie
+a depuis permis aux masses de développer toutes sortes d’applications
+bénéficiant de l’intelligence artificielle. TensorFlow est une version polie
+du système DistBelief. DistBelief est un produit du projet The Google Brain.
+Après avoir été utilisé pendant quelques années pour des produits Google ainsi
+que pour de la recherche, DistBelief est amélioré et rendu publique sous le
+nom TensorFlow <a class="bibtex reference internal" href="zbib.html#tfpaper" id="id2">[The TensorFlow developper team, 2015]</a>. Aujourd’hui, la
+<a class="reference external" href="https://github.com/tensorflow/tensorflow">page Github</a> de TensorFlow mentionne
+plus de 100 000 utilisateurs et 2 780 contributeurs. La librairie est utilisée
+par de multiples entreprises dont Google, Coca-Cola, airbnb, Twitter et Intel
+<a class="bibtex reference internal" href="zbib.html#tfmain" id="id3">[The TensorFlow developper team, 2020]</a>.</p>
+</div>
+<div class="section" id="notre-utilisation">
+<h3>Notre utilisation<a class="headerlink" href="#notre-utilisation" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Nous utilisons TensorFlow afin de faciliter l’accès à nos données et afin
+de créer notre modèle.</p>
+<div class="section" id="acces-aux-donnees">
+<h4>Accès aux données<a class="headerlink" href="#acces-aux-donnees" title="Lien permanent vers ce titre">¶</a></h4>
+<p>Pour entrainer notre modèle, nous utilisons la base de données
+<a class="reference external" href="http://yann.lecun.com/exdb/mnist/">MNIST</a>. Bien qu’elle soit très complète,
+le format de cette base de donnée est assez complexe
+(<span class="xref myst">Voir la section sur le /preprocessing/</span>. Heureusement,
+la libraire TensorFlow procure un
+<a class="reference external" href="https://www.tensorflow.org/api_docs/python/tf/keras/datasets/mnist/load_data">interface simple</a>
+avec le langage de programmation que nous utilisons.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">((</span><span class="n">train_data</span><span class="p">,</span> <span class="n">train_labels</span><span class="p">),</span> <span class="p">(</span><span class="n">test_data</span><span class="p">,</span> <span class="n">test_labels</span><span class="p">))</span> <span class="o">=</span> <span class="n">mnist</span><span class="o">.</span><span class="n">load_data</span><span class="p">()</span>
+<span class="n">num_data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">([</span><span class="n">train_data</span><span class="p">,</span> <span class="n">test_data</span><span class="p">])</span>
+<span class="n">num_labels</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">([</span><span class="n">train_labels</span><span class="p">,</span> <span class="n">test_labels</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>La classe <code class="docutils literal notranslate"><span class="pre">mnist</span></code> fournie par la librairie <code class="docutils literal notranslate"><span class="pre">Tensorflow</span></code>nous permet de charger en mémoire toutes les données nécessaires en seulement trois lignes.</p>
+</div>
+<div class="section" id="entrainement-du-modele">
+<h4>Entraînement du modèle<a class="headerlink" href="#entrainement-du-modele" title="Lien permanent vers ce titre">¶</a></h4>
+<p>Le domaine de l’IA s’avère assez complexe. Programmer et entraîner un modèle nécessite des connaissances en mathématiques avancées <a class="bibtex reference internal" href="zbib.html#goodfellow-et-al-2016" id="id4">[Goodfellow et al., 2016]</a>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Tensorflow</span></code>vise à accélérer le développement de l’intelligence artificielle ainsi que de rendre ce développement accessible aux masses. Afin de simplifier la réalisation de notre programme et afin de le rendre plus efficace, nous comptons donc utiliser les méthodes d’entraînement fournies par la librairie. Pour aider le lecteur à comprendre le fonctionnement du programme (et donc pour éviter le phénomène de la [boîte noire](lien vers la section de la boîte noire), chaque fonction utilisée sera décortiquée et expliquée en détails.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">keras</span><span class="o">.</span><span class="n">Sequential</span><span class="p">([</span>
+    <span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Flatten</span><span class="p">(</span><span class="n">input_shape</span><span class="o">=</span><span class="p">(</span><span class="mi">28</span><span class="p">,</span> <span class="mi">28</span><span class="p">)),</span>
+    <span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Dense</span><span class="p">(</span><span class="mi">128</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;relu&#39;</span><span class="p">),</span>
+    <span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Dense</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="p">])</span>
+
+<span class="n">model</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">optimizer</span><span class="o">=</span><span class="s1">&#39;adam&#39;</span><span class="p">,</span>
+	<span class="n">loss</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">losses</span><span class="o">.</span><span class="n">SparseCategoricalCrossentropy</span><span class="p">(</span><span class="n">from_logits</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
+              <span class="n">metrics</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;accuracy&#39;</span><span class="p">])</span>
+<span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">train_images</span><span class="p">,</span> <span class="n">train_labels</span><span class="p">,</span> <span class="n">epochs</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Seulement quelques lignes sont nécessaires à l’entraînement de notre modèle.</p>
+</div>
+</div>
+</div>
+<div class="section" id="numpy">
+<h2>Numpy<a class="headerlink" href="#numpy" title="Lien permanent vers ce titre">¶</a></h2>
+<p><a class="reference external" href="https://numpy.org">NumPy</a> est une librairie facilitant le calcul avec le langage de programmation que nous utilisons pour créer notre modèle.</p>
+<div class="section" id="id5">
+<h3>Historique<a class="headerlink" href="#id5" title="Lien permanent vers ce titre">¶</a></h3>
+<p>La libraire à été créée en 2005 et était à l’époque basée sur les librairies <a class="reference external" href="https://docs.python.org/3/library/numeric.html">numériques et les modules mathématiques</a> de Python <a class="bibtex reference internal" href="zbib.html#numpy" id="id6">[The Numpy documentation team, 2020]</a>.
+Numpy vise à rendre la réalisation de grands calculs numériques plus simples et optimisée. Plusieurs de ses capacités ont des fonctions homologue dans les logiciels <a class="reference external" href="https://www.mathworks.com">Matlab</a> et <a class="reference external" href="https://maplesoft.com">Maple</a>.</p>
+</div>
+<div class="section" id="id7">
+<h3>Notre utilisation<a class="headerlink" href="#id7" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Comme sera possible de l’observer tout au long de ce rapport, les mathématiques constituent le pilier principal sur lequel repose le domaine de l’intelligence artificielle. De plus, la plupart des composantes des réseaux neuronaux peuvent être représentés comme des matrices. Numpy permet d’utiliser certaines propriétés des matrices afin de paralléliser les calculs menant à l’entraînement du modèle.  De plus,  comme nous le verrons dans la section suivante, Numpy peut être utilisé afin de représenter des images comme des matrices, et donc faciliter les opérations sur chacun des pixels.</p>
+</div>
+</div>
+<div class="section" id="matplolib">
+<h2>Matplolib<a class="headerlink" href="#matplolib" title="Lien permanent vers ce titre">¶</a></h2>
+<p><a class="reference external" href="https://matplotlib.org">Matplotlib</a> est une librairie de visualisation implémentée dans le langage de programmation Python.</p>
+<div class="section" id="id8">
+<h3>Historique<a class="headerlink" href="#id8" title="Lien permanent vers ce titre">¶</a></h3>
+<p>La libraire est un projet à code source ouvert financé par <a class="reference external" href="https://numfocus.org">Numfocus</a>. Déployé depuis plus de 17 ans cite<code class="docutils literal notranslate"><span class="pre">wikimatplotlib</span></code>,  la librairie permet, tout comme <code class="docutils literal notranslate"><span class="pre">Numpy</span></code>, au langage de programmation Python de se rapprocher de l’application Matlab, tout en restant libre de droit.</p>
+</div>
+<div class="section" id="id9">
+<h3>Notre utilisation<a class="headerlink" href="#id9" title="Lien permanent vers ce titre">¶</a></h3>
+<p>La librairie fourni un <em>API</em> simple à utiliser permettant de réaliser des graphiques directement dans nos notebooks. Nous utilisons aussi la fonctionnalité permettant de représenter des images comme suit:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">train_data</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>Ce qui permet d’obtenir la figure suivante:</p>
+<p><img alt="" src="_images/plot-demo.png" /></p>
+<p><code class="docutils literal notranslate"><span class="pre">train_data[0]</span></code> est un <code class="docutils literal notranslate"><span class="pre">array</span></code> de pixels, représentés par leur <code class="docutils literal notranslate"><span class="pre">grayscale</span> <span class="pre">value</span></code>. Nous discuterons plus de ces termes dans la section suivante.</p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="intro_finale.html" title="previous page">Introduction</a>
+    <a class='right-next' id="next-link" href="notions_de_base.html" title="next page">Notions de base</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Émile Bergeron, Samuel Paquin, Étienne Parent, Jérémie Sanfaçon<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>

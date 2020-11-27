@@ -1,0 +1,456 @@
+
+<!DOCTYPE html>
+
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notions de base &#8212; Introduction à la reconnaissance optique de caractère</title>
+    
+  <link rel="stylesheet" href="_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/translations.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Recherche" href="search.html" />
+    <link rel="next" title="L’entrainement d’un système neuronal" href="training.html" />
+    <link rel="prev" title="Les librairies nécessaires" href="explications_librairies.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="index.html">
+  
+  <img src="_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Introduction à la reconnaissance optique de caractère</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Rechercher dans ce livre ..." aria-label="Rechercher dans ce livre ..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Préface
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="rapport_final.html">
+   Rapport Final
+  </a>
+  <ul class="current collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="intro_finale.html">
+     Introduction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="explications_librairies.html">
+     Les librairies nécessaires
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Notions de base
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="training.html">
+     L’entrainement d’un système neuronal
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="bienfaits_et_inconv%C3%A9nients.html">
+     Bienfaits et inconvénients
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="conclusion.html">
+     Conclusion
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="zbib.html">
+     Bibliographie
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Basculer la navigation" aria-controls="site-navigation"
+            title="Basculer la navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Téléchargez cette page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/notions_de_base.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Télécharger le fichier source" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimer au format PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Mode plein écran"
+                title="Mode plein écran"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contenu
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction-au-reseau-neuronal">
+   Introduction au réseau neuronal
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ocr">
+   OCR
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#le-neurone">
+   Le neurone
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#couches-de-neurones">
+   Couches de neurones
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reseaux-neuronaux-et-le-cerveau-humain">
+   Réseaux neuronaux et le cerveau humain
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="notions-de-base">
+<h1>Notions de base<a class="headerlink" href="#notions-de-base" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="section" id="introduction-au-reseau-neuronal">
+<h2>Introduction au réseau neuronal<a class="headerlink" href="#introduction-au-reseau-neuronal" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Un réseau neuronal est une forme d’intelligence artificielle, qui effectue des prédictions basées sur des valeurs qui sont entrées dans le système,
+afin d’accomplir une certaine tâche. Le réseau est constitué d’un ensemble de neurones interconnectés et distribués en plusieurs couches.</p>
+<p>Chaque neurone possède des paramètres qui peuvent être ajustés, afin d’obtenir des résultats plus fiables. C’est ce qu’on appele l’entrainement.
+Le réseau est entrainé à partir d’un jeu de données, qui contient des valeurs associées à une étiquette, qui consiste de la « réponse » attendue.</p>
+<p>Par exemple, un réseau neuronal ayant comme objectif de prédire l’achalandage dans un parc d’amusement pour une journée donnée pourrait recevoir
+comme intrant la température, le niveau d’ensoleillement ainsi que le pourcentage de précipitation et d’humidité. Le jeu de données serait alors
+constituée d’une liste ces quatres valeurs enregistrées à chaque jour des dernières années, avec comme étiquette le nombre de clients cette journée-là.
+Les réponses du réseau sont comparées aux étiquettes, et les paramètres des neurones sont individuellement modifiés de manière à se rapprocher de la réponse attendue.</p>
+<div class="figure align-default" id="reseau-neuronal">
+<img alt="./img/reseauneuronalsimp.png" src="./img/reseauneuronalsimp.png" />
+<p class="caption"><span class="caption-number">Fig. 3 </span><span class="caption-text">Ceci est un exemple simplifié d’un réseau neuronal. Les composantes du schéma seront expliquées en détail dans cette section.</span><a class="headerlink" href="#reseau-neuronal" title="Lien permanent vers cette image">¶</a></p>
+</div>
+</div>
+<div class="section" id="ocr">
+<h2>OCR<a class="headerlink" href="#ocr" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Le terme OCR, ou ROC en français, signifie « Reconnaissance optique de caractères ». Cela désigne un processus aucours duquel du texte est extrait
+d’une image ou d’un document afin d’être transformé en fichier. Pour ce faire, un réseau neuronal reçoit les valeurs des pixels du document de source,</p>
+<blockquote>
+<div><p>Note : La valeur d’un pixel en « grayscale » ou échelle de gris, est un nombre entier
+de format 8 bits et peut donc avoir
+une valeur comprise entre 0 et 255 (2^8 - 1), où 0 est noir et 255 est blanc.
+Un pixel en couleur est représenté sous la forme d’un vecteur de 3 nombres 8
+bits, chaque nombre correspondant à une valeur de rouge, vert et bleu. <a class="bibtex reference internal" href="zbib.html#hipr2" id="id1">[RFisher &amp; Wolfart, 2003]</a></p>
+</div></blockquote>
+<p>traitées afin de les rendre utilisables par le réseau. Ces données se propagent ensuite vers l’avant
+dans le réseau, de couche de neurone en couche de neurone, avant d’aboutir à la couche d’extrants, composée de 10 neurones dans le cas de notre
+programme, qui correspondent aux chiffres de 0 à 9. Un de ces neurones de cette couche finale s’active, donnant ainsi le résultat estimé par le réseau.
+Ensuite, divers paramètres sont ajustés par un algorithme d’optimisation afin d’augmenter la précision des réponses du réseau.</p>
+</div>
+<div class="section" id="le-neurone">
+<h2>Le neurone<a class="headerlink" href="#le-neurone" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Le neurone est l’unité de base d’un réseau neuronal. C’est un noeud parmis le réseau par lequel transitent des valeurs, qui sont modifiées
+au passage par un procédé qui sera expliqué plus en détail prochainement, avant d’être envoyées vers les prochains neurones.
+Essentiellement, un neurone reçoit une ou des valeurs comme intrant, effectue des opérations sur ces dernières, puis transmet la nouvelle valeur.</p>
+<p>La structure d’un neurone est relativement simple. Chaque neurone possède un coefficient, ou un <strong>poids</strong> <span class="math notranslate nohighlight">\(p\)</span> dans le jargon, associé à chaque <strong>intrant</strong> <span class="math notranslate nohighlight">\(I\)</span> qu’elle reçoit.
+La première opération que la neurone effectue est la somme des produits des intrants fois leur poids. À celà est ajouté un <strong>biais</strong> <span class="math notranslate nohighlight">\(b\)</span> propre à chaque neurone.
+Cette opération peut être représentée par la fonction $<span class="math notranslate nohighlight">\(Y = \sum_{i=1}^{n} I_i \times p_i + b\)</span>$, où n correspond au nombre d’intrants.</p>
+<p>La dernière opération que les valeurs subissent avant d’être transmises est une fonction d’activation. La fonction d’activation est appliquée à chaque extrant de chaque
+neurone de la couche. Les fonctions d’activation, analogues à l’activation
+d’un neurone biologique, permettent généralement d’obtenir un extrant compris entre 0 et 1, ou -1 et 1. Elles ont plusieurs utilités, notamment
+pour la modélisation de fonctions non linéeaires, ainsi que pour l’entrainement du réseau, ce qui sera expliqué dans une section ultérieure.</p>
+<div class="figure align-default" id="neurone">
+<img alt="_images/neurone.png" src="_images/neurone.png" />
+<p class="caption"><span class="caption-number">Fig. 4 </span><span class="caption-text">Exemple des opérations effectuées au sein d’un neurone.</span><a class="headerlink" href="#neurone" title="Lien permanent vers cette image">¶</a></p>
+</div>
+<p>La fonction la plus simple est la fonction à échelons. Elle retourne 1 si l’intrant <em>x</em> est plus grand qu’une valeur seuil <em>s</em>, et 0 s’il ne l’est pas. Cette fonction peut être représentée par l’équation
+$<span class="math notranslate nohighlight">\(
+E(x)=
+\begin{cases}
+ 1 &amp; \quad \text{si } x \text{ &gt; s}\\
+ 0 &amp; \quad \text{si } x \text{ &lt;= s}
+\end{cases}
+\)</span>$
+Elle n’est néanmoins pas utilisée, puisqu’elle empêche l’entrainement du réseau.
+La fonction d’activation doit être dérivable en une autre fonction, et non en une constante, afin que le processus d’ajustement des paramètres puisse avoir lieu.
+Il est également impossible de représenter des situations non-linéeaires avec cette fonction, puisque seulement des fonctions linéaires sont présentes dans le réseau.</p>
+<p>La fonction d’activation la plus utilisée est la fonction Unité Linéaire Rectifiée, ou « ReLU » en anglais (Rectified Linear Unit).
+Cette fonction peut être représentée par l’équation :  $<span class="math notranslate nohighlight">\(
+R(x)=
+\begin{cases}
+ x &amp; \quad \text{si } x \text{ &gt; 0}\\
+ 0 &amp; \quad \text{si } x \text{ &lt;= 0}
+\end{cases}
+\)</span>$</p>
+<p>ou encore, <span class="math notranslate nohighlight">\( R(x) = max(0, x)\)</span>. Cette fonction est peu demandante à calculer pour l’ordinateur, et se fait très rapidement. De plus, malgré son apparence linéaire,
+elle peut être dérivée, ce qui est nécessaire pour pouvoir entrainer le réseau. C’est pour ces raisons que c’est la fonction d’activation la plus répendue.
+Elle a toutefois comme désavantage de produire parfois une trop grande quantité de « 0 », ce qui peut entrainer une réaction en chaine, où ces zéros se propagent,
+empêchant le bon fonctionnement du réseau. Cette situation est appelée la « mort du réseau », où l’extrant de plusieurs neurones devient invariablement 0, ce qui
+diminue l’efficacité du réseau. Ce phénomène se produit surtout lorsque le réseau se fait entrainer de manière trop rigoureuse, et que le biais de certaines
+neurones devient une très grande valeur négative, ce qui fait que l’intrant dans la fonction d’activation est toujours en dessous de 0, et l’extrant reste ainsi
+invariablement 0.</p>
+<p>Une variation de cette fonction, nommée Leaky ReLU, a été créée afin de tenter de régler ce problème de mort du réseau : $<span class="math notranslate nohighlight">\( 
+L(x)=
+\begin{cases}
+ x &amp; \quad \text{si } x \text{ &gt; 0}\\
+ 0,01 \times x &amp; \quad \text{si } x \text{ &lt;= 0}
+\end{cases}
+\)</span>$</p>
+<p>Ici, les zéros sont remplacés par de très petits nombres négatifs, qui correspondent généralement à x multiplié par le coefficient 0,01.</p>
+<p>Une autre fonction commune est la sigmoide. Son équation est :
+$<span class="math notranslate nohighlight">\( \phi(x) = 
+\frac{1}{1 + e^{-x}}
+\)</span>$
+La fonction retourne 0 lorsque x tend vers l’infini négatif, et 1 lorsque x tend vers l’infini positif. Cette fonction a comme avantage de
+s’approcher rapidement de 0 ou de 1, lorsque l’intrant <em>x</em> est plus petit que -2 ou plus grand que 2, respectivement. Cela permet d’envoyer
+un signal très fort aux prochains neurones. Cela peut toutefois devenir un désavantage lorsque les intrants sont très grands, puisque l’extrant
+reste pratiquement le même, ce qui peut nuire à l’entrainement. Cette fonction est également plus lourde pour l’ordinateur, ce qui peut ralentir
+considérablement le système lorsque ce calcul est effectué des centaines ou des milliers de fois.</p>
+<p>Une fonction similaire à la sigmoide et la TanH. Son équation est :
+$<span class="math notranslate nohighlight">\( tanh(x) = 
+\frac{2}{1 + e^{-2x}} - 1
+\)</span>$
+Elle retourne -1 lorsque x tend vers l’infini négatif, et 1 lorsque x tend vers l’infini positif. Elle a comme avantage de retourner en moyenne
+des valeurs proches de 0, ce qui rend la tâche plus facile pour les couches suivantes, puisque les valeurs auront moins tendance à devenir très grandes,
+ce qui ralentirait les opérations.</p>
+</div>
+<div class="section" id="couches-de-neurones">
+<h2>Couches de neurones<a class="headerlink" href="#couches-de-neurones" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Comme mentionné précedemment, les neurones sont organisés en couches. Il y a 3 types de couches différentes. La première est la couche des intrants, dans laquelle
+les données sont rentrées dans le réseau. Dans le cas de notre programme, où les intrants sont des images de format 28x28,
+la première couche est composée de 784 (<span class="math notranslate nohighlight">\(28\times28 = 784\)</span>) neurones recevant chacun la valeur en échelle de gris d’un pixel de l’image.
+Plus concrètement, ces images sont des matrices carrées <span class="math notranslate nohighlight">\(M_{28}\)</span>, qui se font vectoriser en un vecteur de taille 784. Par la suite, chacune de ces
+données est transmise à chacun des neurones de la couche cachée, puisque le réseau est densément connecté, et les neurones d’une couche sont connectés à
+tout ceux des couches adjacentes. Pour la suite de cette explication, le réseau neuronal provenant de la figure affichée plus haut sera utilisé, à des
+fins de clarté. Donc, les valeurs des trois neurones de la couche d’intrants sont contenus dans la matrice <span class="math notranslate nohighlight">\(I_{1\times3}\)</span>. Les poids des neurones de la couche cachée 1 sont
+contenus dans la matrice <span class="math notranslate nohighlight">\(C_{4\times3}\)</span>, où 4 correspond au nombre de neurones dans la couche, et 3 aux poids que possèdent chaque neurones de la couche (un poid par neurone
+de la couche précédente). Ici, l’opération à faire serait un produit matriciel
+$<span class="math notranslate nohighlight">\(
+A_{m\times p} \times B_{p\times n} = C_{m\times n}
+\)</span><span class="math notranslate nohighlight">\(
+, afin de multiplier les intrants par chaque ensemble de poids. Toutefois, les matrices ne sont
+pas compatibles pour effectuer cette opération, puisque le nombre de colonnes de la première matrice n'est pas égal au nombre de rangées de la seconde. 
+Il faut donc faire la transposée de la matrice \)</span>C_{4\times3}<span class="math notranslate nohighlight">\(, qui devient alors \)</span>C_{3\times4}^{t}<span class="math notranslate nohighlight">\(. L'opération \)</span>I_{1\times3} \times C_{3\times4}^{t}<span class="math notranslate nohighlight">\(, où sont multipliés
+dans l'ordre, élément par élément, chaque élément d'une ligne de *I* par chaque élément d'une colonne de *C*, puis est effectué la somme de 
+ces produits pour obtenir un nouvel élément de la matrice résultante \)</span>R_{1\times4}<span class="math notranslate nohighlight">\( {cite}`Alloprof`. Par la suite, la matrice \)</span>B_{1\times4}<span class="math notranslate nohighlight">\( 
+contenant les biais de chaque neurone 
+de la couche est additionée à la matrice R, dans une opération où s'additionnent entre-eux les éléments correspondants de chaque matrice pour 
+former une nouvelle matrice de même dimension. Finalement, dans une itération au travers de cette matrice, chaque élément passe par la fonction d'activation, 
+pour former encore une nouvelle matrice de même dimensions contenant les résultats de cette dernière opération. Cette matrice résultante finale \)</span>F_{1\times4}$ devient
+alors l’intrant de la couche suivante de neurones, et ainsi de suite.</p>
+</div>
+<div class="section" id="reseaux-neuronaux-et-le-cerveau-humain">
+<h2>Réseaux neuronaux et le cerveau humain<a class="headerlink" href="#reseaux-neuronaux-et-le-cerveau-humain" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Plusieurs liens peuvent être faits entre les réseaux neuronaux et le cerveau humain. Le premier réseau neuronal était un
+système mécanique financé par la marine américaine qui tentait d’émuler les neurones biologiques. La fonction d’activation
+à échelons était utilisée, imitant les neurones biologiques qui s’activent <em>1</em> ou ne s’activent pas <em>0</em>. Le projet a rapidement
+été laissé de côté, principalement à cause du fait que le réseau était extrêmement difficile à entrainer, puisque, comme vu plus
+tôt, la fonction à échelon ne permet pas l’entrainement du réseau, et les paramètres devaient être ajustés au hasard.</p>
+<p>Voilà donc une première différence fondamentale entre les neurones artificiels et organiques. Les neurones artificiels peuvent
+sortir toutes sortes de valeurs, de manière à mieux servir les intérêts du système, alors que dans le cas d’un neurone organique,
+elles ne peuvent envoyer que le signal binaire <em>activé</em> ou <em>non-activé</em>.</p>
+<blockquote>
+<div><p>Un neurone s’active lorsque son seuil d’excitation est atteint. Le potentiel de repos d’un neurone est d’environ -50mV. Lorsqu’il
+reçoit suffisament de neurotransmetteurs (des particules envoyées par d’autre neurones et qui possèdent une charge électrique), par
+ses dendrites et que le seuil d’excitation d’environ 15mV est atteint, le potentiel d’action se déclenche, et un influx nerveux se propage
+le long de l’axone sous forme de courant électrique. Une fois arrivé aux terminaisons axonales du neurone, d’autres neurotransmetteurs sont
+libérés par les synapses, poursuivant ainsi la transmission du signal. La quantité de neurotransmetteurs libérée ne dépend pas de l’intensité
+du stimulus initial ; c’est une situation de tout ou rien. <a class="bibtex reference internal" href="zbib.html#futura-sciences" id="id2">[futura-sciences, n.d.]</a></p>
+</div></blockquote>
+<p>En d’autres termes, l’image de la fonction d’un neurone artificiel <em>A</em>, dépendamment de la fonction d’activation, peut être,
+par exemple <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> , <span class="math notranslate nohighlight">\(\mathbb{R^+}\)</span>, ou encore <span class="math notranslate nohighlight">\([-1, 1]\)</span>,
+tandis que l’image de la fonction d’un neurone organique <em>O</em> est toujours limité à <span class="math notranslate nohighlight">\(\text{{0, 1}}\)</span>.</p>
+<p>L’aspect où les réseaux neuronaux et le cerveau humain ont le plus en commun est leur état initial. Les deux commencent comme un canvas vierge, ne possédant
+aucune connaissances ou expériences. Les deux se font « entrainer » par des informations extérieurs, jusqu’à arriver au point ou ils deviennent autonomes.
+Les connaissances qu’ils amassent se trouvent d’une certaine manière encodées dans leur système, et influencent leurs actions futures.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="explications_librairies.html" title="previous page">Les librairies nécessaires</a>
+    <a class='right-next' id="next-link" href="training.html" title="next page">L’entrainement d’un système neuronal</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Émile Bergeron, Samuel Paquin, Étienne Parent, Jérémie Sanfaçon<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>

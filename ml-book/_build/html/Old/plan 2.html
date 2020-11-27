@@ -1,0 +1,798 @@
+
+<!DOCTYPE html>
+
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plan de rédaction du travail &#8212; Introduction à la reconnaissance optique de caractère</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Recherche" href="../search.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  
+  <h1 class="site-logo" id="site-title">Introduction à la reconnaissance optique de caractère</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Rechercher dans ce livre ..." aria-label="Rechercher dans ce livre ..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Préface
+  </a>
+ </li>
+</ul>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../rapport_final.html">
+   Rapport Final
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../intro_finale.html">
+     Introduction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../explications_librairies.html">
+     Les librairies nécessaires
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../notions_de_base.html">
+     Notions de base
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../training.html">
+     L’entrainement d’un système neuronal
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../conclusion.html">
+     Conclusion
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Basculer la navigation" aria-controls="site-navigation"
+            title="Basculer la navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Téléchargez cette page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/Old/plan.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Télécharger le fichier source" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimer au format PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Mode plein écran"
+                title="Mode plein écran"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contenu
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#choix-de-la-these">
+   Choix de la thèse
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#un-bref-historique">
+   Un bref historique
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#les-debuts-de-l-ia">
+     Les débuts de l’IA
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#alan-turing">
+       Alan Turing
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#eliza">
+       Eliza
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#defaite-de-garry-kasparov">
+       Défaite de Garry Kasparov
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#les-grandes-avancees">
+     Les grandes avancées
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#les-quantites-massives-de-donnees">
+       Les quantités massives de données
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#gpus">
+       GPUS
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#les-predictions-pour-le-futur">
+     Les prédictions pour le futur
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#notions-de-base-des-procedes">
+   Notions de base des procédés
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#apprentissage-machine-explication-a-l-aide-d-un-programme">
+   Apprentissage machine (explication à l’aide d’un programme)
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#explication-de-la-collecte-et-traitement-de-donnees">
+     Explication de la collecte et traitement de données
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#fonction-de-cout">
+     Fonction de coût
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#explication-de-la-modification-des-parametres">
+     Explication de la modification des paramètres
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#programme-sur-la-reconnaissance-optique-de-caractere">
+     Programme sur la reconnaissance optique de caractère
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#impact-de-l-intelligence-artificielle">
+     Impact de l’intelligence artificielle
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id10">
+   Impact de l’intelligence artificielle
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bienfaits">
+     Bienfaits
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#inconvenients">
+     Inconvénients
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conclusion">
+   Conclusion
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#retour-sur-l-hypothese">
+     Retour sur l’hypothèse
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#reponse-a-la-question">
+     Réponse à la question
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ouverture">
+     Ouverture
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#methodologie">
+   Méthodologie
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#markdown">
+     Markdown
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#google-colab">
+     Google Colab
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#jupyter-book">
+     Jupyter Book
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#github">
+     Github
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="plan-de-redaction-du-travail">
+<h1>Plan de rédaction du travail<a class="headerlink" href="#plan-de-redaction-du-travail" title="Lien permanent vers ce titre">¶</a></h1>
+<p><strong>Comment allons-nous démontrer notre thèse en 3 ou 4 grandes étapes. Comment
+ces étapes sont-elles utiles</strong></p>
+<p><em>Quel est le fonctionnent de l’intelligence artificielle et comment devrait-elle
+être utilisée afin de bénéficier l’être humain?</em></p>
+<div class="section" id="choix-de-la-these">
+<h2>Choix de la thèse<a class="headerlink" href="#choix-de-la-these" title="Lien permanent vers ce titre">¶</a></h2>
+<p>L’intelligence artificielle est au coeur de nos vies présentement et a évolué
+à une vitesse fulgurante au courant de la dernière décennie. Les multiples
+nouvelles avancées du domaine augmentent aussi le nombre
+<a class="reference external" href="https://www.nytimes.com/topic/subject/artificial-intelligence">d’articles</a>
+écrits sur le sujet ainsi que
+<a class="reference external" href="https://trends.google.com/trends/explore?hl=en-GB&amp;tz=240&amp;date=all&amp;q=%2Fm%2F0h1fn8h,machine+learning&amp;sni=3">l’intérêt</a>
+de la population par rapport au domaine.</p>
+<p>En effet, en faisant une recherche rapide sur le site du
+<a class="reference external" href="https://www.nytimes.com/">New York Times</a>, il est possible de déceler que
+seulement quelques 113 articles en lien avec l’IA ont été écrits entre le 13
+aout 1984 et 12 novembre 2006, soit un peu plus de 5 par année. En comparaison,
+975 articles ont été écrits sur le sujet par des auteurs affiliés au journal
+entre novembre 2006 et le 8 octobre 2020, une augmentation d’environ 1400%
+articles par année.</p>
+<script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/2213_RC01/embed_loader.js"></script> <script type="text/javascript"> trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"machine learning","geo":"US","time":"2004-01-01 2020-10-26"},{"keyword":"artificial intelligence","geo":"US","time":"2004-01-01 2020-10-26"}],"category":0,"property":""}, {"exploreQuery":"date=all&geo=US&q=machine%20learning,artificial%20intelligence","guestPath":"https://trends.google.com:443/trends/embed/"}); </script>
+<p>Les tendances de recherche à l’aide du moteur <a class="reference external" href="https://www.google.com/">Google</a>
+pointent aussi dans la même direction. L’intérêt dans le temps pour les termes
+«Deep learning» et «Machine learning» a beaucoup augmenté récemment
+<a class="bibtex reference internal" href="../zbib.html#trendsai" id="id1">[Google, n.d.]</a> . Par contre, la popularité du terme «Artificial Intelligence»
+ne semble pas varier dans la même direction <a class="bibtex reference internal" href="../zbib.html#trendsai" id="id2">[Google, n.d.]</a> . Il faut alors prendre en
+considération que l’intelligence artificielle est un domaine qui date, et que
+le moteur de recherche n’existe que depuis le début des années 2000.</p>
+<p>En se basant sur les statistiques mentionnées plus haut, il est possible
+d’affirmer que l’IA est un domaine d’actualité avec lequel la population se
+fait de plus en plus familière. De multiples articles traitent déjà du sujet,
+une grande partie d’entre eux mentionnant comment son utilisation pourrait
+bénéficier l’être humain.</p>
+<p>Le principal problème avec ces articles est qu’ils ne permettent pas au lecteur
+de réellement saisir comment un programme peut être entraîné à réaliser des
+tâches qui témoignent d’une intelligence humaine. Une connaissance de ces
+concepts est nécessaire au développement d’un bon jugement critique face
+aux bonnes et mauvaises utilisations de la technologie.</p>
+<p>C’est pourquoi notre thèse inclus non seulement la manière dont l’IA pourrait
+être utilisée pour bénéficier l’être humain, mais aussi quel est le
+fonctionnement de la technologie.</p>
+<p>Nous allons d’abord introduire le sujet en mentionnant comment l’intelligence
+artificielle a évolué depuis sa création. Nous allons ensuite décrire en détail
+les composantes d’un <em>machine learing pipeline</em> ainsi que les mathématiques qui
+y sont associées. À l’aide de ces composantes, nous allons créer un modèle
+permettant la reconnaissance optique de caractères. Par la suite, nous
+analyserons les capacités de notre modèle, mettant beaucoup d’emphase sur les
+limites de celui-ci. Pour conclure, nous utiliserons les connaissances
+nouvellement acquises afin de porter un regard critique sur les utilisations
+potentielles de l’IA.</p>
+</div>
+<div class="section" id="un-bref-historique">
+<h2>Un bref historique<a class="headerlink" href="#un-bref-historique" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Afin de bien introduire la technologie, nous comptons tenir une ligne du temps
+commentée des évènements marquants dans le développement de l’intelligence
+artificielle. Voici les éléments que cette ligne du temps devrait pour l’instant
+contenir.</p>
+<div class="section" id="les-debuts-de-l-ia">
+<h3>Les débuts de l’IA<a class="headerlink" href="#les-debuts-de-l-ia" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="section" id="alan-turing">
+<h4>Alan Turing<a class="headerlink" href="#alan-turing" title="Lien permanent vers ce titre">¶</a></h4>
+<p>Au courant de la Deuxième Guerre mondiale, les forces de l’Axe encryptent leurs
+communications à l’aide de machines
+<a class="reference external" href="https://en.wikipedia.org/wiki/Enigma_machine">Enigma</a>. Ces machines rendent le
+décryptage par force brute pratiquement impossible à réaliser par des humains.
+Les forces alliées ne peuvent alors décrypter les messages que lorsqu’ils
+trouvent des indices quant à de l’information contenue dans les messages.</p>
+<p>Afin de déchiffrer plus efficacement les communications cryptées, Alan Turing
+améliore une machine polonaise et crée une version britannique de la
+<a class="reference external" href="https://en.wikipedia.org/wiki/Bombe">Bombe</a>. Cette version rudimentaire de
+l’ordinateur sera discutée plus en détail.</p>
+<p>Alan Turing publie aussi
+<a class="reference external" href="https://en.wikipedia.org/wiki/Computing_Machinery_and_Intelligence">Computing Machinery and Intelligence</a>
+quelques années après la guerre <a class="bibtex reference internal" href="../zbib.html#ibmai" id="id3">[IBM Cloud Education, 2020]</a>. C’est à ce papier que l’on doit
+le <a class="reference external" href="https://en.wikipedia.org/wiki/Turing_test">Turing Test</a>, une procédure
+dont nous comptons aussi discuter.</p>
+</div>
+<div class="section" id="eliza">
+<h4>Eliza<a class="headerlink" href="#eliza" title="Lien permanent vers ce titre">¶</a></h4>
+<p>Eliza est le tout premier <em>chatbot</em> à être créé. Développée à MIT au courant des
+années 60, Eliza permet à un utilisateur d’avoir une conversation similaire à
+celles que l’on pourrait entretenir avec un humain <a class="bibtex reference internal" href="../zbib.html#harvardeliza" id="id4">[Ireland, 2012]</a>.</p>
+</div>
+<div class="section" id="defaite-de-garry-kasparov">
+<h4>Défaite de Garry Kasparov<a class="headerlink" href="#defaite-de-garry-kasparov" title="Lien permanent vers ce titre">¶</a></h4>
+<p>En 1987, l’ordinateur Deep Blue de la compagnie IBM défait le champion mondial
+aux échecs <a class="bibtex reference internal" href="../zbib.html#wiredai" id="id5">[Simonite, 2018]</a>.</p>
+<div class="figure align-default" id="garry-deepblue">
+<img alt="Old/./img/garry.jpg" src="Old/./img/garry.jpg" />
+<p class="caption"><span class="caption-text">Garry Kasparov jouant une partie d’échecs contre Deep Blue.</span><a class="headerlink" href="#garry-deepblue" title="Lien permanent vers cette image">¶</a></p>
+<div class="legend">
+<p><em>source: https://www.forbes.com/sites/davidewalt/2011/05/03/kasparov-vs-deep-blue/#1134dd3b30f8</em></p>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="les-grandes-avancees">
+<h3>Les grandes avancées<a class="headerlink" href="#les-grandes-avancees" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Ensuite, nous comptons discuter des principales avancées qui ont permis les
+avancées fulgurantes des deux dernières décennies.</p>
+<div class="section" id="les-quantites-massives-de-donnees">
+<h4>Les quantités massives de données<a class="headerlink" href="#les-quantites-massives-de-donnees" title="Lien permanent vers ce titre">¶</a></h4>
+<p>Nous comptons discuter de l’impact qu’ont eu Google et Facebook dans la collecte
+et l’utilisation de l’information de leurs utilisateurs pour le développement de
+l’intelligence artificielle.</p>
+</div>
+<div class="section" id="gpus">
+<h4>GPUS<a class="headerlink" href="#gpus" title="Lien permanent vers ce titre">¶</a></h4>
+<p>Les cartes graphiques ont aussi eu un rôle très important à jouer dans les récentes
+avancées du domaine. Nous verrons plus en détail pourquoi les cartes graphiques
+sont aussi performantes pour faire de l’intelligence artificielle.</p>
+</div>
+</div>
+<div class="section" id="les-predictions-pour-le-futur">
+<h3>Les prédictions pour le futur<a class="headerlink" href="#les-predictions-pour-le-futur" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Nous comptons aussi conclure l’introduction avec une hypothèse quant aux bonnes
+et mauvaises utilisations de l’intelligence artificielle. Nous discuterons de
+comment cette technologie pourra révolutionner le monde sous la majorité de ses
+aspects.</p>
+</div>
+</div>
+<div class="section" id="notions-de-base-des-procedes">
+<h2>Notions de base des procédés<a class="headerlink" href="#notions-de-base-des-procedes" title="Lien permanent vers ce titre">¶</a></h2>
+<p>La section <strong>Notions de base des procédés</strong> a comme fonction de définir et expliquer certains termes de base,
+et d’expliciter la structure d’un réseau neuronal. D’abord, le processus de reconnaissance optique de caractères
+sera expliqué sommairement, et servira d’exemple auquel pourront être rapportés les concepts qui suivront.
+Ensuite, les différentes composantes d’un réseau neuronal seront expliquées en ordre croissant de complexité,
+en débutant avec la plus simple unité, le neurone.</p>
+<ul class="simple">
+<li><p>Définition du mot OCR</p>
+<ul>
+<li><p>Définir ce terme, et expliquer le fonctionnement global d’un type de réseau neuronal permettra
+au lecteur de relier les différents termes qui suivent à cet exemple afin
+de faciliter leur compréhension.</p></li>
+</ul>
+</li>
+<li><p>Explication des neurones</p>
+<ul>
+<li><p>Une connaissance adéquate de l’unité de base d’un réseau neuronal permettra de comprendre
+d’où proviennent divers concepts mathématiques qui sont nécessaires à son fonctionnement.</p>
+<ul>
+<li><p>Structure d’un neurone</p></li>
+<li><p>Poids et biais</p></li>
+<li><p>Fonction d’activation (démonstration mathématique)</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Communication entre les couches</p>
+<ul>
+<li><p>La manière les valeurs sont entrées dans le réseau, puis sont ensuite modifiées et propagées
+au travers du réseau est le fondement de comment un réseau neuronal apprend.</p>
+<ul>
+<li><p>entrants et extrants</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Lien avec les neurones biologiques</p>
+<ul>
+<li><p>L’analogie avec les neurones biologiques permet de visualiser plus facilement le fonctionnement
+d’un réseau neuronal, et fait un lien avec le terme
+« intelligence artificielle ».
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</p></li>
+</ul>
+</li>
+</ul>
+<p>=======</p>
+<blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><p>6d4ec17d2093bedc7ade0bd115bfdd94a5491e64</p>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+</div>
+<div class="section" id="apprentissage-machine-explication-a-l-aide-d-un-programme">
+<h2>Apprentissage machine (explication à l’aide d’un programme)<a class="headerlink" href="#apprentissage-machine-explication-a-l-aide-d-un-programme" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Maintenant que le langage et certaines notions de base reliées aux réseaux neurals
+et à la reconnaissance optique ont été expliqués,
+cette section-ci va expliquer en profondeur les différentes étapes à l’intérieur
+d’un système neuronal. Le phénomène de l’apprentissage machine sera expliqué en
+détail afin de comprendre d’où provient le biais et comment l’intelligence
+artificielle peut être autant pratique et puissante. Certaines démonstrations
+mathématiques permettront d’expliquer en profondeur le fonctionnement de chaque
+étape. Enfin, un programme documenté fera un lien
+entre la théorie démontrée et l’application pratique.</p>
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</p>
+<div class="section" id="explication-de-la-collecte-et-traitement-de-donnees">
+<h3>Explication de la collecte et traitement de données<a class="headerlink" href="#explication-de-la-collecte-et-traitement-de-donnees" title="Lien permanent vers ce titre">¶</a></h3>
+<ul class="simple">
+<li><p>Les différentes étapes nécessaires avant de pouvoir utiliser les données d’une image comme la
+conversion en binaire.</p></li>
+<li><p>Expliquer ce fonctionnement est utile puisque sans ce processus, les images
+données ne pourraient pas être fiables en raison des défauts de l’image
+<a class="bibtex reference internal" href="../zbib.html#preprocessing" id="id6">[Reddy, 2019]</a>.</p></li>
+</ul>
+</div>
+<div class="section" id="fonction-de-cout">
+<h3>Fonction de coût<a class="headerlink" href="#fonction-de-cout" title="Lien permanent vers ce titre">¶</a></h3>
+<ul class="simple">
+<li><p>Le coût est le résultat lors de l’entraînement d’un programme. Cette étape sera
+expliquée et la fonction sigmoïde sera démontrée. Cette étape permet de
+comprendre le fonctionnement de l’apprentissage machine global <a class="bibtex reference internal" href="../zbib.html#michael" id="id7">[Nielsen, 2019]</a>.</p></li>
+</ul>
+</div>
+<div class="section" id="explication-de-la-modification-des-parametres">
+<h3>Explication de la modification des paramètres<a class="headerlink" href="#explication-de-la-modification-des-parametres" title="Lien permanent vers ce titre">¶</a></h3>
+<ul class="simple">
+<li><p>Un paramètre modifié a un grand impact sur le reste du résultat. Comprenant
+la fonction de coût et en utilisant son résulat cette étape permettra de
+comprendre l’impact des changements à l’intérieur du système neuronal et ainsi
+mieux comprendre le fonctionnement de l’apprentissage machine.</p></li>
+</ul>
+</div>
+<div class="section" id="programme-sur-la-reconnaissance-optique-de-caractere">
+<h3>Programme sur la reconnaissance optique de caractère<a class="headerlink" href="#programme-sur-la-reconnaissance-optique-de-caractere" title="Lien permanent vers ce titre">¶</a></h3>
+<ul class="simple">
+<li><p>Un programme écrit sera documenté afin de comprendre l’aspect pratique des
+notions théoriques précédemment expliquées. Cela va permettre d’avoir un
+exemple tangible de l’utilisation et du fonctionnement de l’intelligence
+artificielle.</p></li>
+</ul>
+</div>
+<div class="section" id="impact-de-l-intelligence-artificielle">
+<h3>Impact de l’intelligence artificielle<a class="headerlink" href="#impact-de-l-intelligence-artificielle" title="Lien permanent vers ce titre">¶</a></h3>
+<p>=======</p>
+<ul class="simple">
+<li><p>Explication de la collecte et traitement de données</p>
+<ul>
+<li><p>Les différentes étapes nécessaires avant de pouvoir utiliser les données d’une image comme la binarisation.
+Expliquer ce fonctionnement est utile puisque sans ce processus, les images données ne pourraient pas être fiable
+en raison des défauts de l’image <a class="bibtex reference internal" href="../zbib.html#preprocessing" id="id8">[Reddy, 2019]</a>.</p></li>
+</ul>
+</li>
+<li><p>Fonction de coût</p>
+<ul>
+<li><p>Le coût est le résultat lors de l’entraînement d’un programme. Cette étape sera expliqué et la fonction sigmoïde sera démontrée.
+Cette étape permet de comprendre le fonctionnement de l’apprentissage machine global <a class="bibtex reference internal" href="../zbib.html#michael" id="id9">[Nielsen, 2019]</a>.</p></li>
+</ul>
+</li>
+<li><p>Explication de la modification des paramètres</p>
+<ul>
+<li><p>Un paramètre modifié a un grand impact sur le reste du résultat. Comprenant la fonction de coût et en utilisant
+son résulats cette étape permettra de comprendre l’impact des changements à l’intérieur du système neuronal et ainsi
+mieux comprendre le fonctionnement de l’apprentissage machine</p></li>
+</ul>
+</li>
+<li><p>Programme sur la reconnaissance optique de caractère</p>
+<ul>
+<li><p>Un programme écrit sera documenté afin de comprendre l’aspect pratique des notions théoriques précédemment expliquées.
+Cela va permettre d’avoir un exemple tangible de l’utilisation et du fonctionnement de l’intelligence artificielle.</p></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="id10">
+<h2>Impact de l’intelligence artificielle<a class="headerlink" href="#id10" title="Lien permanent vers ce titre">¶</a></h2>
+<blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><p>6d4ec17d2093bedc7ade0bd115bfdd94a5491e64
+Il est important de parler de l”<strong>Impact de l’intelligence artificielle</strong>
+dans le but de répondre à la thèse, c’est pour cela que dans cette section,
+on y retrouve les bienfaits et les inconvénients de l’intelligence artificielle.
+Ceux-ci permettront d’identifier si l’impacte des bienfaits est plus important
+que celui des inconvénients , et donc répondre à la sous-question de notre thèse:
+Est-ce que l’intelligence artificielle peut constituer un bénéfice pour l’être humain?</p>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<div class="section" id="bienfaits">
+<h3>Bienfaits<a class="headerlink" href="#bienfaits" title="Lien permanent vers ce titre">¶</a></h3>
+<p>La sous-section <strong>Bienfaits</strong> permettra de montrer et expliquer les bienfaits de
+l’intelligence artificielle dans plusieurs sphères pour l’être  humain.</p>
+</div>
+<div class="section" id="inconvenients">
+<h3>Inconvénients<a class="headerlink" href="#inconvenients" title="Lien permanent vers ce titre">¶</a></h3>
+<p>La sous-section <strong>Inconvénients</strong> permettra de montrer et expliquer les inconvénients de
+l’intelligence artificielle dans plusieurs sphères pour l’être  humain.</p>
+</div>
+</div>
+<div class="section" id="conclusion">
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Cette section a pour but de rappeler l’hypothèse de départ et de la comparer avec
+les résultats obtenus lors d’expérimentation et d’expliquer les différences entre ceux-ci.
+Tout cela dans le but d’utiliser cette information pour construire et formuler la réponse
+finale à la thèse: <em>Quel est le fonctionnent de l’intelligence artificielle et comment devrait-elle
+être utilisée afin de bénéficier l’être humain?</em>. Cette section se termine
+par une ouverture globale de la thèse et du projet pour complémenter celle-ci
+et laisser place à d’autres questions à répondre.</p>
+<div class="section" id="retour-sur-l-hypothese">
+<h3>Retour sur l’hypothèse<a class="headerlink" href="#retour-sur-l-hypothese" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Le <strong>Retour sur l’hypothèse</strong> permet d’avoir une rétroaction sur l’hypothèse dans le but de comparer
+celle-ci avec les résultats trouvés après les tests et les recherches et en comparer leurs différences
+et leurs ressemblances et d’assembler la réponse à la thèse.</p>
+</div>
+<div class="section" id="reponse-a-la-question">
+<h3>Réponse à la question<a class="headerlink" href="#reponse-a-la-question" title="Lien permanent vers ce titre">¶</a></h3>
+<p>La <strong>Réponse à la question</strong> est la réponse finale à la thèse émise au début du projet basé sur les
+tests et les recherches ainsi que l’hypothèse.</p>
+</div>
+<div class="section" id="ouverture">
+<h3>Ouverture<a class="headerlink" href="#ouverture" title="Lien permanent vers ce titre">¶</a></h3>
+<p>L”<strong>ouverture</strong> est une question ouverte qui permet, non pas de répondre à une
+question spécifique, mais d’ouvrir plusieurs champs de réflexions ainsi que
+des pistes sur  l’intelligence aritifielle dans le monde présent.</p>
+</div>
+</div>
+<div class="section" id="methodologie">
+<h2>Méthodologie<a class="headerlink" href="#methodologie" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Pour plus d’information sur notre méthodologie, voir le
+<a class="reference external" href="https://github.com/TrickyTroll/ML-intro/blob/master/README.md">README</a>
+de notre projet. Nous y mentionnons comment nous avons modifié la
+configuration de nos outils afin de les rendre compatibles avec les
+normes du cégep.</p>
+<div class="section" id="markdown">
+<h3>Markdown<a class="headerlink" href="#markdown" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Pour écrire notre rapport, nous utilisons le langage de <em>markup</em>
+<a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/">MyST</a>. Beaucoup plus facile
+d’accès et efficace que LaTeX, il permet tout de même la réalisation de
+rapports scientifiques de qualité possible avec
+<a class="reference external" href="https://jupyterbook.org/content/myst.html">ses multiples fonctionnalités</a>.</p>
+</div>
+<div class="section" id="google-colab">
+<h3>Google Colab<a class="headerlink" href="#google-colab" title="Lien permanent vers ce titre">¶</a></h3>
+<p><a class="reference external" href="https://colab.research.google.com/notebooks/intro.ipynb#recent=true">Google Colab</a>
+nous permet de réaliser nos calculs dans le nuage sur les serveurs Google.
+Il est donc facile de partager notre progrès, et nos calculs peuvent être
+réalisés sur n’importe quel ordinateur possédant un navigateur web. Avec
+Google Colab, le lecteur pourra aussi facilement lancer son propre notebook
+lors de sa lecture afin de tester nos fonctions. La version de base de
+l’application est gratuite.</p>
+</div>
+<div class="section" id="jupyter-book">
+<h3>Jupyter Book<a class="headerlink" href="#jupyter-book" title="Lien permanent vers ce titre">¶</a></h3>
+<p><a class="reference external" href="https://jupyterbook.org/intro.html">Jupyter Book</a> est un nouveau projet
+permettant de créer des publications scientifiques à l’aide de notebooks
+<a class="reference external" href="https://jupyter.org/">Jupyter</a> et du <a class="reference external" href="https://commonmark.org/help/">Markdown</a>.
+Nous avons choisi cet outil puisqu’il nous permet d’intégrer nos calculs
+réalisés dans un environnement de calcul interactif Python ainsi que notre
+texte décrivant les procédés. Il sera donc plus facile pour le lecteur de
+comprendre les concepts de programmation puisque des explications pourront
+accompagner chaque cellule de code.</p>
+</div>
+<div class="section" id="github">
+<h3>Github<a class="headerlink" href="#github" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Grâce à Github, la séparation des tâches en sous-section est beaucoup plus
+facile, donc chacun des coéquipiers aura leurs sous-section pour travailler
+dedans. Ces sous-sections seront les grandes lignes de notre plan: Le projet
+consiste aussi un produit qui est un programme, celui-ci ce ferra sur le côté,
+plus comme enrichissement au projet et pourra être travaillé à la guise des
+membres de l’équipe ainsi qu’à leur habilité en programmation.</p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./Old"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Émile Bergeron, Samuel Paquin, Étienne Parent, Jérémie Sanfaçon<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>

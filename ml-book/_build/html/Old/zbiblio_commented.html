@@ -1,0 +1,393 @@
+
+<!DOCTYPE html>
+
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bibliographie Commentée &#8212; Introduction à la reconnaissance optique de caractère</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Recherche" href="../search.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Introduction à la reconnaissance optique de caractère</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Rechercher dans ce livre ..." aria-label="Rechercher dans ce livre ..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Préface
+  </a>
+ </li>
+</ul>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../rapport_final.html">
+   Rapport Final
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../intro_finale.html">
+     Introduction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../explications_librairies.html">
+     Les librairies nécessaires
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../notions_de_base.html">
+     Notions de base
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../training.html">
+     L’entrainement d’un système neuronal
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../bienfaits_et_inconv%C3%A9nients.html">
+     Bienfaits et inconvénients
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../conclusion.html">
+     Conclusion
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../zbib.html">
+     Bibliographie
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Basculer la navigation" aria-controls="site-navigation"
+            title="Basculer la navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Téléchargez cette page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/Old/zbiblio_commented.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Télécharger le fichier source" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimer au format PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Mode plein écran"
+                title="Mode plein écran"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contenu
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#brookings-how-artificial-intelligence-is-transforming-the-world">
+   Brookings, How artificial intelligence is transforming the world
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ministere-de-l-economie-et-de-l-innovation-les-avantages-et-inconvenients-de-l-intelligence-artificielle">
+   Ministère de l’Économie et de l’Innovation, Les avantages et inconvénients de l’intelligence artificielle
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ubiquity-human-brain-and-neural-network-behavior-a-comparison">
+   Ubiquity, HUMAN BRAIN AND NEURAL NETWORK BEHAVIOR, A COMPARISON
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#michael-a-nielsen-neural-network-and-deel-learning">
+   Michael A. Nielsen, Neural Network and Deel Learning
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#face-recognition-vendor-test-frvt-part-3-demographic-effects">
+   Face Recognition Vendor Test (FRVT) Part 3: Demographic Effects
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#portland-passes-broadest-facial-recognition-ban-in-the-us">
+   Portland passes broadest facial recognition ban in the US
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="bibliographie-commentee">
+<h1>Bibliographie Commentée<a class="headerlink" href="#bibliographie-commentee" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="section" id="brookings-how-artificial-intelligence-is-transforming-the-world">
+<h2>Brookings, <a class="reference external" href="https://www.brookings.edu/research/how-artificial-intelligence-is-transforming-the-world/#_edn4">How artificial intelligence is transforming the world</a><a class="headerlink" href="#brookings-how-artificial-intelligence-is-transforming-the-world" title="Lien permanent vers ce titre">¶</a></h2>
+<p><a class="bibtex reference internal" href="../zbib.html#brookings" id="id1">[West &amp; Allen, 2018]</a></p>
+<p>Cette source est vraiment intéressante à utiliser, car elle englobe une
+grande partie de l’information sur l’intelligence artificielle. Elle est donc très utile pour notre
+travail, car elle parle des qualités de l’intelligence artificielle, l’application de
+celle-ci dans différents secteurs, les régulations, la politique et les problèmes éthiques de
+l’intelligence artificielle. Cette source est donc importante à la compréhension de l’utilité
+de l’intelligence artificielle et ses enjeux. Elle est de plus très pertinente pour l’énoncé du sujet,
+ou l’on parle plus globalement de l’intelligence artificielle. La section sur les secteurs appliqués
+ainsi que celle sur les enjeux éthiques vont être très importantes pour expliquer la problématique
+ainsi que les événements reliés à l’intelligence artificielle.</p>
+</div>
+<div class="section" id="ministere-de-l-economie-et-de-l-innovation-les-avantages-et-inconvenients-de-l-intelligence-artificielle">
+<h2>Ministère de l’Économie et de l’Innovation, <a class="reference external" href="https://www.economie.gouv.qc.ca/objectifs/informer/vecteurs/vecteurs-actualites/vecteurs-actualites-details/?no_cache=1&amp;tx_ttnews%5Btt_news%5D=23153&amp;tx_ttnews%5Bcat%5D=&amp;cHash=2f4aa33c55d12596ff0c2d6f468960bc">Les avantages et inconvénients de l’intelligence artificielle</a><a class="headerlink" href="#ministere-de-l-economie-et-de-l-innovation-les-avantages-et-inconvenients-de-l-intelligence-artificielle" title="Lien permanent vers ce titre">¶</a></h2>
+<p><a class="bibtex reference internal" href="../zbib.html#gouvqc" id="id2">[InnovationQuebec, 2018]</a></p>
+<p>Cette source est importante pour notre projet en plus d’être fiable,
+car elle provient de notre gouvernement. Grâce à cette source, nous pourrons développer davantage
+sur les conséquences de l’implémentation de l’intelligence artificielle dans plusieurs secteurs.
+Elle est donc très importante pour notre travail, pour ainsi développer sur ces aspects lors de l’énoncé du sujet.
+Cette source vient complémenter celle de Brookings: <a class="reference external" href="https://www.brookings.edu/research/how-artificial-intelligence-is-transforming-the-world/#_edn4">How artificial intelligence is transforming the world</a>
+avec plus d’informations. Nous utiliserons les secteurs affectés par l’intelligence artificielle ainsi
+que les risques liés à l’intelligence artificielle ce qui reflète la problématique de comment devrait-on
+utiliser l’intelligence artificielle pour bénéficier l’être humain.</p>
+</div>
+<div class="section" id="ubiquity-human-brain-and-neural-network-behavior-a-comparison">
+<h2>Ubiquity, <a class="reference external" href="https://ubiquity.acm.org/article.cfm?id=958078">HUMAN BRAIN AND NEURAL NETWORK BEHAVIOR, A COMPARISON</a><a class="headerlink" href="#ubiquity-human-brain-and-neural-network-behavior-a-comparison" title="Lien permanent vers ce titre">¶</a></h2>
+<p><a class="bibtex reference internal" href="../zbib.html#ubiquity" id="id3">[LAURO, n.d.]</a></p>
+<p>Cet article provient de la revue scientifique revue par les pairs de l’ACM, soit Association for Computing Machinery.
+Il est donc possible d’affirmer qu’elle est très fiable et pertinente. Dans cet article, l’auteur compare
+les caractéristiques d’un réseau neuronal à celles du cerveau humain. Il aborde par exemple comment les deux apprennent et
+se développent avec le temps, en commençant de zéro, comme un bébé. Ce genre de comparaison nous permet d’accomplir notre objectif
+pour cette section, soit de rendre le concept de réseau neuronal plus tangible et facile à assimiler.</p>
+</div>
+<div class="section" id="michael-a-nielsen-neural-network-and-deel-learning">
+<h2>Michael A. Nielsen, <a class="reference external" href="http://neuralnetworksanddeeplearning.com/chap1.html">Neural Network and Deel Learning</a><a class="headerlink" href="#michael-a-nielsen-neural-network-and-deel-learning" title="Lien permanent vers ce titre">¶</a></h2>
+<p><a class="bibtex reference internal" href="../zbib.html#michael" id="id4">[Nielsen, 2019]</a></p>
+<p>Cette source est intéressante puisqu’elle explique en profondeur le fonctionnement
+d’un réseau neuronal en donnant un exemple débutant par la reconnaissance optique
+de caractères qui est un exemple du programme semblable à celui que nous allons
+écrire. De plus, de nombreuses démonstrations mathématiques imagées. Également,
+cette source donne des astuces afin de créer notre programme. Cette source est
+très détaillée. De plus, l’auteur est un scientifique qui a aidé à débuter
+l’informatique quantique en plus de grandement s’intéresser à l’intelligence
+artificielle. Malgré tout, cette source est en anglais ce qui peut
+légèrement nuire à la compréhension. Nous allons principalement utiliser la
+section concernant un exemple d’utilisation de l’intelligence
+artificielle afin de reconnaître des chiffres écrits à la main.</p>
+</div>
+<div class="section" id="face-recognition-vendor-test-frvt-part-3-demographic-effects">
+<h2>Face Recognition Vendor Test (FRVT) Part 3: Demographic Effects<a class="headerlink" href="#face-recognition-vendor-test-frvt-part-3-demographic-effects" title="Lien permanent vers ce titre">¶</a></h2>
+<p><a class="bibtex reference internal" href="../zbib.html#nistbias" id="id5">[Grother et al., 2019]</a></p>
+<p>Cette publication gouvernementale semble fiable. Elle a été citée par de
+multiples articles ultérieurement consultés. L’organisme derrière la
+publication, le National Institute of Standards and Technology, est un organisme
+fondé en 1901 afin de facilité la standardisation des procédés entre les
+entreprises et les organisations gouvernementales de développement technologique
+aux États-Unis.</p>
+<p>Cette publication est aussi utile puisqu’elle consiste des résultats d’une
+recherche sur les imprécisions de la reconnaissance faciale à l’aide de
+l’intelligence artificielle. Le sujet sera abordé au courant du rapport et
+les statistiques contenues dans cet article du NIST seront utilisées pour
+supporter plusieurs arguments.</p>
+<p>Finalement, il est aussi intéressant d’avoir une publication du NIST pour
+supporter la recherche puisque nous comptons utiliser des données publiées
+par cette même organisation pour l’entraînement de notre programme.</p>
+</div>
+<div class="section" id="portland-passes-broadest-facial-recognition-ban-in-the-us">
+<h2>Portland passes broadest facial recognition ban in the US<a class="headerlink" href="#portland-passes-broadest-facial-recognition-ban-in-the-us" title="Lien permanent vers ce titre">¶</a></h2>
+<p><a class="bibtex reference internal" href="../zbib.html#cnnportland" id="id6">[Metz, 2020]</a></p>
+<p>Cet article publié par CNN en septembre 2020 relate de récentes régulations
+en lien avec l’utilisation de la reconnaissance faciale par les forces de
+l’ordre.</p>
+<p>L’article est très récent, ce qui est important puisque notre
+sujet évolue rapidement dans le temps. En effet, l’intelligence artificielle
+est un domaine en pleine explosion. Des changements majeurs peuvent survenir
+à tout moment, comme les récentes réglementations expliquées dans l’article.</p>
+<p>CNN est aussi une source journalistique fiable. L’organisation a reporté sur
+plusieurs évènements majeurs et ses journalistes ont remporté plusieurs prix.</p>
+<p>Bien que CNN ait la réputation d’être biaisé poliquement, favorisant
+souvent le partir démocrate lors que leurs reportages, ce biais ne semble pas
+avoir déteint sur la qualité de l’article sélectionné.</p>
+<p id="bibtex-bibliography-Old/zbiblio_commented-0"></p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./Old"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Émile Bergeron, Samuel Paquin, Étienne Parent, Jérémie Sanfaçon<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>

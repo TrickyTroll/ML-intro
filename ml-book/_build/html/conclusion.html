@@ -1,0 +1,343 @@
+
+<!DOCTYPE html>
+
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conclusion &#8212; Introduction à la reconnaissance optique de caractère</title>
+    
+  <link rel="stylesheet" href="_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/translations.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Recherche" href="search.html" />
+    <link rel="next" title="&lt;no title&gt;" href="zbib.html" />
+    <link rel="prev" title="Bienfaits et inconvénients" href="bienfaits_et_inconv%C3%A9nients.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="index.html">
+  
+  <img src="_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Introduction à la reconnaissance optique de caractère</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Rechercher dans ce livre ..." aria-label="Rechercher dans ce livre ..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Préface
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="rapport_final.html">
+   Rapport Final
+  </a>
+  <ul class="current collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="intro_finale.html">
+     Introduction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="explications_librairies.html">
+     Les librairies nécessaires
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="notions_de_base.html">
+     Notions de base
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="training.html">
+     L’entrainement d’un système neuronal
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="bienfaits_et_inconv%C3%A9nients.html">
+     Bienfaits et inconvénients
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Conclusion
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Basculer la navigation" aria-controls="site-navigation"
+            title="Basculer la navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Téléchargez cette page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/conclusion.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Télécharger le fichier source" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimer au format PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Mode plein écran"
+                title="Mode plein écran"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="conclusion">
+<h1>Conclusion<a class="headerlink" href="#conclusion" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Finalement, quel est le fonctionnement de l’intelligence artificielle et
+comment devrait-elle être utilisée afin de bénéficier l’être humain?
+L’hypothèse émise était que si son développement se fait de manière éthique
+et s’il est bien encadré, nous pourrions en retirer plus d’avantages que
+d’inconvénients. Il était donc important de comprendre le fonctionnement
+de cette technologie pour pouvoir expliquer et rationaliser l’utilisation
+bénéfique de l’intelligence artificielle et d’ainsi le documenter.</p>
+<p>Pour ce faire, il a fallu procéder à l’écriture d’un programme d’OCR, une
+forme simple d’intelligence artificielle qui a pour but de reconnaître des
+caractères écrits à la main. Grâce à l’information acquise lors de l’écriture
+de celui-ci ainsi que toute la documentation lue pour la préparation du
+programme, il a été plus facile de comprendre les aspects d’un réseau neuronal
+dans le but de documenter chaque composante du réseau neuronal.</p>
+<p>Ce que nous pouvons conclure d’un réseau neuronal après notre documentation,
+c’est que cette “intelligence” artificielle, n’est rien d’autre qu’un paquet
+de fonctions avec des paramètres qui ont été ajustés par une méthode d’optimisation
+dénommée “Back propagation”. Cette méthode est composée de fonctions qui
+utilisent des notions de mathématiques telles que les dérivées. Cet algorithme
+a lieu lors de chaque “epoch<a class="footnote-reference brackets" href="#id2" id="id1">2</a>” dans le but d’ajuster l’algorithme d’OCR
+graduellement.</p>
+<p>Donc, cet algorithme « intelligent ” n’est pas capable de prendre des
+décisions elle-même et doit être surveillé et entraîné par un être humain
+à l’aide d’un jeu de données.Cela dans le but de pouvoir répondre à la tâche
+précise à la-quel l’algorithme s’est fait assigner, qui est dans notre
+cas la reconnaissance optique des chiffres de 0 à 9. Alors, un algorithme
+qui est bon ou mauvais dans sa tâche et donc qui a une bonne ou mauvaise
+précision est principalement déterminé par la façon dont l’algorithme a
+été entraîné et si le jeu de données utilisé pour l’entraîner est fiable
+et diversifié. Dans notre cas, la précision est calculée par le nombre de
+prédiction réussite sur le nombre total de prédiction.C’est donc l’entraînement
+que provient une partie des biais de l’intelligence artificielle, et donc
+un des inconvénients qu’on avait cité dans notre hypothèse.</p>
+<p>L’autre inconvénient qui a été mentionné lors de l’hypothèse est l’importante
+quantité d’emploi qui risque de disparaître. Or, tel que mentionné dans la
+section sur les impacts de l’intelligence artificielle, il n’y a pas seulement
+cet inconvénient, et ces autres inconvénients sont accompagnés de plusieurs
+avantages intéressants.</p>
+<p>Comme il est décrit dans la section des bienfaits et inconvénients, l’usage
+de l’apprentissage machine peut amener beaucoup d’avantages ainsi que des
+inconvénients. Ces principaux avantages se résument à,
+l’élimination de l’erreur humaine, l’utilisation de l’IA dans des tâches
+dangereuses, la disponibilité 24/7 de celle-ci, la rapidité de prise de
+décision et les emplois dans ce domaine. Tandis que les inconvénient se
+résument au biais de l’IA, diminution de certains types d’emploi, les conflits
+mondiaux lié à celle-ci, l’amélioration des “hacks” et l’utilisation de
+celle-ci dans le but de tuer. Si l’on veut avoir les bénéfices de l’intelligence
+artificielle, il faut d’abord s’occuper de diminuer l’impact des inconvénients.
+La bonne nouvelle étant que ces inconvénients peuvent être quasi inexistants
+si l’IA est implémentée en suivant dans un bon cadre strict ainsi que des
+mesures de sécurité. Par exemple, des règles sur l’utilisation des bases
+de données et des réglementations sur celles-ci pourraient diminuer les
+biais dans les programmes d’apprentissage machine. Si ces conditions sont
+respectées, il est préférable de penser que l’usage de l’intelligence
+artificielle pourrait faire évoluer la société.</p>
+<p>Pour répondre à la thèse, l’intelligence artificielle fonctionne par l’étude
+de grosses bases de données par un programme. Celui-ci va ensuite faire
+varier ses paramètres clés dans le but d’ajuster certaines fonctions. Ces
+fonctions permettent de trouver des tendances dans le jeu de données et de
+les utiliser dans le but de répondre à la tâche attribuée. De plus,
+l’intelligence artificielle peut constituer un bénéfice pour l’être humain
+à condition que celle-ci soit bien encadrée.</p>
+<p>Il ne faut toutefois pas écarter le fait que le futur n’est jamais certain,
+et qu’on ne peut prédire à 100% ce que l’intelligence artificielle va
+ressembler dans 50 ans. Mais, avec les avancées technologiques des dernières
+années qui ne semblent pas s’arrêter, il serait juste de croire que l’IA
+a un futur prometteur. Avec ces avancés prometteuses, ce pourrait-il qu’il
+y ait une sorte d’intelligence au-delà de celle humaine et artificielle dans le futur ?</p>
+<hr class="docutils" />
+<dl class="footnote brackets">
+<dt class="label" id="id2"><span class="brackets"><a class="fn-backref" href="#id1">2</a></span></dt>
+<dd><p>Une “epoch” étant un cycle complet où l’algorithme a traité
+le jeu de données qui lui a été fournie une seule fois.</p>
+</dd>
+</dl>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="bienfaits_et_inconv%C3%A9nients.html" title="previous page">Bienfaits et inconvénients</a>
+    <a class='right-next' id="next-link" href="zbib.html" title="next page">&lt;no title&gt;</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Émile Bergeron, Samuel Paquin, Étienne Parent, Jérémie Sanfaçon<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>

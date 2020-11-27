@@ -1,0 +1,1327 @@
+
+<!DOCTYPE html>
+
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notions de base &#8212; Introduction à la reconnaissance optique de caractère</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Recherche" href="../search.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  
+  <h1 class="site-logo" id="site-title">Introduction à la reconnaissance optique de caractère</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Rechercher dans ce livre ..." aria-label="Rechercher dans ce livre ..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Préface
+  </a>
+ </li>
+</ul>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../rapport_final.html">
+   Rapport Final
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../intro_finale.html">
+     Introduction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../explications_librairies.html">
+     Les librairies nécessaires
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../notions_de_base.html">
+     Notions de base
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../training.html">
+     L’entrainement d’un système neuronal
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../conclusion.html">
+     Conclusion
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Basculer la navigation" aria-controls="site-navigation"
+            title="Basculer la navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Téléchargez cette page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/Old/OCR_SAM.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Télécharger le fichier source" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimer au format PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Mode plein écran"
+                title="Mode plein écran"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/Old/OCR_SAM.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="lancement Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contenu
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Notions de base
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#introduction-au-reseau-neuronal">
+     Introduction au réseau neuronal
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ocr">
+     OCR
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#le-neurone">
+     Le neurone
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#couches-de-neurones">
+     Couches de neurones
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#l-entrainement-d-un-systeme-neuronal">
+   L’entrainement d’un système neuronal
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#fonction-d-erreur">
+     Fonction d’erreur
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#transmition-de-l-information">
+     Transmition de l’information
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#back-propagation">
+     <em>
+      Back propagation
+     </em>
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#origine-du-biais">
+     Origine du biais
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#notre-modele">
+   Notre modèle
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#les-librairies-necessaires">
+     Les librairies nécessaires
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#tensorflow">
+       Tensorflow
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#keras">
+         Keras
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#mnist">
+         MNIST
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#numpy">
+       Numpy
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#matplotlib">
+       Matplotlib
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#chargement-du-mnist-data">
+     Chargement du MNIST data
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pretraitement">
+     Prétraitement
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#testing-it-on-my-own-images">
+     Testing it on my own images
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <p><a href="https://colab.research.google.com/github/TrickyTroll/ML-intro/blob/master/OCR_SAM.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a></p>
+<div class="section" id="notions-de-base">
+<h1>Notions de base<a class="headerlink" href="#notions-de-base" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="section" id="introduction-au-reseau-neuronal">
+<h2>Introduction au réseau neuronal<a class="headerlink" href="#introduction-au-reseau-neuronal" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Un réseau neuronal est une forme d’intelligence artificielle, qui effectue des prédictions basées sur des valeurs qui sont entrées dans le système, afin d’accomplir une certaine tâche. Le réseau est constitué d’un ensemble de neurones interconnectés et distribués en plusieurs couches.</p>
+<p>Chaque neurone possède des paramètres qui peuvent être ajustés, afin d’obtenir des résultats plus fiables. C’est ce qu’on appele l’entrainement.
+Le réseau est entrainé à partir d’une base de données, qui contient des valeurs associées à une étiquette, qui consiste de la « réponse » attendue.</p>
+<p>Par exemple, un réseau neuronal ayant comme objectif de prédire l’achalandage dans un parc d’amusement pour une journée donnée pourrait recevoir comme intrant la température, le niveau d’ensoleillement ainsi que le pourcentage de précipitation et d’humidité. La base de données serait alors constituée d’une liste ces quatres valeurs enregistrées à chaque jour des dernières années, avec comme étiquette le nombre de clients cette journée-là. Les réponses du réseau sont comparées aux étiquettes, et les paramètres des neurones sont individuellement modifiés de manière à se rapprocher de la réponse attendue.</p>
+<p><img alt="picture" src="https://drive.google.com/uc?export=view&amp;id=1c7VtAd-NvVteokYgHm_UMHoj7pr7FiuF" /></p>
+<p><em>Ceci est un exemple simplifié d’un réseau neuronal. Les composantes du schéma seront expliquées en détail dans cette section.</em></p>
+</div>
+<div class="section" id="ocr">
+<h2>OCR<a class="headerlink" href="#ocr" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Le terme OCR, ou ROC en français, signifie « Reconnaissance optique de caractères ». Cela désigne un processus aucours duquel du texte est extrait
+d’une image ou d’un document afin d’être transformé en fichier. Pour ce faire, un réseau neuronal reçoit les valeurs des pixels du document de source,</p>
+<blockquote>
+<div><p>Note : La valeur d’un pixel en « grayscale » ou échelle de gris, est un nombre entier
+de format 8 bits et peut donc avoir
+une valeur comprise entre 0 et 255 (2^8 - 1), où 0 est noir et 255 est blanc.
+Un pixel en couleur est représenté sous la forme d’un vecteur de 3 nombres 8
+bits, chaque nombre correspondant à une valeur de rouge, vert et bleu. <a class="bibtex reference internal" href="../zbib.html#hipr2" id="id1">[RFisher &amp; Wolfart, 2003]</a></p>
+</div></blockquote>
+<p>traitées afin de les rendre utilisables par le réseau. Ces données se propagent ensuite vers l’avant
+dans le réseau, de couche de neurone en couche de neurone, avant d’aboutir à la couche d’extrants, composée de 10 neurones dans le cas de notre
+programme, qui correspondent aux chiffres de 0 à 9. Un de ces neurones de cette couche finale s’active, donnant ainsi le résultat estimé par le réseau.
+Ensuite, divers paramètres sont ajustés par un algorithme d’optimisation afin d’augmenter la précision des réponses du réseau.</p>
+</div>
+<div class="section" id="le-neurone">
+<h2>Le neurone<a class="headerlink" href="#le-neurone" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Le neurone est l’unité de base d’un réseau neuronal. C’est un noeud parmis le réseau par lequel transitent des valeurs, qui sont modifiées
+au passage par un procédé qui sera expliqué plus en détail prochainement, avant d’être envoyées vers les prochains neurones.
+Essentiellement, un neurone reçoit une ou des valeurs comme intrant, effectue des opérations sur ces dernières, puis transmet la nouvelle valeur.</p>
+<p>La structure d’un neurone est relativement simple. Chaque neurone possède un coefficient, ou un <strong>poids</strong> <span class="math notranslate nohighlight">\(p\)</span> dans le jargon, associé à chaque <strong>intrant</strong> <span class="math notranslate nohighlight">\(I\)</span> qu’elle reçoit.
+La première opération que la neurone effectue est la somme des produits des intrants fois leur poids. À celà est ajouté un <strong>biais</strong> <span class="math notranslate nohighlight">\(b\)</span> propre à chaque neurone.
+Cette opération peut être représentée par la fonction $<span class="math notranslate nohighlight">\(Y = \sum_{i=1}^{n} I_i \times p_i + b\)</span>$, où n correspond au nombre d’intrants.</p>
+<p>La dernière opération que les valeurs subissent avant d’être transmises est une fonction d’activation. La fonction d’activation est appliquée à chaque extrant de chaque
+neurone de la couche. Les fonctions d’activation, analogues à l’activation
+d’un neurone biologique, permettent généralement d’obtenir un extrant compris entre 0 et 1, ou -1 et 1. Elles ont plusieurs utilités, notamment
+pour la modélisation de fonctions non linéeaires, ainsi que pour l’entrainement du réseau, ce qui sera expliqué dans une section ultérieure.</p>
+<p>La fonction la plus simple est la</p>
+<p>La fonction d’activation la plus utilisée est la fonction Unité Linéaire Rectifiée, ou « ReLU » en anglais (Rectified Linear Unit).
+Cette fonction peut être représentée par l’équation :  $<span class="math notranslate nohighlight">\(
+R(x)=
+\begin{cases}
+ x &amp; \quad \text{si } x \text{ &gt; 0}\\
+ 0 &amp; \quad \text{si } x \text{ &lt;= 0}
+\end{cases}
+\)</span>$</p>
+<p>ou encore, <span class="math notranslate nohighlight">\( R(x) = max(0, x)\)</span>. Cette fonction est peu demandante à calculer pour l’ordinateur, et se fait très rapidement. De plus, malgré son apparence linéaire,
+elle peut être dérivée, ce qui est nécessaire pour pouvoir entrainer le réseau. C’est pour ces raisons que c’est la fonction d’activation la plus répendue.
+Elle a toutefois comme désavantage de produire parfois une trop grande quantité de « 0 », ce qui peut entrainer une réaction en chaine, où ces zéros se propagent,
+empêchant le bon fonctionnement du réseau. Cette situation est appelée la « mort du réseau ».</p>
+<p>Une variation de cette fonction, nommée Leaky ReLU, a été créée afin de tenter de régler ce problème de mort du réseau : $<span class="math notranslate nohighlight">\( 
+L(x)=
+\begin{cases}
+ x &amp; \quad \text{si } x \text{ &gt; 0}\\
+ 0,01 \times x &amp; \quad \text{si } x \text{ &lt;= 0}
+\end{cases}
+\)</span>$</p>
+<p>Ici, les zéros sont remplacés par de très petits nombres négatifs, qui correspondent généralement à x multiplié par le coefficient 0,01.</p>
+<p>Une autre fonction commune est la sigmoide. Son équation est : $<span class="math notranslate nohighlight">\( \phi(x) = 
+                                                                    \frac{1}{1 + e^{-x}}
+                                                                    \)</span>$
+La fonction retourne 0 lorsque x tend vers l’infini négatif, et 1 lorsque x tend vers l’infini positif. Cette fonction a comme avantage de</p>
+</div>
+<div class="section" id="couches-de-neurones">
+<h2>Couches de neurones<a class="headerlink" href="#couches-de-neurones" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Comme mentionné précedemment, les neurones sont organisés en couches. Il y a 3 types de couches différentes. La première est la couche des intrants, dans laquelle
+les données sont rentrées dans le réseau. Dans le cas de notre programme, où les intrants sont des images de format 28x28, la première couche est composée de 784 (28*28 = 784) neurones recevant chacun la valeur en echelle de gris  d’un pixel de l’image. Plus concrètement, ces images sont des matrices <span class="math notranslate nohighlight">\(M_{28}\)</span>, qui se font vectoriser</p>
+</div>
+</div>
+<div class="section" id="l-entrainement-d-un-systeme-neuronal">
+<h1>L’entrainement d’un système neuronal<a class="headerlink" href="#l-entrainement-d-un-systeme-neuronal" title="Lien permanent vers ce titre">¶</a></h1>
+<p>L’entrainement d’un réseau à l’aide d’une certaine base de données (donnée d’entrainement) permet à celui-ci de prédire le résultat d’une autre base donnée. En effet, le but d’un réseau neuronal est de réduire l’erreur de l’entrainement ainsi que la différence entre l’erreur des données entrainées et l’erreur des données de test soient petites. Lorsque le réseau est sous-entrainé, le réseau de sera pas précis lors de ces résultats. Cependant, lorsque le réseau est sur-entrainé, celui-ci va prendre en compte tout le bruit des données. Ce bruit peut être, par exemple, le fait de prendre en compte les imperfections d’une image, reconnaitre seulement certains styles d’écriture, etc. Cela a comme impact d’augmenter l’erreur lorsque le système est exposé à une nouvelle base de données.</p>
+<div class="figure align-default" id="overfitting">
+<img alt="Old/./img/overfitting.png" src="Old/./img/overfitting.png" />
+<p class="caption"><span class="caption-text">Graphiques représentant l’effet de l’entrainement du réseau de neurone</span><a class="headerlink" href="#overfitting" title="Lien permanent vers cette image">¶</a></p>
+</div>
+<p>L’entrainement d’un réseau neuronal s’effectue à l’inverse. Visuellement, l’entrainement et l’ajustement des différents paramètres se font de la droite vers la gauche. Ce principe, appelé « backpropagation », va être expliqué à l’aide quelques démonstrations mathématiques complémentées par quelques explications écrites.</p>
+<div class="section" id="fonction-d-erreur">
+<h2>Fonction d’erreur<a class="headerlink" href="#fonction-d-erreur" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Une fonction d’erreur est une fonction permettant de connaitre la précision des résultats des extrants de la dernière couche. Il peut y avoir plusieurs fonctions d’erreur. En voici un exemple:</p>
+<p>$<span class="math notranslate nohighlight">\(E_{SS}=1/2\sum_{i=1}^nE_i^2 \)</span>$ <strong>(1.1)</strong></p>
+<p>$<span class="math notranslate nohighlight">\(E_{SS}=1/2\sum_{i=1}^nE_i^2 \)</span>$ <strong>(1.2)</strong></p>
+<p>où <span class="math notranslate nohighlight">\(E_{SS}\)</span>= « error sum of square ». Cela est tout simplement une de plusieurs fonctions d’erreur.</p>
+<p>$<span class="math notranslate nohighlight">\(E_i =|{t_i-I_i}|\)</span>$ <strong>(1.3)</strong></p>
+<p>où <span class="math notranslate nohighlight">\(E_i\)</span> correspond à l’erreur d’un neurone de la dernière couche (extrant). <span class="math notranslate nohighlight">\(I_i\)</span> correspond à la valeur numérique d’un extrant et <span class="math notranslate nohighlight">\(t_i\)</span> correspond à la valeur désirée provenant de la base de données fournies.</p>
+<p>Combiner les deux équations permet d’obtenir:</p>
+<p>$<span class="math notranslate nohighlight">\(E=1/2\sum_{i=1}^n({T_i-Y_i})^2 \)</span>$ <strong>(1.4)</strong></p>
+</div>
+<div class="section" id="transmition-de-l-information">
+<h2>Transmition de l’information<a class="headerlink" href="#transmition-de-l-information" title="Lien permanent vers ce titre">¶</a></h2>
+<blockquote>
+<div><p>Note: Afin de simplifier les explications, ces dernières seront faites en utilisant un réseau neuronal ayant seulement 1 neurone par couche.</p>
+</div></blockquote>
+<p>D’abord, il faut comprendre comment le réseau transmet son information de cellules en cellule. En effet, un neurone ayant contenant une certaine valeur <span class="math notranslate nohighlight">\(Y\)</span> transmet cette dernière à tous les autres neurones de la prochaine couche. Cependant, ces transmitions n’ont pas toutes les mêmes poids. Ces poids <span class="math notranslate nohighlight">\(p\)</span> diffèrent afin de favoriser certaines activations et en défavoriser d’autres. Chaque liaison entre chaque neurone possède un poid propre à chacune. Ces derniers sont multipliés avec l’extrant de la neurone en précédentes.</p>
+<p>$<span class="math notranslate nohighlight">\(Y_{i} = Y_{i-1}\times p_{i}\)</span>$<strong>(2.0)</strong></p>
+<p>où <span class="math notranslate nohighlight">\(p_{i}\)</span> correspond au poid de la neurone de la couche i</p>
+<p>Ensuite, un biais <span class="math notranslate nohighlight">\(b\)</span> est additionné ou soustrait au résultat précédent</p>
+<p>$<span class="math notranslate nohighlight">\(Y_i = Y_{i-1}\times p_{i} + b_i\)</span>$ <strong>(2.1)</strong></p>
+<p>où <span class="math notranslate nohighlight">\(b_i\)</span> correspond au biais de la neurone de la couche i.</p>
+<p>Finalement, une fonction d’activation <span class="math notranslate nohighlight">\(a\)</span> est ajoutée au reste de la formule. L’utilité et le fonctionnement de la fonction d’activation sera expliqué en détail plus loin.</p>
+<p>$<span class="math notranslate nohighlight">\(Y_i = a\times(Y_{i-1}\times p_{i} + b_i)\)</span>$ <strong>(2.2)</strong></p>
+</div>
+<div class="section" id="back-propagation">
+<h2><em>Back propagation</em><a class="headerlink" href="#back-propagation" title="Lien permanent vers ce titre">¶</a></h2>
+<p>L’objectif est de comprendre comment le poids et le biais doit être ajuster en débutant de la fonction d’erreur et d’activation.</p>
+<p>Dabord, en utilisant la formule de base de transmission d’un neurone (sans le biais) :</p>
+<p><span class="math notranslate nohighlight">\(Y = \sum_{i=1}^{n} I_i \times p_i \)</span></p>
+<p>Il est possible de comprendre comment le changement d’une variable impact une autre. Les dérivés seront donc utilisées afin de démontrer ce principe.</p>
+<div class="math notranslate nohighlight">
+\[\frac{dY}{dI_i}=\frac{dY}{dI_i}\sum_{i=1}^{n} I_i \times p_{ji} 
+\]</div>
+<div class="math notranslate nohighlight">
+\[\frac{dY}{dI_i} = p_i\]</div>
+<div class="math notranslate nohighlight">
+\[\frac{dY}{dp_i} = I_i\]</div>
+<p>Cela veut donc dire que le poid influence le résultat de l’extrant et que l’intrant influence le résultat de l’extrant.</p>
+<p>En utlisant la formule (1.4) et le concept de dérivée partielle, il est possible de comprendre l’impact d’un changement de la valeur de l’intrant <span class="math notranslate nohighlight">\(I_i\)</span> sur l’erreur:</p>
+<div class="math notranslate nohighlight">
+\[\frac{dE}{dI_i} =  (2/2)(t_i - I_i)(-1) \]</div>
+<div class="math notranslate nohighlight">
+\[\frac{dE}{dI_i}= -(t_i-I_i)\]</div>
+<p>Maintenant, il faut calculer la dérivation de la fonction d’activation.
+La fonction sigmoïde sera utilisée pour cet exemple.</p>
+<div class="math notranslate nohighlight">
+\[a = \frac{1}{1 + e^{-Y}} =(1+e^{-Y})^{-1}\]</div>
+<div class="math notranslate nohighlight">
+\[\frac{da}{dY} = -1 (-e^{-Y})(1+e^{-Y})^{-2} \]</div>
+<div class="math notranslate nohighlight">
+\[= \frac{e^{-Y}}{(1+e^{-Y})^2} \]</div>
+<div class="math notranslate nohighlight">
+\[= \frac{1}{(1+e^{-Y})}\times\frac{e^{-Y}}{(1+e^{-Y})} \]</div>
+<div class="math notranslate nohighlight">
+\[= a \times \frac{e^{-Y}}{(1+e^{-Y})}\]</div>
+<div class="math notranslate nohighlight">
+\[= a \times \frac{1+e^{-Y}-1}{(1+e^{-Y})} \]</div>
+<div class="math notranslate nohighlight">
+\[= a \times (\frac{(1+e^{-Y})}{(1+e^{-Y})} + \frac{-1}{(1+e^{-Y})})\]</div>
+<div class="math notranslate nohighlight">
+\[\frac{da}{dY}= a \times (1-a)\]</div>
+<p>Maintenant il est possible, à l’aide de la règle de dérivation en chaine, de trouver l’impact qu’a <span class="math notranslate nohighlight">\(Y\)</span> sur l’erreur <span class="math notranslate nohighlight">\(E\)</span>. Dans cet exemple, <span class="math notranslate nohighlight">\(I_i = a \)</span> puisque la fonction d’activation été appliquée au neurone en question.</p>
+<div class="math notranslate nohighlight">
+\[\frac{dE}{dY_i} = \frac{dE}{dI_i} \times \frac{dI_i}{dY_i}\]</div>
+<div class="math notranslate nohighlight">
+\[= \frac{dE}{dI_i} \times \frac{da}{dY_i}\]</div>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}=-(t_i - I_i)  I_i (1- I_i)$$  __(3.0)__\\Ensuite il est possible de calculer la dérivation de l'erreur en fonction du poid $p_{ji}$ d'une liaison entre deux neurones.\\$$\frac{dE}{dp_{ji}} =\frac{dE}{dY_i} \times \frac{dY_i}{dp_{ji}} \end{aligned}\end{align} \]</div>
+<div class="math notranslate nohighlight">
+\[= (-(t_i - I_i) \times I_i\times (1- I_i))\times I_i\]</div>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}= -I_i I_j (1-I_i)(t_i-I_i)$$__(4.0)__\\Cette équation signifie que le changement de l'erreur influence le poid et cette influence correspond à l'extrant d'un neurone négatif multiplié par l'extrant du neurone précédent et ce tout est multplié par 1 moins la valeur du neurone. À ce résultat est multiplié la valeur de l'erreur soit : $(t_i-I_i)$
+L'équation 3.0 sera représenté par la variable:  $\Delta p$  \\Le concept de &quot;backpropagation&quot; se résume donc a:\\$$p_{ji} = p_{ji} + \Delta p\end{aligned}\end{align} \]</div>
+<p>Le poids d’un neurone change légèrement en additionnant un <span class="math notranslate nohighlight">\(\Delta p\)</span>  positif ou négatif. Ce changement est fait avec une plus grande importance plus le neurone est proche de la couche des extrants. Cela est dû au fait que l’apprentissage commence par la couche finale pour enfin se rendre jusqu’à la couche débutant le système neuronal. Les premiers ajustements, donc ceux des couches plus proches de la fin, sont plus importants. Les couches se situant plus au début du réseau vont plutôt avoir de petits changements à leur poids puisque rendu à l’ajustement de dce dernier, l’erreur est déja considérablement réduite. Ce concept se nomme descente de gradient stochastique.</p>
+</div>
+<div class="section" id="origine-du-biais">
+<h2>Origine du biais<a class="headerlink" href="#origine-du-biais" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Certains problèmes peuvent survenir avec le concept de descente de gradiant dans un réseau neuronal. En effet, lorsqu’une couche « n’apprend plus » ou, en d’autres mots, lorsque le poids ne varie plus, on assiste a un problème se nommant la disparition du gradiant. Cela est un problème pour le réseau puisque le tout l’entrainement se fait uniquement dans les dernières couches. Un autre problème est que le gradiant dans une fonction de coût telle une sigoïde, le gradient se situe uniquement au milieu de la fonction comme le montre le graphique ci-dessous.</p>
+<div class="figure align-default" id="tanh">
+<img alt="Old/./img/tanh.png" src="Old/./img/tanh.png" />
+<p class="caption"><span class="caption-text">Fonction sigmoïde</span><a class="headerlink" href="#tanh" title="Lien permanent vers cette image">¶</a></p>
+</div>
+<p>En effet, les extrémités de la fonction forment un plateau. Il n’y a donc pas de changement possible puisque soit l’intrant est multiplié par 1, ce qui ne change pas le résultat, ou bien soit le résultat est multiplié par 0 ce qui rend la valeurr nul et cela est néfaste pour un réseau neuronal. En effet, une valeur égale a 0 empêche l’entrainement du réseau puisque peut importe la variation du poid, <span class="math notranslate nohighlight">\(0\times p\)</span> sera toujours être égale à 0. C’est pour remédier à cette erreur qu’un biais est ajouté à la fonction.</p>
+<div class="math notranslate nohighlight">
+\[Y =\sum_{i=1}^{n} I_i \times p_i + b\]</div>
+<p>L’ajout de ce biais va permettre de conserver un apprentissage même lorsque la valeur d’un neurone est figée à 0.</p>
+</div>
+</div>
+<div class="section" id="notre-modele">
+<h1>Notre modèle<a class="headerlink" href="#notre-modele" title="Lien permanent vers ce titre">¶</a></h1>
+<p><strong>Liens utiles</strong></p>
+<p>https://www.pyimagesearch.com/2020/08/24/ocr-handwriting-recognition-with-opencv-keras-and-tensorflow/</p>
+<p>https://www.pyimagesearch.com/2020/08/17/ocr-with-keras-tensorflow-and-deep-learning/</p>
+<p>https://www.tensorflow.org/tutorials/keras/classification</p>
+<div class="section" id="les-librairies-necessaires">
+<h2>Les librairies nécessaires<a class="headerlink" href="#les-librairies-necessaires" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Afin de réaliser ce projet dans des temps raisonnables, nous utilisons des
+outils des des données réalisés par des organisations réputées comme Google,
+<a class="reference external" href="https://numpy.org/">NumPy</a> et la <a class="reference external" href="https://matplotlib.org/">Matplotlib</a>
+development team.</p>
+<div class="section" id="tensorflow">
+<h3>Tensorflow<a class="headerlink" href="#tensorflow" title="Lien permanent vers ce titre">¶</a></h3>
+<p>C’est quoi tensorflow</p>
+<div class="section" id="keras">
+<h4>Keras<a class="headerlink" href="#keras" title="Lien permanent vers ce titre">¶</a></h4>
+<p>C’est quoi keras</p>
+<p>https://www.tensorflow.org/api_docs/python/tf/keras</p>
+</div>
+<div class="section" id="mnist">
+<h4>MNIST<a class="headerlink" href="#mnist" title="Lien permanent vers ce titre">¶</a></h4>
+<p>C’est quoi le MNIST</p>
+</div>
+</div>
+<div class="section" id="numpy">
+<h3>Numpy<a class="headerlink" href="#numpy" title="Lien permanent vers ce titre">¶</a></h3>
+<p>C’est quoi numpy et comment est ce qu’on l’utilise</p>
+</div>
+<div class="section" id="matplotlib">
+<h3>Matplotlib<a class="headerlink" href="#matplotlib" title="Lien permanent vers ce titre">¶</a></h3>
+<p>C’est quoi matplotlib est comment est ce qu’on l’utilise</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># TensorFlow and tf.keras</span>
+<span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="nn">tf</span>
+<span class="kn">from</span> <span class="nn">tensorflow</span> <span class="kn">import</span> <span class="n">keras</span>
+<span class="kn">from</span> <span class="nn">tensorflow.keras.datasets</span> <span class="kn">import</span> <span class="n">mnist</span>
+
+<span class="c1"># Helper libraries</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">__version__</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="mi">222</span><span class="n">b9a9d3278</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># TensorFlow and tf.keras</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="nn">tf</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">from</span> <span class="nn">tensorflow</span> <span class="kn">import</span> <span class="n">keras</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">from</span> <span class="nn">tensorflow.keras.datasets</span> <span class="kn">import</span> <span class="n">mnist</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> 
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;tensorflow&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">mnist</span><span class="o">.</span><span class="n">load_data</span><span class="p">()[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>numpy.ndarray
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="chargement-du-mnist-data">
+<h2>Chargement du MNIST data<a class="headerlink" href="#chargement-du-mnist-data" title="Lien permanent vers ce titre">¶</a></h2>
+<p>La cellule ci-dessous permet de séparer la base de données MNIST, de tensorFlow, en différentes variables(train_data, train_label, test_date, test_labels) grâce à la fonction mnist.load_data()</p>
+<p>train_data contient des images 28X28 pixels d’un chiffre écrit à la main qui serviront à entrainer le réseau neuronal</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">train_data</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>train_labels contient le chiffre associé à la réponse attendue lors de l’entrainement</p>
+<p>test_data train_data contient des images 28X28 pixels d’un chiffre écrit à la main qui serviront à tester la précision du réseau neuronal</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;toto&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>toto
+</pre></div>
+</div>
+</div>
+</div>
+<p>test_labels contient le chiffre associé à la réponse attendue lors des tests de précisions</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">((</span><span class="n">train_data</span><span class="p">,</span> <span class="n">train_labels</span><span class="p">),</span> <span class="p">(</span><span class="n">test_data</span><span class="p">,</span> <span class="n">test_labels</span><span class="p">))</span> <span class="o">=</span> <span class="n">mnist</span><span class="o">.</span><span class="n">load_data</span><span class="p">()</span>
+<span class="n">num_data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">([</span><span class="n">train_data</span><span class="p">,</span> <span class="n">test_data</span><span class="p">])</span>
+<span class="n">num_labels</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">([</span><span class="n">train_labels</span><span class="p">,</span> <span class="n">test_labels</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">drive</span>
+<span class="n">drive</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">&#39;/content/drive&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>La fonction .shape permet de retourner la forme d’une matrice. La réponse obtenue signifie que train_data contient une liste de 60000 matrice de pixel 28X28.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">train_data</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(60000, 28, 28)
+</pre></div>
+</div>
+</div>
+</div>
+<p>La fonction len() retourne le nombre d’unité de la variable de type liste. La réponse obtenue signifie qu’il y a 60000 réponses attendue aux 60000 matrices de pixels.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">train_labels</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>60000
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">train_labels</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([5, 0, 4, ..., 5, 6, 8], dtype=uint8)
+</pre></div>
+</div>
+</div>
+</div>
+<p>La réponse obtenue signifie que train_data contient une liste de 10000 matrice de pixel 28X28.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">test_data</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(10000, 28, 28)
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="pretraitement">
+<h2>Prétraitement<a class="headerlink" href="#pretraitement" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Utilisation de la librairie mathplotlib</p>
+<ol class="simple">
+<li><p>plt.figure():Permet de créer un nouveau graphique vide</p></li>
+<li><p>plt.imshow():Transforme une matrice X par X de pixel. Dans notre cas il s’agit d’une matrice 28x28 de pixels qui représente un chiffre dessiné à la main.</p></li>
+<li><p>plt.colorbar(): Ajoute une légende de couleur au graphique. Dans notre cas, la légence va de 0 à 255 ce qui représente la valeur d’un pixel dans un « greyscale ».</p></li>
+<li><p>plt.grid(): Ajoute ou enlève un grillage</p></li>
+<li><p>plt.show(): Affiche toutes les figures présentent dans la mémoire.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">train_data</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/OCR_SAM_29_0.png" src="../_images/OCR_SAM_29_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">train_labels</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5
+</pre></div>
+</div>
+</div>
+</div>
+<p>Sachant que la valeur maximal d’un pixel est de 255. Toutes les valeurs sont divisées par 255 afin d’obtenir des résultats entre 0 et 1.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">train_images</span> <span class="o">=</span> <span class="n">train_data</span> <span class="o">/</span> <span class="mf">255.0</span>
+<span class="n">test_images</span> <span class="o">=</span> <span class="n">test_data</span> <span class="o">/</span> <span class="mf">255.0</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Crée les 25 premières images en noir et blanc de la matrice train_data.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">25</span><span class="p">):</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">([])</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">([])</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">train_images</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">cmap</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">binary</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="n">train_labels</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/OCR_SAM_34_0.png" src="../_images/OCR_SAM_34_0.png" />
+</div>
+</div>
+<p>keras.sequential() permet, en fournissant une liste de couche, de créer un sytème neuronal(model).</p>
+<ol class="simple">
+<li><p>keras.layers.Flatten(input_shape=(28, 28) est la première couche du sytème neuronal. Celle-ci est composé des intrants d’une liste. La fonction transforme la matrice de pixel de 28x28 en une liste de 784 pixels.</p></li>
+<li><p>keras.layers.Dense(128, activation=”relu”) est la deuxième couche du système neuronal. Celle-ci, grâce à la fonction .Dense est densément connecté à la première couche. Cela signifie que chacune des neurones de la première couche est connectée à chacune des neuronnes de la deuxième couche.</p></li>
+<li><p>keras.layers.Dense(10) est la troixième couche et dernière du réseau neuronal. Celle-ci est aussi densément connectée à la deuxème couche. Les résulats des 10 neurones finales sont les extrants.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">keras</span><span class="o">.</span><span class="n">Sequential</span><span class="p">([</span>
+    <span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Flatten</span><span class="p">(</span><span class="n">input_shape</span><span class="o">=</span><span class="p">(</span><span class="mi">28</span><span class="p">,</span> <span class="mi">28</span><span class="p">)),</span>
+    <span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Dense</span><span class="p">(</span><span class="mi">128</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;relu&#39;</span><span class="p">),</span>
+    <span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Dense</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>model.compile() ajoute des réglages au model avant de l’entrainer.</p>
+<ol class="simple">
+<li><p>optimizer = “adam”: ajoute un algorithme qui indique au réseau comment traiter les données et le résutlat de la fonction de loss.</p></li>
+<li><p>loss = tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True): Montre la précision du model. Plus le résultat, est bas, plus le model est précis.</p></li>
+<li><p>metrics = [“accuracy”]: Permet de choisir la façon de contrôler l’entrainement et les test du réseau neuronal. Pour notre cas, nous utilisons la fonction accuracy qui correspond au bon nombre d’images prédites sur le nombre total de prédictions.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">optimizer</span><span class="o">=</span><span class="s1">&#39;adam&#39;</span><span class="p">,</span>
+              <span class="n">loss</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">losses</span><span class="o">.</span><span class="n">SparseCategoricalCrossentropy</span><span class="p">(</span><span class="n">from_logits</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
+              <span class="n">metrics</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;accuracy&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>model.fit(train_images, train_labels, epochs=10): prend les données de train_images (60000, 28, 28), fait des prédictions sur le chiffre écrit et les compares avec les réponses de train_labels (60000) dans le but d’améliorer la précision du modèle apres chaque « epochs ». Le chiffre associé à « epochs » correspond au nombre d’entrainement effectué sur le modèle.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">train_images</span><span class="p">,</span> <span class="n">train_labels</span><span class="p">,</span> <span class="n">epochs</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Epoch 1/10
+1875/1875 [==============================] - 3s 2ms/step - loss: 0.2568 - accuracy: 0.9283
+Epoch 2/10
+1875/1875 [==============================] - 3s 2ms/step - loss: 0.1147 - accuracy: 0.9660
+Epoch 3/10
+1875/1875 [==============================] - 3s 2ms/step - loss: 0.0791 - accuracy: 0.9764
+Epoch 4/10
+1875/1875 [==============================] - 3s 2ms/step - loss: 0.0580 - accuracy: 0.9824
+Epoch 5/10
+1875/1875 [==============================] - 3s 2ms/step - loss: 0.0455 - accuracy: 0.9859
+Epoch 6/10
+1875/1875 [==============================] - 3s 2ms/step - loss: 0.0350 - accuracy: 0.9892
+Epoch 7/10
+1875/1875 [==============================] - 3s 2ms/step - loss: 0.0286 - accuracy: 0.9908
+Epoch 8/10
+1875/1875 [==============================] - 3s 2ms/step - loss: 0.0236 - accuracy: 0.9926
+Epoch 9/10
+1875/1875 [==============================] - 3s 2ms/step - loss: 0.0198 - accuracy: 0.9939
+Epoch 10/10
+1875/1875 [==============================] - 3s 2ms/step - loss: 0.0148 - accuracy: 0.9956
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;tensorflow.python.keras.callbacks.History at 0x7fe4f5d81e48&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Représente la précision du système neuronal lorsqu’il soumit à des données différentes (test_data, test_labels).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">test_loss</span><span class="p">,</span> <span class="n">test_acc</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">test_images</span><span class="p">,</span>  <span class="n">test_labels</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Test accuracy:&#39;</span><span class="p">,</span> <span class="n">test_acc</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>313/313 - 0s - loss: 0.0747 - accuracy: 0.9804
+
+Test accuracy: 0.980400025844574
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Model: &quot;sequential&quot;
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+flatten (Flatten)            (None, 784)               0         
+_________________________________________________________________
+dense (Dense)                (None, 128)               100480    
+_________________________________________________________________
+dense_1 (Dense)              (None, 10)                1290      
+=================================================================
+Total params: 101,770
+Trainable params: 101,770
+Non-trainable params: 0
+_________________________________________________________________
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">probability_model</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">Sequential</span><span class="p">([</span><span class="n">model</span><span class="p">,</span> 
+                                         <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Softmax</span><span class="p">()])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">predictions</span> <span class="o">=</span> <span class="n">probability_model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">test_images</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">predictions</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([1.33047600e-08, 2.02930346e-11, 1.42667460e-07, 3.34045399e-05,
+       1.87632367e-14, 5.29390087e-10, 8.63112412e-17, 9.99945879e-01,
+       1.26384725e-08, 2.05938213e-05], dtype=float32)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">predictions</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">test_labels</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">plot_image</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">predictions_array</span><span class="p">,</span> <span class="n">true_label</span><span class="p">,</span> <span class="n">img</span><span class="p">):</span>
+  <span class="n">true_label</span><span class="p">,</span> <span class="n">img</span> <span class="o">=</span> <span class="n">true_label</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">img</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+  <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+  <span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">([])</span>
+  <span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">([])</span>
+
+  <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">binary</span><span class="p">)</span>
+
+  <span class="n">predicted_label</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">predictions_array</span><span class="p">)</span>
+  <span class="k">if</span> <span class="n">predicted_label</span> <span class="o">==</span> <span class="n">true_label</span><span class="p">:</span>
+    <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;blue&#39;</span>
+  <span class="k">else</span><span class="p">:</span>
+    <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;red&#39;</span>
+
+  <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2"> </span><span class="si">{:2.0f}</span><span class="s2">% (</span><span class="si">{}</span><span class="s2">)&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">predicted_label</span><span class="p">,</span>
+                                <span class="mi">100</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">predictions_array</span><span class="p">),</span>
+                                <span class="n">true_label</span><span class="p">),</span>
+                                <span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">plot_value_array</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">predictions_array</span><span class="p">,</span> <span class="n">true_label</span><span class="p">):</span>
+  <span class="n">true_label</span> <span class="o">=</span> <span class="n">true_label</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+  <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+  <span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+  <span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">([])</span>
+  <span class="n">thisplot</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">),</span> <span class="n">predictions_array</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;#777777&quot;</span><span class="p">)</span>
+  <span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+  <span class="n">predicted_label</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">predictions_array</span><span class="p">)</span>
+
+  <span class="n">thisplot</span><span class="p">[</span><span class="n">predicted_label</span><span class="p">]</span><span class="o">.</span><span class="n">set_color</span><span class="p">(</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
+  <span class="n">thisplot</span><span class="p">[</span><span class="n">true_label</span><span class="p">]</span><span class="o">.</span><span class="n">set_color</span><span class="p">(</span><span class="s1">&#39;blue&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">plot_image</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">predictions</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">test_labels</span><span class="p">,</span> <span class="n">test_images</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">plot_value_array</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">predictions</span><span class="p">[</span><span class="n">i</span><span class="p">],</span>  <span class="n">test_labels</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/OCR_SAM_50_0.png" src="../_images/OCR_SAM_50_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">i</span> <span class="o">=</span> <span class="mi">12</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">plot_image</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">predictions</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">test_labels</span><span class="p">,</span> <span class="n">test_images</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">plot_value_array</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">predictions</span><span class="p">[</span><span class="n">i</span><span class="p">],</span>  <span class="n">test_labels</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/OCR_SAM_51_0.png" src="../_images/OCR_SAM_51_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Plot the first X test images, their predicted labels, and the true labels.</span>
+<span class="c1"># Color correct predictions in blue and incorrect predictions in red.</span>
+<span class="n">num_rows</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">num_cols</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">num_images</span> <span class="o">=</span> <span class="n">num_rows</span><span class="o">*</span><span class="n">num_cols</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="mi">2</span><span class="o">*</span><span class="n">num_cols</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">num_rows</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_images</span><span class="p">):</span>
+  <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="n">num_rows</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">num_cols</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+  <span class="n">plot_image</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">predictions</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">test_labels</span><span class="p">,</span> <span class="n">test_images</span><span class="p">)</span>
+  <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="n">num_rows</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">num_cols</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">i</span><span class="o">+</span><span class="mi">2</span><span class="p">)</span>
+  <span class="n">plot_value_array</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">predictions</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">test_labels</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/OCR_SAM_52_0.png" src="../_images/OCR_SAM_52_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Grab an image from the test dataset.</span>
+<span class="n">img</span> <span class="o">=</span> <span class="n">test_images</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">img</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(28, 28)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Add the image to a batch where it&#39;s the only member.</span>
+<span class="n">img</span> <span class="o">=</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">expand_dims</span><span class="p">(</span><span class="n">img</span><span class="p">,</span><span class="mi">0</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">img</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(1, 28, 28)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">predictions_single</span> <span class="o">=</span> <span class="n">probability_model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">predictions_single</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[1.0413674e-12 2.4460157e-08 1.0000000e+00 1.2474424e-09 1.9520718e-24
+  2.0112491e-10 8.8550174e-12 1.1677123e-19 1.9958409e-10 1.3060724e-16]]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plot_value_array</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">predictions_single</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">])</span>
+<span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">),</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">],</span> <span class="n">rotation</span><span class="o">=</span><span class="mi">45</span><span class="p">)</span> <span class="c1">#The labels are wrong</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/OCR_SAM_56_0.png" src="../_images/OCR_SAM_56_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">predictions_single</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="testing-it-on-my-own-images">
+<h2>Testing it on my own images<a class="headerlink" href="#testing-it-on-my-own-images" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">Javascript</span>
+<span class="kn">from</span> <span class="nn">google.colab.output</span> <span class="kn">import</span> <span class="n">eval_js</span>
+<span class="kn">from</span> <span class="nn">base64</span> <span class="kn">import</span> <span class="n">b64decode</span>
+
+<span class="k">def</span> <span class="nf">take_photo</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s1">&#39;photo.jpg&#39;</span><span class="p">,</span> <span class="n">quality</span><span class="o">=</span><span class="mf">0.8</span><span class="p">):</span>
+  <span class="n">js</span> <span class="o">=</span> <span class="n">Javascript</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;</span>
+<span class="s1">    async function takePhoto(quality) {</span>
+<span class="s1">      const div = document.createElement(&#39;div&#39;);</span>
+<span class="s1">      const capture = document.createElement(&#39;button&#39;);</span>
+<span class="s1">      capture.textContent = &#39;Capture&#39;;</span>
+<span class="s1">      div.appendChild(capture);</span>
+
+<span class="s1">      const video = document.createElement(&#39;video&#39;);</span>
+<span class="s1">      video.style.display = &#39;block&#39;;</span>
+<span class="s1">      const stream = await navigator.mediaDevices.getUserMedia({video: true});</span>
+
+<span class="s1">      document.body.appendChild(div);</span>
+<span class="s1">      div.appendChild(video);</span>
+<span class="s1">      video.srcObject = stream;</span>
+<span class="s1">      await video.play();</span>
+
+<span class="s1">      // Resize the output to fit the video element.</span>
+<span class="s1">      google.colab.output.setIframeHeight(document.documentElement.scrollHeight, true);</span>
+
+<span class="s1">      // Wait for Capture to be clicked.</span>
+<span class="s1">      await new Promise((resolve) =&gt; capture.onclick = resolve);</span>
+
+<span class="s1">      const canvas = document.createElement(&#39;canvas&#39;);</span>
+<span class="s1">      canvas.width = video.videoWidth;</span>
+<span class="s1">      canvas.height = video.videoHeight;</span>
+<span class="s1">      canvas.getContext(&#39;2d&#39;).drawImage(video, 0, 0);</span>
+<span class="s1">      stream.getVideoTracks()[0].stop();</span>
+<span class="s1">      div.remove();</span>
+<span class="s1">      return canvas.toDataURL(&#39;image/jpeg&#39;, quality);</span>
+<span class="s1">    }</span>
+<span class="s1">    &#39;&#39;&#39;</span><span class="p">)</span>
+  <span class="n">display</span><span class="p">(</span><span class="n">js</span><span class="p">)</span>
+  <span class="n">data</span> <span class="o">=</span> <span class="n">eval_js</span><span class="p">(</span><span class="s1">&#39;takePhoto(</span><span class="si">{}</span><span class="s1">)&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">quality</span><span class="p">))</span>
+  <span class="n">binary</span> <span class="o">=</span> <span class="n">b64decode</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">])</span>
+  <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">binary</span><span class="p">)</span>
+  <span class="k">return</span> <span class="n">filename</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Image</span>
+<span class="k">try</span><span class="p">:</span>
+  <span class="n">filename</span> <span class="o">=</span> <span class="n">take_photo</span><span class="p">()</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Saved to </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">filename</span><span class="p">))</span>
+  
+  <span class="c1"># Show the image which was just taken.</span>
+  <span class="n">display</span><span class="p">(</span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="p">))</span>
+<span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+  <span class="c1"># Errors will be thrown if the user does not have a webcam or if they do not</span>
+  <span class="c1"># grant the page permission to access it.</span>
+  <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">err</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<script type="application/javascript">
+    async function takePhoto(quality) {
+      const div = document.createElement('div');
+      const capture = document.createElement('button');
+      capture.textContent = 'Capture';
+      div.appendChild(capture);
+
+      const video = document.createElement('video');
+      video.style.display = 'block';
+      const stream = await navigator.mediaDevices.getUserMedia({video: true});
+
+      document.body.appendChild(div);
+      div.appendChild(video);
+      video.srcObject = stream;
+      await video.play();
+
+      // Resize the output to fit the video element.
+      google.colab.output.setIframeHeight(document.documentElement.scrollHeight, true);
+
+      // Wait for Capture to be clicked.
+      await new Promise((resolve) => capture.onclick = resolve);
+
+      const canvas = document.createElement('canvas');
+      canvas.width = video.videoWidth;
+      canvas.height = video.videoHeight;
+      canvas.getContext('2d').drawImage(video, 0, 0);
+      stream.getVideoTracks()[0].stop();
+      div.remove();
+      return canvas.toDataURL('image/jpeg', quality);
+    }
+    </script></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">imutils</span>
+<span class="kn">import</span> <span class="nn">cv2</span>
+<span class="kn">from</span> <span class="nn">google.colab.patches</span> <span class="kn">import</span> <span class="n">cv2_imshow</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">image</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s2">&quot;photo.jpg&quot;</span><span class="p">)</span>
+<span class="n">resized_image</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">resize</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="p">(</span><span class="mi">28</span><span class="p">,</span> <span class="mi">28</span><span class="p">))</span>
+<span class="n">gray</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">cvtColor</span><span class="p">(</span><span class="n">resized_image</span><span class="p">,</span> <span class="n">cv2</span><span class="o">.</span><span class="n">COLOR_RGB2GRAY</span><span class="p">)</span>
+<span class="c1"># blurred = cv2.GaussianBlur(gray, (5, 5), 0)</span>
+<span class="p">(</span><span class="n">thresh</span><span class="p">,</span> <span class="n">blackAndWhiteImage</span><span class="p">)</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">threshold</span><span class="p">(</span><span class="n">gray</span><span class="p">,</span> <span class="mi">110</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="n">cv2</span><span class="o">.</span><span class="n">THRESH_BINARY</span><span class="p">)</span>
+<span class="n">imagem</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">bitwise_not</span><span class="p">(</span><span class="n">blackAndWhiteImage</span><span class="p">)</span>
+<span class="n">cv2_imshow</span><span class="p">(</span><span class="n">imagem</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">imagem</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">img2</span> <span class="o">=</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">expand_dims</span><span class="p">(</span><span class="n">imagem</span><span class="p">,</span><span class="mi">0</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">img2</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">imagem</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">predictions_array</span> <span class="o">=</span> <span class="n">probability_model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">img2</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">predictions_array</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">predicted_label</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">predictions_array</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">predicted_label</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plot_value_array</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">predictions_array</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">),</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">],</span> <span class="n">rotation</span><span class="o">=</span><span class="mi">45</span><span class="p">)</span> <span class="c1">#The labels are wrong</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Il est important de parler des impacts positif et négatif  de l’intelligence artificielle dans le but de répondre à la thèse en répondant à  une des  sous-questions  de notre thèse: Est-ce que l’intelligence artificielle peut constituer un bénéfice pour l’être humain?</p>
+<p>Pour commencer, l’intégration de l’intelligence artificielle à notre vie de tous les jours ainsi que dans plusieurs tâches amènerait plusieurs bénéfices importants.</p>
+<p>Qui dit programme, dit un taux d’erreur qui diminue. En effet, l’erreur humaine est une partie flagrante de plusieurs métiers. C’est tout à fait normal qu’un être humain fasse des erreurs de temps en temps d’où vient la phrase : « L’erreur est humaine», mais réduire ce nombre d’erreurs au minimum est primordial pour certaines tâches. L’utilisation d’une intelligence artificielle bien programmée permet de réduire le taux d’erreurs tout en augmentant la précision du résultat. Cela est possible, car un programme peut parcourir une large base de données et appliquer des algorithmes en peu de temps, tandis que l’être humain prendrait des mois et des mois pour faire cela. Un exemple moderne, serait l’utilisation de l’intelligence artificielle dans les prévisions météo. En effet, ceux-ci deviennent de plus en plus précis avec l’implémentation de l’intelligence artificielle ainsi que l’amélioration des algorithmes.</p>
+<p>Un autre aspect intéressant de l’intelligence artificielle, c’est qu’elle peut remplacer l’être humain dans des tâches dangereuses qui pourrait risquer la vie de des individus, mais qui est sans risques pour l’intelligence artificielle. Un exemple serait le robot Curiosity, qui lancé en novembre 2011 pour atteindre la planète Mars, se trouve toujours sur cette planète en date du 19 novembre 2020 dans des conditions impossible pour qu’un être humain y soit resté aussi longtemps. Le robot a pour but d’examiner la biologie, la géologie  et la radiation de Mars, dans le but de préparer une exploration humaine dans le futur.</p>
+<p>Les conditions de travail font qu’un être humain travaille environ 40 heures par semaine en incluant les pauses. Si ce travail était automatisé et remplacé par une intelligence artificielle, celui-ci n’a pas besoin de pause et peut travailler 24 heures sur 24, 7 jours sur 7. De plus, un être humain devient de moins en moins efficace vers la fin de la journée ou vers la fin de la semaine à cause de la fatigue ou bien de l’ennui. Un intelligence artificielle sera sûrement plus efficace que l’être humain et elle sera aussi consistante dans sa rapidité d’exécution.Cette ennuie vient souvent des travaux répétitifs. Ces tâches banales peuvent souvent être automatisées en remplaçant l’être humain par un intelligence artificielle. Donnant plus de temps à l’être humain pour ce concentrer sur des tâches plus exigeantes et passionnantes pour celui-ci.</p>
+<p>Quand on parle de rapidité, l’être humain est très lent comparé à l’intelligence artificielle. En effet, l’utilisation de l’intelligence artificielle pour la prise de décision permet de prendre ceux-ci extrêmement rapidement avec une précision qui dépend de la qualité de leurs bases de données. En effet, une base de données fiable et bien construite permet à l’intelligence artificielle de prendre des bonnes décisions rapidement. Un être humain, de l’autre côté, doit analyser une plus petite base de données qui est dans sa mémoire en prenant plus de temps. Un des exemples serait l’utilisation de l’intelligence artificielle dans les jeux d’échecs. L’intelligence artificielle à accès à des milliers et des milliers de parties dans sa base de données. Alors lorsque son adversaire humain joue le coup  Nc3 (Cavalier sur la case C3), l’ordinateur analyse toutes les parties où ce coup c’est fait et en ressort le meilleur coup pour contrer celui-ci, et ce, en moins d’une seconde. De plus, la prise de décision de l’intelligence artificielle ne va pas seulement s’arrêter au jeu d’échec. Nous voyons déjà l’industrie médical, ce faire aider dans la prise de décision par l’intelligence artificielle en plus de des nouveaux programmes qui se font développés en ce moment. En effet, ceux-ci ont pour but d’aider les professionnels de la santé dans des diagnostics, surveillances de patients, et plusieurs autres. Google sont en train de travailler sur leur projet: Google Health, en étudiant sur l’utilisation de l’intelligence artificielle dans le but d’assister au diagnostic de cancer</p>
+<p>Certes, ces merveilleux bénéfices ne viennent pas sans coût. En effet, l’intelligence artificielle s’avère à être une arme à double tranchant et continents plusieurs problèmes</p>
+<p>Un de ces  problèmes majeurs est le biais de l’intelligence artificielle intégré dans l’algorithme de manière involontaire ou intentionnelle par la façon dont celui-ci est entraîné ou programmé. Un exemple flagrant serait le programme Correctional Offender Management Profiling for Alternative Sanctions (COMPAS) qui à signaler à tort des personnes ayant la peau foncée presque deux fois plus que des personnes ayant la peau blanche(45% à 24%) devant la cour juridique aux États-Unis. Un intelligence artificielle programmé par Microsoft Corporation dans le but d’interagir avec les internautes, s’est fait enlever rapidement après un entraînement avec l’interaction d’internautes raciste. Cela a mené le robot à dire des phrases vulgaires et inappropriées telles que : “&#64;brightonus33 Hitler was right I hate the jews” et plusieurs autres avant que celui-ci voit la fin de ses jours 16 heures après son arrivée sur Twitter.</p>
+<p>Comme mentionné plus haut, l’intelligence artificielle à apporter et va apporter plusieurs nouveaux emplois spécialisés dans l’intelligence artificielle, mais plusieurs autres emplois vont voir leur fin arriver à grand pas avec la montée de l’intelligence artificielle. Cela c’est déjà fait avec la révolution industrielle, qui avec l’arrivée de la machine à vapeur, un énorme taux de chômage à surgit. L’intelligence artificielle devrait, tout comme la machine à vapeur, augmenter le besoin de certains emplois et créer des emplois qui requièrent un plus haut degré en éducation tout en éradiquant des emplois auxquels aucune caractéristique uniquement humaine est requise.</p>
+<p>Aussi, avec la montée de l’intelligence artificielle ainsi que l’omniprésence de la technologie qui à créer une multitude d’interconnection entre tous les pays, chaque pays va définir des lois et des règlements sur l’intelligence artificielle. Dans un monde idéal, tous les humains s’entendent sur les mêmes lois et règlements pour éviter des conflits avec d’autres pays face à des décisions par rapport à l’intelligence artificielle d’un pays. Malheureusement, comme l’Histoire nous l’a si bien démontré, essayer d’établir des règles communes s’avère difficile, et de les faire respecter, encore plus. Des différence ce font déjà voir entre les puissances du mondes face à l’intelligence artificielle avec l’Union Européenne qui sont déjà entrains de pousser des mesures stricte pour le développement et l’utilisation de l’intelligence artificielle avec le ‘White Paper on Artificial Intelligence – A European Approach to Excellence and Trust’ ,publié en 2020, contrairement aux États - Unis et la Chine qui permettent à leur compagnie d’utiliser l’intelligence artificielle plus librement.</p>
+<p>L’intelligence artificielle va augmenter l’efficacité et la rapidité de plusieurs programmes. Cela ne néglige pas les programmes de piratages informatiques, qui eux aussi vont voir une amélioration drastique avec l’implémentation de l’intelligence artificielle. Cela va donc augmenter aussi la rapidité et l’efficacité des piratages informatiques menant sûrement à une augmentation de ceux-ci ce qui causera plusieurs problèmes majeurs, jusqu’à temps qu’une solution soit trouvée.</p>
+<p>L’utilisation de l’intelligence artificielle dans des buts de tuer des individus est un grave danger. Comme mentionné dans le rapport, l’entraînement de l’intelligence se fait à partir d’une grande base de données fiable. Dans un contexte d’une guerre contre le terrorisme, avoir une base de données sur les terroristres s’avère très difficile et peu fiable, car la plus part d’entre eux s’habille comme des civiles. De plus, cette technologie, une fois tombée dans les mains des terroristes, pourrait semer terreur au sein d’un pays comme le démontre très bien la vidéo Slaughterbots (https://www.youtube.com/watch?v=HipTO_7mUOw&amp;ab_channel=FutureofLifeInstitute) qui promouvoit l’interdiction de l’usage robot tueur.</p>
+<p>Comme mentionné dans ce rapport, l’utilisation de plusieurs tests peuvent permettre de découvrir si un robot à de l’intelligence artificielle semblable ou supérieure à celle d’un humain. Le test de Turing, nommé après Alan Turing, proposait que si un ordinateur était capable de se dissimuler parmi un autre être humain lors d’une période de question plus 50% du temps, celui-ci est considéré comme s’il avait de l’intelligence artificielle. Avec, l’avancement en intelligence artificielle, il s’avère de plus en plus difficile de différencier un être humain d’un robot. En effet, C’est en 2014, que le programme Eugene Goostman fut le premier à passer le test de Turing, et cela va en augmentant. D’autre exemple de l’utilité du test de Turing, serait sa version à l’envers. Donc un humain qui tente de prouver à un ordinateur qu’il est réellement humain. Cela se voit quasiment tous les jours avec les tests Captcha.</p>
+<p>https://www.theguardian.com/inequality/2017/aug/08/rise-of-the-racist-robots-how-ai-is-learning-all-our-worst-impulses
+https://bernardmarr.com/default.asp?contentID=1827
+https://www.forbes.com/sites/bernardmarr/2020/03/02/is-artificial-intelligence-ai-a-threat-to-humans/?sh=2aa4186f205d
+https://blog.oup.com/2018/01/alan-turing-evil-artificial-intelligence/
+https://en.wikipedia.org/wiki/Tay_(bot)
+https://ec.europa.eu/info/sites/info/files/commission-white-paper-artificial-intelligence-feb2020_en.pdf
+https://www.theguardian.com/news/2020/oct/15/dangerous-rise-of-military-ai-drone-swarm-autonomous-weapons</p>
+<p>https://www.newyorker.com/tech/annals-of-technology/what-comes-after-the-turing-test
+https://www.brookings.edu/research/malevolent-soft-power-ai-and-the-threat-to-democracy/
+https://www.forbes.com/sites/bernardmarr/2020/02/10/8-powerful-examples-of-ai-for-good/?sh=7cccfe02d18a
+https://towardsdatascience.com/advantages-and-disadvantages-of-artificial-intelligence-182a5ef6588c
+https://en.wikipedia.org/wiki/Curiosity_(rover)#Goals_and_objectives
+https://link.springer.com/article/10.1007/s41649-019-00096-0</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./Old"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Émile Bergeron, Samuel Paquin, Étienne Parent, Jérémie Sanfaçon<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>
