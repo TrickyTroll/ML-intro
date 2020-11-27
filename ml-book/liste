@@ -36,19 +36,19 @@ Aucun.
 
 Aucune.
 
-#Notions de base
+# Notions de base
 
-###Abréviations
+### Abréviations
 *OCR : Optical Character Recognition
 *ROC : Reconnaissance optique de caractères
 
 
-###Figures
+### Figures
 
 * `resneuronalsimp.png ` est utilisée afin de démontrer visuellement le concept d'un réseau neuronal 
 * `neurone.png`est utilisée afin de montrer le fonctionnement d'un neurone
 
-#Entrainement d'un système neuronal
+# Entrainement d'un système neuronal
 
 ### Figures
 
