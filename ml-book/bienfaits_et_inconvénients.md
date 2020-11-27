@@ -70,12 +70,12 @@ dans le but d’assister au diagnostic de cancer, prévenir l’aveuglement et p
 
 La croissance exponentielle de l’intelligence artificielle dans le monde a affecté
 de manière abrupte le nombre de travail qui requiert des capacités en intelligence 
-artificielle, et donc, a créé plusieurs nouveaux emplois dans ce domaine.Grâce à cela,
+artificielle, et donc, a créé plusieurs nouveaux emplois dans ce domaine. Grâce à cela,
 la part des emplois qui requièrent des capacités en intelligence artificielle a augmenté
 de 4,5 fois depuis 2013 aux États-Unis sur le site web [indeed.com](https://ca.indeed.com/?r=us).
 
 
-Certes, ces merveilleux bénéfices ne viennent pas sans coût.Or, l’intelligence artificielle
+Certes, ces merveilleux bénéfices ne viennent pas sans coût. Or, l’intelligence artificielle
 s’avère à être une arme à double tranchant et continents plusieurs problèmes 
 
 
