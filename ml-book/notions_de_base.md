@@ -4,12 +4,12 @@
 Un réseau neuronal est une forme d'intelligence artificielle, qui effectue des prédictions basées sur des valeurs qui sont entrées dans le système, 
 afin d'accomplir une certaine tâche. Le réseau est constitué d'un ensemble de neurones interconnectés et distribués en plusieurs couches. 
 
-Chaque neurone possède des paramètres qui peuvent être ajustés, afin d'obtenir des résultats plus fiables. C'est ce qu'on appele l'entrainement.
+Chaque neurone possède des paramètres qui peuvent être ajustés, afin d'obtenir des résultats plus fiables. C'est ce qu'on appelle l'entrainement.
 Le réseau est entrainé à partir d'un jeu de données, qui contient des valeurs associées à une étiquette, qui consiste de la "réponse" attendue. 
 
 Par exemple, un réseau neuronal ayant comme objectif de prédire l'achalandage dans un parc d'amusement pour une journée donnée pourrait recevoir 
 comme intrant la température, le niveau d'ensoleillement ainsi que le pourcentage de précipitation et d'humidité. Le jeu de données serait alors 
-constituée d'une liste ces quatres valeurs enregistrées à chaque jour des dernières années, avec comme étiquette le nombre de clients cette journée-là. 
+constitué d'une liste ces quatre valeurs enregistrées à chaque jour des dernières années, avec comme étiquette le nombre de clients cette journée-là. 
 Les réponses du réseau sont comparées aux étiquettes, et les paramètres des neurones sont individuellement modifiés de manière à se rapprocher de la réponse attendue.
 
 
@@ -24,7 +24,7 @@ Ceci est un exemple simplifié d'un réseau neuronal. Les composantes du schéma
 
 
 ### OCR
-Le terme OCR, ou ROC en français, signifie "Reconnaissance optique de caractères". Cela désigne un processus aucours duquel du texte est extrait 
+Le terme OCR, ou ROC en français, signifie "Reconnaissance optique de caractères". Cela désigne un processus au cours duquel du texte est extrait 
 d'une image ou d'un document afin d'être transformé en fichier. Pour ce faire, un réseau neuronal reçoit les valeurs des pixels du document de source,
 >Note : La valeur d'un pixel en "grayscale" ou échelle de gris, est un nombre entier
 >de format 8 bits et peut donc avoir
@@ -61,6 +61,7 @@ Exemple des opérations effectuées au sein d'un neurone.
 ```
 
 La fonction la plus simple est la fonction à échelons. Elle retourne 1 si l'intrant *x* est plus grand qu'une valeur seuil *s*, et 0 s'il ne l'est pas. Cette fonction peut être représentée par l'équation
+
 $
 E(x)=
 \begin{cases}
@@ -68,12 +69,15 @@ E(x)=
  0 & \quad \text{si } x \text{ <= s}
 \end{cases}
 $
+
 Elle n'est néanmoins pas utilisée, puisqu'elle empêche l'entrainement du réseau.
 La fonction d'activation doit être dérivable en une autre fonction, et non en une constante, afin que le processus d'ajustement des paramètres puisse avoir lieu. 
-Il est également impossible de représenter des situations non-linéeaires avec cette fonction, puisque seulement des fonctions linéaires sont présentes dans le réseau.
+Il est également impossible de représenter des situations non-linéaires avec cette fonction, puisque seulement des fonctions linéaires sont présentes dans le réseau.
 
 La fonction d'activation la plus utilisée est la fonction Unité Linéaire Rectifiée, ou "ReLU" en anglais (Rectified Linear Unit).
-Cette fonction peut être représentée par l'équation :  $
+Cette fonction peut être représentée par l'équation :  
+
+$
 R(x)=
 \begin{cases}
  x & \quad \text{si } x \text{ > 0}\\
@@ -82,15 +86,17 @@ R(x)=
 $
                                                         
 ou encore, $ R(x) = max(0, x)$. Cette fonction est peu demandante à calculer pour l'ordinateur, et se fait très rapidement. De plus, malgré son apparence linéaire,
-elle peut être dérivée, ce qui est nécessaire pour pouvoir entrainer le réseau. C'est pour ces raisons que c'est la fonction d'activation la plus répendue.
+elle peut être dérivée, ce qui est nécessaire pour pouvoir entrainer le réseau. C'est pour ces raisons que c'est la fonction d'activation la plus répandue.
 Elle a toutefois comme désavantage de produire parfois une trop grande quantité de "0", ce qui peut entrainer une réaction en chaine, où ces zéros se propagent, 
 empêchant le bon fonctionnement du réseau. Cette situation est appelée la "mort du réseau", où l'extrant de plusieurs neurones devient invariablement 0, ce qui 
-diminue l'efficacité du réseau. Ce phénomène se produit surtout lorsque le réseau se fait entrainer de manière trop rigoureuse, et que le biais de certaines 
+diminue l'efficacité du réseau. Ce phénomène se produit surtout lorsque le réseau se fait entrainer de manière trop rigoureuse, et que le biais de certains 
 neurones devient une très grande valeur négative, ce qui fait que l'intrant dans la fonction d'activation est toujours en dessous de 0, et l'extrant reste ainsi 
 invariablement 0.
 
 
-Une variation de cette fonction, nommée Leaky ReLU, a été créée afin de tenter de régler ce problème de mort du réseau : $ 
+Une variation de cette fonction, nommée Leaky ReLU, a été créée afin de tenter de régler ce problème de mort du réseau : 
+
+$ 
 L(x)=
 \begin{cases}
  x & \quad \text{si } x \text{ > 0}\\
@@ -105,6 +111,7 @@ Une autre fonction commune est la sigmoide. Son équation est :
 $ \phi(x) = 
 \frac{1}{1 + e^{-x}}
 $
+
 La fonction retourne 0 lorsque x tend vers l'infini négatif, et 1 lorsque x tend vers l'infini positif. Cette fonction a comme avantage de 
 s'approcher rapidement de 0 ou de 1, lorsque l'intrant *x* est plus petit que -2 ou plus grand que 2, respectivement. Cela permet d'envoyer 
 un signal très fort aux prochains neurones. Cela peut toutefois devenir un désavantage lorsque les intrants sont très grands, puisque l'extrant 
@@ -112,9 +119,11 @@ reste pratiquement le même, ce qui peut nuire à l'entrainement. Cette fonction
 considérablement le système lorsque ce calcul est effectué des centaines ou des milliers de fois.
 
 Une fonction similaire à la sigmoide et la TanH. Son équation est :
+
 $ tanh(x) = 
 \frac{2}{1 + e^{-2x}} - 1
 $
+
 Elle retourne -1 lorsque x tend vers l'infini négatif, et 1 lorsque x tend vers l'infini positif. Elle a comme avantage de retourner en moyenne
 des valeurs proches de 0, ce qui rend la tâche plus facile pour les couches suivantes, puisque les valeurs auront moins tendance à devenir très grandes, 
 ce qui ralentirait les opérations.
@@ -122,25 +131,29 @@ ce qui ralentirait les opérations.
 
 ### Couches de neurones
 
-Comme mentionné précedemment, les neurones sont organisés en couches. Il y a 3 types de couches différentes. La première est la couche des intrants, dans laquelle 
+Comme mentionné précédemment, les neurones sont organisés en couches. Il y a 3 types de couches différentes. La première est la couche des intrants, dans laquelle 
 les données sont rentrées dans le réseau. Dans le cas de notre programme, où les intrants sont des images de format 28x28, 
 la première couche est composée de 784 ($28\times28 = 784$) neurones recevant chacun la valeur en échelle de gris d'un pixel de l'image. 
+
+
 Plus concrètement, ces images sont des matrices carrées $M_{28}$, qui se font vectoriser en un vecteur de taille 784. Par la suite, chacune de ces
 données est transmise à chacun des neurones de la couche cachée, puisque le réseau est densément connecté, et les neurones d'une couche sont connectés à
 tout ceux des couches adjacentes. Pour la suite de cette explication, le réseau neuronal provenant de la figure affichée plus haut sera utilisé, à des
 fins de clarté. Donc, les valeurs des trois neurones de la couche d'intrants sont contenus dans la matrice $I_{1\times3}$. Les poids des neurones de la couche cachée 1 sont
-contenus dans la matrice $C_{4\times3}$, où 4 correspond au nombre de neurones dans la couche, et 3 aux poids que possèdent chaque neurones de la couche (un poid par neurone
+contenus dans la matrice $C_{4\times3}$, où 4 correspond au nombre de neurones dans la couche, et 3 aux poids que possèdent chaque neurones de la couche (un poids par neurone
 de la couche précédente). Ici, l'opération à faire serait un produit matriciel 
 $A_{m\times p} \times B_{p\times n} = C_{m\times n}$
 , afin de multiplier les intrants par chaque ensemble de poids. Toutefois, les matrices ne sont
 pas compatibles pour effectuer cette opération, puisque le nombre de colonnes de la première matrice n'est pas égal au nombre de rangées de la seconde. 
 Il faut donc faire la transposée de la matrice $C_{4\times3}$, qui devient alors $C_{3\times4}^{t}$. L'opération $I_{1\times3} \times C_{3\times4}^{t}$, où sont multipliés
 dans l'ordre, élément par élément, chaque élément d'une ligne de *I* par chaque élément d'une colonne de *C*, puis est effectué la somme de 
-ces produits pour obtenir un nouvel élément de la matrice résultante $R_{1\times4}$ {cite}`Alloprof`. Par la suite, la matrice $B_{1\times4}$ 
+ces produits pour obtenir un nouvel élément de la matrice résultante $R_{1\times4}$ {cite}`Alloprof`. 
+
+Par la suite, la matrice $B_{1\times4}$ 
 contenant les biais de chaque neurone 
-de la couche est additionée à la matrice R, dans une opération où s'additionnent entre-eux les éléments correspondants de chaque matrice pour 
+de la couche est additionnée à la matrice R, dans une opération où s'additionnent entre eux les éléments correspondants de chaque matrice pour 
 former une nouvelle matrice de même dimension. Finalement, dans une itération au travers de cette matrice, chaque élément passe par la fonction d'activation, 
-pour former encore une nouvelle matrice de même dimensions contenant les résultats de cette dernière opération. Cette matrice résultante finale $F_{1\times4}$ devient 
+pour former encore une nouvelle matrice de même dimension contenant les résultats de cette dernière opération. Cette matrice résultante finale $F_{1\times4}$ devient 
 alors l'intrant de la couche suivante de neurones, et ainsi de suite. 
 
 ### Réseaux neuronaux et le cerveau humain
@@ -155,7 +168,7 @@ sortir toutes sortes de valeurs, de manière à mieux servir les intérêts du s
 elles ne peuvent envoyer que le signal binaire *activé* ou *non-activé*. 
 
 >Un neurone s'active lorsque son seuil d'excitation est atteint. Le potentiel de repos d'un neurone est d'environ -50mV. Lorsqu'il 
-reçoit suffisament de neurotransmetteurs (des particules envoyées par d'autre neurones et qui possèdent une charge électrique), par 
+reçoit suffisamment de neurotransmetteurs (des particules envoyées par d'autre neurones et qui possèdent une charge électrique), par 
 ses dendrites et que le seuil d'excitation d'environ 15mV est atteint, le potentiel d'action se déclenche, et un influx nerveux se propage
 le long de l'axone sous forme de courant électrique. Une fois arrivé aux terminaisons axonales du neurone, d'autres neurotransmetteurs sont
 libérés par les synapses, poursuivant ainsi la transmission du signal. La quantité de neurotransmetteurs libérée ne dépend pas de l'intensité
@@ -165,7 +178,7 @@ En d'autres termes, l'image de la fonction d'un neurone artificiel *A*, dépenda
 par exemple $\mathbb{R}$ , $\mathbb{R^+}$, ou encore $[-1, 1]$, 
 tandis que l'image de la fonction d'un neurone organique *O* est toujours limité à $\text{{0, 1}}$. 
 
-L'aspect où les réseaux neuronaux et le cerveau humain ont le plus en commun est leur état initial. Les deux commencent comme un canvas vierge, ne possédant
-aucune connaissances ou expériences. Les deux se font "entrainer" par des informations extérieurs, jusqu'à arriver au point ou ils deviennent autonomes.
-Les connaissances qu'ils amassent se trouvent d'une certaine manière encodées dans leur système, et influencent leurs actions futures.
+L'aspect où les réseaux neuronaux et le cerveau humain ont le plus en commun est leur état initial. Les deux commencent comme un canevas vierge, ne possédant
+aucunes connaissances ou expériences. Les deux se font "entrainer" par des informations extérieures, jusqu'à arriver au point où ils deviennent autonomes.
+Les connaissances qu'ils amassent se trouvent, d'une certaine manière, encodées dans leur système, et influencent leurs actions futures.
 
