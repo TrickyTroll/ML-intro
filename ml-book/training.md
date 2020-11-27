@@ -41,7 +41,7 @@ __(1.3)__
 
 ### Transmition de l'information
 
->Note: Afin de simplifier les explications, ces dernières seront faites en utilisant un réseau neuronal ayant seulement 1 neurone par couche. 
+>Note: Afin de simplifier les explications, ces dernières seront faites en utilisant un réseau neuronal ayant seulement 1 >neurone par couche. 
 
 D'abord, il faut comprendre comment le réseau transmet son information de cellules en cellule. En effet,
 un neurone ayant contenant une certaine valeur $Y$ transmet cette dernière à tous les autres neurones de
