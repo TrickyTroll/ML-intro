@@ -1,7 +1,7 @@
 - file: intro
 - file: rapport_final
   sections:
-    - file: liste
+    - file: list
     - file: intro_finale
     - file: explications_librairies
     - file: preprocessing
