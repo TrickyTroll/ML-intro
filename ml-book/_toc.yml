@@ -1,8 +1,10 @@
 - file: intro
-- file: rapport_misession
+- file: rapport_final
   sections:
-    - file: enonce_sujet
-    - file: description
-    - file: plan
-    - file: notebooks.ipynb
-    - file: zbiblio_commented
+    - file: intro_finale
+    - file: explications_librairies
+    - file: preprocessing
+    - file: OCR_SAM
+    - file: bienfaits_et_inconvénients
+    - file: conclusion
+    - file: zbib
