@@ -20,22 +20,23 @@ démonstrations mathématiques complémentées par quelques explications écrite
 Une fonction d'erreur est une fonction permettant de connaitre la précision des résultats des extrants de la dernière
 couche. Il peut y avoir plusieurs fonctions d'erreur. En voici un exemple:
   
-$$E_{SS}=1/2\sum_{i=1}^nE_i^2 $$ __(1.1)__
+$E_{SS}=1/2\sum_{i=1}^nE_i^2 $ __(1.1)__
   
-$$E_{SS}=1/2\sum_{i=1}^nE_i^2 $$ __(1.2)__
+$E_{SS}=1/2\sum_{i=1}^nE_i^2 $ __(1.2)__
 
 où $E_{SS}$= "error sum of square". Cela est tout simplement une de plusieurs fonctions d'erreur.
 
-$$E_i =|{t_i-I_i}|$$ __(1.3)__
+$E_i =|{t_i-I_i}|$ __(1.3)__
 
 où $E_i$ correspond à l'erreur d'un neurone de la dernière couche (extrant). $I_i$ correspond à la valeur numérique
 d'un extrant et $t_i$ correspond à la valeur désirée provenant de la base de données fournies.
 
 Combiner les deux équations permet d'obtenir:
 
-$$E=1/2\sum_{i=1}^n({T_i-Y_i})^2 $$ __(1.4)__
+$E=1/2\sum_{i=1}^n({T_i-Y_i})^2$ __(1.4)__
 
-###Transmition de l'information
+### Transmition de l'information
+
 >Note: Afin de simplifier les explications, ces dernières seront faites en utilisant un réseau neuronal ayant seulement 1 neurone par couche. 
 
 D'abord, il faut comprendre comment le réseau transmet son information de cellules en cellule. En effet,
@@ -44,23 +45,25 @@ la prochaine couche. Cependant, ces transmitions n'ont pas toutes les mêmes poi
 afin de favoriser certaines activations et en défavoriser d'autres. Chaque liaison entre chaque neurone possède
 un poid propre à chacune. Ces derniers sont multipliés avec l'extrant de la neurone en précédentes.
 
- $$Y_{i} = Y_{i-1}\times p_{i}$$__(2.0)__ 
+ $Y_{i} = Y_{i-1}\times p_{i}$__(2.0)__ 
  
  où $p_{i}$ correspond au poid de la neurone de la couche i
 
 
 Ensuite, un biais $b$ est additionné ou soustrait au résultat précédent
 
-$$Y_i = Y_{i-1}\times p_{i} + b_i$$ __(2.1)__  
+$Y_i = Y_{i-1}\times p_{i} + b_i$ __(2.1)__  
 
-  où $b_i$ correspond au biais de la neurone de la couche i.
+d’activation sera expliqué en détail plus loin.où $b_i$ correspond au biais de la neurone de la couche i.
 
 Finalement, une fonction d'activation $a$ est ajoutée au reste de la formule. L'utilité et le fonctionnement de
 la fonction d'activation sera expliqué en détail plus loin.
 
-$$Y_i = a\times(Y_{i-1}\times p_{i} + b_i)$$ __(2.2)__ 
+$Y_i = a\times(Y_{i-1}\times p_{i} + b_i)$ 
+__(2.2)__ 
 
-###"Back propagation"
+### *Back propagation*
+
 L'objectif est de comprendre comment le poids et le biais doit être ajuster en débutant de la fonction d'erreur et d'activation.
 
 Dabord, en utilisant la formule de base de transmission d'un neurone (sans le biais) :
@@ -70,12 +73,12 @@ $Y = \sum_{i=1}^{n} I_i \times p_i $
 Il est possible de comprendre comment le changement d'une variable impact une autre. Les dérivés seront
 donc utilisées afin de démontrer ce principe.
 
-$$\frac{dY}{dI_i}=\frac{dY}{dI_i}\sum_{i=1}^{n} I_i \times p_{ji} 
-$$
+$\frac{dY}{dI_i}=\frac{dY}{dI_i}\sum_{i=1}^{n} I_i \times p_{ji} 
+$
 
-$$\frac{dY}{dI_i} = p_i$$
+$\frac{dY}{dI_i} = p_i$
 
-$$\frac{dY}{dp_i} = I_i$$
+$\frac{dY}{dp_i} = I_i$
 
 
 Cela veut donc dire que le poid influence le résultat de l'extrant et que l'intrant influence
@@ -84,45 +87,45 @@ le résultat de l'extrant.
 En utlisant la formule (1.4) et le concept de dérivée partielle, il est possible de comprendre
 l'impact d'un changement de la valeur de l'intrant $I_i$ sur l'erreur:
 
-$$\frac{dE}{dI_i} =  (2/2)(t_i - I_i)(-1) $$
-$$\frac{dE}{dI_i}= -(t_i-I_i)$$
+$\frac{dE}{dI_i} =  (2/2)(t_i - I_i)(-1) $
+$\frac{dE}{dI_i}= -(t_i-I_i)$
 
 Maintenant, il faut calculer la dérivation de la fonction d'activation.
 La fonction sigmoïde sera utilisée pour cet exemple.
 
-$$a = \frac{1}{1 + e^{-Y}} =(1+e^{-Y})^{-1}$$
+$a = \frac{1}{1 + e^{-Y}} =(1+e^{-Y})^{-1}$
 
-$$\frac{da}{dY} = -1 (-e^{-Y})(1+e^{-Y})^{-2} $$
+$\frac{da}{dY} = -1 (-e^{-Y})(1+e^{-Y})^{-2} $
 
-$$= \frac{e^{-Y}}{(1+e^{-Y})^2} $$
+$= \frac{e^{-Y}}{(1+e^{-Y})^2} $
 
-$$= \frac{1}{(1+e^{-Y})}\times\frac{e^{-Y}}{(1+e^{-Y})} $$
+$= \frac{1}{(1+e^{-Y})}\times\frac{e^{-Y}}{(1+e^{-Y})} $
 
-$$= a \times \frac{e^{-Y}}{(1+e^{-Y})}$$
+$= a \times \frac{e^{-Y}}{(1+e^{-Y})}$
 
-$$= a \times \frac{1+e^{-Y}-1}{(1+e^{-Y})} $$
+$= a \times \frac{1+e^{-Y}-1}{(1+e^{-Y})} $
 
-$$= a \times (\frac{(1+e^{-Y})}{(1+e^{-Y})} + \frac{-1}{(1+e^{-Y})})$$
+$= a \times (\frac{(1+e^{-Y})}{(1+e^{-Y})} + \frac{-1}{(1+e^{-Y})})$
 
-$$\frac{da}{dY}= a \times (1-a)$$
+$\frac{da}{dY}= a \times (1-a)$
 
 
 Maintenant il est possible, à l'aide de la règle de dérivation en chaine, de trouver l'impact
 qu'a $Y$ sur l'erreur $E$. Dans cet exemple, $I_i = a $ puisque la fonction d'activation été appliquée au neurone en question.
 
-$$\frac{dE}{dY_i} = \frac{dE}{dI_i} \times \frac{dI_i}{dY_i}$$
+$\frac{dE}{dY_i} = \frac{dE}{dI_i} \times \frac{dI_i}{dY_i}$
 
-$$= \frac{dE}{dI_i} \times \frac{da}{dY_i}$$
+$= \frac{dE}{dI_i} \times \frac{da}{dY_i}$
 
-$$=-(t_i - I_i)  I_i (1- I_i)$$  __(3.0)__
+$=-(t_i - I_i)  I_i (1- I_i)$  __(3.0)__
 
 Ensuite il est possible de calculer la dérivation de l'erreur en fonction du poid $p_{ji}$ d'une liaison entre deux neurones.
 
-$$\frac{dE}{dp_{ji}} =\frac{dE}{dY_i} \times \frac{dY_i}{dp_{ji}} $$
+$\frac{dE}{dp_{ji}} =\frac{dE}{dY_i} \times \frac{dY_i}{dp_{ji}} $
 
-$$= (-(t_i - I_i) \times I_i\times (1- I_i))\times I_i$$
+$= (-(t_i - I_i) \times I_i\times (1- I_i))\times I_i$
 
-$$= -I_i I_j (1-I_i)(t_i-I_i)$$__(4.0)__
+$= -I_i I_j (1-I_i)(t_i-I_i)$__(4.0)__
 
 Cette équation signifie que le changement de l'erreur influence le poid et cette influence
 correspond à l'extrant d'un neurone négatif multiplié par l'extrant du neurone précédent et
@@ -132,7 +135,7 @@ L'équation 3.0 sera représenté par la variable:  $\Delta p$
 
 Le concept de "backpropagation" se résume donc a:
 
-$$p_{ji} = p_{ji} + \Delta p$$
+$p_{ji} = p_{ji} + \Delta p$
 
 Le poids d'un neurone change légèrement en additionnant un $\Delta p$  positif ou négatif. Ce changement
 est fait avec une plus grande importance plus le neurone est proche de la couche des extrants. Cela est
@@ -164,6 +167,6 @@ En effet, une valeur égale a 0 empêche l'entrainement du réseau puisque peut 
 du poid, $0\times p$ sera toujours être égale à 0. C'est pour remédier à cette erreur qu'un biais est ajouté
 à la fonction.
 
-$$Y =\sum_{i=1}^{n} I_i \times p_i + b$$
+$Y =\sum_{i=1}^{n} I_i \times p_i + b$
 
 L'ajout de ce biais va permettre de conserver un apprentissage même lorsque la valeur d'un neurone est figée à 0.

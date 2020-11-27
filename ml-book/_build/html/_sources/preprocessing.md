@@ -86,8 +86,11 @@ $ \lambda \begin{bmatrix}
     x_{21} & x_{22} & x_{23} & \dots  & x_{2n} \\
     \vdots & \vdots & \vdots & \ddots & \vdots \\
     x_{d1} & x_{d2} & x_{d3} & \dots  & x_{dn}
-\end{bmatrix} = 
-\begin{bmatrix}
+\end{bmatrix} $
+
+Revient à faire le calcul:
+
+$\begin{bmatrix}
     \lambda x_{11} & \lambda x_{12} & \lambda x_{13} & \dots  & \lambda x_{1n} \\
     \lambda x_{21} & \lambda x_{22} & \lambda x_{23} & \dots  & \lambda x_{2n} \\
     \vdots & \vdots & \vdots & \ddots & \vdots \\

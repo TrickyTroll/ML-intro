@@ -265,7 +265,7 @@ comme intrant la température, le niveau d’ensoleillement ainsi que le pourcen
 constituée d’une liste ces quatres valeurs enregistrées à chaque jour des dernières années, avec comme étiquette le nombre de clients cette journée-là.
 Les réponses du réseau sont comparées aux étiquettes, et les paramètres des neurones sont individuellement modifiés de manière à se rapprocher de la réponse attendue.</p>
 <div class="figure align-default" id="reseau-neuronal">
-<img alt="./img/reseauneuronalsimp.png" src="./img/reseauneuronalsimp.png" />
+<img alt="_images/resneuronalsimp.png" src="_images/resneuronalsimp.png" />
 <p class="caption"><span class="caption-number">Fig. 3 </span><span class="caption-text">Ceci est un exemple simplifié d’un réseau neuronal. Les composantes du schéma seront expliquées en détail dans cette section.</span><a class="headerlink" href="#reseau-neuronal" title="Lien permanent vers cette image">¶</a></p>
 </div>
 </div>
@@ -292,7 +292,7 @@ au passage par un procédé qui sera expliqué plus en détail prochainement, av
 Essentiellement, un neurone reçoit une ou des valeurs comme intrant, effectue des opérations sur ces dernières, puis transmet la nouvelle valeur.</p>
 <p>La structure d’un neurone est relativement simple. Chaque neurone possède un coefficient, ou un <strong>poids</strong> <span class="math notranslate nohighlight">\(p\)</span> dans le jargon, associé à chaque <strong>intrant</strong> <span class="math notranslate nohighlight">\(I\)</span> qu’elle reçoit.
 La première opération que la neurone effectue est la somme des produits des intrants fois leur poids. À celà est ajouté un <strong>biais</strong> <span class="math notranslate nohighlight">\(b\)</span> propre à chaque neurone.
-Cette opération peut être représentée par la fonction $<span class="math notranslate nohighlight">\(Y = \sum_{i=1}^{n} I_i \times p_i + b\)</span>$, où n correspond au nombre d’intrants.</p>
+Cette opération peut être représentée par la fonction <span class="math notranslate nohighlight">\(Y = \sum_{i=1}^{n} I_i \times p_i + b\)</span>, où n correspond au nombre d’intrants.</p>
 <p>La dernière opération que les valeurs subissent avant d’être transmises est une fonction d’activation. La fonction d’activation est appliquée à chaque extrant de chaque
 neurone de la couche. Les fonctions d’activation, analogues à l’activation
 d’un neurone biologique, permettent généralement d’obtenir un extrant compris entre 0 et 1, ou -1 et 1. Elles ont plusieurs utilités, notamment
@@ -302,24 +302,24 @@ pour la modélisation de fonctions non linéeaires, ainsi que pour l’entrainem
 <p class="caption"><span class="caption-number">Fig. 4 </span><span class="caption-text">Exemple des opérations effectuées au sein d’un neurone.</span><a class="headerlink" href="#neurone" title="Lien permanent vers cette image">¶</a></p>
 </div>
 <p>La fonction la plus simple est la fonction à échelons. Elle retourne 1 si l’intrant <em>x</em> est plus grand qu’une valeur seuil <em>s</em>, et 0 s’il ne l’est pas. Cette fonction peut être représentée par l’équation
-$<span class="math notranslate nohighlight">\(
+<span class="math notranslate nohighlight">\(
 E(x)=
 \begin{cases}
  1 &amp; \quad \text{si } x \text{ &gt; s}\\
  0 &amp; \quad \text{si } x \text{ &lt;= s}
 \end{cases}
-\)</span>$
+\)</span>
 Elle n’est néanmoins pas utilisée, puisqu’elle empêche l’entrainement du réseau.
 La fonction d’activation doit être dérivable en une autre fonction, et non en une constante, afin que le processus d’ajustement des paramètres puisse avoir lieu.
 Il est également impossible de représenter des situations non-linéeaires avec cette fonction, puisque seulement des fonctions linéaires sont présentes dans le réseau.</p>
 <p>La fonction d’activation la plus utilisée est la fonction Unité Linéaire Rectifiée, ou « ReLU » en anglais (Rectified Linear Unit).
-Cette fonction peut être représentée par l’équation :  $<span class="math notranslate nohighlight">\(
+Cette fonction peut être représentée par l’équation :  <span class="math notranslate nohighlight">\(
 R(x)=
 \begin{cases}
  x &amp; \quad \text{si } x \text{ &gt; 0}\\
  0 &amp; \quad \text{si } x \text{ &lt;= 0}
 \end{cases}
-\)</span>$</p>
+\)</span></p>
 <p>ou encore, <span class="math notranslate nohighlight">\( R(x) = max(0, x)\)</span>. Cette fonction est peu demandante à calculer pour l’ordinateur, et se fait très rapidement. De plus, malgré son apparence linéaire,
 elle peut être dérivée, ce qui est nécessaire pour pouvoir entrainer le réseau. C’est pour ces raisons que c’est la fonction d’activation la plus répendue.
 Elle a toutefois comme désavantage de produire parfois une trop grande quantité de « 0 », ce qui peut entrainer une réaction en chaine, où ces zéros se propagent,
@@ -327,27 +327,27 @@ empêchant le bon fonctionnement du réseau. Cette situation est appelée la «�
 diminue l’efficacité du réseau. Ce phénomène se produit surtout lorsque le réseau se fait entrainer de manière trop rigoureuse, et que le biais de certaines
 neurones devient une très grande valeur négative, ce qui fait que l’intrant dans la fonction d’activation est toujours en dessous de 0, et l’extrant reste ainsi
 invariablement 0.</p>
-<p>Une variation de cette fonction, nommée Leaky ReLU, a été créée afin de tenter de régler ce problème de mort du réseau : $<span class="math notranslate nohighlight">\( 
+<p>Une variation de cette fonction, nommée Leaky ReLU, a été créée afin de tenter de régler ce problème de mort du réseau : <span class="math notranslate nohighlight">\( 
 L(x)=
 \begin{cases}
  x &amp; \quad \text{si } x \text{ &gt; 0}\\
  0,01 \times x &amp; \quad \text{si } x \text{ &lt;= 0}
 \end{cases}
-\)</span>$</p>
+\)</span></p>
 <p>Ici, les zéros sont remplacés par de très petits nombres négatifs, qui correspondent généralement à x multiplié par le coefficient 0,01.</p>
 <p>Une autre fonction commune est la sigmoide. Son équation est :
-$<span class="math notranslate nohighlight">\( \phi(x) = 
+<span class="math notranslate nohighlight">\( \phi(x) = 
 \frac{1}{1 + e^{-x}}
-\)</span>$
+\)</span>
 La fonction retourne 0 lorsque x tend vers l’infini négatif, et 1 lorsque x tend vers l’infini positif. Cette fonction a comme avantage de
 s’approcher rapidement de 0 ou de 1, lorsque l’intrant <em>x</em> est plus petit que -2 ou plus grand que 2, respectivement. Cela permet d’envoyer
 un signal très fort aux prochains neurones. Cela peut toutefois devenir un désavantage lorsque les intrants sont très grands, puisque l’extrant
 reste pratiquement le même, ce qui peut nuire à l’entrainement. Cette fonction est également plus lourde pour l’ordinateur, ce qui peut ralentir
 considérablement le système lorsque ce calcul est effectué des centaines ou des milliers de fois.</p>
 <p>Une fonction similaire à la sigmoide et la TanH. Son équation est :
-$<span class="math notranslate nohighlight">\( tanh(x) = 
+<span class="math notranslate nohighlight">\( tanh(x) = 
 \frac{2}{1 + e^{-2x}} - 1
-\)</span>$
+\)</span>
 Elle retourne -1 lorsque x tend vers l’infini négatif, et 1 lorsque x tend vers l’infini positif. Elle a comme avantage de retourner en moyenne
 des valeurs proches de 0, ce qui rend la tâche plus facile pour les couches suivantes, puisque les valeurs auront moins tendance à devenir très grandes,
 ce qui ralentirait les opérations.</p>
@@ -363,18 +363,16 @@ tout ceux des couches adjacentes. Pour la suite de cette explication, le réseau
 fins de clarté. Donc, les valeurs des trois neurones de la couche d’intrants sont contenus dans la matrice <span class="math notranslate nohighlight">\(I_{1\times3}\)</span>. Les poids des neurones de la couche cachée 1 sont
 contenus dans la matrice <span class="math notranslate nohighlight">\(C_{4\times3}\)</span>, où 4 correspond au nombre de neurones dans la couche, et 3 aux poids que possèdent chaque neurones de la couche (un poid par neurone
 de la couche précédente). Ici, l’opération à faire serait un produit matriciel
-$<span class="math notranslate nohighlight">\(
-A_{m\times p} \times B_{p\times n} = C_{m\times n}
-\)</span><span class="math notranslate nohighlight">\(
+<span class="math notranslate nohighlight">\(A_{m\times p} \times B_{p\times n} = C_{m\times n}\)</span>
 , afin de multiplier les intrants par chaque ensemble de poids. Toutefois, les matrices ne sont
-pas compatibles pour effectuer cette opération, puisque le nombre de colonnes de la première matrice n'est pas égal au nombre de rangées de la seconde. 
-Il faut donc faire la transposée de la matrice \)</span>C_{4\times3}<span class="math notranslate nohighlight">\(, qui devient alors \)</span>C_{3\times4}^{t}<span class="math notranslate nohighlight">\(. L'opération \)</span>I_{1\times3} \times C_{3\times4}^{t}<span class="math notranslate nohighlight">\(, où sont multipliés
-dans l'ordre, élément par élément, chaque élément d'une ligne de *I* par chaque élément d'une colonne de *C*, puis est effectué la somme de 
-ces produits pour obtenir un nouvel élément de la matrice résultante \)</span>R_{1\times4}<span class="math notranslate nohighlight">\( {cite}`Alloprof`. Par la suite, la matrice \)</span>B_{1\times4}<span class="math notranslate nohighlight">\( 
-contenant les biais de chaque neurone 
-de la couche est additionée à la matrice R, dans une opération où s'additionnent entre-eux les éléments correspondants de chaque matrice pour 
-former une nouvelle matrice de même dimension. Finalement, dans une itération au travers de cette matrice, chaque élément passe par la fonction d'activation, 
-pour former encore une nouvelle matrice de même dimensions contenant les résultats de cette dernière opération. Cette matrice résultante finale \)</span>F_{1\times4}$ devient
+pas compatibles pour effectuer cette opération, puisque le nombre de colonnes de la première matrice n’est pas égal au nombre de rangées de la seconde.
+Il faut donc faire la transposée de la matrice <span class="math notranslate nohighlight">\(C_{4\times3}\)</span>, qui devient alors <span class="math notranslate nohighlight">\(C_{3\times4}^{t}\)</span>. L’opération <span class="math notranslate nohighlight">\(I_{1\times3} \times C_{3\times4}^{t}\)</span>, où sont multipliés
+dans l’ordre, élément par élément, chaque élément d’une ligne de <em>I</em> par chaque élément d’une colonne de <em>C</em>, puis est effectué la somme de
+ces produits pour obtenir un nouvel élément de la matrice résultante <span class="math notranslate nohighlight">\(R_{1\times4}\)</span> <span class="bibtex" id="id2">[Alloprof]</span>. Par la suite, la matrice <span class="math notranslate nohighlight">\(B_{1\times4}\)</span>
+contenant les biais de chaque neurone
+de la couche est additionée à la matrice R, dans une opération où s’additionnent entre-eux les éléments correspondants de chaque matrice pour
+former une nouvelle matrice de même dimension. Finalement, dans une itération au travers de cette matrice, chaque élément passe par la fonction d’activation,
+pour former encore une nouvelle matrice de même dimensions contenant les résultats de cette dernière opération. Cette matrice résultante finale <span class="math notranslate nohighlight">\(F_{1\times4}\)</span> devient
 alors l’intrant de la couche suivante de neurones, et ainsi de suite.</p>
 </div>
 <div class="section" id="reseaux-neuronaux-et-le-cerveau-humain">
@@ -393,7 +391,7 @@ reçoit suffisament de neurotransmetteurs (des particules envoyées par d’autr
 ses dendrites et que le seuil d’excitation d’environ 15mV est atteint, le potentiel d’action se déclenche, et un influx nerveux se propage
 le long de l’axone sous forme de courant électrique. Une fois arrivé aux terminaisons axonales du neurone, d’autres neurotransmetteurs sont
 libérés par les synapses, poursuivant ainsi la transmission du signal. La quantité de neurotransmetteurs libérée ne dépend pas de l’intensité
-du stimulus initial ; c’est une situation de tout ou rien. <a class="bibtex reference internal" href="zbib.html#futura-sciences" id="id2">[futura-sciences, n.d.]</a></p>
+du stimulus initial ; c’est une situation de tout ou rien. <a class="bibtex reference internal" href="zbib.html#futura-sciences" id="id3">[futura-sciences, n.d.]</a></p>
 </div></blockquote>
 <p>En d’autres termes, l’image de la fonction d’un neurone artificiel <em>A</em>, dépendamment de la fonction d’activation, peut être,
 par exemple <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> , <span class="math notranslate nohighlight">\(\mathbb{R^+}\)</span>, ou encore <span class="math notranslate nohighlight">\([-1, 1]\)</span>,

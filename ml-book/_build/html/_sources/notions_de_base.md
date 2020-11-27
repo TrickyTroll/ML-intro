@@ -13,7 +13,7 @@ constituée d'une liste ces quatres valeurs enregistrées à chaque jour des der
 Les réponses du réseau sont comparées aux étiquettes, et les paramètres des neurones sont individuellement modifiés de manière à se rapprocher de la réponse attendue.
 
 
-```{figure} ./img/reseauneuronalsimp.png
+```{figure} ./img/resneuronalsimp.png
 ---
 name: Réseau neuronal
 ---
@@ -46,7 +46,7 @@ Essentiellement, un neurone reçoit une ou des valeurs comme intrant, effectue d
 
 La structure d'un neurone est relativement simple. Chaque neurone possède un coefficient, ou un **poids** $p$ dans le jargon, associé à chaque **intrant** $I$ qu'elle reçoit.
 La première opération que la neurone effectue est la somme des produits des intrants fois leur poids. À celà est ajouté un **biais** $b$ propre à chaque neurone.
-Cette opération peut être représentée par la fonction $$Y = \sum_{i=1}^{n} I_i \times p_i + b$$, où n correspond au nombre d'intrants.
+Cette opération peut être représentée par la fonction $Y = \sum_{i=1}^{n} I_i \times p_i + b$, où n correspond au nombre d'intrants.
 
 La dernière opération que les valeurs subissent avant d'être transmises est une fonction d'activation. La fonction d'activation est appliquée à chaque extrant de chaque
 neurone de la couche. Les fonctions d'activation, analogues à l'activation
@@ -61,25 +61,25 @@ Exemple des opérations effectuées au sein d'un neurone.
 ```
 
 La fonction la plus simple est la fonction à échelons. Elle retourne 1 si l'intrant *x* est plus grand qu'une valeur seuil *s*, et 0 s'il ne l'est pas. Cette fonction peut être représentée par l'équation
-$$
+$
 E(x)=
 \begin{cases}
  1 & \quad \text{si } x \text{ > s}\\
  0 & \quad \text{si } x \text{ <= s}
 \end{cases}
-$$
+$
 Elle n'est néanmoins pas utilisée, puisqu'elle empêche l'entrainement du réseau.
 La fonction d'activation doit être dérivable en une autre fonction, et non en une constante, afin que le processus d'ajustement des paramètres puisse avoir lieu. 
 Il est également impossible de représenter des situations non-linéeaires avec cette fonction, puisque seulement des fonctions linéaires sont présentes dans le réseau.
 
 La fonction d'activation la plus utilisée est la fonction Unité Linéaire Rectifiée, ou "ReLU" en anglais (Rectified Linear Unit).
-Cette fonction peut être représentée par l'équation :  $$
+Cette fonction peut être représentée par l'équation :  $
 R(x)=
 \begin{cases}
  x & \quad \text{si } x \text{ > 0}\\
  0 & \quad \text{si } x \text{ <= 0}
 \end{cases}
-$$
+$
                                                         
 ou encore, $ R(x) = max(0, x)$. Cette fonction est peu demandante à calculer pour l'ordinateur, et se fait très rapidement. De plus, malgré son apparence linéaire,
 elle peut être dérivée, ce qui est nécessaire pour pouvoir entrainer le réseau. C'est pour ces raisons que c'est la fonction d'activation la plus répendue.
@@ -90,21 +90,21 @@ neurones devient une très grande valeur négative, ce qui fait que l'intrant da
 invariablement 0.
 
 
-Une variation de cette fonction, nommée Leaky ReLU, a été créée afin de tenter de régler ce problème de mort du réseau : $$ 
+Une variation de cette fonction, nommée Leaky ReLU, a été créée afin de tenter de régler ce problème de mort du réseau : $ 
 L(x)=
 \begin{cases}
  x & \quad \text{si } x \text{ > 0}\\
  0,01 \times x & \quad \text{si } x \text{ <= 0}
 \end{cases}
-$$
+$
                                                          
 Ici, les zéros sont remplacés par de très petits nombres négatifs, qui correspondent généralement à x multiplié par le coefficient 0,01. 
 
 
 Une autre fonction commune est la sigmoide. Son équation est : 
-$$ \phi(x) = 
+$ \phi(x) = 
 \frac{1}{1 + e^{-x}}
-$$
+$
 La fonction retourne 0 lorsque x tend vers l'infini négatif, et 1 lorsque x tend vers l'infini positif. Cette fonction a comme avantage de 
 s'approcher rapidement de 0 ou de 1, lorsque l'intrant *x* est plus petit que -2 ou plus grand que 2, respectivement. Cela permet d'envoyer 
 un signal très fort aux prochains neurones. Cela peut toutefois devenir un désavantage lorsque les intrants sont très grands, puisque l'extrant 
@@ -112,9 +112,9 @@ reste pratiquement le même, ce qui peut nuire à l'entrainement. Cette fonction
 considérablement le système lorsque ce calcul est effectué des centaines ou des milliers de fois.
 
 Une fonction similaire à la sigmoide et la TanH. Son équation est :
-$$ tanh(x) = 
+$ tanh(x) = 
 \frac{2}{1 + e^{-2x}} - 1
-$$
+$
 Elle retourne -1 lorsque x tend vers l'infini négatif, et 1 lorsque x tend vers l'infini positif. Elle a comme avantage de retourner en moyenne
 des valeurs proches de 0, ce qui rend la tâche plus facile pour les couches suivantes, puisque les valeurs auront moins tendance à devenir très grandes, 
 ce qui ralentirait les opérations.
@@ -131,9 +131,7 @@ tout ceux des couches adjacentes. Pour la suite de cette explication, le réseau
 fins de clarté. Donc, les valeurs des trois neurones de la couche d'intrants sont contenus dans la matrice $I_{1\times3}$. Les poids des neurones de la couche cachée 1 sont
 contenus dans la matrice $C_{4\times3}$, où 4 correspond au nombre de neurones dans la couche, et 3 aux poids que possèdent chaque neurones de la couche (un poid par neurone
 de la couche précédente). Ici, l'opération à faire serait un produit matriciel 
-$$
-A_{m\times p} \times B_{p\times n} = C_{m\times n}
-$$
+$A_{m\times p} \times B_{p\times n} = C_{m\times n}$
 , afin de multiplier les intrants par chaque ensemble de poids. Toutefois, les matrices ne sont
 pas compatibles pour effectuer cette opération, puisque le nombre de colonnes de la première matrice n'est pas égal au nombre de rangées de la seconde. 
 Il faut donc faire la transposée de la matrice $C_{4\times3}$, qui devient alors $C_{3\times4}^{t}$. L'opération $I_{1\times3} \times C_{3\times4}^{t}$, où sont multipliés
