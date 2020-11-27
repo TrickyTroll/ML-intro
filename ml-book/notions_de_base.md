@@ -124,8 +124,26 @@ ce qui ralentirait les opérations.
 
 Comme mentionné précedemment, les neurones sont organisés en couches. Il y a 3 types de couches différentes. La première est la couche des intrants, dans laquelle 
 les données sont rentrées dans le réseau. Dans le cas de notre programme, où les intrants sont des images de format 28x28, 
-la première couche est composée de 784 ($28\times28 = 784$) neurones recevant chacun la valeur en echelle de gris  d'un pixel de l'image. 
-Plus concrètement, ces images sont des matrices $M_{28}$, qui se font vectoriser
+la première couche est composée de 784 ($28\times28 = 784$) neurones recevant chacun la valeur en échelle de gris d'un pixel de l'image. 
+Plus concrètement, ces images sont des matrices carrées $M_{28}$, qui se font vectoriser en un vecteur de taille 784. Par la suite, chacune de ces
+données est transmise à chacun des neurones de la couche cachée, puisque le réseau est densément connecté, et les neurones d'une couche sont connectés à
+tout ceux des couches adjacentes. Pour la suite de cette explication, le réseau neuronal provenant de la figure affichée plus haut sera utilisé, à des
+fins de clarté. Donc, les valeurs des trois neurones de la couche d'intrants sont contenus dans la matrice $I_{1\times3}$. Les poids des neurones de la couche cachée 1 sont
+contenus dans la matrice $C_{4\times3}$, où 4 correspond au nombre de neurones dans la couche, et 3 aux poids que possèdent chaque neurones de la couche (un poid par neurone
+de la couche précédente). Ici, l'opération à faire serait un produit matriciel 
+$$
+A_{m\times p} \times B_{p\times n} = C_{m\times n}
+$$
+, afin de multiplier les intrants par chaque ensemble de poids. Toutefois, les matrices ne sont
+pas compatibles pour effectuer cette opération, puisque le nombre de colonnes de la première matrice n'est pas égal au nombre de rangées de la seconde. 
+Il faut donc faire la transposée de la matrice $C_{4\times3}$, qui devient alors $C_{3\times4}^{t}$. L'opération $I_{1\times3} \times C_{3\times4}^{t}$, où sont multipliés
+dans l'ordre, élément par élément, chaque élément d'une ligne de *I* par chaque élément d'une colonne de *C*, puis est effectué la somme de 
+ces produits pour obtenir un nouvel élément de la matrice résultante $R_{1\times4}$ {cite}`Alloprof`. Par la suite, la matrice $B_{1\times4}$ 
+contenant les biais de chaque neurone 
+de la couche est additionée à la matrice R, dans une opération où s'additionnent entre-eux les éléments correspondants de chaque matrice pour 
+former une nouvelle matrice de même dimension. Finalement, dans une itération au travers de cette matrice, chaque élément passe par la fonction d'activation, 
+pour former encore une nouvelle matrice de même dimensions contenant les résultats de cette dernière opération. Cette matrice résultante finale $F_{1\times4}$ devient 
+alors l'intrant de la couche suivante de neurones, et ainsi de suite. 
 
 ### Réseaux neuronaux et le cerveau humain
 Plusieurs liens peuvent être faits entre les réseaux neuronaux et le cerveau humain. Le premier réseau neuronal était un 
@@ -149,4 +167,7 @@ En d'autres termes, l'image de la fonction d'un neurone artificiel *A*, dépenda
 par exemple $\mathbb{R}$ , $\mathbb{R^+}$, ou encore $[-1, 1]$, 
 tandis que l'image de la fonction d'un neurone organique *O* est toujours limité à $\text{{0, 1}}$. 
 
-L'aspect ou les réseaux neuronaux et le cerveau humain ont le plus en commun est leur état initial vierge.
+L'aspect où les réseaux neuronaux et le cerveau humain ont le plus en commun est leur état initial. Les deux commencent comme un canvas vierge, ne possédant
+aucune connaissances ou expériences. Les deux se font "entrainer" par des informations extérieurs, jusqu'à arriver au point ou ils deviennent autonomes.
+Les connaissances qu'ils amassent se trouvent d'une certaine manière encodées dans leur système, et influencent leurs actions futures.
+
