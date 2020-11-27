@@ -13,7 +13,7 @@ constituée d'une liste ces quatres valeurs enregistrées à chaque jour des der
 Les réponses du réseau sont comparées aux étiquettes, et les paramètres des neurones sont individuellement modifiés de manière à se rapprocher de la réponse attendue.
 
 
-```{figure} ./img/reseauneuronalsimp.png
+```{figure} ./img/resneuronalsimp.png
 ---
 name: Réseau neuronal
 ---
